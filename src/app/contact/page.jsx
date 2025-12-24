@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React, { useState } from "react";
 import "./contact.css";
 
@@ -28,7 +27,12 @@ const Contact = () => {
     e.preventDefault();
 
     // Validate required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.subject.trim() ||
+      !formData.message.trim()
+    ) {
       alert("Please fill in all required fields.");
       return;
     }
@@ -44,16 +48,29 @@ Message:
 ${formData.message.trim()}`;
 
     // Build WhatsApp URL
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${ADMIN_WHATSAPP}&text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${ADMIN_WHATSAPP}&text=${encodeURIComponent(
+      message
+    )}`;
 
     // Open WhatsApp
     try {
-      const whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      const whatsappWindow = window.open(
+        whatsappUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
 
       // Check if popup was blocked
       setTimeout(() => {
-        if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed === 'undefined') {
-          alert("Popup blocked! Please allow popups, or copy this link and open manually: " + whatsappUrl);
+        if (
+          !whatsappWindow ||
+          whatsappWindow.closed ||
+          typeof whatsappWindow.closed === "undefined"
+        ) {
+          alert(
+            "Popup blocked! Please allow popups, or copy this link and open manually: " +
+              whatsappUrl
+          );
         } else {
           // Success - reset form
           setFormData({
@@ -62,13 +79,16 @@ ${formData.message.trim()}`;
             subject: "",
             message: "",
           });
-          alert('WhatsApp opened successfully! Please send the pre-filled message.');
+          alert(
+            "WhatsApp opened successfully! Please send the pre-filled message."
+          );
         }
       }, 1000);
-
     } catch (err) {
-      console.error('Error opening WhatsApp:', err);
-      alert("Failed to open WhatsApp. Please try again or check your browser settings.");
+      console.error("Error opening WhatsApp:", err);
+      alert(
+        "Failed to open WhatsApp. Please try again or check your browser settings."
+      );
     }
   };
 
