@@ -134,7 +134,7 @@ const Gallery = () => {
           />
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 className="text-4xl md:text-6xl font-sitka-banner tracking-widest font-medium">
+            <h1 className="text-4xl md:text-6xl font-[sitka-banner] tracking-widest font-medium">
               Eco Gallery
             </h1>
             <p className="font-arial-narrow tracking-wider text-lg md:text-2xl mt-2">
@@ -148,7 +148,7 @@ const Gallery = () => {
         <div className="max-w-[86rem] mx-auto">
           <div className="flex items-center justify-center mb-5">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
               Our Gallery
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4 " />

@@ -41,7 +41,7 @@ const Blog = () => {
               <span className="inline-block mt-4 px-6 py-2 font-arial-narrow tracking-wider bg-[rgb(110,97,70)] text-[#D1C8C1] rounded-full text-sm font-medium mb-6">
                 Madhuban Eco Retreat
               </span>
-              <h1 className="text-[rgb(110,97,70)] lg:text-5xl font-bold mb-6 leading-tight tracking-wider font-sitka-banner">
+              <h1 className="text-[rgb(110,97,70)] lg:text-5xl font-bold mb-6 leading-tight tracking-wider font-[sitka-banner]">
                 Reconnect with Nature at Madhuban Eco Retreat
               </h1>
               <p className="text-xl text-[rgb(110,97,70)] tracking-wider font-arial-narrow mb-8">
@@ -82,7 +82,7 @@ const Blog = () => {
 
                 <div className="my-12 relative">
                   <div className="absolute -left-4 top-0 bottom-0 w-1 bg-[#D1C8C1] rounded-full"></div>
-                  <h2 className="text-3xl font-extrabold text-[#D1C8C1] tracking-widest font-sitka-banner mb-6 pl-4">
+                  <h2 className="text-3xl font-extrabold text-[#D1C8C1] tracking-widest font-[sitka-banner] mb-6 pl-4">
                     A Pure Vegetarian Paradise
                   </h2>
                   <p className="text-[#D1C8C1] tracking-wider font-arial-narrow mb-8 pl-4">
@@ -105,7 +105,7 @@ const Blog = () => {
                 </div>
 
                 <div className="bg-[#D1C8C1] rounded-2xl shadow-lg p-8 my-12">
-                  <h2 className="text-3xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-sitka-banner mb-6">
+                  <h2 className="text-3xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-[sitka-banner] mb-6">
                     Your Stay at Madhuban Eco Retreat
                   </h2>
                   <p className="text-[rgb(110,97,70)] tracking-wider font-arial-narrow mb-8">
@@ -148,7 +148,7 @@ const Blog = () => {
                 </div>
 
                 <div className="my-12">
-                  <h2 className="text-3xl font-extrabold text-[#D1C8C1] tracking-widest font-sitka-banner mb-6">
+                  <h2 className="text-3xl font-extrabold text-[#D1C8C1] tracking-widest font-[sitka-banner] mb-6">
                     Dining Experience at Madhuban Eco Retreat
                   </h2>
                   <div className="bg-[#D1C8C1] rounded-2xl p-8">
@@ -199,7 +199,7 @@ const Blog = () => {
                         key={index}
                         className="bg-[#D1C8C1] rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
                       >
-                        <h3 className="font-semibold text-xl mb-2 text-[rgb(110,97,70)] tracking-widest font-sitka-banner">
+                        <h3 className="font-semibold text-xl mb-2 text-[rgb(110,97,70)] tracking-widest font-[sitka-banner]">
                           {item.title}
                         </h3>
                         <p className="text-[rgb(110,97,70)] tracking-wider font-arial-narrow">
@@ -226,7 +226,7 @@ const Blog = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-32">
                 <div className="bg-[#D1C8C1] rounded-2xl shadow-lg p-6 mb-8">
-                  <h3 className="text-xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-sitka-banner mb-4 ">
+                  <h3 className="text-xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-[sitka-banner] mb-4 ">
                     Quick Links
                   </h3>
                   <ul className="space-y-3">
@@ -258,7 +258,7 @@ const Blog = () => {
                 </div>
 
                 <div className="bg-[#D1C8C1] rounded-2xl p-6">
-                  <h3 className="text-xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-sitka-banner mb-4">
+                  <h3 className="text-xl font-extrabold text-[rgb(110,97,70)] tracking-widest font-[sitka-banner] mb-4">
                     Contact Us
                   </h3>
                   <p className="text-[rgb(110,97,70)] tracking-wider font-arial-narrow mb-4">
@@ -267,7 +267,7 @@ const Blog = () => {
                   </p>
                   <a
                     href="/booking"
-                    className="block w-full text-center bg-[rgb(110,97,70)] text-[#D1C8C1] py-3 px-6 rounded-lg hover:bg-[rgb(96,85,61)] transition-colors font-sitka-banner text-xl"
+                    className="block w-full text-center bg-[rgb(110,97,70)] text-[#D1C8C1] py-3 px-6 rounded-lg hover:bg-[rgb(96,85,61)] transition-colors font-[sitka-banner] text-xl"
                   >
                     Book Now
                   </a>

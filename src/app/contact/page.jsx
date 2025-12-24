@@ -88,7 +88,7 @@ ${formData.message.trim()}`;
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-          <h1 className="text-4xl md:text-6xl font-sitka-banner tracking-widest font-medium">
+          <h1 className="text-4xl md:text-6xl font-[sitka-banner] tracking-widest font-medium">
             Get in Touch
           </h1>
           <p className="font-arial-narrow tracking-wider text-lg md:text-2xl mt-2 max-w-2xl">
@@ -101,7 +101,7 @@ ${formData.message.trim()}`;
       <section className="contact-section ">
         <div className="flex items-center justify-center">
           <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-          <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider">
             Contact Us
           </h2>
           <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
