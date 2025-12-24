@@ -1,26 +1,6 @@
-// import { Helmet } from "react-helmet";
-
 const Blog = () => {
   return (
     <>
-      {/* <Helmet>
-        <title>Madhuban Eco Retreat | Blog</title>
-        <meta
-          name="description"
-          content="Explore Madhya Pradesh, Ratapani forest, wilderness, forest walk, eco retreat in Bhopal, eco retreat in india, explore forest, wildlife in Bhopal, Ratapani tiger santury"
-        />
-        <meta
-          name="keywords"
-          content="eco retreat near Ratanapni, Bhopal, sustainable travel India, eco resort near Ratapani, Bhopal, Mud Houses in India, farm to table dining, nature stay Madhya Pradesh, peaceful gateway for seniors, wildlife and eco experience in India"
-        />
-        <meta property="og:title" content="Madhuban Eco Retreat" />
-        <meta
-          property="og:description"
-          content="Nature-inspired living and travel at its best."
-        />
-        <link rel="canonical" href="https://www.madhubanecoretreat.com/" />
-      </Helmet> */}
-
       <div className="min-h-screen bg-[rgb(135,121,92)]">
         {/* Hero Section with Split Design */}
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
