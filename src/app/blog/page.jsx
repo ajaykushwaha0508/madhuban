@@ -2,18 +2,17 @@ import React, { use } from "react";
 import { getAllBlogs } from "@/services/blog/blogServices";
 import Blog from "@/components/blog/Blog";
 
-const BlogPage = () => {
+const BlogPage = async() => {
   const getBlogs = async () => {
     try {
       const res = await getAllBlogs();
-      console.log("blog");
       return res.data;
     } catch (err) {
       console.log("Error in fetching blogs", err);
     }
   };
 
-  const blogsData = use(getBlogs());
+  const blogsData = await getBlogs();
 
   if (!blogsData?.blogs)
     return (
