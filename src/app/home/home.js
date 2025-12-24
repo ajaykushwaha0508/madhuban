@@ -121,7 +121,6 @@ const sustainabilityFeatures = [
 export const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef(null);
-  const [dummy , setDummyText] = useState("this is dummy text");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -154,7 +153,6 @@ export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-stone-50 pt-[220px]">
-      <div>{dummy}</div>
       {/* -----------------Meta Tag start -------------------------------------------------------- */}
       {/* <Helmet>
         <title>
