@@ -115,17 +115,13 @@ const sustainabilityFeatures = [
     icon: "leaf",
     title: "On-site farm providing fresh produce",
     description: "Comprehensive recycling and composting program",
-  },
-  // {
-  //   icon: "recycle",
-  //   title: "Zero Waste",
-  //   description: "Comprehensive recycling and composting program",
-  // },
+  }
 ];
 
 export const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef(null);
+  const [dummy , setDummyText] = useState("this is dummy text");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -158,6 +154,7 @@ export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-stone-50 pt-[220px]">
+      <div>{dummy}</div>
       {/* -----------------Meta Tag start -------------------------------------------------------- */}
       {/* <Helmet>
         <title>
@@ -170,7 +167,7 @@ export const Home = () => {
         <link rel="canonical" href="/home" />
       </Helmet> */}
       {/* -----------------Meta Tag End -------------------------------------------------------- */}
-      {/* Hero Section */}
+      {/* Hero Section */} 
       <section className="relative min-h-screen m-0 p-0 lg:min-h-[50vh] md:-mt-[166px] sm:-mt-[116px] max640:-mt-[116px]">
         {/* Hero Image Slider */}
         <div className="absolute inset-0 overflow-hidden">
