@@ -75,12 +75,12 @@ const BirdWilderness = () => {
           </p>
 
           {/* Nested Accordion inside first main accordion item */}
-          <div className="font-sitka-banner divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
+          <div className="font-[sitka-banner] divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect ",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-sitka-banner space-y-2">
+                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-[sitka-banner] space-y-2">
                     <li>
                       Early morning and sunset bird watching sessions with
                       expert guides
@@ -107,7 +107,7 @@ const BirdWilderness = () => {
               {
                 title: "Ideal For",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-sitka-banner space-y-2">
+                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-[sitka-banner] space-y-2">
                     <li>
                       Bird watchers and ornithologists seeking new species
                     </li>
@@ -131,7 +131,7 @@ const BirdWilderness = () => {
                     session—{" "}
                     <Link
                       href="/booking"
-                      className="list-disc list-inside underline text-[#D1C8C1] font-bold tracking-widest font-sitka-banner space-y-2"
+                      className="list-disc list-inside underline text-[#D1C8C1] font-bold tracking-widest font-[sitka-banner] space-y-2"
                     >
                       Book Your Bird Watching Trail Now
                     </Link>
@@ -197,7 +197,7 @@ const BirdWilderness = () => {
         </video>
 
         <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-sitka-banner tracking-widest font-medium mb-4">
+          <h1 className="text-4xl md:text-6xl font-[sitka-banner] tracking-widest font-medium mb-4">
             Bird Watching & Wilderness
           </h1>
           <p className="text-xl md:text-2xl font-arial-narrow tracking-wider">
@@ -209,7 +209,7 @@ const BirdWilderness = () => {
                 .getElementById("accordion-section")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="font-sitka-banner font-semibold tracking-wider mt-10 text-white border border-white px-4 py-2 rounded-full hover:bg-white hover:text-[rgb(110,97,70)] transition duration-300"
+            className="font-[sitka-banner] font-semibold tracking-wider mt-10 text-white border border-white px-4 py-2 rounded-full hover:bg-white hover:text-[rgb(110,97,70)] transition duration-300"
           >
             ↓ Scroll Down
           </button>
@@ -224,7 +224,7 @@ const BirdWilderness = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center mb-5">
             <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-sitka-banner text-[#D1C8C1] font-semibold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#D1C8C1] font-semibold tracking-wider text-center">
               Explore The Nature
             </h2>
             <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
@@ -233,7 +233,7 @@ const BirdWilderness = () => {
             {accordionItems.map((item, index) => (
               <div key={index} className="group">
                 <button
-                  className="font-sitka-banner font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
+                  className="font-[sitka-banner] font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
@@ -279,7 +279,7 @@ const BirdWilderness = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-5">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-bold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-bold tracking-wider text-center">
               Birds Gallery
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />

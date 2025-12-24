@@ -216,7 +216,7 @@ ${formData.room_interested}`;
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="text-center mb-2">
-              <h2 className="text-2xl font-sitka-banner font-semibold tracking-widest text-[rgb(110,97,70)]">
+              <h2 className="text-2xl font-[sitka-banner] font-semibold tracking-widest text-[rgb(110,97,70)]">
                 Book Your Stay
               </h2>
               <p className="text-[rgb(110,97,70)]/80 text-sm">
@@ -366,7 +366,7 @@ ${formData.room_interested}`;
 
             <button
               type="submit"
-              className="w-full bg-[rgb(110,97,70)] text-white py-3 rounded-md hover:bg-[rgb(117,105,83)] transition font-sitka-banner tracking-widest"
+              className="w-full bg-[rgb(110,97,70)] text-white py-3 rounded-md hover:bg-[rgb(117,105,83)] transition font-[sitka-banner] tracking-widest"
             >
               Send via WhatsApp
             </button>

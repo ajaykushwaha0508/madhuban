@@ -204,7 +204,7 @@ export const Home = () => {
             className="text-center max-w-3xl"
           >
             <motion.h1
-              className="font-sitka-banner tracking-widest font-medium  text-5xl md:text-6xl mb-4"
+              className="font-[sitka-banner] tracking-widest font-medium  text-5xl md:text-6xl mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -273,7 +273,7 @@ export const Home = () => {
           >
             {/* Text Section text-[rgb(110,97,70)] */}
             <motion.div className="h-full" variants={itemVariants}>
-              <h2 className="font-sitka-banner tracking-widest font-bold md:text-[30px] text-2xl text-[rgb(110,97,70)] mb-6 text-center">
+              <h2 className="font-[sitka-banner] tracking-widest font-bold md:text-[30px] text-2xl text-[rgb(110,97,70)] mb-6 text-center">
                 Welcome to "Madhuban Eco Retreat"
               </h2>
 
@@ -329,7 +329,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-gray-400 mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-gray-400 font-semibold tracking-wider">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-gray-400 font-semibold tracking-wider">
                 Our Accommodations
               </h2>
               <hr className="w-16 border-t border-gray-400 ml-4" />
@@ -364,7 +364,7 @@ export const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sitka-banner tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
+                <h3 className="font-[sitka-banner] tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
                   Safari Tent
                 </h3>
                 <p className="text-[rgb(110,97,70)] font-arial-narrow text-base tracking-wide mb-4 text-justify">
@@ -390,7 +390,7 @@ export const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sitka-banner tracking-widest text-[rgb(110,97,70)] mb-3 font-semibold text-2xl">
+                <h3 className="font-[sitka-banner] tracking-widest text-[rgb(110,97,70)] mb-3 font-semibold text-2xl">
                   Mud Houses
                 </h3>
                 <p className="text-[rgb(110,97,70)] font-arial-narrow text-base tracking-wide mb-10 text-justify">
@@ -416,7 +416,7 @@ export const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sitka-banner tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
+                <h3 className="font-[sitka-banner] tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
                   Pool Side Villa
                 </h3>
                 <p className="text-[rgb(110,97,70)] font-arial-narrow text-base tracking-wide mb-4 text-justify">
@@ -442,7 +442,7 @@ export const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sitka-banner tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
+                <h3 className="font-[sitka-banner] tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
                   Glamping Tents
                 </h3>
                 <p className="text-[rgb(110,97,70)] font-arial-narrow text-base tracking-wide mb-4 text-justify">
@@ -467,7 +467,7 @@ export const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-sitka-banner tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
+                <h3 className="font-[sitka-banner] tracking-widest text-[rgb(110,97,70)] mb-2 font-semibold text-2xl">
                   Camping Tents
                 </h3>
                 <p className="text-[rgb(110,97,70)] font-arial-narrow text-base tracking-wide mb-4 text-justify">
@@ -509,7 +509,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wider">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider">
                 Immersive Experiences
               </h2>
               <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -522,7 +522,7 @@ export const Home = () => {
           </motion.div>
           {/* Adjusted grid columns for exactly 3 items */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 -mt-9 font-sitka-banner"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 -mt-9 font-[sitka-banner]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -563,7 +563,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-[#D1C8C1] font-semibold tracking-wider">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#D1C8C1] font-semibold tracking-wider">
                 Our Commitment to Sustainability
               </h2>
               <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
@@ -600,7 +600,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-10 border-t border-[rgb(110,97,70)] mr-4" />
-              <h2 className="2xl:text-4xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wide sm:text-3xl max-Xsm:text-2xl">
+              <h2 className="2xl:text-4xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wide sm:text-3xl max-Xsm:text-2xl">
                 Esteemed Guests @ Madhuban Eco Retreat
               </h2>
               <hr className="w-10 border-t border-[rgb(110,97,70)] ml-4" />
@@ -626,7 +626,7 @@ export const Home = () => {
               />
               <div className="absolute  inset-0 bg-black/50 flex flex-col justify-end p-4">
                 <div className="ml-5">
-                  <h5 className="font-sitka-banner font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
+                  <h5 className="font-[sitka-banner] font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
                     Vidya Balan
                   </h5>
                   <p className="text-[rgb(204,180,120)] text-sm tracking-wider font-arial-narrow">
@@ -649,7 +649,7 @@ export const Home = () => {
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-4">
                 <div className="ml-10">
-                  <h5 className="font-sitka-banner font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
+                  <h5 className="font-[sitka-banner] font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
                     Vijay Raaz
                   </h5>
                   <p className="text-[rgb(204,180,120)] text-sm tracking-wider font-arial-narrow">
@@ -670,7 +670,7 @@ export const Home = () => {
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-4">
                 <div className="ml-10">
-                  <h5 className="font-sitka-banner font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
+                  <h5 className="font-[sitka-banner] font-medium text-[rgb(190,175,145)] tracking-widest text-xl">
                     Samir Somaiya
                   </h5>
                   <p className="text-[rgb(204,180,120)] text-sm tracking-wider font-arial-narrow">
@@ -700,7 +700,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-gray-400 mr-4" />
-              <h2 className="text-4xl sm:text-4xl max640:text-4xl max500:text-3xl max-Xsm:text-3xl md:text-5xl font-sitka-banner text-gray-400 tracking-wider font-semibold">
+              <h2 className="text-4xl sm:text-4xl max640:text-4xl max500:text-3xl max-Xsm:text-3xl md:text-5xl font-[sitka-banner] text-gray-400 tracking-wider font-semibold">
                 Guest Experiences
               </h2>
               <hr className="w-16 border-t border-gray-400 ml-4" />
@@ -732,7 +732,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wider mb-3 max500:text-3xl">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider mb-3 max500:text-3xl">
                 Follow Our Journey
               </h2>
               <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -919,7 +919,7 @@ export const Home = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-[#D1C8C1] font-extrabold tracking-wider">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#D1C8C1] font-extrabold tracking-wider">
                 Ready for Your Eco Retreat?
               </h2>
               <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
@@ -939,7 +939,7 @@ export const Home = () => {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/booking"
-                  className="px-8 py-3 bg-[#D1C8C1]  hover:font-bold  text-[rgb(110,97,70)] transition rounded-md font-sitka-banner font-extrabold text-lg tracking-wider"
+                  className="px-8 py-3 bg-[#D1C8C1]  hover:font-bold  text-[rgb(110,97,70)] transition rounded-md font-[sitka-banner] font-extrabold text-lg tracking-wider"
                 >
                   Book Your Stay
                 </Link>
@@ -947,7 +947,7 @@ export const Home = () => {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/contact"
-                  className="px-8 py-3  text-[rgb(110,97,70)] bg-[#D1C8C1]  hover:font-bold transition rounded-md font-extrabold text-lg font-sitka-banner tracking-wider"
+                  className="px-8 py-3  text-[rgb(110,97,70)] bg-[#D1C8C1]  hover:font-bold transition rounded-md font-extrabold text-lg font-[sitka-banner] tracking-wider"
                 >
                   Contact Us
                 </Link>

@@ -120,7 +120,7 @@ const Story = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-sitka-banner text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
                 About Madhuban Eco Retreat
               </h2>
               <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
