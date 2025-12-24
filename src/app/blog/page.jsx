@@ -1,8 +1,8 @@
-import React, { use } from "react";
+import React ,{use} from "react";
 import { getAllBlogs } from "@/services/blog/blogServices";
 import Blog from "@/components/blog/Blog";
 
-const BlogPage = async() => {
+const BlogPage = () => {
   const getBlogs = async () => {
     try {
       const res = await getAllBlogs();
@@ -12,7 +12,7 @@ const BlogPage = async() => {
     }
   };
 
-  const blogsData = await getBlogs();
+  const blogsData =  use(getBlogs());
 
   if (!blogsData?.blogs)
     return (
