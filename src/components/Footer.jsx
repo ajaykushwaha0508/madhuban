@@ -1,5 +1,5 @@
 // src/components/Footer.js
-"use client"
+"use client";
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </Link>
             </div>
-                  <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider">
+            <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider">
               An eco-luxury retreat nestled near Ratapani Wildlife Sanctuary,
               offering sustainable luxury and immersive nature experiences.
             </p>
@@ -103,7 +103,6 @@ const Footer = () => {
                   className="w-10 h-10"
                 />
               </a>
-              
             </div>
             <button
               style={buttonStyle}
@@ -147,7 +146,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                 href="/about/story"
+                  href="/about/story"
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> About Us
@@ -311,30 +310,26 @@ const Footer = () => {
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
           </div>
           <div className="font-[sitka-banner] text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
-          
-                <Link
-                  href="/privacy-policy"
-                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
-                >
-                   Privacy Policy
-                </Link>
-                 
-             
-                <Link
-                  href="/terms-and-condition"
-                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  Terms & Conditions
-                </Link>
-             
-             
-                <Link
-                  href="/cookies-and-consent-policy"
-                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  Cookie Policy
-                </Link>
-             
+            <Link
+              href="/privacy-policy"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/terms-and-condition"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+            >
+              Terms & Conditions
+            </Link>
+
+            <Link
+              href="/cookies-and-consent-policy"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+            >
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
