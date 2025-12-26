@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { facebook, instagram, linkedin, youtube } from "@/utills/constants";
 
 const Footer = () => {
   const [open, setOpen] = useState(false); // dropdown state
@@ -55,7 +56,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3">
               <a
-                href="https://www.instagram.com/madhubanresortsomaiya"
+                href={instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition"
@@ -67,7 +68,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://www.facebook.com/share/1LHQF9QhuJ/"
+                href={facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition"
@@ -78,6 +79,31 @@ const Footer = () => {
                   className="w-10 h-10"
                 />
               </a>
+              <a
+                href={youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
+                  alt="Youtube"
+                  className="w-11 h-10"
+                />
+              </a>
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
+                  alt="Linkedin"
+                  className="w-10 h-10"
+                />
+              </a>
+              
             </div>
             <button
               style={buttonStyle}
@@ -222,7 +248,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/cookie-policy"
+                  href="/cookies-and-consent-policy"
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" />Cookie Policy

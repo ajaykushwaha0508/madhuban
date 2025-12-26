@@ -5,6 +5,7 @@ import React, { useState ,useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { facebook, instagram, linkedin, youtube } from "@/utills/constants";
 
 const MainNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,7 +104,7 @@ const MainNavigation = () => {
           </div>
           <div className="flex items-center space-x-3">
             <a
-              href="https://www.instagram.com/madhubanresortsomaiya"
+              href={instagram}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -114,13 +115,35 @@ const MainNavigation = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/share/1LHQF9QhuJ/"
+              href={facebook}
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
                 alt="Facebook"
+                className="w-5 h-5"
+              />
+            </a>
+            <a
+              href={youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
+                alt="Youtube"
+                className="w-6 h-5"
+              />
+            </a>
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
+                alt="Linkdin"
                 className="w-5 h-5"
               />
             </a>

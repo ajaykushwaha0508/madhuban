@@ -9,6 +9,8 @@ import {
   List,
   ListItem,
   ListItemText,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CustomBanner from "@/common-components/banner/CustomBanner";
@@ -26,6 +28,8 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
   marginBottom: theme.spacing(2),
+  position: "relative",
+  width: "fit-content",
 }));
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
@@ -41,102 +45,116 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   paddingLeft: theme.spacing(3),
 }));
 
-const privacyData = {
-  title: "Privacy Policy",
+const t_and_c_data = {
+  title: "Terms And Conditions",
   lastUpdated: "1 August 2025",
   companyName: "VyomEdge",
   website: "info@vyomedge.com",
-  description : "Welcome to Madhuban Eco Retreat. This Cookies & Consent Policy explains how we use cookies and similar technologies when you visit our website https://www.madhubanecoretreat.com/ and how you can control your preferences.",
-
+  description :"Welcome to Madhuban Eco Retreat! These Terms & Conditions govern your use of our website, booking services, on-site facilities, experiences, and interactions with our team. By accessing or booking through https://www.madhubanecoretreat.com/, you agree to comply with and be bound by these terms.",
   sections: [
     {
-      title: "1. What Are Cookies?",
-      content:
-        "Cookies are small text files stored on your device (computer, tablet, or mobile) when you visit a website. They help us recognize your browser and remember certain information to improve your experience, such as your language preference, personalization settings, and pages you visit. Cookies do not give us access to your personal files or sensitive data on your device.",
-    },
-    {
-      title: "2. Types of Cookies We Use",
-      itemsObjects: [
-        {
-          title: "a. Essential Cookies",
-          desc: "These cookies are necessary for the website to function correctly. They enable core features like secure navigation, session management, and booking processes. Without these cookies, parts of the website may not work properly.",
-        },
-        {
-          title: "b. Performance & Analytics Cookies",
-          desc: "We use cookies to understand how visitors interact with our site so we can improve performance. These cookies collect anonymous data about page visits, time spent on pages, and website behavior. They help us make the site more efficient and user-friendly.",
-        },
-        {
-          title: "c. Functionality Cookies",
-          desc: "These cookies remember your preferences during visits, such as region, language, or other display choices, so you don’t have to reset them each time.",
-        },
-        {
-          title: "d. Advertising & Third-Party Cookies (if any)",
-          desc: "Our site may include content and features from third parties (e.g., maps, social media or analytics tools) that use their own cookies. These cookies may track your activity across websites and help tailor marketing and content offers. You can manage or disable these through your browser settings.",
-        },
-      ],
-    },
-    {
-      title: "3. Your Consent",
-      content:
-        "By continuing to browse and use our website, you consent to the placement of cookies on your device as described in this policy. If you do not wish to accept cookies, you can change your browser settings to reject or block cookies. However, this may impact your ability to fully use certain features of the site.",
-    },
-    {
-      title: "4. How to Control Cookies",
-      content: "Most web browsers allow you to:",
+      title: "1. Reservations & Payments",
       items: [
-        "Accept or reject cookies",
-        "Delete existing cookies",
-        "Set preferences for specific websites",
+        "All reservations are subject to availability.",
+        "A valid online booking, phone confirmation, or email confirmation constitutes a reservation.",
+        " Advance payment or security deposit may be required as per the booking terms provided at the time of reservation.",
+        "Prices, offers, and packages are subject to change without prior notice unless confirmed in writing.",
       ],
-      note:"You can usually find these controls in your browser’s “Settings” or “Preferences” menu. Please refer to your browser provider’s help section for detailed instructions."
     },
     {
-      title: "5. Third-Party Services",
-      content: "Some services used by our website (e.g., analytics, social integrations or maps) may set cookies on your device. We do not control these cookies and recommend reviewing the privacy policies of those third parties to understand how they use cookies and other tracking technologies.",
-      
+      title: "2. Check-In & Check-Out",
+      items: [
+        "Check-in and check-out times depend on final confirmation.",
+        "Early check-in or late check-out may be permitted subject to availability and may incur additional charges",
+      ],
     },
     {
-      title: "6. Security & Your Data",
-      content: "Cookies used on our site are managed with appropriate security measures. However, no online method of transmitting or storing information is completely secure, and we cannot guarantee absolute protection.",
+      title: "3. Cancellation & Refund",
+      items: [
+        "Cancellations must be communicated to us in writing as per our Cancellation & Refund Policy.",
+        " Refunds, if eligible, will be processed through the original payment method as per policy timelines.",
+      ],
     },
     {
-      title: "7. Changes to This Policy",
-      content: "We may update this policy from time to time to reflect changes in technology, legal requirements, or our privacy practices. Updated versions will be posted on this page with a revised Effective Date.",
+      title: "4. Guest Conduct & Safety",
+      items: [
+        "Guests are expected to respect resort property, staff, and other visitors.",
+        "Smoking is permitted only in designated areas.",
+        "Use of alcohol, recreational substances, or behavior which endangers others is strictly prohibited.",
+        "The management reserves the right to refuse service or accommodation to anyone violating rules or behaving in an unsafe manner.",
+      ],
     },
     {
-      title: "8.  Contact Us",
-      content: "If you have questions about cookies or privacy practices at Madhuban Eco Retreat, please contact us via the Contact Us page on our website.",
+      title: "5. Health & Outdoor Activities",
+      items: [
+        "Participation in outdoor experiences, forest walks, bird watching, nature trails, and leisure activities is voluntary and at your own risk.",
+        "Guests should evaluate personal health suitability before joining any activity.",
+        "Madhuban Eco Retreat is not responsible for injuries arising from personal participation in these activities.",
+      ],
     },
+    {
+      title: "6. Property, Liability & Damages",
+      items: [
+        "Guests are liable for any damage caused to rooms, facilities, equipment, or resort property.",
+        "Management reserves the right to charge for repairs, replacements, or additional cleaning if required.",
+      ],
+    },
+    {
+      title: "7. Privacy & Personal Information",
+      items: [
+        "Use of guest data collected during booking, check-in, or website interaction is governed by our Privacy Policy.",
+        "We take appropriate measures to protect personal information but are not responsible for third-party security breaches beyond our control.",
+      ],
+    },
+    {
+      title: "8. Third-Party Links & Services",
+      items: [
+        "The website may contain links to external platforms for maps, bookings, social media, or partner services.",
+        " Madhuban Eco Retreat is not responsible for content, transactions, policies, or practices of third-party sites.",
+      ],
+    },
+    {
+      title: "9. Intellectual Property",
+      items: [
+        "All content, branding elements, images, text, and digital assets on this site are owned by Madhuban Eco Retreat unless otherwise stated.",
+        "Unauthorized use, reproduction, or distribution of any content is prohibited.",
+      ],
+    },
+    {
+      title: "10. Amendments",
+      items: [
+        "Madhuban Eco Retreat reserves the right to modify or update these Terms & Conditions at any time without prior notice.",
+        "Continued use of our website, services, or facilities constitutes acceptance of updated terms.",
+      ],
+    }
   ],
 };
 
-export default function PrivacyPolicy() {
+export default function TermsAndCondition() {
   return (
     <>
       <CustomBanner
         showLogo={true}
         logoSrc="/logo.png"
-        title={"Our Cookie Policy"}
+        title={"Terms And Conditions"}
         breadcrumbs={[
           {
             name: "Home",
             goesto: "/",
           },
           {
-            name: "Cookie Policy",
-            goesto: "/cookie-policy",
+            name: "Terms And Conditions",
+            goesto: "/terms-and-condition",
           },
         ]}
       />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
-
-        <Typography sx={{mb:4 ,fontSize : 18}}>
-          {privacyData.description}
+         <Typography sx={{mb:4 ,fontSize : 18}}>
+          {t_and_c_data?.description}
         </Typography>
-
         {/* Privacy Sections */}
-        {privacyData.sections.map((section, index) => (
+        {t_and_c_data.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
             <SectionTitle variant="h5" component="h2">
               {section.title}
@@ -233,34 +251,8 @@ export default function PrivacyPolicy() {
                 </Typography>
               </Box>
             )}
-
-            {section?.itemsObjects?.map((obj, i) => {
-              return (
-                <Box key={i} sx={{ mb: 4 }}>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      fontSize: 20,
-                      fontWeight: 500,
-                      mb: 1,
-                    }}
-                  >
-                    {obj.title}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                    }}
-                  >
-                    {obj.desc}
-                  </Typography>
-                </Box>
-              );
-            })}
           </StyledPaper>
         ))}
-
-        
       </Container>
     </>
   );
