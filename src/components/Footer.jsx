@@ -1,5 +1,5 @@
 // src/components/Footer.js
-"use client"
+"use client";
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </Link>
             </div>
-                  <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider">
+            <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider">
               An eco-luxury retreat nestled near Ratapani Wildlife Sanctuary,
               offering sustainable luxury and immersive nature experiences.
             </p>
@@ -103,7 +103,6 @@ const Footer = () => {
                   className="w-10 h-10"
                 />
               </a>
-              
             </div>
             <button
               style={buttonStyle}
@@ -147,7 +146,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                 href="/about/story"
+                  href="/about/story"
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> About Us
@@ -216,7 +215,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Contact Us
@@ -228,30 +227,6 @@ const Footer = () => {
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> FAQs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" /> Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms-and-condition"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" />Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookies-and-consent-policy"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" />Cookie Policy
                 </Link>
               </li>
             </ul>
@@ -330,9 +305,31 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-center">
+        <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-between">
           <div className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
+          </div>
+          <div className="font-[sitka-banner] text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
+            <Link
+              href="/privacy-policy"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/terms-and-condition"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+            >
+              Terms & Conditions
+            </Link>
+
+            <Link
+              href="/cookies-and-consent-policy"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+            >
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
