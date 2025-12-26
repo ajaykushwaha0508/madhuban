@@ -204,6 +204,30 @@ const Footer = () => {
                   <ChevronRight className="w-4 h-4 mr-1" /> FAQs
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  <ChevronRight className="w-4 h-4 mr-1" /> Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-and-condition"
+                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  <ChevronRight className="w-4 h-4 mr-1" />Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookie-policy"
+                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  <ChevronRight className="w-4 h-4 mr-1" />Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
 

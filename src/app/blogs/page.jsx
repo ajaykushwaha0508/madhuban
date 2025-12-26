@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { getAllBlogs } from "@/services/blog/blogServices";
 import Blog from "@/components/blog/Blog";
+import NewBlogPage from "@/components/blog/NewBlog";
 
 const BlogPage = () => {
   const getBlogs = async () => {
@@ -21,7 +22,7 @@ const BlogPage = () => {
       </div>
     );
 
-  return <Blog />;
+  return <NewBlogPage />;
 };
 
 export default BlogPage;
