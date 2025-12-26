@@ -1,0 +1,12 @@
+:root{
+    --primary-gray: #d1c8c1;
+    --primary-gray2: rgb(110,97,70)
+}
+
+.bg-primary-gray {
+  background-color:var( --primary-gray)
+}
+
+.bg-primary-gray2 {
+  background-color:var( --primary-gray2)
+}

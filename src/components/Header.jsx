@@ -29,7 +29,7 @@ const MainNavigation = () => {
         { name: "Eco-Philosophy", path: "/about/eco-philosophy" },
         { name: "Vision & Mission", path: "/about/Vision-&-Mission" },
         // { name: "Our Team", path: "/about/Our-Team" },
-        { name: "Blog", path: "/blog" },
+        { name: "Blog", path: "/blogs" },
       ],
     },
     {
@@ -82,9 +82,9 @@ const MainNavigation = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-[#D1C8C1] shadow-lg ">
+    <header className="fixed w-full z-50 bg-primary-gray shadow-lg ">
       {/* Top Info Bar */}
-      <div className="hidden lg:block bg-[rgb(110,97,70)] text-white py-1 px-4">
+      <div className="hidden lg:block bg-primary-gray2 text-white py-1 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <a
