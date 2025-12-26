@@ -216,7 +216,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Contact Us
@@ -228,30 +228,6 @@ const Footer = () => {
                   className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> FAQs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" /> Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms-and-condition"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" />Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookies-and-consent-policy"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
-                >
-                  <ChevronRight className="w-4 h-4 mr-1" />Cookie Policy
                 </Link>
               </li>
             </ul>
@@ -330,9 +306,35 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-center">
+        <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-between">
           <div className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
+          </div>
+          <div className="font-[sitka-banner] text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
+          
+                <Link
+                  href="/privacy-policy"
+                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
+                >
+                   Privacy Policy
+                </Link>
+                 
+             
+                <Link
+                  href="/terms-and-condition"
+                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  Terms & Conditions
+                </Link>
+             
+             
+                <Link
+                  href="/cookies-and-consent-policy"
+                  className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  Cookie Policy
+                </Link>
+             
           </div>
         </div>
       </div>
