@@ -69,7 +69,7 @@ const MainNavigation = () => {
     },
     {
       name: "Contact",
-      path: "/contact",
+      path: "/contact-us",
       dropdown: null,
     },
   ];

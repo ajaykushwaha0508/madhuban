@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./contact.css";
+import "./Contact.css";
 
 // ⚠️ CHANGE THIS TO YOUR WHATSAPP NUMBER
 // Format: Country code + number (no + sign, no spaces)
