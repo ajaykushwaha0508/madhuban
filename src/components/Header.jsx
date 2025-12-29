@@ -172,9 +172,9 @@ const MainNavigation = () => {
             className="h-20 w-20 filter brightness-75"
           />
           <div className="flex flex-col justify-center">
-            <h1 className="font-[sitka-banner] tracking-wide text-xl font-bold text-[rgb(110,97,70)] leading-tight">
+            <div className="font-[sitka-banner] tracking-wide text-xl font-bold text-[rgb(110,97,70)] leading-tight">
               Madhuban Eco Retreat
-            </h1>
+            </div>
 
             <p className="font-[sitka-banner] tracking-wider text-sm text-[rgb(110,97,70)] leading-tight">
               Ratapani Tiger Reserve,
