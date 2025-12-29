@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { facebook, instagram, linkedin, youtube } from "@/utills/constants";
+import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
 
 const Footer = () => {
   const [open, setOpen] = useState(false); // dropdown state
@@ -107,7 +107,7 @@ const Footer = () => {
             <button
               style={buttonStyle}
               onClick={() => {
-                window.open("https://wa.me/+919770558419", "_blank");
+                window.open(`https://wa.me/${phone}`, "_blank");
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "#1DA851";
@@ -251,7 +251,7 @@ const Footer = () => {
                   href="tel:+917895432160"
                   className="text-[#D1C8C1] font-[sitka-banner] tracking-wider text-lg"
                 >
-                  +91 9770 558 419
+                 +{phone}
                 </a>
               </li>
               <li className="flex">
@@ -260,7 +260,7 @@ const Footer = () => {
                   href="mailto:info@madhubanecoretreat.com"
                   className="text-[#D1C8C1] font-[sitka-banner] tracking-wider text-lg"
                 >
-                  madhubanresort@somaiya.com
+                  {gmail}
                 </a>
               </li>
               <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider text-lg">

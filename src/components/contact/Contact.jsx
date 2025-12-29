@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import "./contactPage.css";
+import { phone } from "@/utills/constants";
 
-const ADMIN_WHATSAPP = "919770558419";
+const ADMIN_WHATSAPP = phone;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
