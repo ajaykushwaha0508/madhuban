@@ -330,6 +330,13 @@ const Footer = () => {
             >
               Cookie Policy
             </Link>
+
+            <Link
+              href="/disclaimer"
+              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+            >
+              Disclaimer
+            </Link>
           </div>
         </div>
       </div>

@@ -10,3 +10,10 @@
 .bg-primary-gray2 {
   background-color:var( --primary-gray2)
 }
+
+.text-primary-gray{
+  color: var( --primary-gray);
+}
+.text-primary-gray2{
+  color: var( --primary-gray2);
+}
