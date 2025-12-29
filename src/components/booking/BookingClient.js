@@ -5,11 +5,9 @@ import { useSearchParams } from "next/navigation";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Calendar } from "lucide-react";
+import { phone } from "@/utills/constants";
 
-// ⚠️ CHANGE THIS TO YOUR WHATSAPP NUMBER
-// Format: Country code + number (no + sign, no spaces)
-// Example: 919876543210
-const ADMIN_WHATSAPP = "919770558419";
+const ADMIN_WHATSAPP = phone;
 
 const BookingClient = () => {
   const searchParams = useSearchParams();

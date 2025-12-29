@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CustomBanner from "@/common-components/banner/CustomBanner";
+import { gmail, phone } from "@/utills/constants";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -110,7 +111,7 @@ const privacyData = {
         title:
           "If you wish to exercise any of these rights, please contact us at:",
         email: "info@vyomedge.com",
-        phone: "+91 9770 558 419",
+        phone: `+${phone}`,
       },
     },
     {
@@ -130,8 +131,8 @@ const privacyData = {
         companyName: "Madhuban Eco Retreat",
         street: "Sarkanpur, Road, Dongri, Near Ratapani Wildlife Sanctuary",
         location: "Bhopal, Madhya Pradesh, India- 466446",
-        phone: "+91 9770 558 419",
-        email: "madhubanresort@somaiya.com",
+        phone: `+${phone}`,
+        email: gmail,
       },
     },
   ],

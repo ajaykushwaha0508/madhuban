@@ -5,12 +5,15 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdCloseCircle } from "react-icons/io";
 import Cookies from "js-cookie";
+import { usePathname } from "next/navigation";
+import { phone } from "@/utills/constants";
 
-const ADMIN_WHATSAPP = "919770558419";
+const ADMIN_WHATSAPP = phone;
 
 const ContactModal = () => {
   const COOKIE_NAME = "contact_popup_hidden";
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
 
   const {
     register,
@@ -74,7 +77,9 @@ const ContactModal = () => {
 
     if (!isHidden) {
       setTimeout(() => {
-        setOpen(true);
+        if(pathName !== "/contact-us"){
+             setOpen(true);
+        }
       }, 7000);
     }
   }, []);

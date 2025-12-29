@@ -5,7 +5,7 @@ import React, { useState ,useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import { facebook, instagram, linkedin, youtube } from "@/utills/constants";
+import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
 
 const MainNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,13 +93,13 @@ const MainNavigation = () => {
               className="flex items-center hover:text-[#D1C8C1]"
             >
               <Phone className="w-4 h-4 mr-1" />
-              <span>+91 9770 558 419</span>
+              <span>+{phone}</span>
             </a>
             <a
-              href="mailto:madhubanresort@somaiya.com"
+              href={`mailto:${gmail}`}
               className="hover:text-[#D1C8C1]"
             >
-              madhubanresort@somaiya.com
+              {gmail}
             </a>
           </div>
           <div className="flex items-center space-x-3">
@@ -148,7 +148,7 @@ const MainNavigation = () => {
               />
             </a>
             <a
-              href="https://wa.me/+919770558419"
+              href={`https://wa.me/${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >

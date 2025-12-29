@@ -9,9 +9,9 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa6";
-import { facebook, instagram, linkedin, youtube } from "@/utills/constants";
+import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
 
-const ADMIN_WHATSAPP = "919770558419";
+const ADMIN_WHATSAPP = phone;
 
 export default function ContactPage2() {
   const {
@@ -116,7 +116,7 @@ Message: ${data.message}
               <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
                 <IoCall /> Call / WhatsApp
               </h3>
-              <p className="text-gray-700 font-medium">+91 9770 558 419</p>
+              <p className="text-gray-700 font-medium">+{phone}</p>
               <p className="text-sm text-gray-600">
                 Send us a WhatsApp message and we’ll respond within 24 hours.
               </p>
@@ -127,7 +127,7 @@ Message: ${data.message}
               <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
                 <IoMail /> Email
               </h3>
-              <p className="text-gray-700">madhubanresort@somaiya.com</p>
+              <p className="text-gray-700">{gmail}</p>
             </div>
 
             {/* Social Media */}
