@@ -69,11 +69,13 @@ const ContactModal = () => {
     }
   };
 
-   useEffect(() => {
+  useEffect(() => {
     const isHidden = Cookies.get(COOKIE_NAME);
 
     if (!isHidden) {
-      setOpen(true);
+      setTimeout(() => {
+        setOpen(true);
+      }, 7000);
     }
   }, []);
 
@@ -90,7 +92,7 @@ const ContactModal = () => {
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
       open={open}
-      onClose={handleClose}
+      onClose={()=>{}}
       closeAfterTransition
       slots={{ backdrop: Backdrop }}
       slotProps={{
