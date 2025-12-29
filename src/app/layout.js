@@ -5,6 +5,7 @@ import MainNavigation from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./not-found"
 import ContactModal from "@/components/modals/ContactModal";
+import CookiesPopup from "@/common-components/cookies/cookies";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <ContactModal/>
+         <CookiesPopup />
       </body>
     </html>
   );

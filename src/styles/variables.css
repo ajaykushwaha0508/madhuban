@@ -1,6 +1,6 @@
 :root{
     --primary-gray: #d1c8c1;
-    --primary-gray2: rgb(110,97,70)
+    --primary-gray2: #6E6146;
 }
 
 .bg-primary-gray {
@@ -16,4 +16,8 @@
 }
 .text-primary-gray2{
   color: var( --primary-gray2);
+}
+
+.primary-font-family{
+  font-family: 'sikta banner' ,serif;
 }
