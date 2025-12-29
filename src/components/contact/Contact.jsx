@@ -2,9 +2,6 @@
 import React, { useState } from "react";
 import "./contactPage.css";
 
-// ⚠️ CHANGE THIS TO YOUR WHATSAPP NUMBER
-// Format: Country code + number (no + sign, no spaces)
-// Example: 919876543210
 const ADMIN_WHATSAPP = "919770558419";
 
 const Contact = () => {
@@ -99,7 +96,7 @@ ${formData.message.trim()}`;
   };
 
   return (
-    <div className="contact-page bg-[#D1C8C1]">
+    <div className="contact-page bg-[#D1C8C1] ">
       {/* Banner Section */}
       <div className="relative w-full h-[85vh] overflow-hidden rounded-bl-[60px] rounded-br-[60px]">
         <img

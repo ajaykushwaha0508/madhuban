@@ -1,8 +1,10 @@
 import Contact from "@/components/contact/Contact"
+import ContactPage2 from "@/components/contact/Contact2";
 
 export default function ContactPage(){
     return(
-        <Contact/>
+        // <Contact/>
+        <ContactPage2/>
     )
 }
 
