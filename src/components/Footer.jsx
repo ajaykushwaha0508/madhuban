@@ -38,9 +38,9 @@ const Footer = () => {
                   className="h-20 w-20 filter brightness-75"
                 />
                 <div className="flex flex-col justify-center">
-                  <h1 className="font-inter text-base font-bold text-black leading-tight">
+                  <div className="font-inter text-base font-bold text-black leading-tight">
                     Madhuban Eco Retreat
-                  </h1>
+                  </div>
                   <p className="font-inter text-xs text-black leading-tight">
                     Ratapani Tiger Reserve,
                   </p>
@@ -140,9 +140,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
               Quick Links
-            </h3>
+            </div>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -234,9 +234,9 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
               Contact Us
-            </h3>
+            </div>
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
