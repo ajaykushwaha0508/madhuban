@@ -18,6 +18,14 @@
   color: var( --primary-gray2);
 }
 
+.border-primary-gray{
+  color: var( --primary-gray);
+}
+
+.border-primary-gray2{
+  color: var( --primary-gray2);
+}
+
 .primary-font-family{
   font-family: 'sikta banner' ,serif;
 }
