@@ -38,7 +38,7 @@ const VisionMission = () => {
   return (
     <>
       <motion.div
-        className="text-center pb-16 pt-12 bg-primary-gray2"
+        className="text-center pb-16 pt-12 bg-primary-gray2 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -47,18 +47,18 @@ const VisionMission = () => {
         <div className="max-w-7xl mx-auto ">
           <div className="flex items-center justify-center mb-4">
             <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-white font-semibold tracking-wider">
+            <h2 className="text-2xl md:text-5xl font-primary text-white font-semibold tracking-wider">
               Vision & Mission
             </h2>
             <hr className="w-16 border-t border-white ml-4" />
           </div>
 
-          <div className="flex flex-col gap-4 bg-primary-gray p-4 rounded-2xl">
+          <div className="flex flex-col gap-4 bg-primary-gray p-4  md:rounded-2xl">
             {/* our vision */}
             <motion.div className="h-full" variants={itemVariants}>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2  gap-12">
                 <motion.div
-                  className="h-full bg-primary-gray2 rounded-2xl"
+                  className="h-full bg-primary-gray2 rounded-2xl order-2 md:order1"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
@@ -79,7 +79,7 @@ const VisionMission = () => {
                 </motion.div>
 
                 <motion.div
-                  className="h-full"
+                  className="h-full order-1 md:order2"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}

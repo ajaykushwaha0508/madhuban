@@ -34,7 +34,7 @@ const itemVariants = {
 const AboutSection = () => {
   return (
    <motion.div
-        className="text-center pb-16 pt-12 bg-[#D1C8C1]"
+        className="text-center pb-16 pt-12 bg-[#D1C8C1] overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -43,7 +43,7 @@ const AboutSection = () => {
         <div className="max-w-7xl mx-auto ">
           <div className="flex items-center justify-center mb-4">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider">
+            <h2 className="text-2xl md:text-5xl  font-primary text-[rgb(110,97,70)] font-semibold tracking-wider">
               About Madhuban Eco Retreat
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -59,13 +59,13 @@ const AboutSection = () => {
               >
                 <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
                   <div className="text-[rgb(110,97,70)] font-arial-narrow">
-                    <p className="mb-6  text-justify">
+                    <p className="mb-6 text-lg md:text-xl  text-justify">
                       Just outside the vibrant city of Bhopal, on the edge of
                       the serene Ratapani Wildlife Sanctuary, lies Madhuban Eco
                       Retreat — a place where time slows down, nature speaks
                       louder, and life finds its authentic rhythm.
                     </p>
-                    <p className="mb-6 text-justify">
+                    <p className="mb-6 text-md md:text-xl text-justify">
                       What was once dry, unused land has transformed into a
                       lush, thriving, and self-sustaining eco-lodge. This
                       evolution is rooted in slow tourism, sustainable tourism,
@@ -83,7 +83,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.7 }}
               >
                 <div className=" rounded-2xl shadow-lg p-8 bg-[#6e6146]">
-                  <h2 className="font-primary text-2xl text-white mb-4">
+                  <h2 className="font-primary text-lg md:text-xl text-white mb-4">
                     Today Madhuban stands As
                   </h2>
 
@@ -96,7 +96,7 @@ const AboutSection = () => {
                           variants={itemVariants}
                           whileHover={{ scale: 1.03 }}
                         >
-                          <div className="block rounded-xl border border-[#6e6146ff]  p-4  font-medium bg-[#d1c8c1] transition">
+                          <div className="text-md block rounded-xl border border-[#6e6146ff]  p-4  font-medium bg-[#d1c8c1] transition">
                             {item}
                           </div>
                         </motion.div>
@@ -115,7 +115,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-xl md:text-xl pt-12">
+              <p className="text-lg md:text-xl pt-12">
                 Families, solo travelers, artists, researchers, nature lovers,
                 and spiritual seekers come to Madhuban Eco Retreat to rediscover{" "}
                 <br /> what truly matters — simplicity, serenity, and balance.

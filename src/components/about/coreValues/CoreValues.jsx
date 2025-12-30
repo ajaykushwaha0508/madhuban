@@ -76,7 +76,7 @@ const CoreValues = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center mb-4">
           <hr className="w-16 border-t text-primary-gray2 mr-4" />
-          <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+          <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
             Our Core Values
           </h2>
           <hr className="w-16 border-t text-primary-gray2 ml-4" />
@@ -91,7 +91,7 @@ const CoreValues = () => {
           >
             <div className=" mx-auto px-4 py-10 text-lg text-gray-800">
               <div className="text-primary-gray2 font-arial-narrow">
-                <p className="mb-4">
+                <p className="mb-4 text-lg md:text-xl">
                   Our values shape every choice—from how we build, to how we
                   share life with nature.
                 </p>
@@ -107,10 +107,10 @@ const CoreValues = () => {
                     {coreValues.map((feature, index) => (
                       <motion.div key={index} variants={itemVariants}>
                         <div className="bg-primary-gray2 h-full flex flex-col justify-center bg-opacity-50 text-start item-center gap-2 rounded-lg p-6 backdrop-blur-sm">
-                          <p className="font-primary text-2xl tracking-wider text-white text-center text-opacity-90">
+                          <p className="font-primary text-xl md:text-2xl tracking-wider text-white text-center text-opacity-90">
                             {feature.title}
                           </p>
-                          <p className="  text-white text-center text-opacity-90">
+                          <p className="text-lg md:text-xl  text-white text-center text-opacity-90">
                             {feature.description}
                           </p>
                         </div>

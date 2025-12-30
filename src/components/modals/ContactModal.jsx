@@ -7,6 +7,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import Cookies from "js-cookie";
 import { usePathname } from "next/navigation";
 import { phone } from "@/utills/constants";
+import "./ContactModal.css";
 
 const ADMIN_WHATSAPP = phone;
 
@@ -77,8 +78,8 @@ const ContactModal = () => {
 
     if (!isHidden) {
       setTimeout(() => {
-        if(pathName !== "/contact-us"){
-             setOpen(true);
+        if (pathName !== "/contact-us") {
+          setOpen(true);
         }
       }, 7000);
     }
@@ -97,7 +98,7 @@ const ContactModal = () => {
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
       open={open}
-      onClose={()=>{}}
+      onClose={() => {}}
       closeAfterTransition
       slots={{ backdrop: Backdrop }}
       slotProps={{
@@ -114,7 +115,7 @@ const ContactModal = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: { xs: "30%" },
+            width: { xs:'90%', md: "30%" },
             boxShadow: 24,
             border: "none",
             outline: "none",
@@ -136,11 +137,11 @@ const ContactModal = () => {
           >
             <IoMdCloseCircle />
           </Box>
-          <div className="  rounded-2xl shadow-lg p-8 bg-[#6e6146] ">
-            <h2 className="text-3xl font-semibold text-white text-center mb-2 font-primary">
+          <div className="rounded-2xl shadow-lg p-2 py-8 md:p-8 bg-[#6e6146] ">
+            <h2 className="text-xl md:text-3xl font-semibold text-white text-center mb-2 font-primary">
               Send Us a Message
             </h2>
-            <p className="text-gray-200 mb-6 text-center">
+            <p className="text-sm  md:text-xl text-gray-200 mb-2 md:mb-6 text-center">
               Your message goes directly to WhatsApp.
             </p>
 
@@ -229,7 +230,7 @@ const ContactModal = () => {
               </form>
             </div>
 
-            <p className="text-sm text-white mt-4 text-center">
+            <p className="text-sm text-white md:mt-4 text-center">
               We promise to respond within 24 hours.
             </p>
           </div>

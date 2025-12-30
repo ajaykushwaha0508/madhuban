@@ -66,7 +66,7 @@ const sustainabilityFeatures = [
 const EcoPhilosophy = () => {
   return (
     <motion.div
-        className="text-center pb-16 pt-20 bg-[#D1C8C1]"
+        className="text-center pb-16 pt-20 bg-[#D1C8C1] overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -75,7 +75,7 @@ const EcoPhilosophy = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-center mb-4">
             <hr className="w-16 border-t text-primary-gray2 mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+            <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
               Eco Philosophy
             </h2>
             <hr className="w-16 border-t text-primary-gray2 ml-4" />
@@ -90,7 +90,7 @@ const EcoPhilosophy = () => {
             >
               <div className=" mx-auto px-4 py-10 text-lg text-gray-800">
                 <div className="text-primary-gray2 font-arial-narrow">
-                  <p className="mb-6  text-justify">
+                  <p className="mb-6 text-lg md:text-xl  text-justify">
                     At Madhuban Eco Retreat, nature is not a backdrop — it is
                     the foundation of everything we do. Our eco philosophy is
                     simple: Live lightly, protect consciously, and give back
@@ -98,7 +98,7 @@ const EcoPhilosophy = () => {
                   </p>
 
                   <div className="bg-primary-gray2 rounded-2xl p-6 py-10">
-                    <p className="text-3xl text-white font-primary font-semibold">
+                    <p className="text-lg md:text-3xl text-white font-primary font-semibold">
                       Here’s how we bring this philosophy to life
                     </p>
                     <motion.div
@@ -123,13 +123,13 @@ const EcoPhilosophy = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7 }}
                     >
-                      <p className="text-xl md:text-xl pt-12 text-primary-gray2">
+                      <p className="text-lg md:text-xl pt-12 text-primary-gray2">
                         Our commitment extends beyond the retreat. We actively
                         participate in community development, volunteering, and
                         conservation-based initiatives that benefit the land and
                         people around us.
                       </p>
-                      <p className="text-xl md:text-xl pt-5 text-primary-gray2">
+                      <p className="text-lg md:text-xl pt-5 text-primary-gray2">
                         Eco-living at Madhuban is not a concept — it is a daily
                         practice that shapes how we grow, serve, and sustain
                       </p>
