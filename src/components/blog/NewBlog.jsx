@@ -99,7 +99,7 @@ const NewBlogPage = async () => {
             <div className="custom-container py-4 md:py-8">
                 <div className='flex gap-2 items-center'>
                     <div className="w-[20px] h-[35px] bg-primary-gray2 rounded-r-full"></div>
-                    <h2 className='responsiveheading2 text-[22px] font-[sitka-banner]'>{`Blogs`}</h2>
+                    <h2 className='responsiveheading2 text-[22px] font-primary'>{`Blogs`}</h2>
                 </div>
                 <div className="mt-10 flex items-center justify-center gap-5">
                     <BlogListWithPagination

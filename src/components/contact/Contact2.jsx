@@ -76,7 +76,7 @@ Message: ${data.message}
       <div className="max-w-7xl mx-auto">
         {/* Page Heading */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-[#3e3a2d] mb-4 font-[sitka-banner]">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#3e3a2d] mb-4 font-primary">Contact Us</h1>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Whether you’re planning a peaceful retreat or seeking information
             about our eco tourism experiences, our team at{" "}
@@ -98,7 +98,7 @@ Message: ${data.message}
 
             {/* Location */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
                 <IoLocation /> Location
               </h3>
               <p className="text-gray-700">
@@ -113,7 +113,7 @@ Message: ${data.message}
 
             {/* Call / WhatsApp */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
                 <IoCall /> Call / WhatsApp
               </h3>
               <p className="text-gray-700 font-medium">+{phone}</p>
@@ -124,7 +124,7 @@ Message: ${data.message}
 
             {/* Email */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
                 <IoMail /> Email
               </h3>
               <p className="text-gray-700">{gmail}</p>
@@ -132,7 +132,7 @@ Message: ${data.message}
 
             {/* Social Media */}
             <div>
-              <h3 className="text-xl font-semibold text-[#3e3a2d] mb-3 font-[sitka-banner]">
+              <h3 className="text-xl font-semibold text-[#3e3a2d] mb-3 font-primary">
                 Follow Us
               </h3>
               <div className="flex gap-4 text-gray-700">
@@ -153,7 +153,7 @@ Message: ${data.message}
 
             {/* CTA */}
             <div className="mt-8 rounded-xl bg-[#6e6146]/10 p-6">
-              <h3 className="text-2xl font-semibold text-[#3e3a2d] mb-2 font-[sitka-banner]">
+              <h3 className="text-2xl font-semibold text-[#3e3a2d] mb-2 font-primary">
                 Looking for the Best Weekend Digital Detox Stay Near Ratapani?
               </h3>
               <p className="text-gray-700 mb-4">
@@ -162,7 +162,7 @@ Message: ${data.message}
               </p>
               <Link
                 href="/book-now"
-                className="inline-block rounded-full bg-[#6e6146] px-6 py-3 text-white font-semibold hover:bg-[#5b503a] transition font-[sitka-banner]"
+                className="inline-block rounded-full bg-[#6e6146] px-6 py-3 text-white font-semibold hover:bg-[#5b503a] transition font-primary"
               >
                 Book Now
               </Link>
@@ -171,7 +171,7 @@ Message: ${data.message}
 
           {/* RIGHT SIDE – CONTACT FORM */}
           <div className=" rounded-2xl shadow-lg p-8 bg-[#6e6146]">
-            <h2 className="text-3xl font-semibold text-white mb-2 font-[sitka-banner]">
+            <h2 className="text-3xl font-semibold text-white mb-2 font-primary">
               Send Us a Message
             </h2>
             <p className="text-gray-200 mb-6">
@@ -256,7 +256,7 @@ Message: ${data.message}
                 </div>
                 <button
                   type="submit"
-                  className="submit-btn font-arial-narrow text-[rgb(110,97,70)] font-[sitka-banner]"
+                  className="submit-btn font-arial-narrow text-[rgb(110,97,70)] font-primary"
                 >
                   {isSubmitting ? "Sending..." : "Submit"}
                 </button>
@@ -271,7 +271,7 @@ Message: ${data.message}
 
         {/* MAP SECTION */}
         <div className="mt-16">
-          <h2 className="text-3xl font-semibold text-center text-[#3e3a2d] mb-6 font-[sitka-banner]">
+          <h2 className="text-3xl font-semibold text-center text-[#3e3a2d] mb-6 font-primary">
             Find Us Here
           </h2>
 

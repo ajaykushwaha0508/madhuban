@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </Link>
             </div>
-            <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider">
+            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider">
               An eco-luxury retreat nestled near Ratapani Wildlife Sanctuary,
               offering sustainable luxury and immersive nature experiences.
             </p>
@@ -140,14 +140,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <div className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="text-xl text-[#D1C8C1] tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
               Quick Links
             </div>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about/story"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> About Us
                 </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/stay"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Accommodations
                 </Link>
@@ -165,7 +165,7 @@ const Footer = () => {
               <li className="relative">
                 <button
                   onClick={() => setOpen(!open)}
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   {open ? (
                     <ChevronDown className="w-4 h-4 mr-1" />
@@ -180,7 +180,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/forest-walks-and-nature-trails"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-[sitka-banner] font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
                       >
                         Forest Walks & Nature Trails
                       </Link>
@@ -188,7 +188,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/bird-watching-and-wilderness"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-[sitka-banner] font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
                       >
                         Bird Watching & Wilderness
                       </Link>
@@ -196,7 +196,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/recreational-facilities"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-[sitka-banner] font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
                       >
                         Recreational Facilities
                       </Link>
@@ -208,7 +208,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/gallery"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Gallery
                 </Link>
@@ -216,7 +216,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact-us"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Contact Us
                 </Link>
@@ -224,7 +224,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/faqs"
-                  className="font-[sitka-banner] text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> FAQs
                 </Link>
@@ -234,13 +234,13 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <div className="text-xl text-[#D1C8C1] tracking-widest font-[sitka-banner] font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="text-xl text-[#D1C8C1] tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
               Contact Us
             </div>
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
-                <span className="text-[#D1C8C1] font-[sitka-banner] tracking-wider text-lg">
+                <span className="text-[#D1C8C1] font-primary tracking-wider text-lg">
                   Near Ratapani Wildlife Sanctuary, Bhopal, Madhya Pradesh,
                   India
                 </span>
@@ -249,7 +249,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
                 <a
                   href="tel:+917895432160"
-                  className="text-[#D1C8C1] font-[sitka-banner] tracking-wider text-lg"
+                  className="text-[#D1C8C1] font-primary tracking-wider text-lg"
                 >
                  +{phone}
                 </a>
@@ -258,12 +258,12 @@ const Footer = () => {
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
                 <a
                   href="mailto:info@madhubanecoretreat.com"
-                  className="text-[#D1C8C1] font-[sitka-banner] tracking-wider text-lg"
+                  className="text-[#D1C8C1] font-primary tracking-wider text-lg"
                 >
                   {gmail}
                 </a>
               </li>
-              <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider text-lg">
+              <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-lg">
                 Subscribe to recieve updates on special offers, new experiences,
                 and sustainability initiatives.
               </p>
@@ -278,11 +278,11 @@ const Footer = () => {
               className="w-[70px] h-[70px] mt-3 mb-4 mx-auto filter brightness-75"
               style={{ filter: "brightness(0.75)" }}
             />
-            <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider text-center mx-auto">
+            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-center mx-auto">
               A Somaiya Group Initiative <br /> Where Sustainability Meets
               Hospitality.
             </p>
-            <p className="text-[#D1C8C1] mb-6 font-[sitka-banner] tracking-wider text-xs">
+            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-xs">
               By subscribing, you agree to our Privacy Policy. You can
               unsubscribe at any time.
             </p>
@@ -291,11 +291,11 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="font-[sitka-banner] tracking-wider flex-grow px-4 bg-[#D1C8C1] border border-stone-700 focus:outline-none focus:ring-2 focus:ring-brown-700 rounded-l-md text-[rgb(110,97,70)] placeholder-[rgb(110,97,70)]"
+                  className="font-primary tracking-wider flex-grow px-4 bg-[#D1C8C1] border border-stone-700 focus:outline-none focus:ring-2 focus:ring-brown-700 rounded-l-md text-[rgb(110,97,70)] placeholder-[rgb(110,97,70)]"
                 />
                 <button
                   type="submit"
-                  className="bg-[rgb(106,95,80)] hover:bg-[rgb(87,75,58)] px-4 rounded-r-md font-[sitka-banner] font-medium"
+                  className="bg-[rgb(106,95,80)] hover:bg-[rgb(87,75,58)] px-4 rounded-r-md font-primary font-medium"
                 >
                   Subscribe
                 </button>
@@ -306,34 +306,34 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-between">
-          <div className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-center">
+          <div className="font-primary text-sm text-[#D1C8C1] tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
           </div>
-          <div className="font-[sitka-banner] text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
+          <div className="font-primary text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
             <Link
               href="/privacy-policy"
-              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
+              className="font-primary text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms-and-condition"
-              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
             >
               Terms & Conditions
             </Link>
 
             <Link
               href="/cookies-and-consent-policy"
-              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
             >
               Cookie Policy
             </Link>
 
             <Link
               href="/disclaimer"
-              className="font-[sitka-banner] text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
             >
               Disclaimer
             </Link>

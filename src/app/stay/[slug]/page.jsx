@@ -207,7 +207,7 @@ const AccommodationDetail = () => {
         </p>
         <Link
           href="/stay"
-          className="mt-[30px] font-[sitka-banner] inline-flex items-center bg-green-700 text-gray-500 font-medium py-3 px-6 rounded-md hover:bg-green-600 transition-colors duration-300"
+          className="mt-[30px] font-primary inline-flex items-center bg-green-700 text-gray-500 font-medium py-3 px-6 rounded-md hover:bg-green-600 transition-colors duration-300"
         >
           <ChevronLeft size={20} className="mr-2" />
           Back to All Accommodations
@@ -232,7 +232,7 @@ const AccommodationDetail = () => {
             >
               <ChevronLeft
                 size={20}
-                className="font-[sitka-banner]  font-medium mr-1 group-hover:-translate-x-1 transition-transform duration-300"
+                className="font-primary  font-medium mr-1 group-hover:-translate-x-1 transition-transform duration-300"
               />
               Back to All Accommodations
             </Link>
@@ -274,7 +274,7 @@ const AccommodationDetail = () => {
 
               <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between h-auto md:min-h-[400px]">
                 <div>
-                  <h1 className="text-4xl md:text-4xl font-[sitka-banner] font-semibold text-[rgb(110,97,70)] mb-3">
+                  <h1 className="text-4xl md:text-4xl font-primary font-semibold text-[rgb(110,97,70)] mb-3">
                     {accommodation.name}
                   </h1>
                   <div className="flex items-center mb-4">
@@ -302,14 +302,14 @@ const AccommodationDetail = () => {
                   {accommodation.amenities &&
                     accommodation.amenities.length > 0 && (
                       <div className="mb-6">
-                        <h3 className="text-lg font-[sitka-banner] font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
+                        <h3 className="text-lg font-primary font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
                           Amenities:
                         </h3>
                         <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                           {accommodation.amenities.map((amenity, index) => (
                             <li
                               key={index}
-                              className="flex items-center font-[sitka-banner] font-medium text-[rgb(110,97,70)] tracking-wider"
+                              className="flex items-center font-primary font-medium text-[rgb(110,97,70)] tracking-wider"
                             >
                               <Check
                                 size={16}
@@ -471,7 +471,7 @@ const AccommodationDetail = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <p className="text-md text-[rgb(110,97,70)] mb-2">
-                      <strong className="font-[sitka-banner] tracking-widest font-semibold">
+                      <strong className="font-primary tracking-widest font-semibold">
                         Capacity:
                       </strong>{" "}
                       {accommodation.capacity}
@@ -490,7 +490,7 @@ const AccommodationDetail = () => {
                   {accommodation.capacity && (
                     <div className="flex justify-between items-center">
                       <p className="text-md text-[rgb(110,97,70)] mb-2">
-                        <strong className="font-[sitka-banner] tracking-widest font-semibold">
+                        <strong className="font-primary tracking-widest font-semibold">
                           Capacity:
                         </strong>{" "}
                         {accommodation.capacity}
@@ -511,7 +511,7 @@ const AccommodationDetail = () => {
             {accommodation.galleryImages &&
               accommodation.galleryImages.length > 0 && (
                 <div className="p-6 md:p-8 border-t border-gray-200">
-                  <h2 className="text-3xl font-[sitka-banner] font-semibold text-[rgb(110,97,70)] mb-4">
+                  <h2 className="text-3xl font-primary font-semibold text-[rgb(110,97,70)] mb-4">
                     Gallery
                   </h2>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

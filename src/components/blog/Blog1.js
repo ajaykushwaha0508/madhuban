@@ -10,7 +10,7 @@ const Blog1 = () => {
             <div>
                 <div className='flex gap-2 mb-5'>
                     <div className="w-[20px] h-[35px] bg-primary-gray2 rounded-r-full"></div>
-                    <h2 className='responsiveheading2  flex gap-2 items-center text-[22px] font-[sitka-banner]'> {`Where Smart Learning Meets Smart Thinking`}</h2>
+                    <h2 className='responsiveheading2  flex gap-2 items-center text-[22px] font-primary'> {`Where Smart Learning Meets Smart Thinking`}</h2>
                 </div>
                 <p className="responsive-text text-[#484545] ">{`Education is changing — and we’re here to tell the story.`}</p>
                 <p className="responsive-text text-[#484545] mb-4">{` From smart classrooms to AI-driven learning tools, the `}<strong className='font-bold'>{` Shikso Blog `}</strong>{` brings you the latest ideas, trends, and real stories from schools across India and beyond.`}</p>

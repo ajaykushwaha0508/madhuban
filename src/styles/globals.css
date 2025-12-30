@@ -25,6 +25,10 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+@theme {
+  --font-primary: "Sitka Banner", serif; 
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from {

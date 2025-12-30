@@ -56,11 +56,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"], // custom "font-poppins"
         openSans: ["Open Sans", "sans-serif"], // custom "font-openSans"
         inter: ["Inter", "sans-serif"], // custom "font-inter"
-
-        // ✅ New: Cinzel with fallback
-        cinzel: ["Cinzel", "Palatino Linotype", "sans-serif"],
-
-        "sitka-banner": ['"Sitka Banner"', "serif"], // Quotes needed because of space in name
+        // "sitka-banner": ['"Sitka Banner"', "serif"], // Quotes needed because of space in name
         "arial-narrow": ['"Arial Narrow"', "sans-serif"], // custom "font-cinzel"
       },
 

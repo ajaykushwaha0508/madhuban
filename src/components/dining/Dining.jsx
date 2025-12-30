@@ -49,7 +49,7 @@ const Dining = () => {
       <section className="gallery-section ">
         <div className="flex items-center justify-center mb-8">
           <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-          <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+          <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
             Photo Gallery
           </h2>
           <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -73,7 +73,7 @@ const Dining = () => {
         <div className="flex justify-center mb-5 -mt-7">
           <div className="flex items-center justify-center">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
               Video Gallery
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />

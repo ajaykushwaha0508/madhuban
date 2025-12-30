@@ -12,7 +12,7 @@ const CommonFaq = ({ faqData, title }) => {
     <div className="custom-container py-7 ">
       <div className='flex gap-2 w-fit m-auto'>
         <div className="w-[20px] h-[35px] bg-primary-gray2 rounded-r-full"></div>
-        <h2 className="responsiveheading2  flex w-fit m-auto items-center gap-2 text-[22px] font-[sitka-banner]">{`FAQs `}{""}{title}</h2>
+        <h2 className="responsiveheading2  flex w-fit m-auto items-center gap-2 text-[22px] font-primary">{`FAQs `}{""}{title}</h2>
       </div>
 
       {faqData?.map((item, index) => (

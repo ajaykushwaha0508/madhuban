@@ -49,12 +49,12 @@ const ForestNature = () => {
             experience is more than a stroll. It's a soulful journey through the
             heart of Madhya Pradesh’s thriving wilderness...
           </p>
-          <div className="font-[sitka-banner] divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
+          <div className="font-primary divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-[sitka-banner] space-y-2">
+                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
                     <li>
                       Guided eco-trails with naturalists to explore the flora
                       and local ecosystem
@@ -81,7 +81,7 @@ const ForestNature = () => {
               {
                 title: "Ideal For",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-[sitka-banner] space-y-2">
+                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
                     <li>Nature enthusiasts and eco-tourists in Bhopal</li>
                     <li>Travelers seeking wellness in nature</li>
                     <li>
@@ -101,7 +101,7 @@ const ForestNature = () => {
                     Join us for a tranquil forest walk —{" "}
                     <Link
                       href="/booking"
-                      className="text-[#D1C8C1] underline font-bold tracking-widest font-[sitka-banner]"
+                      className="text-[#D1C8C1] underline font-bold tracking-widest font-primary"
                     >
                       Book Your Nature Trail Now
                     </Link>
@@ -167,7 +167,7 @@ const ForestNature = () => {
         </video>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-[sitka-banner] tracking-widest font-medium mb-4">
+            <h1 className="text-4xl md:text-6xl font-primary tracking-widest font-medium mb-4">
               Forest Walks & Nature Trails
             </h1>
             <p className="text-xl md:text-2xl font-light tracking-wider font-arial-narrow">
@@ -180,7 +180,7 @@ const ForestNature = () => {
                 .getElementById("accordion-section")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="font-[sitka-banner] font-semibold tracking-wider mt-10 text-white border border-white px-4 py-2 rounded-full hover:bg-white hover:text-[rgb(110,97,70)] transition duration-300"
+            className="font-primary font-semibold tracking-wider mt-10 text-white border border-white px-4 py-2 rounded-full hover:bg-white hover:text-[rgb(110,97,70)] transition duration-300"
           >
             ↓ Scroll Down
           </button>
@@ -195,7 +195,7 @@ const ForestNature = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center mb-5">
             <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#D1C8C1] font-semibold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-primary text-[#D1C8C1] font-semibold tracking-wider text-center">
               Explore Our Forest
             </h2>
             <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
@@ -204,12 +204,12 @@ const ForestNature = () => {
             {accordionItems.map((item, index) => (
               <div key={index} className="group">
                 <button
-                  className="font-[sitka-banner] tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
+                  className="font-primary tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                  <span className="font-[sitka-banner] tracking-widest font-bold text-xl">
+                  <span className="font-primary tracking-widest font-bold text-xl">
                     {item.title}
                   </span>
                   <svg
@@ -249,7 +249,7 @@ const ForestNature = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-5">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-bold tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-bold tracking-wider text-center">
               Forest Gallery
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
