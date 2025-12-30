@@ -17,14 +17,14 @@ const SustainabilityFeature = ({ feature }) => {
   const IconComponent = iconMap[icon] || Leaf;
 
   return (
-    <div className="bg-[#1aa321] bg-opacity-50 rounded-lg p-6 backdrop-blur-sm">
+    <div className="bg-primary-gray bg-opacity-50 rounded-lg p-6 backdrop-blur-sm">
       <div className="mb-4">
-        <IconComponent className="w-10 h-10" />
+        <IconComponent className="w-10 h-10 text-primary-gray2" />
       </div>
-      <h3 className="font-primary tracking-widest text-white font-medium  text-xl mb-2">
+      <h3 className="font-primary tracking-widest text-primary-gray2 font-medium  text-xl mb-2">
         {title}
       </h3>
-      <p className="font-primary tracking-wider text-white text-opacity-90">
+      <p className=" text-primary-gray2 text-opacity-90">
         {description}
       </p>
     </div>

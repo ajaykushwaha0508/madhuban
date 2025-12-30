@@ -26,9 +26,9 @@ const MainNavigation = () => {
       name: "About",
       path: "/about",
       dropdown: [
-        { name: "The Madhuban Story", path: "/about/story" },
-        { name: "Eco-Philosophy", path: "/about/eco-philosophy" },
-        { name: "Vision & Mission", path: "/about/Vision-&-Mission" },
+        { name: "The Madhuban Story", path: "/about-us/story" },
+        { name: "Eco-Philosophy", path: "/about-us/eco-philosophy" },
+        { name: "Vision & Mission", path: "/about-us/Vision-&-Mission" },
         // { name: "Our Team", path: "/about/Our-Team" },
         { name: "Blog", path: "/blogs" },
       ],
