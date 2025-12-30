@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <section className="min-h-screen flex items-center justify-center  px-6 py-35 sm:py-40">
       <div className="text-center bg-white/80 backdrop-blur rounded-2xl p-0 sm:p-10">
-        <h1 className="text-2xl sm:text-4xl font-bold text-primary-gray2 font-[sitka-banner] text-emerald-700 mb-4">
+        <h1 className="text-2xl sm:text-4xl font-bold text-primary-gray2 font-primary text-emerald-700 mb-4">
           <span className="text-5xl sm:text-6xl mb-4 inline-block"> 404 </span>
           <br />
           You’ve Wandered Off the Forest Trail 🌲
@@ -23,7 +23,7 @@ export default function NotFound() {
           leads back to peace, nature, and meaningful experiences.
         </p>
 
-        <h2 className="text-xl sm:text-4xl text-primary-gray2 font-semibold text-gray-800 mb-6 font-[sitka-banner]">
+        <h2 className="text-xl sm:text-4xl text-primary-gray2 font-semibold text-gray-800 mb-6 font-primary">
           Where Would You Like to Go Next?
         </h2>
 
@@ -60,7 +60,7 @@ export default function NotFound() {
         <div className="border-t pt-6">
           <Link
             href="/contact"
-            className="text-xl sm:text-4xl text-primary-gray2 text-emerald-700 font-semibold hover:underline font-[sitka-banner]"
+            className="text-xl sm:text-4xl text-primary-gray2 text-emerald-700 font-semibold hover:underline font-primary"
           >
             📞 Contact Madhuban Eco Retreat
           </Link>
@@ -73,7 +73,7 @@ export default function NotFound() {
 
           <Link
             href="/"
-            className="inline-block mt-4 rounded-full bg-primary-gray2 text-primary-gray px-6 py-3 font-semibold hover:opacity-90 transition font-[sitka-banner]"
+            className="inline-block mt-4 rounded-full bg-primary-gray2 text-primary-gray px-6 py-3 font-semibold hover:opacity-90 transition font-primary"
           >
             Return To Homepage
           </Link>

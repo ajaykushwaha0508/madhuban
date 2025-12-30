@@ -7,7 +7,7 @@ const CommonBanner1 = ({ title, breadcom = [], paraghraph, tagline, paraghraph1 
         <div className="bg-[#FFFDEB] ">
             <div className="custom-container flex  h-[320px] sm:h-[290px] items-end pb-7">
                 <div className="w-full p-2">
-                    <h1 className="text-[#0A0C0C] text-center responsive-heading font-medium leading-tight text-[28px] font-[sitka-banner]">
+                    <h1 className="text-[#0A0C0C] text-center responsive-heading font-medium leading-tight text-[28px] font-primary">
                         {title}
                     </h1>
                     <p className="text-[#484545] text-center responsive-text font-medium leading-tight mt-3">{paraghraph}</p>

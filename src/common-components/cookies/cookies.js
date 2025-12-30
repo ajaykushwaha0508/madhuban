@@ -146,7 +146,7 @@ const CookiesPopup = () => {
                 <button
                   onClick={handleAcceptAll}
                   height={{ xs: "40px", sm: "50px" }}
-                  className="hidden xl:block px-4 py-2 rounded-md font-[sitka-banner] font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)]  transition cursor-pointer"
+                  className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)]  transition cursor-pointer"
                   type="submit"
                   color="#1A2E33"
                   
@@ -156,7 +156,7 @@ const CookiesPopup = () => {
                 <button
                   height={{ xs: "40px", sm: "50px" }}
                   onClick={handleRejectNonEssential}
-                  className="hidden xl:block px-4 py-2 rounded-md font-[sitka-banner] font-semibold  border border-[#6E6146]  transition cursor-pointer hover:text-[#D1C8C1] hover:bg-[#6E6146]"
+                  className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold  border border-[#6E6146]  transition cursor-pointer hover:text-[#D1C8C1] hover:bg-[#6E6146]"
                   type="submit"
                 >
                   {`Reject All`}

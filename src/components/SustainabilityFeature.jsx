@@ -21,10 +21,10 @@ const SustainabilityFeature = ({ feature }) => {
       <div className="mb-4">
         <IconComponent className="w-10 h-10" />
       </div>
-      <h3 className="font-[sitka-banner] tracking-widest text-white font-medium  text-xl mb-2">
+      <h3 className="font-primary tracking-widest text-white font-medium  text-xl mb-2">
         {title}
       </h3>
-      <p className="font-[sitka-banner] tracking-wider text-white text-opacity-90">
+      <p className="font-primary tracking-wider text-white text-opacity-90">
         {description}
       </p>
     </div>

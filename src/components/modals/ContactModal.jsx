@@ -137,7 +137,7 @@ const ContactModal = () => {
             <IoMdCloseCircle />
           </Box>
           <div className="  rounded-2xl shadow-lg p-8 bg-[#6e6146] ">
-            <h2 className="text-3xl font-semibold text-white text-center mb-2 font-[sitka-banner]">
+            <h2 className="text-3xl font-semibold text-white text-center mb-2 font-primary">
               Send Us a Message
             </h2>
             <p className="text-gray-200 mb-6 text-center">
@@ -222,7 +222,7 @@ const ContactModal = () => {
                 </div>
                 <button
                   type="submit"
-                  className="submit-btn font-arial-narrow text-[rgb(110,97,70)] font-[sitka-banner]"
+                  className="submit-btn font-arial-narrow text-[rgb(110,97,70)] font-primary"
                 >
                   {isSubmitting ? "Sending..." : "Submit"}
                 </button>

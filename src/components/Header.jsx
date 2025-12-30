@@ -172,14 +172,14 @@ const MainNavigation = () => {
             className="h-20 w-20 filter brightness-75"
           />
           <div className="flex flex-col justify-center">
-            <div className="font-[sitka-banner] tracking-wide text-xl font-bold text-[rgb(110,97,70)] leading-tight">
+            <div className="font-primary tracking-wide text-xl font-bold text-[rgb(110,97,70)] leading-tight">
               Madhuban Eco Retreat
             </div>
 
-            <p className="font-[sitka-banner] tracking-wider text-sm text-[rgb(110,97,70)] leading-tight">
+            <p className="font-primary tracking-wider text-sm text-[rgb(110,97,70)] leading-tight">
               Ratapani Tiger Reserve,
             </p>
-            <p className="font-[sitka-banner] tracking-wide text-xs text-[rgb(110,97,70)] leading-tight">
+            <p className="font-primary tracking-wide text-xs text-[rgb(110,97,70)] leading-tight">
               Bhopal, Madhya Pradesh, India
             </p>
           </div>
@@ -210,7 +210,7 @@ const MainNavigation = () => {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button
-                      className="flex items-center font-[sitka-banner] font-medium tracking-wide text-[22px]  text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)]"
+                      className="flex items-center font-primary font-medium tracking-wide text-[22px]  text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)]"
                       onClick={() => toggleDropdown(index)}
                     >
                       {item.name} <ChevronDown className="ml-1 w-4 h-4" />
@@ -230,8 +230,8 @@ const MainNavigation = () => {
                             href={subItem.path}
                             className={`block px-4 py-2 text-lg ${
                               isActive
-                                ? "text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] font-[sitka-banner] font-medium tracking-wide"
-                                : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] font-[sitka-banner] font-medium tracking-wide"
+                                ? "text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] font-primary font-medium tracking-wide"
+                                : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] font-primary font-medium tracking-wide"
                             }`}
                           >
                             {subItem.name}
@@ -245,8 +245,8 @@ const MainNavigation = () => {
                     href={item.path}
                     className={`font-medium text-[19px] ${
                       isActive
-                        ? "text-[rgb(110,97,70)] font-[sitka-banner] font-medium tracking-wide text-[22px]"
-                        : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] text-[22px] font-[sitka-banner] font-medium tracking-wide"
+                        ? "text-[rgb(110,97,70)] font-primary font-medium tracking-wide text-[22px]"
+                        : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] text-[22px] font-primary font-medium tracking-wide"
                     }`}
                   >
                     {item.name}
@@ -260,7 +260,7 @@ const MainNavigation = () => {
         {/* Book Now Button - Desktop */}
         <Link
           href="/booking"
-          className="hidden xl:block px-4 py-2 rounded-md font-[sitka-banner] font-semibold text-xl text-[#D1C8C1] bg-[rgb(110,97,70)]  transition"
+          className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold text-xl text-[#D1C8C1] bg-[rgb(110,97,70)]  transition"
         >
           Book Now
         </Link>

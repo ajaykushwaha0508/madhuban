@@ -75,7 +75,7 @@ export default function FAQsBoxLayout() {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4">
           <div className="text-center text-white max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-[sitka-banner] tracking-widest">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-primary tracking-widest">
               Frequently Asked Questions
             </h1>
             <p className="text-lg md:text-xl font-arial-narrow tracking-wider">
@@ -89,7 +89,7 @@ export default function FAQsBoxLayout() {
       <div className="max-w-6xl mx-auto px-4 pt-5 pb-5">
         <div className="flex items-center justify-center">
           <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-          <h2 className="text-4xl md:text-5xl font-[sitka-banner] border-[rgb(110,97,70)] font-semibold tracking-widest">
+          <h2 className="text-4xl md:text-5xl font-primary border-[rgb(110,97,70)] font-semibold tracking-widest">
             FAQ
           </h2>
           <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -112,7 +112,7 @@ export default function FAQsBoxLayout() {
             >
               <div className="flex items-center gap-3 mb-2">
                 {faq.icon}
-                <h3 className="text-lg font-semibold text-[#D1C8C1] font-[sitka-banner] tracking-widest">
+                <h3 className="text-lg font-semibold text-[#D1C8C1] font-primary tracking-widest">
                   {faq.question}
                 </h3>
               </div>

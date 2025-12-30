@@ -247,7 +247,7 @@ const Stay = () => {
           )}
 
           <motion.h1
-            className="font-[sitka-banner] font-medium text-4xl md:text-6xl"
+            className="font-primary font-medium text-4xl md:text-6xl"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -277,7 +277,7 @@ const Stay = () => {
           >
             <div className="flex items-center justify-center mb-3">
               <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-              <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+              <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
                 Our Accommodations
               </h2>
               <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
@@ -331,7 +331,7 @@ const Stay = () => {
                         </motion.div>
 
                         <div className="p-6 flex flex-col flex-grow bg-[#D1C8C1]">
-                          <h3 className="text-3xl font-[sitka-banner] font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
+                          <h3 className="text-3xl font-primary font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
                             {accommodation.name}
                           </h3>
                           <p className="font-arial-narrow text-[rgb(110,97,70)] tracking-wider text-sm mb-4 flex-grow text-justify">
@@ -339,7 +339,7 @@ const Stay = () => {
                           </p>
 
                           <div className="mb-4">
-                            <h4 className="text-base font-[sitka-banner] font-semibold tracking-widest text-[rgb(110,97,70)] mb-3">
+                            <h4 className="text-base font-primary font-semibold tracking-widest text-[rgb(110,97,70)] mb-3">
                               Key Features:
                             </h4>
                             <ul className="font-openSans grid grid-cols-4 max-[496px]:grid-cols-2 gap-6 justify-between">
@@ -376,7 +376,7 @@ const Stay = () => {
                           </div>
 
                           <p className="text-base text-[rgb(110,97,70)] mb-4">
-                            <strong className="font-[sitka-banner] font-medium">
+                            <strong className="font-primary font-medium">
                               Capacity:
                             </strong>{" "}
                             {accommodation.capacity}
@@ -391,7 +391,7 @@ const Stay = () => {
                               variants={buttonHoverVariants}
                               transition={{ duration: 0.5 }}
                             />
-                            <span className="relative z-10 font-[sitka-banner] tracking-widest font-medium">
+                            <span className="relative z-10 font-primary tracking-widest font-medium">
                               View Details & Book
                             </span>
                           </Link>

@@ -14,7 +14,7 @@ const EcoPhilosophy = () => {
       <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
         <div className="flex items-center justify-center mb-6">
           <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-          <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+          <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
             Eco Philosophy
           </h2>
           <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />

@@ -101,7 +101,7 @@ const TestimonialSlider = () => {
                 </blockquote>
 
                 <div>
-                  <p className="font-medium text-gray-400 tracking-widest font-[sitka-banner]">
+                  <p className="font-medium text-gray-400 tracking-widest font-primary">
                     {testimonial.name}
                   </p>
                   <p className="text-gray-400 font-arial-narrow tracking-wider font-medium">

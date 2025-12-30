@@ -104,12 +104,12 @@ const VisionMission = () => {
               {/* Overlayed Text Content */}
               <div className="relative inset-0 flex flex-col justify-center items-center text-center px-4 md:px-16 bg-black/30">
                 <div className="absolute xl:bottom-[20rem] xl:left-[2rem] lg:bottom-[28rem] lg:left-[20rem] md:bottom-[30rem] md:left-[10rem] sm:bottom-[29rem] sm:left-[4rem] max640:bottom-[27rem] max640:left-0 max500:bottom-[25rem] max-340:bottom-[7rem] max-Xsm:bottom-[15rem]">
-                  {/* <h3 className="font-[sitka-banner] font-semibold text-4xl md:text-4xl text-[rgb(110,97,70)] tracking-wider mb-4">
+                  {/* <h3 className="font-primary font-semibold text-4xl md:text-4xl text-[rgb(110,97,70)] tracking-wider mb-4">
                     Our Vision
                   </h3> */}
                   <div className="flex items-center justify-center">
                     <hr className="w-16 border-t border-[#a2790d] mr-4" />
-                    <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#e9a907] font-semibold tracking-wider mb-4">
+                    <h2 className="text-4xl md:text-5xl font-primary text-[#e9a907] font-semibold tracking-wider mb-4">
                       {VISION.title}
                     </h2>
                     <hr className="w-16 border-t border-[#a2790d] ml-4" />
@@ -146,7 +146,7 @@ const VisionMission = () => {
                 <div className="absolute xl:bottom-[20rem] xl:left-[10rem] lg:bottom-[28rem] lg:left-[20rem] md:bottom-[28rem] md:left-[6rem] sm:bottom-[28rem] sm:left-[3rem] max640:bottom-[25rem] max500:bottom-[23rem] max-Xsm:bottom-[16rem]">
                   <div className="flex items-center justify-center">
                     <hr className="w-16 border-t border-[#a2790d] mr-4" />
-                    <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#e9a907] font-semibold tracking-widest mb-4">
+                    <h2 className="text-4xl md:text-5xl font-primary text-[#e9a907] font-semibold tracking-widest mb-4">
                       {MISSION.title}
                     </h2>
                     <hr className="w-16 border-t border-[#a2790d] ml-4" />
@@ -183,7 +183,7 @@ const VisionMission = () => {
                 <div className="absolute xl:bottom-[20rem] lg:bottom-24 md:bottom-24 sm:bottom-9 max640:bottom-[15rem] max500:bottom-[9rem] max-Xsm:bottom-20 max-340:bottom-0">
                   <div className="flex items-center justify-center">
                     <hr className="w-16 border-t border-[#a2790d] mr-4" />
-                    <h2 className="text-4xl md:text-5xl font-[sitka-banner] text-[#a2790d] font-semibold tracking-wider mb-4">
+                    <h2 className="text-4xl md:text-5xl font-primary text-[#a2790d] font-semibold tracking-wider mb-4">
                       Our Core Values
                     </h2>
                     <hr className="w-16 border-t border-[#a2790d] ml-4" />
