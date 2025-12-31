@@ -1,5 +1,4 @@
 import RecreationalFacilities from "@/components/experiences/recreational-facilities/RecreationalFacilities";
-import SEO from "@/components/SEO/SEO";
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -86,8 +85,6 @@ const faqSchema = {
 const RecreationalFacilitiesPage = () => {
   return (
     <>
-      <SEO schema={pageSchema} />
-      <SEO schema={faqSchema} />
       <RecreationalFacilities />
     </>
   );
@@ -95,28 +92,34 @@ const RecreationalFacilitiesPage = () => {
 
 export default RecreationalFacilitiesPage;
 
-export const metadata = {
-  title: "Recreational Activities Ratapani | Nature Recreation Near Bhopal",
+export async function generateMetadata() {
+  return {
+    title: "Recreational Activities Ratapani | Nature Recreation Near Bhopal",
 
-  description:
-    "Enjoy eco-friendly recreational activities near Bhopal. Cycling, indoor games, hammocks, campfires & nature-friendly relaxation at Madhuban Eco Retreat.",
+    description:
+      "Enjoy eco-friendly recreational activities near Bhopal. Cycling, indoor games, hammocks, campfires & nature-friendly relaxation at Madhuban Eco Retreat.",
 
-  keywords: [
-    "recreational activities near bhopal",
-    "ratapani recreation",
-    "outdoor activities bhopal",
-    "eco resort recreation mp",
-    "family activities bhopal",
-    "nature recreation ratapani",
-  ],
+    keywords: [
+      "recreational activities near bhopal",
+      "ratapani recreation",
+      "outdoor activities bhopal",
+      "eco resort recreation mp",
+      "family activities bhopal",
+      "nature recreation ratapani",
+    ],
 
-  alternates: {
-    canonical:
-      "https://www.madhubanecoretreat.com/experiences/recreational-facilities",
-  },
+    alternates: {
+      canonical:
+        "https://www.madhubanecoretreat.com/experiences/recreational-facilities",
+    },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    other: {
+      "ld+json": JSON.stringify([pageSchema, faqSchema]),
+    },
+  };
+}

@@ -223,6 +223,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  href="/blogs"
+                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                >
+                  <ChevronRight className="w-4 h-4 mr-1" /> Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/faqs"
                   className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
                 >

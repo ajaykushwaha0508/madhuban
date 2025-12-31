@@ -79,7 +79,7 @@ const heroSlides = [
 const experiences = [
   {
     title: "Forest Walks & Nature Trails",
-    path: "forest-walks-&-nature-trails",
+    path: "forest-walks-and-nature-trails",
     image: "/images/experiences/nature-trail.jpg",
     description:
       "Reconnect with the wilderness through guided forest walks and nature trails inside the Ratapani region. Learn about native plants, medicinal herbs, butterflies, and eco-systems while enjoying peaceful, device-free moments in the forest.",
@@ -87,7 +87,7 @@ const experiences = [
   },
   {
     title: "Bird Watching & Wilderness",
-    path: "bird-watching-&-wilderness",
+    path: "bird-watching-and-wilderness",
     image: "/images/experiences/bird-watching.jpg",
     description:
       "Witness over 70+ species of birds across pristine landscapes — from paradise flycatchers to orioles and kingfishers. Our guided birding sessions offer a serene wilderness experience ideal for enthusiasts and researchers.",

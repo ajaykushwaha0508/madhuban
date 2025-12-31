@@ -29,8 +29,8 @@ const ExperiencesBanner = () => {
           <p className="text-4xl md:text-6xl font-bold mb-4">
             Experience Life at Nature’s Rhythm
           </p>
-          <p className="text-lg md:text-xl">
-            Explore mindful, eco-friendly experiences designed around <br />{" "}
+          <p className="max-w-2xl mx-auto text-lg md:text-xl">
+            Explore mindful, eco-friendly experiences designed around 
             forests, wildlife, and peaceful living near Bhopal
           </p>
         </motion.div>
