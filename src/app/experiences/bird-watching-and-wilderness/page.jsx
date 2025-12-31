@@ -5,7 +5,7 @@ const PageSchema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   name: "Bird Watching & Wilderness",
-  url: "https://www.madhubanecoretreat.com/experiences/bird-watching-&-wilderness",
+  url: "https://www.madhubanecoretreat.com/experiences/bird-watching-and-wilderness",
   description:
     "Peaceful bird watching and wilderness sessions near Bhopal at Madhuban Eco Retreat. Spot 70+ bird species in the untouched forests of Ratapani.",
   image: [
@@ -32,7 +32,7 @@ const PageSchema = {
     price: "0",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
-    url: "https://www.madhubanecoretreat.com/experiences/bird-watching-&-wilderness",
+    url: "https://www.madhubanecoretreat.com/experiences/bird-watching-and-wilderness",
   },
 };
 
@@ -112,7 +112,7 @@ export async function generateMetadata() {
 
     alternates: {
       canonical:
-        "https://www.madhubanecoretreat.com/experiences/bird-watching-%26-wilderness",
+        "https://www.madhubanecoretreat.com/experiences/bird-watching-and-wilderness",
     },
 
     robots: {

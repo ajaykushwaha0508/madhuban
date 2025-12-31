@@ -4,7 +4,7 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   name: "Forest Walks & Nature Trails",
-  url: "https://www.madhubanecoretreat.com/experiences/forest-walks-&-nature-trails",
+  url: "https://www.madhubanecoretreat.com/experiences/forest-walks-and-nature-trails",
   description:
     "Guided forest walks and nature trails near Bhopal at Madhuban Eco Retreat. Explore flora, herbs, butterflies and Ratapani wilderness with naturalists.",
   provider: {
@@ -27,7 +27,7 @@ const pageSchema = {
     price: "0",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
-    url: "https://www.madhubanecoretreat.com/experiences/forest-walks-&-nature-trails",
+    url: "https://www.madhubanecoretreat.com/experiences/forest-walks-and-nature-trails",
   },
   image: [
     "https://www.madhubanecoretreat.com/assets/images/forest-walk-1.jpg",
@@ -111,7 +111,7 @@ export async function generateMetadata() {
 
     alternates: {
       canonical:
-        "https://www.madhubanecoretreat.com/experiences/forest-walks-%26-nature-trails",
+        "https://www.madhubanecoretreat.com/experiences/forest-walks-and-nature-trails",
     },
 
     robots: {
