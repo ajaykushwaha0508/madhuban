@@ -94,9 +94,9 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
        
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6  ">
+        <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">  
           <motion.div
-            className="grid grid-cols-1  gap-4"
+            className="grid   gap-4 order-2 md:order-1"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -118,7 +118,7 @@ const WhyChooseUs = () => {
             })}
           </motion.div>
           <motion.div
-            className="grid grid-cols-1   gap-6 rounded-2xl"
+            className="grid   gap-6 rounded-2xl order-1 md:order-2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
