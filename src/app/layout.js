@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <ContactModal/>
-         {/* <CookiesPopup /> */}
+         <CookiesPopup />
       </body>
     </html>
   );
