@@ -19,11 +19,11 @@
 }
 
 .border-primary-gray{
-  color: var( --primary-gray);
+  border-color: var( --primary-gray);
 }
 
 .border-primary-gray2{
-  color: var( --primary-gray2);
+  border-color: var( --primary-gray2);
 }
 
 .primary-font-family{

@@ -9,44 +9,44 @@ import VisionMission from "./Vision-&-Mission/VisionAndMission";
 const schema = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
-  "name": "Madhuban Eco Retreat",
-  "url": "https://www.madhubanecoretreat.com/about-us",
-  "image": "https://www.madhubanecoretreat.com/assets/images/madhuban.jpg",
-  "description": "Madhuban Eco Retreat is a nature-based eco resort near Bhopal offering sustainable tourism experiences, slow travel, and wellness-focused stays near Ratapani.",
-  "address": {
+  name: "Madhuban Eco Retreat",
+  url: "https://www.madhubanecoretreat.com/about-us",
+  image: "https://www.madhubanecoretreat.com/assets/images/madhuban.jpg",
+  description:
+    "Madhuban Eco Retreat is a nature-based eco resort near Bhopal offering sustainable tourism experiences, slow travel, and wellness-focused stays near Ratapani.",
+  address: {
     "@type": "PostalAddress",
-    "addressLocality": "Bhopal",
-    "addressRegion": "Madhya Pradesh",
-    "addressCountry": "India"
+    addressLocality: "Bhopal",
+    addressRegion: "Madhya Pradesh",
+    addressCountry: "India",
   },
-  "geo": {
+  geo: {
     "@type": "GeoCoordinates",
-    "latitude": "23.2599",
-    "longitude": "77.4126"
+    latitude: "23.2599",
+    longitude: "77.4126",
   },
-  "amenityFeature": [
+  amenityFeature: [
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Eco-friendly Accommodation",
-      "value": true
+      name: "Eco-friendly Accommodation",
+      value: true,
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Organic Farm-to-Table Food",
-      "value": true
+      name: "Organic Farm-to-Table Food",
+      value: true,
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Nature & Wellness Activities",
-      "value": true
-    }
+      name: "Nature & Wellness Activities",
+      value: true,
+    },
   ],
-  "sameAs": [
+  sameAs: [
     "https://www.facebook.com/madhubanecoretreat",
-    "https://www.instagram.com/madhubanecoretreat"
-  ]
-}
-
+    "https://www.instagram.com/madhubanecoretreat",
+  ],
+};
 
 const AboutUs = () => {
   return (

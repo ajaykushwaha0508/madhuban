@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,8 +6,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
+import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 
-const BirdWilderness = () => {
+const BirdWatchingAndWilderness = () => {
   // Track active main accordion index
   const [activeAccordion, setActiveAccordion] = useState(0); // First expanded by default
   // Track active nested accordion index for the first accordion item
@@ -65,60 +66,66 @@ const BirdWilderness = () => {
       title: "Bird Watching & Wilderness",
       content: (
         <>
-          <p className="mb-4 font-arial-narrow text-[rgb(110,97,70)] tracking-wider">
-            Madhuban ECO Retreat is a haven for bird lovers and wildlife
-            enthusiasts. Nestled amidst untouched forests of Madhya Pradesh, our
-            retreat offers a rare chance to witness the vibrant life of over 70
-            species of native and migratory birds in their natural habitat. With
-            no urban noise, just the call of the wild and rustling leaves,
-            you’ll be immersed in a pure wilderness experience like no other.
+          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+            Escape into the peaceful wilderness of Ratapani with our Bird
+            Watching & Wilderness experience at Madhuban Eco Retreat. Surrounded
+            by untouched forest, this region is home to over 70+ species of
+            native and migratory birds — making it one of the best bird-watching
+            locations near Bhopal.
+          </p>
+          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+            Our guided birding sessions take place during early mornings and
+            golden-hour evenings, when the forest is most alive. With no urban
+            noise and minimal human disturbance, you can witness the beauty of
+            birds in their natural habitat — from the graceful Indian Paradise
+            Flycatcher to colorful orioles, kingfishers, drongos, peacocks, and
+            seasonal visitors.
+          </p>
+          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+            If you’re seeking a silent wilderness experience, a nature-based
+            activity for families, or an ideal spot for wildlife photography,
+            this trail offers a rare chance to slow down, observe, and connect
+            deeply with the forest.
           </p>
 
           {/* Nested Accordion inside first main accordion item */}
-          <div className="font-primary divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
+          <div className="font-primary divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect ",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
-                    <li>
-                      Early morning and sunset bird watching sessions with
-                      expert guides
-                    </li>
-                    <li>
-                      Spot species like the Indian paradise flycatcher, golden
-                      oriole, kingfisher, and peacockss
-                    </li>
-                    <li>
-                      Explore the wild with low-impact nature exploration
-                      practices
-                    </li>
-                    <li>
-                      Photography-friendly zones with minimal disturbance to
-                      wildlife
-                    </li>
-                    <li>
-                      Learn about bird calls, behaviors, and seasonal migrations
-                    </li>
+                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                    <li>Guided sessions at sunrise and sunset</li>
+                    <li>Spot native & migratory birds across forest zones</li>
+                    <li>Learn bird calls, seasonal patterns & behaviors</li>
+                    <li>Low-impact wilderness exploration</li>
+                    <li>Photography-friendly viewing points</li>
                   </ul>
                 ),
               },
 
               {
-                title: "Ideal For",
+                title: "Perfect For",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                    
+
+
+
+
+
                     <li>
-                      Bird watchers and ornithologists seeking new species
+                      Bird watchers & ornithologists
                     </li>
-                    <li>Wildlife photographers and researchers</li>
+                    <li>Wildlife photographers</li>
                     <li>
-                      Families and students learning about bio-diversity in
-                      Bhopal
+                     Nature lovers & quiet travelers
                     </li>
                     <li>
-                      Travelers seeking silent nature experiences and forest
-                      immersion
+                      Families & students
+                    </li>
+                    <li>
+                      Anyone exploring eco-tourism near Bhopal
                     </li>
                   </ul>
                 ),
@@ -127,13 +134,12 @@ const BirdWilderness = () => {
                 title: "Let Nature Surprise You",
                 content: (
                   <>
-                    Let Nature Surprise You Join us for a peaceful wilderness
-                    session—{" "}
+                    Immerse yourself in the sounds of wings and the calm of the forest.—{" "}
                     <Link
                       href="/booking"
-                      className="list-disc list-inside underline text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2"
+                      className="list-disc list-inside underline text-primary-gray2 font-bold tracking-widest font-primary space-y-2"
                     >
-                      Book Your Bird Watching Trail Now
+                      Book Your Bird Watching Experience Now
                     </Link>
                   </>
                 ),
@@ -141,7 +147,7 @@ const BirdWilderness = () => {
             ].map((item, idx) => (
               <div key={idx} className="group">
                 <button
-                  className="flex items-center justify-between w-full py-3 px-4 text-left text-[#D1C8C1] font-medium transition duration-200"
+                  className="flex items-center justify-between w-full py-3 px-4 text-left text-primary-gray2 font-medium transition duration-200"
                   onClick={() =>
                     setActiveNestedAccordion(
                       activeNestedAccordion === idx ? null : idx
@@ -181,6 +187,40 @@ const BirdWilderness = () => {
     },
   ];
 
+ const birdWatchingFaqs = [
+  {
+    question: "What birds can I spot in Ratapani during bird watching?",
+    answer:
+      "You may see the paradise flycatcher, golden oriole, kingfisher, drongo, peacock, woodpeckers, and various migratory species.",
+  },
+  {
+    question: "Is this the best bird watching spot near Bhopal?",
+    answer:
+      "Yes. Madhuban Eco Retreat is considered one of the top bird-watching zones near Bhopal due to its peaceful forest surroundings and rich biodiversity.",
+  },
+  {
+    question: "Are the bird watching sessions guided?",
+    answer:
+      "Yes, all sessions are led by experienced naturalists familiar with local bird species and their behavior.",
+  },
+  {
+    question: "What time is ideal for bird watching?",
+    answer:
+      "Early mornings and sunset hours are the most active and recommended times for bird watching.",
+  },
+  {
+    question: "Is bird watching suitable for children and beginners?",
+    answer:
+      "Absolutely. The sessions are easy, educational, and enjoyable for all age groups.",
+  },
+  {
+    question: "Do I need binoculars or a camera?",
+    answer:
+      "You may bring your own binoculars or camera, but even without equipment, the bird watching experience remains enriching.",
+  },
+];
+
+
   return (
     <div className="min-h-screen bg-[#b4a681d8]">
       {/* Hero Section */}
@@ -201,7 +241,7 @@ const BirdWilderness = () => {
             Bird Watching & Wilderness
           </h1>
           <p className="text-xl md:text-2xl font-arial-narrow tracking-wider">
-            Listen to Wings, Watch the Wild, Feel the Silence
+            Listen to Wings, Follow the Forest, Feel the Silence
           </p>
           <button
             onClick={() =>
@@ -219,26 +259,26 @@ const BirdWilderness = () => {
       {/* Accordion Section */}
       <section
         id="accordion-section"
-        className="py-10 px-4 md:px-8 bg-[rgb(110,97,70)]"
+        className="py-10 px-4 md:px-8 bg-primary-gray"
       >
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-[#D1C8C1] font-semibold tracking-wider text-center">
+            <hr className="w-16 border-t border-primary-gray2 mr-4" />
+            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider text-center">
               Explore The Nature
             </h2>
-            <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
+            <hr className="w-16 border-t border-primary-gray2 ml-4" />
           </div>
-          <div className="divide-y rounded-xl bg-[#D1C8C1] shadow-md overflow-hidden">
+          <div className="divide-y rounded-xl bg-primary-gray2 shadow-md overflow-hidden">
             {accordionItems.map((item, index) => (
-              <div key={index} className="group">
+              <div key={index} className="group bg-primary-gray2">
                 <button
-                  className="font-primary font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
+                  className="font-primary font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                  <span>{item.title}</span>
+                  <span className="text-2xl">{item.title}</span>
                   <svg
                     className={`w-5 h-5 transform transition-transform duration-300 ${
                       activeAccordion === index ? "rotate-180" : ""
@@ -275,14 +315,14 @@ const BirdWilderness = () => {
       </section>
 
       {/* Image Slider Section */}
-      <section className="py-10 px-4 md:px-8 	bg-[#D1C8C1]">
+      <section className="py-10 px-4 md:px-8 	bg-primary-gray2">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-bold tracking-wider text-center">
+            <hr className="w-16 border-t border-white mr-4" />
+            <h2 className="text-4xl md:text-5xl font-primary text-white font-bold tracking-wider text-center">
               Birds Gallery
             </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
+            <hr className="w-16 border-t border-white ml-4" />
           </div>
           <div className="w-[90%] md:w-[100%] h-[70vh] mx-auto">
             <Swiper
@@ -305,8 +345,14 @@ const BirdWilderness = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQs */}
+      <CommonFaqs 
+      heading="FAQs – Bird Watching & Wilderness"
+      faqs={birdWatchingFaqs}
+       />
     </div>
   );
 };
 
-export default BirdWilderness;
+export default BirdWatchingAndWilderness;

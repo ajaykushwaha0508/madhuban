@@ -2,10 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { FaAnglesRight } from "react-icons/fa6";
 
 const ExperienceCard = ({ experience }) => {
-  const { title, image, description } = experience;
-  const slug = title.toLowerCase().replace(/\s+/g, "-");
+  const { title, image, description, learnMoreBtn, path } = experience;
 
   return (
     <div className=" group relative rounded-lg overflow-hidden shadow-lg h-96 hover:shadow-xl transition-all duration-300">
@@ -22,18 +22,21 @@ const ExperienceCard = ({ experience }) => {
 
       {/* Content with slide-up effect on hover  text-[rgb(110,97,70)]*/}
       <div className="absolute bottom-0 left-0 right-0 p-6 text-white  transition-all duration-500 transform translate-y-0 group-hover:-translate-y-2">
-        <h3 className="text-white font-primary tracking-wider font-semibold text-2xl mb-2 lg:text-[21px]">
+        <h3 className="text-white font-primary tracking-wider font-semibold text-3xl mb-2 lg:text-[21px]">
           {title}
         </h3>
-        <p className="font-arial-narrow tracking-wide font-medium text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-32 mb-20 group-hover:opacity-100 max-h-0 max500:mb-28">
+        <p className=" text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-36 mb-20 group-hover:opacity-100 max-h-0 max500:mb-28">
           {description}
         </p>
+        <p className="flex text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-5 mb-5 group-hover:opacity-100 max-h-0 max500:mb-28 ">
+          Ideal For : Bird watchers, wildlife photographers, students, silent
+          nature seekers
+        </p>
         <Link
-          href={`/experiences/${slug}`}
-          // className="inline-flex items-center text-[#9d7b2b] font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 hover:text-[#b89335]"
-          className="inline-flex items-center max-340:mt-40 max-Xsm:mt-36 max-sm:mt-24 xl:mt-14 lg:mt-24 text-white font-arial-narrow font-semibold tracking-wider group-hover:opacity-100 hover:text-[#033A06]"
+          href={`/experiences/${path}`}
+          className="inline-flex items-center max-340:mt-40 max-Xsm:mt-36 max-sm:mt-24 xl:mt-14 lg:mt-24 text-white font-arial-narrow font-semibold tracking-wider group-hover:opacity-100 "
         >
-          Learn More{" "}
+          {learnMoreBtn}{" "}
           <ChevronRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

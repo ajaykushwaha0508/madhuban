@@ -53,7 +53,7 @@ const privacyData = {
   title: "Privacy Policy",
   lastUpdated: "1 August 2025",
   companyName: "VyomEdge",
-  website: "info@vyomedge.com",
+  website: "madhubanresort@somaiya.com",
   description:
     "At Madhuban Eco Retreat, we value your privacy and are committed to protecting your personal information when you interact with us — whether through our website, email, booking forms, contact or signup forms, or other services. This Privacy Policy explains what information we collect, how we use it, and the steps we take to safeguard it.",
 
@@ -110,7 +110,7 @@ const privacyData = {
       contactInfo: {
         title:
           "If you wish to exercise any of these rights, please contact us at:",
-        email: "info@vyomedge.com",
+        email: "madhubanresort@somaiya.com",
         phone: `+${phone}`,
       },
     },
@@ -164,12 +164,15 @@ export default function PrivacyPolicy() {
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle variant="h5" component="h2">
+            <SectionTitle  component="h2">
               {section.title}
             </SectionTitle>
-            <SectionSubTitle variant="h6" component="h6">
+          {
+            section?.subtitle && 
+            <SectionSubTitle  component="h3">
               {section.subtitle}
             </SectionSubTitle>
+          }  
 
             {section.content && (
               <Typography variant="body1" sx={{ mb: 2 }}>
@@ -260,7 +263,7 @@ export default function PrivacyPolicy() {
                 </Typography>
 
                 {section?.contactInfo?.email && (
-                  <Stack flexDirection={"row"}>
+                  <Stack flexDirection={"row"} gap={1}>
                     <Typography fontWeight={600} component={"span"}>
                       Email :
                     </Typography>
@@ -271,7 +274,7 @@ export default function PrivacyPolicy() {
                 )}
 
                 {section?.contactInfo?.phone && (
-                  <Stack flexDirection={"row"}>
+                  <Stack flexDirection={"row"} gap={1}>
                     <Typography fontWeight={600} component={"span"}>
                       Phone :
                     </Typography>

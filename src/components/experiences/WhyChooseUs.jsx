@@ -1,0 +1,136 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { FaHeart } from "react-icons/fa6";
+import { LuTentTree } from "react-icons/lu";
+import { FaHandshakeSimple } from "react-icons/fa6";
+import { GiThreeFriends } from "react-icons/gi";
+import { FaRoute } from "react-icons/fa6";
+import { MdOutlineTravelExplore } from "react-icons/md";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
+const WhyChoosePoints = [
+  {
+    title: "Located in the heart of Ratapani Wildlife Sanctuary region",
+    icon: FaHeart,
+  },
+  {
+    title: "Perfect for eco-tourism near Bhopal",
+    icon: LuTentTree,
+  },
+  {
+    title: "Naturalists and trained guides",
+    icon: FaHandshakeSimple,
+  },
+  {
+    title: "Family-friendly and senior-friendly experiences",
+    icon: GiThreeFriends,
+  },
+  {
+    title: "Close to Satpura, Ratapani & MP’s rich forest belt",
+    icon: FaRoute,
+  },
+  {
+    title: "Designed for slow travel, wellness & nature immersion",
+    icon: MdOutlineTravelExplore,
+  },
+];
+
+const WhyChooseUs = () => {
+  return (
+    <section className="py-8 px-4 md:px-8 bg-primary-gray2">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="flex items-center justify-center">
+            <hr className="w-16 border-t border-white mr-4" />
+            <h2 className="text-4xl md:text-5xl font-primary text-white font-semibold tracking-wider">
+              Why Choose Madhuban Experiences?
+            </h2>
+            <hr className="w-16 border-t border-white ml-4" />
+          </div>
+          <p className="mt-1 max-w-2xl mx-auto text-lg text-white px-4 tracking-wide font-arial-narrow">
+            We offer more than a stay — Madhuban is a mindful escape rooted in
+            nature, sustainability, and slow living.
+          </p>
+        </motion.div>
+       
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6  ">
+          <motion.div
+            className="grid grid-cols-1  gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+          >
+            {WhyChoosePoints.map((item, i) => {
+                const IconComponent = item.icon;
+              return (
+                <motion.div
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  key={i}
+                >
+                  <div className="block flex items-center gap-4 rounded-xl border border-primary-gray bg-primary-gray  p-4 text-primary-gray2 transition">
+                   <IconComponent/> {item.title}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-1   gap-6 rounded-2xl"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            style={{
+              backgroundImage: `url(/images/hero/hero-1.jpg)`,
+              backgroundSize: "cover",
+            }}
+          ></motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;
