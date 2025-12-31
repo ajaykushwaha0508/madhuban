@@ -1,4 +1,5 @@
 import AboutUs from "@/components/about/about";
+import SEO from "@/components/seo/Seo";
 
 const schema = {
   "@context": "https://schema.org",
@@ -43,7 +44,12 @@ const schema = {
 };
 
 const AboutUsPage = () => {
-  return <AboutUs />;
+  return (
+    <>
+      <SEO schemas={[schema]} />
+      <AboutUs />
+    </>
+  );
 };
 
 export default AboutUsPage;
@@ -66,9 +72,5 @@ export async function generateMetadata() {
       "nature resort bhopal",
       "madhuban eco retreat",
     ],
-
-    other: {
-      "ld+json": JSON.stringify(schema),
-    },
   };
 }

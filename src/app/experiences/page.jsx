@@ -3,7 +3,7 @@ import OurExperiences from "@/components/experiences/OurExperiences";
 import WhyChooseUs from "@/components/experiences/WhyChooseUs";
 import ExperiencesFAQs from "@/components/experiences/ExperiencesFAQs";
 import ExperiencesBanner from "@/components/experiences/ExperiencesBanner";
-
+import SEO from "@/components/seo/Seo";
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -84,6 +84,7 @@ const faqSchema = {
 const ExperiencesPage = () => {
   return (
     <>
+      <SEO schemas={[pageSchema, faqSchema]} />
       <ExperiencesBanner />
       <ExperienceComponent />
       <OurExperiences />
@@ -121,11 +122,6 @@ export async function generateMetadata() {
     robots: {
       index: true,
       follow: true,
-    },
-
-    other: {
-      // 👇 MULTIPLE SCHEMAS IN HEAD
-      "ld+json": JSON.stringify([pageSchema, faqSchema]),
     },
   };
 }
