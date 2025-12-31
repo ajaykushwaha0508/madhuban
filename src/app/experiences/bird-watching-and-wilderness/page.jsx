@@ -1,5 +1,5 @@
-
 import BirdWatchingAndWilderness from "@/components/experiences/Bird-Watching-And-Wilderness/BirdWatchingAndWilderness";
+import SEO from "@/components/seo/Seo";
 
 const PageSchema = {
   "@context": "https://schema.org",
@@ -86,6 +86,7 @@ const FaqsSchema = {
 const BirdWildernessPage = () => {
   return (
     <>
+      <SEO schemas={[PageSchema, FaqsSchema]} />
       <BirdWatchingAndWilderness />
     </>
   );
@@ -118,11 +119,6 @@ export async function generateMetadata() {
     robots: {
       index: true,
       follow: true,
-    },
-
-    other: {
-      // 👇 MULTIPLE SCHEMAS IN HEAD
-      "ld+json": JSON.stringify([PageSchema, FaqsSchema]),
     },
   };
 }

@@ -1,4 +1,5 @@
 import ForestWalkAndNatureTrails from "@/components/experiences/Forest-Walk-And-Nature-Trails/ForestWalkAndNatureTrails";
+import SEO from "@/components/seo/Seo";
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -85,6 +86,7 @@ const FaqSchema = {
 const ForestWalkAndNatureTrailsPage = () => {
   return (
     <>
+      <SEO schemas={[pageSchema, FaqSchema]} />
       <ForestWalkAndNatureTrails />
     </>
   );
@@ -117,10 +119,6 @@ export async function generateMetadata() {
     robots: {
       index: true,
       follow: true,
-    },
-    other: {
-      // 👇 MULTIPLE SCHEMAS IN HEAD
-      "ld+json": JSON.stringify([pageSchema, FaqSchema]),
     },
   };
 }

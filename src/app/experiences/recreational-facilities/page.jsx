@@ -1,4 +1,5 @@
 import RecreationalFacilities from "@/components/experiences/recreational-facilities/RecreationalFacilities";
+import SEO from "@/components/seo/Seo";
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -85,6 +86,7 @@ const faqSchema = {
 const RecreationalFacilitiesPage = () => {
   return (
     <>
+    <SEO schemas={[pageSchema, faqSchema]} />
       <RecreationalFacilities />
     </>
   );
@@ -116,10 +118,6 @@ export async function generateMetadata() {
     robots: {
       index: true,
       follow: true,
-    },
-
-    other: {
-      "ld+json": JSON.stringify([pageSchema, faqSchema]),
-    },
+    }
   };
 }
