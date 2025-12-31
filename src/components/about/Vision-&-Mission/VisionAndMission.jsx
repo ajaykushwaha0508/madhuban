@@ -34,6 +34,18 @@ const ourMissionPoint = [
   "Experiences that promote mental clarity, wellness, and slow living",
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+
 const VisionMission = () => {
   return (
     <>
@@ -53,13 +65,19 @@ const VisionMission = () => {
             <hr className="w-16 border-t border-white ml-4" />
           </div>
 
-          <div className="flex flex-col gap-4 bg-primary-gray p-4  md:rounded-2xl">
+          <motion.div
+            className="flex flex-col gap-4 bg-primary-gray p-4  md:rounded-2xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
             {/* our vision */}
-            <motion.div className="h-full" variants={itemVariants}>
+            <motion.div className="h-full" variants={containerVariants}>
               <div className="grid grid-cols-1 lg:grid-cols-2  gap-12">
                 <motion.div
                   className="h-full bg-primary-gray2 rounded-2xl order-2 md:order1"
-                  initial={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
                 >
@@ -80,7 +98,7 @@ const VisionMission = () => {
 
                 <motion.div
                   className="h-full order-1 md:order2"
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
                 >
@@ -167,7 +185,7 @@ const VisionMission = () => {
                 </motion.div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </>
