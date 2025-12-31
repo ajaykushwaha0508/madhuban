@@ -90,7 +90,8 @@ const privacyData = {
     },
     {
       title: "6. Website Availability & Technical Accuracy",
-      content: "We do not warrant that the website will be available at all times or free from technical issues, viruses, or interruptions. Madhuban Eco Retreat is not liable for any temporary unavailability or technical errors that may affect user access.",
+      content:
+        "We do not warrant that the website will be available at all times or free from technical issues, viruses, or interruptions. Madhuban Eco Retreat is not liable for any temporary unavailability or technical errors that may affect user access.",
     },
     {
       title: "7. Intellectual Property",
@@ -135,12 +136,12 @@ export default function Disclaimer() {
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle variant="h5" component="h2">
-              {section.title}
-            </SectionTitle>
-            <SectionSubTitle variant="h6" component="h6">
-              {section.subtitle}
-            </SectionSubTitle>
+            <SectionTitle component="h2">{section.title}</SectionTitle>
+            {section?.subtitle && (
+              <SectionSubTitle component="h6">
+                {section.subtitle}
+              </SectionSubTitle>
+            )}
 
             {section.content && (
               <Typography variant="body1" sx={{ mb: 2 }}>

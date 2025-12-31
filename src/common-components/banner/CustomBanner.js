@@ -22,7 +22,7 @@ const CustomBanner = ({
       paddingLeft={2}
       paddingRight={2}
       sx={{
-        background: "#FFFDEB" ,
+        background: "#FFFDEB",
         overflow: "hidden",
         ...sx,
       }}
@@ -35,7 +35,7 @@ const CustomBanner = ({
           fontFamily: "sen, sans-serif",
           whiteSpace: "wrap",
           // fontWeight: 500,
-          marginTop:2,
+          marginTop: 2,
           lineHeight: "130%",
           color: "#322C3E",
           fontSize: { xs: "24px", sm: "28px", md: "36px", lg: "40px" },
@@ -45,57 +45,57 @@ const CustomBanner = ({
         {title}
       </Typography>
 
-      <Typography
-        variant="h2"
-        component="h2"
-        sx={{
-          fontFamily: "sen, sans-serif",
-          whiteSpace: "wrap",
-          lineHeight: "130%",
-          color: "#443B56",
-          fontSize: { xs: "20px", sm: "22px", md: "24px", lg: "24px" },
-          mt: 2,
-          color: "#333",
-        }}
-      >
-        {subtitle}
-      </Typography>
-
-        <Box
+      {subtitle && (
+        <Typography
+          variant="h2"
+          component="h2"
           sx={{
-           
-            borderRadius: "4px",
-            display: "flex",
-            width: "fit-content",
-            padding: "4px 20px",
-            justifySelf: "center",
-            marginTop: "20px",
-            cursor: "default",
+            fontFamily: "sen, sans-serif",
+            whiteSpace: "wrap",
+            lineHeight: "130%",
+            color: "#443B56",
+            fontSize: { xs: "20px", sm: "22px", md: "24px", lg: "24px" },
+            mt: 2,
+            color: "#333",
           }}
         >
-          {breadcrumbs?.map((val, index) => (
-            <React.Fragment key={val.goesto}>
-              <Link href={val.goesto}>
-                <Box
-                  component="span"
-                  sx={{
-                    fontWeight: "bold", 
-                    fontFamily: "sen, sans-serif",
-                    cursor: index == 0 ? "pointer" : "default"
-                  }}
-                >
-                  {val.name}
-                </Box>
-              </Link>
-              {index < breadcrumbs.length - 1 && (
-                <Box component="span" sx={{ mx: 1 }}>
-                  /
-                </Box>
-              )}
-            </React.Fragment>
-          ))}
-        </Box>
+          {subtitle}
+        </Typography>
+      )}
 
+      <Box
+        sx={{
+          borderRadius: "4px",
+          display: "flex",
+          width: "fit-content",
+          padding: "4px 20px",
+          justifySelf: "center",
+          marginTop: "20px",
+          cursor: "default",
+        }}
+      >
+        {breadcrumbs?.map((val, index) => (
+          <React.Fragment key={val.goesto}>
+            <Link href={val.goesto}>
+              <Box
+                component="span"
+                sx={{
+                  fontWeight: "bold",
+                  fontFamily: "sen, sans-serif",
+                  cursor: index == 0 ? "pointer" : "default",
+                }}
+              >
+                {val.name}
+              </Box>
+            </Link>
+            {index < breadcrumbs.length - 1 && (
+              <Box component="span" sx={{ mx: 1 }}>
+                /
+              </Box>
+            )}
+          </React.Fragment>
+        ))}
+      </Box>
     </Grid>
   );
 };

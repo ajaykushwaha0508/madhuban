@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,8 +6,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
+import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 
-const ForestNature = () => {
+const ForestWalkAndNatureTrails = () => {
   const [activeAccordion, setActiveAccordion] = useState(0);
   const [activeNestedAccordion, setActiveNestedAccordion] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null); // for fullscreen modal
@@ -44,53 +45,52 @@ const ForestNature = () => {
       title: "Forest Walks & Nature Trails",
       content: (
         <>
-          <p className="mb-4 font-arial-narrow text-[rgb(110,97,70)] tracking-wider text-base font-medium">
-            At Madhuban ECO Retreat, our guided Forest Walk and Nature Trail
-            experience is more than a stroll. It's a soulful journey through the
-            heart of Madhya Pradesh’s thriving wilderness...
+          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+            Step into the quiet, refreshing world of Ratapani with our Forest
+            Walks & Nature Trails experience. Designed for travelers who love
+            calm, nature, and mindful exploration, this guided walk takes you
+            through the lush wilderness surrounding Madhuban Eco Retreat.
           </p>
-          <div className="font-primary divide-y rounded-lg bg-[rgb(110,97,70)] shadow-inner overflow-hidden">
+          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+            Discover medicinal plants, native trees, butterflies, birds, and the
+            natural ecosystem that thrives in this part of Madhya Pradesh. Every
+            trail is led by trained naturalists who help you understand the
+            forest, its rhythm, and the life it nurtures. These trails are safe,
+            scenic, and suitable for families, seniors, solo travelers, and
+            nature lovers.
+          </p>
+          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+            Whether you're looking for forest walks near Bhopal, peaceful
+            eco-tourism, or an offbeat nature experience, this trail offers a
+            chance to reconnect with yourself and the wild.
+          </p>
+          <div className="font-primary divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                    <li>Guided eco-trails with trained naturalists</li>
                     <li>
-                      Guided eco-trails with naturalists to explore the flora
-                      and local ecosystem
+                      Learning about local flora, herbs, and forest ecology
                     </li>
                     <li>
-                      Observation of medicinal plants, native trees,
-                      butterflies, and wild herbs
+                      Mindful walking sessions to improve calmness & focus
                     </li>
-                    <li>
-                      Mindful walking sessions promoting calmness and mental
-                      clarity
-                    </li>
-                    <li>
-                      A chance to disconnect from devices and reconnect with
-                      nature
-                    </li>
-                    <li>
-                      Safe, well-marked trails suitable for families, solo
-                      travelers, and senior guests
-                    </li>
+                    <li>Device-free experience to help you disconnect</li>
+                    <li>Safe, well-marked routes for all age groups</li>
                   </ul>
                 ),
               },
               {
                 title: "Ideal For",
                 content: (
-                  <ul className="list-disc list-inside text-[#D1C8C1] font-bold tracking-widest font-primary space-y-2">
-                    <li>Nature enthusiasts and eco-tourists in Bhopal</li>
-                    <li>Travelers seeking wellness in nature</li>
-                    <li>
-                      Families and kids wanting a meaningful outdoor activity
-                    </li>
-                    <li>
-                      Photographers and bird watchers looking for the perfect
-                      shot
-                    </li>
+                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                    <li>Nature enthusiasts & eco-tourists</li>
+                    <li>Wellness travelers</li>
+                    <li>Families & children</li>
+                    <li>Photographers & bird watchers</li>
+                    <li>Travelers seeking offbeat experiences near Bhopal</li>
                   </ul>
                 ),
               },
@@ -98,20 +98,21 @@ const ForestNature = () => {
                 title: "Ready to Walk the Wild Side?",
                 content: (
                   <>
-                    Join us for a tranquil forest walk —{" "}
+                    Join our guided forest walk and discover Ratapani’s natural
+                    treasures. —{" "}
                     <Link
                       href="/booking"
-                      className="text-[#D1C8C1] underline font-bold tracking-widest font-primary"
+                      className="text-primary-gray2 underline font-bold tracking-widest font-primary"
                     >
-                      Book Your Nature Trail Now
+                      Book Your Nature Trail Experience Now
                     </Link>
                   </>
                 ),
               },
             ].map((item, idx) => (
-              <div key={idx} className="group">
+              <div key={idx} className="group border-primary-gray2">
                 <button
-                  className="flex items-center justify-between w-full py-3 px-4 text-left text-[#D1C8C1] font-medium transition duration-200"
+                  className="flex items-center justify-between w-full py-3 px-4 text-left text-primary-gray2 font-medium transition duration-200"
                   onClick={() =>
                     setActiveNestedAccordion(
                       activeNestedAccordion === idx ? null : idx
@@ -151,6 +152,38 @@ const ForestNature = () => {
     },
   ];
 
+  const forestWalkFaqs = [
+    {
+      question: "Are the forest walks safe for beginners?",
+      answer:
+        "Yes, all trails are beginner-friendly, guided, and suitable for families and seniors.",
+    },
+    {
+      question: "How long does a forest walk take?",
+      answer:
+        "Most walks last between 45 minutes to 1.5 hours, depending on the trail.",
+    },
+    {
+      question: "What can I see during the nature trail?",
+      answer:
+        "Guests can spot medicinal herbs, butterflies, native trees, insects, bird species, and natural forest formations.",
+    },
+    {
+      question: "Is this the best forest walk experience near Bhopal?",
+      answer:
+        "Yes, Madhuban Eco Retreat offers one of the most peaceful and eco-friendly forest walks near Bhopal, inside the Ratapani region.",
+    },
+    {
+      question: "Do I need to book in advance?",
+      answer: "Pre-booking is recommended to ensure naturalist availability.",
+    },
+    {
+      question: "Are the trails suitable for children?",
+      answer:
+        "Yes, children enjoy the nature learning experience and the easy, safe trails.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#908873d8]">
       {/* Hero Section with Scroll Down Button */}
@@ -171,7 +204,7 @@ const ForestNature = () => {
               Forest Walks & Nature Trails
             </h1>
             <p className="text-xl md:text-2xl font-light tracking-wider font-arial-narrow">
-              Step into Serenity, Breathe with the Forest
+              Slow Down, Breathe, and Walk With the Forest
             </p>
           </div>
           <button
@@ -190,26 +223,26 @@ const ForestNature = () => {
       {/* Accordion Section */}
       <section
         id="accordion-section"
-        className="py-10 px-4 md:px-8 bg-[rgb(110,97,70)]"
+        className="py-10 px-4 md:px-8 bg-primary-gray"
       >
         <div className="container mx-auto max-w-4xl">
           <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-[#D1C8C1] font-semibold tracking-wider text-center">
+            <hr className="w-16 border-t border-primary-gray2 mr-4" />
+            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider text-center">
               Explore Our Forest
             </h2>
-            <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
+            <hr className="w-16 border-t border-primary-gray2 ml-4" />
           </div>
-          <div className="divide-y  rounded-xl bg-[#D1C8C1] shadow-md overflow-hidden">
+          <div className="divide-y  rounded-xl bg-primary-gray2 shadow-md overflow-hidden">
             {accordionItems.map((item, index) => (
               <div key={index} className="group">
                 <button
-                  className="font-primary tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-[rgb(110,97,70)] transition duration-200"
+                  className="font-primary tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                  <span className="font-primary tracking-widest font-bold text-xl">
+                  <span className="font-primary tracking-widest font-bold text-2xl">
                     {item.title}
                   </span>
                   <svg
@@ -245,14 +278,14 @@ const ForestNature = () => {
       </section>
 
       {/* Image Slider Section */}
-      <section className="py-10 px-4 md:px-8 	bg-[#D1C8C1]">
+      <section className="py-10 px-4 md:px-8 	bg-primary-gray2">
         <div className="container mx-auto">
           <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-[rgb(110,97,70)] font-bold tracking-wider text-center">
+            <hr className="w-16 border-t border-white mr-4" />
+            <h2 className="text-4xl md:text-5xl font-primary text-white font-bold tracking-wider text-center">
               Forest Gallery
             </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
+            <hr className="w-16 border-t border-white ml-4" />
           </div>
           <div className="min-w-[80vw] md:w-[100%] h-[70vh] mx-auto">
             <Swiper
@@ -295,8 +328,13 @@ const ForestNature = () => {
           </div>
         </div>
       )}
+
+      {/* FAQs */}
+      <section className="py-10 px-4 md:px-8 	bg-[#D1C8C1]">
+        <CommonFaqs faqs={forestWalkFaqs} />
+      </section>
     </div>
   );
 };
 
-export default ForestNature;
+export default ForestWalkAndNatureTrails;

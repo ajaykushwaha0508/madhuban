@@ -32,21 +32,7 @@ const MainNavigation = () => {
     },
     {
       name: "Experiences",
-      path: "/experiences",
-      dropdown: [
-        {
-          name: "Forest Walks & Nature Trails",
-          path: "/experiences/forest-walks-and-nature-trails",
-        },
-        {
-          name: "Bird Watching & Wilderness",
-          path: "/experiences/bird-watching-and-wilderness",
-        },
-        {
-          name: "Recreational Facilities",
-          path: "/experiences/recreational-facilities",
-        },
-      ],
+      path: "/experiences"
     },
     {
       name: "Dining",

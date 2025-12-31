@@ -79,24 +79,27 @@ const heroSlides = [
 const experiences = [
   {
     title: "Forest Walks & Nature Trails",
-    path:"forest-walks-and-nature-trails",
+    path: "forest-walks-&-nature-trails",
     image: "/images/experiences/nature-trail.jpg",
     description:
-      "Explore the wild beauty of Madhuban ECO Retreat through our guided Forest Walks and Nature Trail, immerse yourself in bird songs, fresh air, and the healing calm of untouched greenery.",
+      "Reconnect with the wilderness through guided forest walks and nature trails inside the Ratapani region. Learn about native plants, medicinal herbs, butterflies, and eco-systems while enjoying peaceful, device-free moments in the forest.",
+    learnMoreBtn: "Explore Forest Walks",
   },
   {
     title: "Bird Watching & Wilderness",
-    path:"bird-watching-and-wilderness",
+    path: "bird-watching-&-wilderness",
     image: "/images/experiences/bird-watching.jpg",
     description:
-      "Discover the joy of Bird Watching and Wilderness at Madhuban ECO Retreat and spot rare species, enjoy peaceful moments, and reconnect with nature in a truly untouched forest ecosystem.",
+      "Witness over 70+ species of birds across pristine landscapes — from paradise flycatchers to orioles and kingfishers. Our guided birding sessions offer a serene wilderness experience ideal for enthusiasts and researchers.",
+    learnMoreBtn: "Explore Bird Watching",
   },
   {
     title: "Recreational Facilities",
-    path:"recreational-facilities",
+    path: "recreational-facilities",
     image: "/images/experiences/Recreational-Facilities.jpg",
     description:
-      "Unwind with our eco-friendly Recreational Facilities at Madhuban ECO Retreat and enjoy indoor games, open-air seating, cycling trails, and peaceful spaces. all are thoughtfully designed to refresh your body, mind, and spirit, naturally.",
+      "Relax and unwind with eco-friendly recreation — from indoor games and cycling tracks to hammocks, swings, open-air seating, children zones, and quiet reading corners.",
+    learnMoreBtn: "Explore Recreational Activities",
   },
 ];
 
