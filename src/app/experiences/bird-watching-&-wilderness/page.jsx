@@ -1,6 +1,5 @@
-import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+
 import BirdWatchingAndWilderness from "@/components/experiences/Bird-Watching-And-Wilderness/BirdWatchingAndWilderness";
-import SEO from "@/components/SEO/SEO";
 
 const PageSchema = {
   "@context": "https://schema.org",
@@ -40,86 +39,90 @@ const PageSchema = {
 const FaqsSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
+  mainEntity: [
     {
       "@type": "Question",
-      "name": "What birds can I spot in Ratapani during bird watching?",
-      "acceptedAnswer": {
+      name: "What birds can I spot in Ratapani during bird watching?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "You can spot paradise flycatchers, golden orioles, kingfishers, drongos, peacocks, woodpeckers and various migratory birds."
-      }
+        text: "You can spot paradise flycatchers, golden orioles, kingfishers, drongos, peacocks, woodpeckers and various migratory birds.",
+      },
     },
     {
       "@type": "Question",
-      "name": "Is this the best bird watching spot near Bhopal?",
-      "acceptedAnswer": {
+      name: "Is this the best bird watching spot near Bhopal?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Yes. Madhuban Eco Retreat is one of the top bird watching locations near Bhopal with over 70 species recorded."
-      }
+        text: "Yes. Madhuban Eco Retreat is one of the top bird watching locations near Bhopal with over 70 species recorded.",
+      },
     },
     {
       "@type": "Question",
-      "name": "Are bird watching sessions guided?",
-      "acceptedAnswer": {
+      name: "Are bird watching sessions guided?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Yes, all bird watching sessions are guided by expert naturalists."
-      }
+        text: "Yes, all bird watching sessions are guided by expert naturalists.",
+      },
     },
     {
       "@type": "Question",
-      "name": "What time is ideal for bird watching?",
-      "acceptedAnswer": {
+      name: "What time is ideal for bird watching?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Early mornings and sunset hours are the most active for bird sightings."
-      }
+        text: "Early mornings and sunset hours are the most active for bird sightings.",
+      },
     },
     {
       "@type": "Question",
-      "name": "Is bird watching suitable for kids and beginners?",
-      "acceptedAnswer": {
+      name: "Is bird watching suitable for kids and beginners?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Yes, the sessions are safe and ideal for beginners, children, and families."
-      }
-    }
-  ]
-}
-
+        text: "Yes, the sessions are safe and ideal for beginners, children, and families.",
+      },
+    },
+  ],
+};
 
 const BirdWildernessPage = () => {
-  return(
-        <>
-        <SEO schema={PageSchema}/>
-        <SEO schema={FaqsSchema}/>
-       <BirdWatchingAndWilderness />
-       </>
-  ) ;
+  return (
+    <>
+      <BirdWatchingAndWilderness />
+    </>
+  );
 };
 
 export default BirdWildernessPage;
 
-export const metadata = {
-  title: "Bird Watching in Ratapani | Wilderness Experience Near Bhopal",
+export async function generateMetadata() {
+  return {
+    title: "Bird Watching in Ratapani | Wilderness Experience Near Bhopal",
 
-  description:
-    "Experience bird watching in Ratapani near Bhopal. Spot 70+ native & migratory species during peaceful guided wilderness sessions at Madhuban Eco Retreat.",
+    description:
+      "Experience bird watching in Ratapani near Bhopal. Spot 70+ native & migratory species during peaceful guided wilderness sessions at Madhuban Eco Retreat.",
 
-  keywords: [
-    "bird watching near bhopal",
-    "ratapani bird watching",
-    "wilderness near bhopal",
-    "forest birding mp",
-    "migratory birds ratapani",
-    "wildlife trails bhopal",
-    "eco tourism ratapani",
-  ],
+    keywords: [
+      "bird watching near bhopal",
+      "ratapani bird watching",
+      "wilderness near bhopal",
+      "forest birding mp",
+      "migratory birds ratapani",
+      "wildlife trails bhopal",
+      "eco tourism ratapani",
+    ],
 
-  alternates: {
-    canonical:
-      "https://www.madhubanecoretreat.com/experiences/bird-watching-%26-wilderness",
-  },
+    alternates: {
+      canonical:
+        "https://www.madhubanecoretreat.com/experiences/bird-watching-%26-wilderness",
+    },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    other: {
+      // 👇 MULTIPLE SCHEMAS IN HEAD
+      "ld+json": JSON.stringify([PageSchema, FaqsSchema]),
+    },
+  };
+}
