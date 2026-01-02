@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useRouter } from "next/navigation";
 
 const BookingWidget = () => {
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
   const [adults, setAdults] = useState(2);
@@ -32,7 +32,7 @@ const BookingWidget = () => {
     <div className="w-full px-4 sm:px-6 lg:px-8 pb-4">
       <div className="bg-[rgb(110,97,70)] rounded-lg shadow-xl p-4 sm:p-6 relative sm:-bottom-16 mx-auto max-w-[1000px]">
         <form onSubmit={handleCheckAvailability}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
             {/* Check-in Date */}
             <div className="lg:col-span-1 flex justify-center">
               <div>
@@ -41,7 +41,7 @@ const BookingWidget = () => {
                 </label>
                 <div className="relative text-black">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Calendar className="h-5 w-5 text-black" />
+                    <Calendar className="h-5 w-5 text-primary-gray2 z-1" />
                   </div>
                   <DatePicker
                     selected={checkIn}
@@ -64,8 +64,8 @@ const BookingWidget = () => {
                   Check-out
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Calendar className="h-5 w-5 text-gray-400" />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-1">
+                    <Calendar className="h-5 w-5 text-primary-gray2" />
                   </div>
                   <DatePicker
                     selected={checkOut}
@@ -88,14 +88,11 @@ const BookingWidget = () => {
                   Guests
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 -left-5 flex items-center pointer-events-none">
-                    <Users className="h-5 w-5 text-[#D1C8C1]" />
-                  </div>
-                  <div className="w-44 flex space-x-2">
+                  <div className="flex space-x-2">
                     <select
                       value={adults}
                       onChange={(e) => setAdults(parseInt(e.target.value))}
-                      className="w-3/4 bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
+                      className=" bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2.5 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
                       <option value="1">1 Adult</option>
                       <option value="2">2 Adults</option>
@@ -107,7 +104,7 @@ const BookingWidget = () => {
                     <select
                       value={children}
                       onChange={(e) => setChildren(parseInt(e.target.value))}
-                      className="w-3/4 bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
+                      className=" bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
                       <option value="0">0 Child</option>
                       <option value="1">1 Child</option>
@@ -129,7 +126,7 @@ const BookingWidget = () => {
                 <select
                   value={accommodationType}
                   onChange={(e) => setAccommodationType(e.target.value)}
-                  className="w-40 rounded-md bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium text-[rgb(110,97,70)] py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-40 rounded-md bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium text-[rgb(110,97,70)] py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                 >
                   <option value="all">All Types</option>
                   <option value="cottage">Safari Tent</option>
@@ -141,7 +138,7 @@ const BookingWidget = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="lg:col-span-1 flex justify-center items-end">
+            <div className="lg:col-span-4 flex justify-center items-end">
               <div className="w-full">
                 <label className="invisible block text-sm font-medium text-[#D1C8C1] mb-1">
                   Check

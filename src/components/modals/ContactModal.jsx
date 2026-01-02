@@ -109,13 +109,13 @@ const ContactModal = () => {
     >
       <Fade in={open}>
         <Box
-          className="rounded-2xl"
+          className="rounded-2xl contactModal"
           sx={{
             position: "absolute",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: { xs:'90%', md: "30%" },
+            width: { xs: "90%", md: "30%" },
             boxShadow: 24,
             border: "none",
             outline: "none",
