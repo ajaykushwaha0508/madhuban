@@ -5,7 +5,8 @@ import { ChevronRight } from "lucide-react";
 import { FaAnglesRight } from "react-icons/fa6";
 
 const ExperienceCard = ({ experience }) => {
-  const { title, image, description, learnMoreBtn, path } = experience;
+  const { title, image, description, learnMoreBtn, path, idealFor } =
+    experience;
 
   return (
     <div className=" group relative rounded-lg overflow-hidden shadow-lg h-96 hover:shadow-xl transition-all duration-300">
@@ -28,10 +29,12 @@ const ExperienceCard = ({ experience }) => {
         <p className=" text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-36 mb-20 group-hover:opacity-100 max-h-0 max500:mb-28">
           {description}
         </p>
-        <p className="flex text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-5 mb-5 group-hover:opacity-100 max-h-0 max500:mb-28 ">
-          Ideal For : Bird watchers, wildlife photographers, students, silent
-          nature seekers
-        </p>
+        {idealFor && (
+          <p className="flex text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-5 mb-5 group-hover:opacity-100 max-h-0 max500:mb-28 ">
+            Ideal For : {idealFor}
+          </p>
+        )}
+
         <Link
           href={`/experiences/${path}`}
           className="inline-flex items-center max-340:mt-40 max-Xsm:mt-36 max-sm:mt-24 xl:mt-14 lg:mt-24 text-white font-arial-narrow font-semibold tracking-wider group-hover:opacity-100 "

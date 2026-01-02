@@ -1,6 +1,14 @@
 // src/components/SustainabilityFeature.js
 import React from "react";
-import { Droplet, Sun, Leaf, RefreshCw } from "lucide-react";
+import {
+  Droplet,
+  Sun,
+  Leaf,
+  RefreshCw,
+  Trees,
+  Users,
+  Sprout,
+} from "lucide-react";
 
 const SustainabilityFeature = ({ feature }) => {
   const { icon, title, description } = feature;
@@ -11,6 +19,9 @@ const SustainabilityFeature = ({ feature }) => {
     sun: Sun,
     leaf: Leaf,
     recycle: RefreshCw,
+    trees: Trees,
+    community: Users,
+    nature: Sprout,
   };
 
   // Get the appropriate icon component
@@ -24,9 +35,7 @@ const SustainabilityFeature = ({ feature }) => {
       <h3 className="font-primary tracking-widest text-primary-gray2 font-medium  text-xl mb-2">
         {title}
       </h3>
-      <p className=" text-primary-gray2 text-opacity-90">
-        {description}
-      </p>
+      <p className=" text-primary-gray2 text-opacity-90">{description}</p>
     </div>
   );
 };

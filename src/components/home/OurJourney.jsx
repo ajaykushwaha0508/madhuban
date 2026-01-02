@@ -1,0 +1,253 @@
+"use client";
+import { facebook, instagram } from "@/utills/constants";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const OurJourney = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  return (
+    <section className="py-20 px-4 md:px-1 bg-[#D1C8C1]">
+      <div className="container mx-auto">
+        {/* Section Header */}
+        <motion.div
+          className="text-center max-w-3xl mx-auto -mt-10 mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="flex items-center justify-center">
+            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
+            <h2 className="text-xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider mb-3 max500:text-3xl">
+              Follow Our Journey
+            </h2>
+            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
+          </div>
+          <motion.div
+            className="flex justify-center items-center space-x-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <motion.a
+              href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.2 }}
+            >
+              <img
+                src="/images/socials/instagram.png"
+                alt="Instagram"
+                className="w-8 h-8"
+              />
+            </motion.a>
+            <motion.a
+              href={facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.2 }}
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+                alt="Facebook"
+                className="w-8 h-8"
+              />
+            </motion.a>
+            <motion.a
+              href={facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.2 }}
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-8 h-8"
+              />
+            </motion.a>
+          </motion.div>
+        </motion.div>
+
+        {/* Instagram Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          {/* Manual image on top */}
+          <motion.div
+            className="mb-4 flex justify-center items-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src="/images/instagram/vidya.jpg"
+              alt="Manual"
+              className="xl:w-[50vw] xl:h-[50vh] object-cover rounded-md sm:w-[100vw] max640:w-[100vw]"
+              // className="w-[50vw] h-[50vh]  object-cover rounded-md sm:w-screen max640:w-screen "
+            />
+          </motion.div>
+
+          {/* Grid of 4 Instagram images */}
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+          >
+            {[...Array(3)].map((_, index) => (
+              <motion.div
+                key={index}
+                className="aspect-square min-h-[200px] rounded-xl overflow-hidden cursor-pointer"
+                onClick={() =>
+                  setSelectedImage(`/images/instagram/insta-${index + 1}.jpg`)
+                }
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <img
+                  src={`/images/instagram/insta-${index + 1}.jpg`}
+                  alt={`Instagram post ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="flex justify-center items-center relative mt-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div
+              className="relative cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <img
+                src="/images/instagram/insta-4-thumbanil.png"
+                alt="Video Thumbnail"
+                className="xl:w-[25vw] xl:h-[50vh] object-cover rounded-md sm:w-[100vw] max640:w-[100vw]"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/80 rounded-full p-4 hover:scale-105 transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8 text-[#29561F]"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M6.271 11.653l4.5-3.5a.5.5 0 000-.806l-4.5-3.5A.5.5 0 006 4.5v7a.5.5 0 00.271.153z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Modal Popup */}
+          {isModalOpen && (
+            <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
+              <div className="relative w-full max-w-4xl px-4">
+                <button
+                  className="absolute top-2 right-4 text-white text-3xl font-bold z-50"
+                  onClick={() => setIsModalOpen(false)}
+                >
+                  &times;
+                </button>
+                <video
+                  autoPlay
+                  playsInline
+                  className="w-full h-[100vh] rounded-md"
+                >
+                  <source
+                    src="/images/instagram/insta-4.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          )}
+        </motion.div>
+
+        {/* Lightbox Modal */}
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            onClick={() => setSelectedImage(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.img
+              src={selectedImage}
+              alt="Full Size"
+              className="max-w-full max-h-full rounded-lg shadow-lg"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+            />
+          </motion.div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default OurJourney;
