@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MainNavigation />
-        <div className="mt-20">{children}</div>
+        {children}
         <Footer />
         <ContactModal />
         <CookiesPopup />

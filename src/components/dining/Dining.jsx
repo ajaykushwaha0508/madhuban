@@ -6,7 +6,7 @@ import DiningSpacial from "./DiningSpacial";
 import DiningOptions from "./DiningOptions";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 
-export const foodAndDiningFaqs = [
+const foodAndDiningFaqs = [
   {
     question: "Do you serve non-vegetarian food?",
     answer:
@@ -95,7 +95,7 @@ const Dining = () => {
               </div>
 
               <div className="flex flex-col gap-4">
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 text-center">
+                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
                   At Madhuban Eco Retreat, dining is more than a meal — it’s an
                   experience rooted in nature, purity, and mindful eating. Our
                   farm-to-table concept brings fresh ingredients straight from
@@ -103,7 +103,7 @@ const Dining = () => {
                   communities, ensuring every dish is nourishing, seasonal, and
                   full of flavor.
                 </p>
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 text-center">
+                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
                   Prepared with minimal processing and maximum care, our meals
                   celebrate the essence of clean eating, inspired by the
                   simplicity of rural Madhya Pradesh. Whether you’re enjoying a
@@ -111,7 +111,7 @@ const Dining = () => {
                   you’ll experience food that is earthy, honest, and deeply
                   satisfying.
                 </p>
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 text-center">
+                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
                   Perfect for travelers looking for veg food near Ratapani,
                   healthy cuisine, or sustainable dining options close to
                   Bhopal, our kitchen reflects our commitment to eco-conscious
@@ -181,6 +181,7 @@ const Dining = () => {
             </div>
           </section>
         </div>
+
         {selectedMedia && (
           <div className="modal" onClick={closeModal}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
