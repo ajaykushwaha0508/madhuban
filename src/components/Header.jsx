@@ -62,7 +62,7 @@ const MainNavigation = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-primary-gray shadow-lg ">
+    <header className="fixed top-0 w-full z-50 bg-primary-gray shadow-lg ">
       {/* Top Info Bar */}
       <div className="hidden lg:block bg-primary-gray2 text-white py-1 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -148,10 +148,10 @@ const MainNavigation = () => {
           <img
             src="/images/logo/logo-4.png"
             alt="Madhuban Eco Retreat Logo"
-            className="h-20 w-20 filter brightness-75"
+            className="h-15 md:h-20 w-15 md:w-20 filter brightness-75"
           />
           <div className="flex flex-col justify-center">
-            <div className="font-primary tracking-wide text-xl font-bold text-[rgb(110,97,70)] leading-tight">
+            <div className="font-primary tracking-wide text-lg  md:text-xl font-bold text-[rgb(110,97,70)] leading-tight">
               Madhuban Eco Retreat
             </div>
 

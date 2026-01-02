@@ -62,18 +62,18 @@ const heroSlides = [
     subtitle:
       "Experience sustainable luxury and serene forest walks in the heart of Madhya Pradesh.",
   },
-  {
-    image: "/images/hero/hero-2.jpg",
-    title: "Sustainable Travel in India: An Eco-Luxury Retreat",
-    subtitle:
-      "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
-  },
-  {
-    image: "/images/hero/hero-3.jpg",
-    title: "Connect With Wildlife & Nature",
-    subtitle:
-      "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
-  },
+  // {
+  //   image: "/images/hero/hero-2.jpg",
+  //   title: "Sustainable Travel in India: An Eco-Luxury Retreat",
+  //   subtitle:
+  //     "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
+  // },
+  // {
+  //   image: "/images/hero/hero-3.jpg",
+  //   title: "Connect With Wildlife & Nature",
+  //   subtitle:
+  //     "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
+  // },
 ];
 
 const experiences = [
@@ -155,7 +155,7 @@ const Home = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="min-h-screen bg-stone-50 pt-[220px]">
+    <div className="min-h-screen bg-stone-50 md:pt-[210px]">
       {/* -----------------Meta Tag start -------------------------------------------------------- */}
       {/* <Helmet>
         <title>
@@ -202,7 +202,7 @@ const Home = () => {
             className="text-center max-w-3xl"
           >
             <motion.h1
-              className="font-primary tracking-widest font-medium  text-5xl md:text-6xl mb-4"
+              className="font-primary tracking-widest font-medium text-3xl  md:text-5xl md:text-6xl mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -210,7 +210,7 @@ const Home = () => {
               {heroSlides[currentSlide].title}
             </motion.h1>
             <motion.p
-              className="font-arial-narrow tracking-wider text-xl md:text-2xl mb-8"
+              className="font-arial-narrow tracking-wider text-xl   md:text-2xl mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
