@@ -62,18 +62,18 @@ const heroSlides = [
     subtitle:
       "Experience sustainable luxury and serene forest walks in the heart of Madhya Pradesh.",
   },
-  // {
-  //   image: "/images/hero/hero-2.jpg",
-  //   title: "Sustainable Travel in India: An Eco-Luxury Retreat",
-  //   subtitle:
-  //     "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
-  // },
-  // {
-  //   image: "/images/hero/hero-3.jpg",
-  //   title: "Connect With Wildlife & Nature",
-  //   subtitle:
-  //     "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
-  // },
+  {
+    image: "/images/hero/hero-2.jpg",
+    title: "Sustainable Travel in India: An Eco-Luxury Retreat",
+    subtitle:
+      "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
+  },
+  {
+    image: "/images/hero/hero-3.jpg",
+    title: "Connect With Wildlife & Nature",
+    subtitle:
+      "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
+  },
 ];
 
 const experiences = [
