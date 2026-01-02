@@ -3,7 +3,14 @@
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
+import {
+  facebook,
+  gmail,
+  instagram,
+  linkedin,
+  phone,
+  youtube,
+} from "@/utills/constants";
 
 const Footer = () => {
   const [open, setOpen] = useState(false); // dropdown state
@@ -259,7 +266,7 @@ const Footer = () => {
                   href="tel:+917895432160"
                   className="text-[#D1C8C1] font-primary tracking-wider text-lg"
                 >
-                 +{phone}
+                  +{phone}
                 </a>
               </li>
               <li className="flex">

@@ -49,13 +49,12 @@ body {
 .react-datepicker-wrapper input[type='text'] {
   background-color: #D1C8C1 !important;
   color: white !important;
-  border: 1px solid black !important;
 }
 
 .react-datepicker-wrapper input[type='text']:focus {
   background-color: #D1C8C1 !important;
   color: white !important;
-  border: 2px solid black !important;
+  border: 2px solid var(--primary-gray2) !important;
   outline: none !important;
 }
 

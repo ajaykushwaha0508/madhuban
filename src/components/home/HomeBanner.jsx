@@ -68,7 +68,7 @@ const HomeBanner = () => {
           className="text-center max-w-3xl"
         >
           <motion.h1
-            className="font-primary tracking-widest font-medium text-3xl  md:text-5xl md:text-6xl mb-4"
+            className="font-primary tracking-widest font-medium text-2xl  md:text-5xl  mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -76,7 +76,7 @@ const HomeBanner = () => {
             {heroSlides[currentSlide].title}
           </motion.h1>
           <motion.p
-            className="font-arial-narrow tracking-wider text-xl   md:text-2xl mb-8"
+            className="font-arial-narrow tracking-wider text-md   md:text-2xl mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
