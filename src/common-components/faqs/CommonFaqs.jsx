@@ -7,7 +7,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,15 +41,14 @@ const fadeInUp = {
   },
 };
 
-export default function CommonFaqs({
-  faqs ,
-  heading = "FAQs"
-}) {
+export default function CommonFaqs({ faqs = [], heading = "FAQs" }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  if (!faqs.length) return <></>;
 
   return (
     <section className="py-8 px-4 md:px-8 bg-primary-gray">
@@ -146,4 +144,3 @@ export const metadata = {
     follow: true,
   },
 };
-

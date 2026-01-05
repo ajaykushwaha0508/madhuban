@@ -1,6 +1,6 @@
 import React from "react";
 
-const SEO = ({ schemas }) => {
+const SEO = ({ schemas = [] }) => {
   return schemas.map((schema, i) => {
     return (
       <script
