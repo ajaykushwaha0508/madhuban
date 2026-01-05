@@ -176,6 +176,7 @@ const Accommodations = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           <div className="flex items-center justify-center mb-3">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
@@ -301,6 +302,7 @@ const Accommodations = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
+          viewport={{ once: true }}
         >
           More details about our accommodations are coming soon. Please check
           back later!

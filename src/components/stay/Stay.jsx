@@ -3,6 +3,7 @@ import WhyStayMadhuban from "./WhyStayMadhuban";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 import StayBanner from "./StayBanner";
 import Accommodations from "./Accommodations";
+import DiscoverIdeal from "./DiscoverIdeal";
 
 const stayFaqs = [
   {
@@ -52,6 +53,7 @@ const Stay = () => {
   return (
     <div className="stay-page bg-[#b4a681d8]">
       <StayBanner />
+      <DiscoverIdeal />
       <Accommodations />
       <WhyStayMadhuban />
       <CommonFaqs faqs={stayFaqs} />
