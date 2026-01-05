@@ -320,11 +320,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 -mt-5 pt-2 flex flex-col md:flex-row items-center justify-between">
+        <div className="border-t border-gray-800 -mt-5 pt-2 flex  flex-col-reverse md:flex-row gap-8  items-center justify-between">
           <div className="font-primary text-sm text-[#D1C8C1] tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
           </div>
-          <div className="font-primary text-sm text-[#D1C8C1] flex gap-4 tracking-wider text-center">
+          <div className="font-primary text-sm text-[#D1C8C1] w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row gap-4 tracking-wider text-center">
             <Link
               href="/privacy-policy"
               className="font-primary text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"

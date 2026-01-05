@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 // import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -11,6 +11,187 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import StayWhyChooseUs from "@/components/stay/Stay-WhyChooseUs";
+import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+
+const safariTentFaqs = [
+  {
+    question: "What is the price of the safari tent house in Ratapani?",
+    answer:
+      "The safari tent stay at Madhuban Eco Retreat starts at ₹12,000 per night, with optional extra bedding available for ₹1,500 per person.",
+  },
+  {
+    question: "Is this the best safari tent stay near Bhopal?",
+    answer:
+      "Yes. Our safari tents are among the top-rated safari tent houses near Bhopal, offering eco-luxury, forest views, and peaceful surroundings.",
+  },
+  {
+    question: "Are the safari tents suitable for families?",
+    answer:
+      "Absolutely. The safari tent house is ideal for family stays near Bhopal, offering ample space, safety, comfort, and immersive nature experiences.",
+  },
+  {
+    question: "What makes your Ratapani safari tent unique?",
+    answer:
+      "Our safari tents feature raised platforms by a natural stream, elegant cane furniture, open-sky showers, eco-friendly design, and tranquil forest views.",
+  },
+  {
+    question: "Do guests get access to the infinity pool?",
+    answer:
+      "Yes. Guests staying in the Safari Tent enjoy complimentary access to the infinity pool.",
+  },
+  {
+    question: "Is the safari tent pet-friendly?",
+    answer:
+      "Yes, Madhuban Eco Retreat welcomes pets in selected accommodation types, including safari tents.",
+  },
+  {
+    question: "How far is the safari tent stay from Bhopal?",
+    answer:
+      "The retreat is conveniently located near Bhopal, offering quick access while providing a peaceful wilderness escape inside the Ratapani region.",
+  },
+];
+
+const mudHouseFaqs = [
+  {
+    question: "What is the price of Mud House stay in Ratapani?",
+    answer:
+      "Mud House 1 starts at ₹9,000 per night, and Mud House 2 (with bathtub) starts at ₹10,000 per night.",
+  },
+  {
+    question: "Are these the best mud houses near Bhopal?",
+    answer:
+      "Yes, Madhuban Eco Retreat offers one of the most authentic and comfortable mud house stays near Bhopal, rooted in Gond tribal design.",
+  },
+  {
+    question: "Are Mud Houses suitable for families or couples?",
+    answer:
+      "Yes, Mud Houses are ideal for both couples and small families seeking a peaceful, nature-rich, and culturally inspired stay.",
+  },
+  {
+    question: "Do the Mud Houses have AC?",
+    answer:
+      "Yes, each Mud House is fully air-conditioned while still maintaining natural cooling through traditional mud architecture.",
+  },
+  {
+    question: "Is the Mud House pet friendly?",
+    answer:
+      "Yes, pets are welcome in selected mud cottages at Madhuban Eco Retreat.",
+  },
+  {
+    question:
+      "Do guests staying in Mud Houses get access to the infinity pool?",
+    answer:
+      "Yes, complimentary infinity pool access is included for all Mud House guests.",
+  },
+  {
+    question: "Can I book the Mud House online?",
+    answer:
+      "Yes, Mud House bookings can be made directly through the website to avail the best rates.",
+  },
+];
+
+const poolSideVillaFaqs = [
+  {
+    question: "What is the price of a Pool Side Villa near Bhopal?",
+    answer:
+      "The Pool Side Villa at Madhuban Eco Retreat is priced at ₹12,000 per night, with extra bedding available at ₹1,500 per person.",
+  },
+  {
+    question: "Is this the best pool villa stay near Bhopal?",
+    answer:
+      "Yes, it is one of the most peaceful and eco-friendly poolside stays in the Ratapani region, known for privacy, nature views, and boutique comfort.",
+  },
+  {
+    question: "Is the Pool Side Villa suitable for families?",
+    answer:
+      "Absolutely. The villa can comfortably accommodate families and offers a serene environment for bonding and relaxation.",
+  },
+  {
+    question: "Do guests get access to the infinity eco-pool?",
+    answer:
+      "Yes, Pool Side Villa guests have complimentary access to the eco-friendly infinity pool.",
+  },
+  {
+    question: "Is the Pool Side Villa pet friendly?",
+    answer:
+      "Yes, selected poolside villa rooms allow pets, making it a great choice for pet parents.",
+  },
+  {
+    question: "How many people can stay in the Pool Side Villa?",
+    answer: "The villa can accommodate up to 4 guests.",
+  },
+];
+
+const glampingTentFaqs = [
+  {
+    question: "What is the price of Glamping Tent stay in Ratapani?",
+    answer:
+      "The Glamping Tent at Madhuban Eco Retreat is priced at ₹7,500 per night, with extra bedding available for ₹1,500 per person.",
+  },
+  {
+    question: "Are Glamping Tents good for couples?",
+    answer:
+      "Yes. These tents are a favorite among couples seeking a peaceful, stylish, and nature-rich stay near Bhopal.",
+  },
+  {
+    question: "Do the Glamping Tents have AC?",
+    answer:
+      "Yes, all Glamping Tents come with air conditioning and a fan to ensure comfort throughout the year.",
+  },
+  {
+    question: "Do guests get access to the infinity pool?",
+    answer:
+      "Yes, complimentary infinity pool access is included for all Glamping Tent guests.",
+  },
+  {
+    question: "Is the Glamping Tent pet friendly?",
+    answer:
+      "Yes. Selected Glamping Tents allow pets, making it a great option for pet-friendly stays.",
+  },
+  {
+    question: "How many people can stay in the Glamping Tent?",
+    answer: "Each Glamping Tent comfortably accommodates up to 2 guests.",
+  },
+];
+
+const nightCampingFaqs = [
+  {
+    question: "What is the price for night camping in Ratapani?",
+    answer:
+      "Night camping starts at ₹2,500 per person, including food, a nature walk, an obstacle course, and infinity pool access.",
+  },
+  {
+    question: "Is this the best camping stay near Bhopal?",
+    answer:
+      "Yes. Madhuban Eco Retreat offers one of the most scenic and safe jungle camping experiences near Bhopal, surrounded by forest landscapes and open skies.",
+  },
+  {
+    question: "Is camping safe for beginners?",
+    answer:
+      "Absolutely. The camping area is secure, well-managed, and supported by Madhuban’s trained staff and on-ground facilities.",
+  },
+  {
+    question: "Do we get food during the camping stay?",
+    answer:
+      "Yes, both breakfast and dinner are included in the camping package.",
+  },
+  {
+    question: "Is the camping area pet friendly?",
+    answer:
+      "Selected camping areas allow pets. Please confirm availability during booking.",
+  },
+  {
+    question: "Do I get access to the pool while camping?",
+    answer:
+      "Yes, all camping guests enjoy complimentary access to the infinity pool.",
+  },
+  {
+    question: "Is this suitable for groups and college trips?",
+    answer:
+      "Yes, night camping is ideal for friends, students, groups, and corporate teams seeking adventure, bonding, and outdoor experiences.",
+  },
+];
 
 const accommodationsData = [
   {
@@ -19,10 +200,11 @@ const accommodationsData = [
     slug: "safari-tent",
     image: "/videos/safari-tent.mp4",
     altText: "Exterior view of a charming safari tent nestled in greenery",
-    shortDescription:
-      "Experience rustic charm and modern comforts in our safari tents, perfect for a peaceful retreat.",
-    longDescription:
-      "Classic safari style tents on raised platforms perched at the age of a stream that runs through the property overlooking a vast expanse of forested mountains. Each tent is tastefully appointed with exquisite safari style cane furniture, in-situ vanity and change area, separate toilet and shower area and even an open to sky shower with relaxation area.",
+    descriptions: [
+      "Experience the charm of a true safari tent house in Ratapani, designed for travelers who wish to immerse themselves in nature without compromising on comfort. Set on raised platforms beside a gentle stream and overlooking forested mountains, these classic safari-style tents offer one of the most serene and authentic jungle stay experiences near Bhopal.",
+
+      "Each tent is thoughtfully crafted with elegant cane furniture, a vanity and dressing space, a separate shower area, and an open-to-sky bath surrounded by nature. Whether you're a couple seeking a peaceful getaway, a family looking for a unique stay near Bhopal, or a nature lover wanting to unwind amidst wilderness, this safari tent provides the ideal blend of rustic charm and eco-luxury.",
+    ],
     galleryImages: [
       "/images/accommodations/safari-tent2.jpeg",
       "/images/accommodations/safari-tent3.jpeg",
@@ -46,21 +228,44 @@ const accommodationsData = [
       "Work-Space",
     ],
 
+    whyChoosePoints: [
+      "Located in the heart of Ratapani’s wilderness",
+      "Perfect for couples, families & nature travelers",
+      "Sustainable, solar-powered living",
+      "Peaceful streamside location",
+      "Unique open-to-sky bathing experience",
+      "Ideal weekend getaway from Bhopal",
+    ],
+
+    whyChooseTitle: "Why Choose Our Safari Tent House Near Bhopal?",
+
     capacity: "Sleeps 2",
     pricePerNightSefari: "Rs. 12,000 per night",
     extraBedding: "₹ 1500 per extra person",
     rating: 4.5,
+    faqs: safariTentFaqs,
+    faqsTitle: "FAQs – Safari Tent House",
+
+    bookingOptions: [
+      {
+        optionName: "SAFARI TENT",
+        price: "9,000",
+        rateUnit: "Per Night",
+      },
+    ],
   },
   {
     id: 2,
-    name: "Mud House",
+    name: "Mud House – Traditional Gond Architecture with Modern Comfort",
     slug: "mud-villa",
     image: "/videos/mud-villa.mp4",
     altText: "Exterior view of a charming safari tent nestled in greenery",
-    shortDescription:
-      "Experience rustic charm and modern comforts in our safari tents, perfect for a peaceful retreat.",
-    longDescription:
-      "Mud-based cottages are the country style room addition to our room segments. Built on the vernacular architecture of Gond Tribes, these cottages are built in the middle of our 5-acre organic orchard. Every mud cottage has a spacious AC room, annexed lobby, front and backyard veranda, and an ethic look luxurious washroom. The roof top sitting area adds to the attraction of these mud cottages and gives a 360-degree view of the whole resort.",
+    descriptions: [
+      "Experience the warmth and simplicity of earth-inspired living in our Mud Houses, crafted using the traditional vernacular architecture of the Gond tribes. Nestled in the heart of our 5-acre organic orchard, these cottages offer an immersive and peaceful stay surrounded by greenery, birdsong, and nature’s calm.",
+      "Each Mud House features a spacious AC room, an annexed lobby, front and backyard verandas, and a beautifully designed luxury washroom with ethnic styling. The rooftop seating area offers a stunning 360-degree view of the entire resort—perfect for sunrise chai, reading, or stargazing on quiet evenings.",
+
+      "Designed for travelers seeking a mud house stay near Bhopal, a cultural escape, or an eco-friendly retreat, this is one of the finest and most authentic mud cottage experiences in the Ratapani region.",
+    ],
     galleryImages: [
       "/images/accommodations/mud-villa1.jpg",
       "/images/accommodations/mud-villa2.jpg",
@@ -70,7 +275,7 @@ const accommodationsData = [
       "King Size Bed",
       "Double Occupancy",
       "Infinity Pool",
-      "Bathtub",
+      "Bathtub (Mud House 2)",
       "WiFi",
       "Breakfast Included",
       "Free Slippers",
@@ -82,23 +287,51 @@ const accommodationsData = [
       "Gyser",
       "Tea/Coffee Maker",
       "Work-Space",
+      "Free Slippers",
     ],
+    whyChoosePoints: [
+      "Inspired by Gond tribal architecture",
+      "Located inside a lush organic orchard",
+      "Cool, naturally insulated rooms",
+      "Perfect blend of traditional charm and modern luxury",
+      "Ideal for couples, families & culture travelers",
+      "One of the best mud house stays near Bhopal & Ratapani",
+    ],
+
+    whyChooseTitle: "Why Choose Our Mud Houses?",
     capacity: "Sleeps 2",
     pricePerNightMud: "Mud House 1 ( Without Bathtub ): ₹ 9,000 per night",
     pricePerNightMud1: "Mud House 2 ( With Bathtub ): ₹ 10,000 per night",
     extraBedding: "₹ 1500 per extra person",
     rating: 4.5,
+    faqs: mudHouseFaqs,
+    faqsTitle: "FAQs – Mud House",
+
+    bookingOptions: [
+      {
+        optionName: "MUD HOUSE 1",
+        optionDetail: "(WITHOUT BATHHUB)",
+        price: "9,000",
+        rateUnit: "Per Night",
+      },
+      {
+        optionName: "MUD HOUSE 2",
+        optionDetail: "(WITH BATHHUB)",
+        price: "10,000",
+        rateUnit: "Per Night",
+      },
+    ],
   },
   {
     id: 3,
-    name: "Pool Side Villa",
+    name: "Pool Side Villa – Luxury Eco Stay by the Water",
     slug: "pool-side-room",
     image: "/videos/pool-side.mp4",
     altText: "A beautiful treehouse offering panoramic views of the forest",
-    shortDescription:
-      "Designed on the rural theme, poolside rooms have mud textured walls and teak textured ceilings. The center of the room is adorned with king size bamboo bed. The attached washrooms have a hot/ cold water facility.",
-    longDescription:
-      "Wake up to soft sunlight shimmering on the water and unwind to the peaceful rhythm of nature in our elegant Pool Side Villa. With a view of the tranquil eco-pool and surrounded by greenery, your stay promises wellness, privacy, and rejuvenation. Whether you wish to enjoy a morning dip, sip chai by the poolside, or simply lounge in nature's silence, this space invites you to slow down and breathe easy.",
+    descriptions: [
+      "Discover serenity and slow living in our Pool Side Villa, designed for travelers seeking comfort, privacy, and a refreshing nature-dipped experience. Wake up to gentle sunlight shimmering on the eco-pool, breathe in the fresh forest air, and enjoy calm moments surrounded by greenery.",
+      "Perfect for families, couples, and wellness seekers, this pool villa stay near Bhopal blends eco-conscious design with boutique luxury. Whether you prefer a morning dip, peaceful poolside chai, or quiet evenings under the stars, this villa invites you to reconnect with yourself and nature.",
+    ],
     galleryImages: [
       "/images/accommodations/pool-side-room1.jpg",
       "/images/accommodations/pool-side-room2.jpg",
@@ -120,22 +353,41 @@ const accommodationsData = [
       "Gyser",
       "Tea/Coffee Maker",
       "Work-Space",
+      "Free Slippers",
     ],
     capacity: "Sleeps 4",
     pricePerNightPool: "Pool Side Villa ( 2 Rooms ) : Rs. 12,000 per night",
     extraBedding: "₹ 1500 per extra person",
     rating: 4.5,
+    bookingOptions: [
+      {
+        optionName: "POOLSIDE VILLA",
+        optionDetail: "(2 ROOMS)",
+        price: "12,000",
+        rateUnit: "Per Night",
+      },
+    ],
+    whyChoosePoints: [
+      "Peaceful poolside views surrounded by greenery",
+      "Perfect for families & couples seeking privacy",
+      "Eco-luxury design with natural light & open spaces",
+      "Ideal for wellness retreats and slow travel",
+      "One of the most serene pool villa stays near Bhopal & Ratapani",
+    ],
+    faqs: poolSideVillaFaqs,
+    whyChooseTitle: "Why Choose the Pool Side Villa?",
   },
   {
     id: 4,
-    name: "Glamping Tents",
+    name: "Glamping Tents – Boutique Comfort in the Heart of Ratapani",
     slug: "glamping-tents",
     image: "/images/accommodations/glamping-tent1.JPG",
     altText: "Luxury glamping tent with deck overlooking greenery",
-    shortDescription:
-      "Experience comfort in the wild with rustic mini-safari glamping tents, cozy interiors, a personal lawn, and the perfect blend of nature and boutique luxury.",
-    longDescription:
-      "Our Glamping Tents are crafted for travelers who crave the raw beauty of Ratapani’s forest while enjoying refined comforts. Each tent hosts a plush king-size bed, curated décor inspired by safari chic, ensuite shower, and a private sit-out that opens into your own lawn. Wake up to golden mornings, sip freshly brewed tea on the verandah, and enjoy personalized hospitality that keeps every modern convenience within reach.",
+    descriptions: [
+      "Enjoy the charm of the outdoors with the comfort of a thoughtfully designed stay in our Glamping Tents. Set amid Ratapani’s peaceful landscape, each tent combines natural textures with warm, elegant décor. Inside, you’ll find a plush king-size bed, ensuite shower, soft lighting, and calming interiors that make your stay effortless and relaxing.",
+
+      "Step outside to your private lawn-side sit-out, perfect for slow mornings, evening tea, or peaceful moments surrounded by greenery. With attentive hospitality and all modern conveniences, this stay is ideal for couples, nature lovers, and weekend travelers searching for a stylish escape near Bhopal.",
+    ],
     galleryImages: [
       "/images/accommodations/glamping-tent2.JPG",
       "/images/accommodations/glamping-tent3.JPG",
@@ -157,22 +409,41 @@ const accommodationsData = [
       "Gyser",
       "Tea/Coffee Maker",
       "Work-Space",
+      "Free Slippers",
     ],
     capacity: "Sleeps 2",
     pricePerNightGlamping: "Rs. 7,500",
     extraBedding: "Rs. 1,500 per person",
     rating: 4.6,
+
+    bookingOptions: [
+      {
+        optionName: "Glamping Tents",
+        price: "7,500",
+        rateUnit: "Per Night",
+      },
+    ],
+    whyChoosePoints: [
+      "Elegant interiors with nature-inspired touches",
+      "Cozy private lawn-side sit-out",
+      "Peaceful surroundings close to Ratapani forest",
+      "Ideal for couples and weekend getaways",
+      "Perfect balance of comfort and outdoor charm",
+    ],
+    faqs: glampingTentFaqs,
+    whyChooseTitle: "Why Guests Love the Glamping Tents?",
   },
   {
     id: 5,
-    name: "Camping Tent",
+    name: "Camping Tent – Nature-First Camping in the Heart of Ratapani",
     slug: "camping-tent",
     image: "/images/accommodations/camping-tent.jpeg",
     altText: "A beautiful treehouse offering panoramic views of the forest",
-    shortDescription:
-      "Madhuban’s Campsite is a MP Tourism certified campsite. We are located into wilds and gives u perfect jungle Camping experience under the perfect stary nights!!",
-    longDescription:
-      "Reconnect with nature in our cozy Camping Tents at Madhuban ECO Retreat ideal for adventure seekers craving a simple, off-grid experience with starry skies and serene forest surroundings.  ",
+    descriptions: [
+      "Experience the thrill of outdoor living with our Camping Tents, designed for travelers who want true closeness to nature. Set against the serene backdrop of Ratapani’s forest, this stay offers peaceful nights, fresh morning air, and uninterrupted views of the night sky.",
+
+      "Perfect for adventure seekers, trekkers, backpackers, and nature lovers, this is one of the best camping experiences near Bhopal, offering a safe, scenic, and refreshing escape from city life. Whether you’re planning a group outing, a solo nature break, or a weekend adventure, this tent stay gives you everything you need to disconnect and recharge.",
+    ],
     galleryImages: [
       "/images/accommodations/comping-tent1.jpg",
       "/images/accommodations/comping-tent4.jpg",
@@ -180,8 +451,35 @@ const accommodationsData = [
     ],
     pricePerNight111: "One Night Comping: 2500/person",
     pricePerNight22: "Day Package: 1100/person",
-
+    capacity: "Up to 2 per tent",
     rating: 4.5,
+
+    bookingOptions: [
+      {
+        optionName: "ONE NIGHT CAMPING",
+        price: "2,500",
+        rateUnit: "Per Person",
+      },
+    ],
+    whyChoosePoints: [
+      "Located in the lush Ratapani forest region",
+      "Perfect for night camping near Bhopal",
+      "Safe, peaceful, and beginner-friendly",
+      "Ideal for adventure groups & weekend getaways",
+      "Authentic jungle environment with modern support",
+      "One of the best camping experiences in Madhya Pradesh",
+    ],
+    faqs: nightCampingFaqs,
+    whyChooseTitle: "Why Guests Love Camping at Madhuban?",
+    inclusions: [
+      "Breakfast",
+      "Dinner",
+      "Infinity Pool Access",
+      "Obstacle Course",
+      "Nature Walk",
+      "Secure Camping Area",
+      "Access to resort amenities",
+    ],
   },
 ];
 
@@ -189,15 +487,14 @@ const AccommodationDetail = () => {
   const params = useParams();
   const { slug } = params;
   const accommodation = accommodationsData.find((acc) => acc.slug === slug);
+  const randomImgUrl =
+    accommodation?.galleryImages[
+      Math.floor(Math.random() * accommodation.galleryImages.length)
+    ];
 
   if (!accommodation) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-stone-50 text-center px-4">
-        {/* <HelmetProvider> */}
-          {/* <Helmet>
-            <title>Accommodation Not Found | Madhuban Eco Retreat</title>
-          </Helmet> */}
-        {/* </HelmetProvider> */}
         <MountainSnow size={64} className="text-green-700 mb-4" />
         <h1 className="text-4xl font-inter font-medium text-green-800 mb-2">
           Oops! Accommodation Not Found
@@ -217,18 +514,13 @@ const AccommodationDetail = () => {
   }
 
   return (
-    // <HelmetProvider>
-      // {/* <Helmet>
-      //   <title>{`${accommodation.name} | Madhuban Eco Retreat`}</title>
-      //   <meta name="description" content={accommodation.shortDescription} />
-      // </Helmet> */}
-
-      <div className="bg-stone-50 min-h-screen py-12 pt-24 md:pt-32 px-4">
+    <>
+      <div className="bg-stone-50 min-h-screen py-12 pt-20 md:pt-24 md:pt-32 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-8">
             <Link
               href="/stay"
-              className="inline-flex items-center font-semibold text-[rgb(110,97,70)] tracking-widest mt-8 transition-colors duration-300 group"
+              className="inline-flex items-center font-semibold text-[rgb(110,97,70)] mt-8 transition-colors duration-300 group"
             >
               <ChevronLeft
                 size={20}
@@ -274,7 +566,7 @@ const AccommodationDetail = () => {
 
               <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between h-auto md:min-h-[400px]">
                 <div>
-                  <h1 className="text-4xl md:text-4xl font-primary font-semibold text-[rgb(110,97,70)] mb-3">
+                  <h1 className="text-2xl md:text-4xl font-primary font-semibold text-[rgb(110,97,70)] mb-3">
                     {accommodation.name}
                   </h1>
                   <div className="flex items-center mb-4">
@@ -296,24 +588,32 @@ const AccommodationDetail = () => {
                     </span>
                   </div>
 
-                  <p className="text-[rgb(110,97,70)] mb-6 leading-relaxed text-justify font-arial-narrow tracking-wider text-lg">
-                    {accommodation.longDescription}
-                  </p>
+                  {accommodation?.descriptions?.map((des, i) => {
+                    return (
+                      <p
+                        key={i}
+                        className="text-[rgb(110,97,70)] mb-6  text-justify font-arial-narrow text-lg"
+                      >
+                        {des}
+                      </p>
+                    );
+                  })}
+
                   {accommodation.amenities &&
                     accommodation.amenities.length > 0 && (
                       <div className="mb-6">
-                        <h3 className="text-lg font-primary font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
+                        <h3 className="text-xl font-primary font-semibold text-primary-gray2 mb-2">
                           Amenities:
                         </h3>
-                        <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-md md:text-lg">
                           {accommodation.amenities.map((amenity, index) => (
                             <li
                               key={index}
-                              className="flex items-center font-primary font-medium text-[rgb(110,97,70)] tracking-wider"
+                              className="flex items-center font-primary font-medium text-primary-gray2 "
                             >
                               <Check
                                 size={16}
-                                className="text-[rgb(110,97,70)] mr-2"
+                                className="text-primary-gray2 mr-2"
                               />
                               {amenity}
                             </li>
@@ -324,179 +624,71 @@ const AccommodationDetail = () => {
                 </div>
 
                 <div className="mt-auto">
-                  {accommodation.slug === "safari-tent" && (
-                    <div className="flex flex-col items-center space-y-2">
-                      {/* Heading */}
-                      <h3 className="text-2xl font-bold text-[rgb(110,97,70)] tracking-wide">
-                        BOOK YOUR STAY
-                      </h3>
+                  <div className="flex flex-col items-center space-y-4">
+                    {/* Heading */}
+                    <h3 className="text-xl font-extrabold text-primary-gray2 tracking-wide mb-2">
+                      BOOK YOUR STAY
+                    </h3>
 
-                      {/* Price Pill */}
-                      <div className="bg-[rgb(110,97,70)] text-white rounded-full px-6 py-3 flex flex-col items-center">
-                        <span className="text-xl font-bold">
-                          {accommodation.pricePerNightSefari}
-                        </span>
-                      </div>
-                    </div>
-                  )}
-
-                  {accommodation.slug === "mud-villa" && (
-                    <div className="flex flex-col items-center space-y-4">
-                      {/* Heading */}
-                      <h3 className="text-2xl font-extrabold text-[#1a1d18] tracking-wide mb-2">
-                        BOOK YOUR STAY
-                      </h3>
-
-                      {/* Mud House 1 */}
-                      <div className="flex justify-between items-center w-full">
-                        <p className="text-base font-bold text-[#1a1d18]">
-                          • MUD HOUSE 1: <br />
-                          <span className="font-normal">(WITHOUT BATHTUB)</span>
-                        </p>
-                        <div className="bg-[rgb(110,97,70)] text-white rounded-full px-16 py-3 flex flex-col items-center">
-                          <span className="text-lg font-bold">Rs. 9,000</span>
-                          <span className="text-sm">Per night</span>
+                    {accommodation.bookingOptions.map((bookOpt, i) => {
+                      return (
+                        <div
+                          key={i}
+                          className="flex justify-between items-center w-full"
+                        >
+                          <p className=" text-sm  md:text-base font-bold text-primary-gray2">
+                            • {bookOpt.optionName}: <br />
+                            <span className="font-normal text-xs md:text-sm">
+                              {bookOpt.optionDetail}
+                            </span>
+                          </p>
+                          <div className="bg-[rgb(110,97,70)] text-white rounded-full  px-8 md:px-16 py-3 flex flex-col items-center">
+                            <span className="text-sm font-bold">
+                              Rs. {bookOpt.price}
+                            </span>
+                            <span className="text-xs">{bookOpt.rateUnit}</span>
+                          </div>
                         </div>
-                      </div>
+                      );
+                    })}
+                  </div>
 
-                      {/* Mud House 2 */}
-                      <div className="flex justify-between items-center w-full">
-                        <p className="text-base font-bold text-[#1a1d18]">
-                          • MUD HOUSE 2: <br />
-                          <span className="font-normal">(WITH BATHTUB)</span>
-                        </p>
-                        <div className="bg-[rgb(110,97,70)] text-white rounded-full px-16 py-3 flex flex-col items-center">
-                          <span className="text-lg font-bold">Rs. 10,000</span>
-                          <span className="text-sm">Per night</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {accommodation.slug === "pool-side-room" && (
-                    <div className="flex flex-col items-center space-y-4">
-                      {/* Heading */}
-                      <h3 className="text-2xl font-extrabold text-[#1a1d18] tracking-wide mb-2">
-                        BOOK YOUR STAY
-                      </h3>
-
-                      {/* Poolside Villa */}
-                      <div className="flex justify-between items-center w-full">
-                        <p className="text-sm font-bold text-[#374151]">
-                          • POOLSIDE VILLA: <br />
-                          <span className="font-normal">(2 ROOMS)</span>
-                        </p>
-                        <div className="bg-[rgb(110,97,70)] mt-2 text-white rounded-full px-16 py-3 flex flex-col items-center">
-                          <span className="text-lg font-bold">Rs. 12,000</span>
-                          <span className="text-sm">Per night</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {/* Show Camping Tent Packages Only if slug === 'camping-tent' */}
-                  {accommodation.slug === "camping-tent" && (
+                  {accommodation.inclusions && (
                     <>
-                      {/* ONE NIGHT CAMPING */}
-                      <div className="flex flex-col mb-20">
-                        <div className="flex justify-between items-center ">
-                          {/* Title */}
-                          <h3 className="text-2xl font-extrabold text-[#1a1d18] tracking-wide">
-                            ONE NIGHT CAMPING
-                          </h3>
-                          {/* Price Pill */}
-                          <span className="bg-[rgb(110,97,70)] text-white font-bold text-lg px-4 py-2 rounded-full">
-                            ₹2500/person
-                          </span>
+                      <div className="mb-4">
+                        <div className="text-lg md:text-xl font-semibold text-primary-gray2 mb-2">
+                          Inclusions
                         </div>
-                        {/* Details */}
-                        <p className="text-sm font-bold text-[#1a1d18] mt-1">
-                          Breakfast, Dinner, Pool, Obstacle course, Nature Walk
-                        </p>
-                        {/* Separator */}
-                        <div className="border-b-4 border-black mt-3 w-full"></div>
+                        {accommodation.inclusions.map((inc, i) => {
+                          return (
+                            <p key={i} className="text-primary-gray2">
+                              • {inc}
+                            </p>
+                          );
+                        })}
                       </div>
-
-                      {/* Day Package */}
-                      {/* <div className="flex flex-col mb-6">
-                        <div className="flex justify-between items-center">
-                          <h3 className="text-2xl font-extrabold text-[#1a1d18] tracking-wide">
-                            Day Package
-                          </h3>
-                          <span className="bg-[rgb(110,97,70)] text-white font-bold text-lg px-4 py-2 rounded-full">
-                            ₹ 1100/person
-                          </span>
-                        </div>
-                        <p className="text-sm font-bold text-[#1a1d18] mt-1">
-                          Breakfast, Lunch, Pool, Obstacle course, Nature Walk
-                        </p>
-                        <div className="border-b-4 border-black mt-3 w-full"></div>
-                      </div> */}
-
-                      {/* Trekking */}
-                      {/* <div className="flex flex-col mb-6">
-                        <div className="flex justify-between items-center">
-                          <h3 className="text-2xl font-extrabold text-[#1a1d18] tracking-wide">
-                            Trekking
-                          </h3>
-                          <span className="bg-[rgb(110,97,70)] text-white font-bold text-lg px-4 py-2 rounded-full">
-                            ₹ 1300/person
-                          </span>
-                        </div>
-                        <p className="text-sm font-bold text-[#1a1d18] mt-1">
-                          Breakfast, Lunch, Trekking
-                        </p>
-                        <div className="border-b-4 border-black mt-3 w-full"></div>
-                      </div> */}
                     </>
                   )}
 
-                  {accommodation.slug === "glamping-tents" && (
-                    <div className="flex flex-col items-center space-y-2 mb-6">
-                      <h3 className="text-2xl font-bold text-[rgb(110,97,70)] tracking-wide">
-                        BOOK YOUR STAY
-                      </h3>
-                      <div className="bg-[rgb(110,97,70)] text-white rounded-full px-8 py-3 flex flex-col items-center">
-                        <span className="text-xl font-bold">
-                          {accommodation.pricePerNightGlamping}
-                        </span>
-                        <span className="text-sm">Per night</span>
-                      </div>
-                    </div>
-                  )}
+                  {/* Show Camping Tent Packages Only if slug === 'camping-tent' */}
 
-                  {/* <div className="flex justify-between items-center">
-                    <p className="text-sm font-semibold text-[rgb(110,97,70)] mb-2">
-                      Extra Bedding - {accommodation.extraBedding}{" "}
-                    </p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <p className="text-md text-[rgb(110,97,70)] mb-2">
-                      <strong className="font-primary tracking-widest font-semibold">
-                        Capacity:
-                      </strong>{" "}
-                      {accommodation.capacity}
-                    </p>
-                  </div> */}
-                  {/* Extra Bedding Section */}
                   {accommodation.extraBedding && (
                     <div className="flex justify-between items-center">
-                      <p className="text-sm font-semibold text-[rgb(110,97,70)] mb-2">
+                      <p className=" font-semibold text-[rgb(110,97,70)] mb-2">
                         Extra Bedding - {accommodation.extraBedding}
                       </p>
                     </div>
                   )}
 
-                  {/* Capacity Section */}
                   {accommodation.capacity && (
                     <div className="flex justify-between items-center">
                       <p className="text-md text-[rgb(110,97,70)] mb-2">
-                        <strong className="font-primary tracking-widest font-semibold">
-                          Capacity:
-                        </strong>{" "}
+                        <strong className="  font-semibold">Capacity:</strong>{" "}
                         {accommodation.capacity}
                       </p>
                     </div>
                   )}
+
                   <Link
                     href="/booking"
                     className="font-inter w-full flex items-center justify-center bg-[rgb(110,97,70)] text-white font-medium py-3 px-6 rounded-md hover:bg-[rgb(123,108,80)] text-lg"
@@ -533,7 +725,13 @@ const AccommodationDetail = () => {
           </div>
         </div>
       </div>
-    // </HelmetProvider>
+      <StayWhyChooseUs
+        points={accommodation?.whyChoosePoints}
+        title={accommodation.whyChooseTitle}
+        imageUrl={randomImgUrl}
+      />
+      <CommonFaqs faqs={accommodation.faqs} heading={accommodation.faqsTitle} />
+    </>
   );
 };
 
