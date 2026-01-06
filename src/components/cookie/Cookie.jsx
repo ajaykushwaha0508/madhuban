@@ -46,7 +46,8 @@ const privacyData = {
   lastUpdated: "1 August 2025",
   companyName: "VyomEdge",
   website: "info@vyomedge.com",
-  description : "Welcome to Madhuban Eco Retreat. This Cookies & Consent Policy explains how we use cookies and similar technologies when you visit our website https://www.madhubanecoretreat.com/ and how you can control your preferences.",
+  description:
+    "Welcome to Madhuban Eco Retreat. This Cookies & Consent Policy explains how we use cookies and similar technologies when you visit our website https://www.madhubanecoretreat.com/ and how you can control your preferences.",
 
   sections: [
     {
@@ -88,24 +89,27 @@ const privacyData = {
         "Delete existing cookies",
         "Set preferences for specific websites",
       ],
-      note:"You can usually find these controls in your browser’s “Settings” or “Preferences” menu. Please refer to your browser provider’s help section for detailed instructions."
+      note: "You can usually find these controls in your browser’s “Settings” or “Preferences” menu. Please refer to your browser provider’s help section for detailed instructions.",
     },
     {
       title: "5. Third-Party Services",
-      content: "Some services used by our website (e.g., analytics, social integrations or maps) may set cookies on your device. We do not control these cookies and recommend reviewing the privacy policies of those third parties to understand how they use cookies and other tracking technologies.",
-      
+      content:
+        "Some services used by our website (e.g., analytics, social integrations or maps) may set cookies on your device. We do not control these cookies and recommend reviewing the privacy policies of those third parties to understand how they use cookies and other tracking technologies.",
     },
     {
       title: "6. Security & Your Data",
-      content: "Cookies used on our site are managed with appropriate security measures. However, no online method of transmitting or storing information is completely secure, and we cannot guarantee absolute protection.",
+      content:
+        "Cookies used on our site are managed with appropriate security measures. However, no online method of transmitting or storing information is completely secure, and we cannot guarantee absolute protection.",
     },
     {
       title: "7. Changes to This Policy",
-      content: "We may update this policy from time to time to reflect changes in technology, legal requirements, or our privacy practices. Updated versions will be posted on this page with a revised Effective Date.",
+      content:
+        "We may update this policy from time to time to reflect changes in technology, legal requirements, or our privacy practices. Updated versions will be posted on this page with a revised Effective Date.",
     },
     {
       title: "8.  Contact Us",
-      content: "If you have questions about cookies or privacy practices at Madhuban Eco Retreat, please contact us via the Contact Us page on our website.",
+      content:
+        "If you have questions about cookies or privacy practices at Madhuban Eco Retreat, please contact us via the Contact Us page on our website.",
     },
   ],
 };
@@ -124,14 +128,14 @@ export default function Cookie() {
           },
           {
             name: "Cookie Policy",
-            goesto: "/cookie-policy",
+            goesto: "/cookies-and-consent-policy",
           },
         ]}
       />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
 
-        <Typography sx={{mb:4 ,fontSize : 18}}>
+        <Typography sx={{ mb: 4, fontSize: 18 }}>
           {privacyData.description}
         </Typography>
 
@@ -259,8 +263,6 @@ export default function Cookie() {
             })}
           </StyledPaper>
         ))}
-
-        
       </Container>
     </>
   );

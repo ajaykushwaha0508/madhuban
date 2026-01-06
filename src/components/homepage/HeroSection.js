@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { MdOutlineDateRange } from "react-icons/md";
 
@@ -72,7 +72,7 @@ export default function HeroSection({
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="text-white text-center px-4"
+              className="text-white text-center px-4 max-w-7xl"
             >
               <h1
                 className="text-4xl md:text-6xl  mb-4 font-primary"

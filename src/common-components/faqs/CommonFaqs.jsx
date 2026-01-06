@@ -44,8 +44,9 @@ const fadeInUp = {
 export default function CommonFaqs({
   faqs = [],
   heading = "FAQs",
-  bg = "bg-primary-gray",
+  bgColor = "bg-primary-gray",
 }) {
+  console.log(bgColor);
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -55,7 +56,7 @@ export default function CommonFaqs({
   if (!faqs.length) return <></>;
 
   return (
-    <section className={`py-8 px-4 md:px-8 ${bg}`}>
+    <section className={`py-8 px-4 md:px-8 ${bgColor}`}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"

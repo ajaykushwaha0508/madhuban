@@ -65,7 +65,7 @@ const BlogDesc = async ({ params }) => {
           <BlogDescription blog={blogDetails} />
           {Array.isArray(blogDetails?.faq) &&
             blogDetails?.faq?.[0]?.question?.length > 0 && (
-              <CommonFaqs faqs={blogDetails?.faq} />
+              <CommonFaqs faqs={blogDetails?.faq} bgColor="bg-[#b4a681d8]" />
             )}
         </div>
       ) : (
