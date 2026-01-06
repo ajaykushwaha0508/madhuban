@@ -11,7 +11,7 @@ const BlogDescription = ({ blog }) => {
   );
 
   return (
-    <div className="bg-primary-gray pt-10">
+    <div className=" pt-10 bg-[#b4a681d8]">
       <div className=" no-tailwind">
         <div
           className="discriptionContent"

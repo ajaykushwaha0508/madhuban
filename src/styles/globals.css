@@ -131,7 +131,7 @@ body {
     border: 1px solid var(--primary-gray2);
     border-radius: 20px;
     margin-top: 10px;
-    background: white;
+    background: var(--primary-gray);
 }
 
 

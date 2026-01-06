@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
           },
           {
             name: "Privacy policy",
-            goesto: "/privacyPolicy",
+            goesto: "/privacy-policy",
           },
         ]}
       />
@@ -164,15 +164,12 @@ export default function PrivacyPolicy() {
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle  component="h2">
-              {section.title}
-            </SectionTitle>
-          {
-            section?.subtitle && 
-            <SectionSubTitle  component="h3">
-              {section.subtitle}
-            </SectionSubTitle>
-          }  
+            <SectionTitle component="h2">{section.title}</SectionTitle>
+            {section?.subtitle && (
+              <SectionSubTitle component="h3">
+                {section.subtitle}
+              </SectionSubTitle>
+            )}
 
             {section.content && (
               <Typography variant="body1" sx={{ mb: 2 }}>

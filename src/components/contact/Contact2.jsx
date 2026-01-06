@@ -9,7 +9,14 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa6";
-import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
+import {
+  facebook,
+  gmail,
+  instagram,
+  linkedin,
+  phone,
+  youtube,
+} from "@/utills/constants";
 
 const ADMIN_WHATSAPP = phone;
 
@@ -76,7 +83,9 @@ Message: ${data.message}
       <div className="max-w-7xl mx-auto">
         {/* Page Heading */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-[#3e3a2d] mb-4 font-primary">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#3e3a2d] mb-4 font-primary">
+            Contact Us
+          </h1>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Whether you’re planning a peaceful retreat or seeking information
             about our eco tourism experiences, our team at{" "}
@@ -140,7 +149,7 @@ Message: ${data.message}
                   <FaFacebookSquare />
                 </Link>
                 <Link href={instagram} className="text-2xl text-[#3e3a2d]">
-                 <FaSquareInstagram />
+                  <FaSquareInstagram />
                 </Link>
                 <Link href={youtube} className="text-2xl text-[#3e3a2d]">
                   <TbBrandYoutubeFilled />
@@ -161,7 +170,7 @@ Message: ${data.message}
                 mind and body.
               </p>
               <Link
-                href="/book-now"
+                href="/booking"
                 className="inline-block rounded-full bg-[#6e6146] px-6 py-3 text-white font-semibold hover:bg-[#5b503a] transition font-primary"
               >
                 Book Now
