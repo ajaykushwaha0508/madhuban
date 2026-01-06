@@ -1,7 +1,21 @@
 import React, { use } from "react";
 import { getAllBlogs } from "@/services/blog/blogServices";
-import Blog from "@/components/blog/Blog";
 import NewBlogPage from "@/components/blog/NewBlog";
+import SEO from "@/components/seo/Seo";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Madhuban Eco Retreat Blog",
+  url: "https://www.madhubanecoretreat.com/blog",
+  description:
+    "Nature stories, eco-travel guides, wildlife insights and sustainable living tips from Madhuban Eco Retreat, Ratapani.",
+  publisher: {
+    "@type": "Organization",
+    name: "Madhuban Eco Retreat",
+    url: "https://www.madhubanecoretreat.com",
+  },
+};
 
 const BlogPage = () => {
   const getBlogs = async () => {
@@ -22,38 +36,37 @@ const BlogPage = () => {
       </div>
     );
 
-  return <NewBlogPage />;
+  return (
+    <>
+      <SEO schemas={[blogSchema]} />
+      <NewBlogPage />
+    </>
+  );
 };
 
 export default BlogPage;
 
 export const metadata = {
-  title: "Madhuban Eco Retreat | Blog",
+  title: "Madhuban Blog | Nature, Travel & Eco-Living Stories",
 
   description:
-    "Explore Madhya Pradesh, Ratapani forest, wilderness, forest walk, eco retreat in Bhopal, eco retreat in india, explore forest, wildlife in Bhopal, Ratapani tiger santury",
+    "Read nature stories, travel guides, wildlife insights, and eco-living tips from Madhuban Eco Retreat. Explore Ratapani and sustainable travel through our blog.",
 
   keywords: [
-    "eco retreat near Ratapani",
-    "Bhopal",
-    "sustainable travel India",
-    "eco resort near Ratapani",
-    "Mud Houses in India",
-    "farm to table dining",
-    "nature stay Madhya Pradesh",
-    "peaceful gateway for seniors",
-    "wildlife and eco experience in India",
+    "madhuban blog",
+    "ratapani travel blog",
+    "eco travel mp",
+    "sustainable travel madhya pradesh",
+    "nature blog bhopal",
+    "ratapani guides",
   ],
 
   alternates: {
-    canonical: "https://www.madhubanecoretreat.com/",
+    canonical: "https://www.madhubanecoretreat.com/blog",
   },
 
-  openGraph: {
-    title: "Madhuban Eco Retreat",
-    description: "Nature-inspired living and travel at its best.",
-    url: "https://www.madhubanecoretreat.com/",
-    siteName: "Madhuban Eco Retreat",
-    type: "website",
+  robots: {
+    index: true,
+    follow: true,
   },
 };

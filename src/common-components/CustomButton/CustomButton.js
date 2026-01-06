@@ -4,7 +4,7 @@ import React from "react";
 
 const CustomButton = ({
   children,
-  color = "#6e6146ff", 
+  color = "#6e6146ff",
   type = "button",
   height,
   width,
@@ -35,8 +35,8 @@ const CustomButton = ({
       }}
       className={`
         inline-flex items-center justify-center gap-2
-        px-6 py-3 font-normal  
-        text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px]
+        cursor-pointer
+        py-3 font-normal  
         leading-[30px] whitespace-nowrap
         rounded-lg shadow 
         transition-all duration-300 ease-in-out

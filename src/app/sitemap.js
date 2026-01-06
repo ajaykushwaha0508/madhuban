@@ -42,10 +42,8 @@ const sitemapUrls = [
 ];
 
 export default async function sitemap() {
-  const headersList = await headers();
-  const host = headersList.get("host") || "www.madhubanecoretreat.com";
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const baseUrl = `${protocol}://${host}`;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.madhubanecoretreat.com";
 
   const lastmod = new Date().toISOString().replace("Z", "+00:00");
 

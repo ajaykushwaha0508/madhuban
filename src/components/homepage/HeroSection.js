@@ -2,97 +2,114 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import CustomButton2 from "@/common-components/CustomBotton2/CustomButton2";
-import CustomButton from "@/common-components/CustomButton/CustomButton";
-// import ConnectUsModal from "@/common-component/ConnectUsModal/ConnectUsModal";
+import { MdOutlineDateRange } from "react-icons/md";
+
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+  const getSuffix = (d) => {
+    if (d >= 11 && d <= 13) return "th";
+    switch (d % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+  return `${month} ${day}${getSuffix(day)}, ${year}`;
+}
 
 export default function HeroSection({
   breadcom = [],
-  title = `Learn Smarter.<br/>Shine Brighter.<br/>With Shikso!`,
-  title2 = `Fun, focused, and personalized learning for every young achiever.`,
-  image = "/herobanner.webp",
-  showPrimaryBtn = true,
-  primaryBtnText = "Start Learning",
-  onPrimaryClick,
-  showSecondaryBtn = true,
-  secondaryBtnText = "View Courses",
-  secondaryBtnLink = "/courses",
+  title = ``,
+  createdAt = ``,
+  image = "",
 }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handlePrimary = () => {
-    if (onPrimaryClick) return onPrimaryClick();
-    setIsModalOpen(true);
-  };
-
-  const FALLBACK_IMAGE = "/Shiksologo.png";
-  const [imgSrc, setImgSrc] = useState(image);
-
   return (
     <>
-      {/* <ConnectUsModal open={isModalOpen} setOpen={setIsModalOpen} /> */}
-      <section className=" bg-[#E6F9FF] relative">
-        <div className="custom-container py-6 md:py-10">
-          <div className="grid sm:grid-cols-2 gap-2 pt-18 sm:pt-13 md:pt-6 items-center ">
-            <div className="space-y-6">
-              <h1 className="responsive-heading  font-bold! leading-tight text-gray-900"
-                dangerouslySetInnerHTML={{ __html: title }} />
-              <p className="text-gray-700 text-lg max-w-md">{title2}</p>
-              <div className="flex items-center gap-4">
-                {showPrimaryBtn && (
-                  <CustomButton onClick={handlePrimary}>
-                    {primaryBtnText}
-                  </CustomButton>
-                )}
-
-                {showSecondaryBtn && (
-                  <CustomButton2 variant="primary" href={secondaryBtnLink}>
-                    {secondaryBtnText}
-                  </CustomButton2>
-                )}
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-[600px] aspect-[600/418]">
-                <Image
-                  src={imgSrc}
-                  alt="Hero"
-                  fill
-                  className="object-contain"
-                  onError={() => {
-                    if (imgSrc !== FALLBACK_IMAGE) {
-                      setImgSrc(FALLBACK_IMAGE);
-                    }
-                  }}
-                />
-              </div>
-            </div>
+      <section
+        className="h-[90vh] bg-cover bg-center "
+        style={{ backgroundImage: `url(${image})` }}
+      >
+        <div
+          className="w-full h-full flex flex-col items-center justify-center relative"
+          style={{
+            background:
+              "linear-gradient(180deg,rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4) 80%)",
+          }}
+        >
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="text-white flex gap-2 mb-4"
+          >
+            <MdOutlineDateRange size={22} />{" "}
+            <span className=" mr-2">{formatDate(createdAt)}</span>
+          </motion.div>
+          <div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="text-white text-center px-4"
+            >
+              <h1
+                className="text-4xl md:text-6xl  mb-4 font-primary"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+            </motion.div>
           </div>
-          {breadcom?.length > 0 && (
-            <div className="max-w-7xl mx-auto mt-1">
-              <div className="flex items-center text-gray-700 text-sm">
-                <Link href="/" className="hover:text-[#00D6FF] ">
-                  {` Home`}
-                </Link>
-                {breadcom.map((item, index) => (
-                  <React.Fragment key={index}>
-                    <span className="px-1">/</span>
-                    {item?.url ? (
-                      <Link
-                        href={item.url}
-                        className="hover:text-[#00D6FF] px-1"
-                      >
-                        {item.title}
-                      </Link>
-                    ) : (
-                      <span className="px-1 text-gray-900">{item.title}</span>
-                    )}
-                  </React.Fragment>
-                ))}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="absolute bottom-6"
+          >
+            {breadcom?.length > 0 && (
+              <div className="max-w-7xl mx-auto flex justify-center w-screen    ">
+                <div className="flex items-center text-white text-md max-w-[90%]   ">
+                  <Link href="/" className="hover:underline ">
+                    {` Home`}
+                  </Link>
+                  {breadcom.map((item, index) => (
+                    <React.Fragment key={index}>
+                      <span className="px-1 ">/</span>
+                      {item?.url ? (
+                        <Link href={item.url} className="hover:underline px-1">
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <span className="px-1 text-white truncate">
+                          {item.title}
+                        </span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </motion.div>
         </div>
       </section>
     </>
