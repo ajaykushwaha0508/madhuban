@@ -41,7 +41,11 @@ const fadeInUp = {
   },
 };
 
-export default function CommonFaqs({ faqs = [], heading = "FAQs" }) {
+export default function CommonFaqs({
+  faqs = [],
+  heading = "FAQs",
+  bg = "bg-primary-gray",
+}) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -51,7 +55,7 @@ export default function CommonFaqs({ faqs = [], heading = "FAQs" }) {
   if (!faqs.length) return <></>;
 
   return (
-    <section className="py-8 px-4 md:px-8 bg-primary-gray">
+    <section className={`py-8 px-4 md:px-8 ${bg}`}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
