@@ -170,7 +170,7 @@ const VisionMission = () => {
                               whileHover={{ scale: 1.03 }}
                             >
                               <div className="block rounded-xl flex gap-2 items-center text-primary-gray2   p-1  font-medium  transition">
-                                <FaAnglesRight /> {item}
+                                <FaAnglesRight className="shrink-0" /> {item}
                               </div>
                             </motion.div>
                           );
