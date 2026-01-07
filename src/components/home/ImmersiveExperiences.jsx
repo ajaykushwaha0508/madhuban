@@ -44,7 +44,8 @@ const experiences = [
     path: "forest-walks-and-nature-trails",
     image: "/images/experiences/nature-trail.jpg",
     description:
-      "Explore the pristine Ratapani forest trails with naturalists and discover native plants, butterflies, and forest ecology.",
+      "Reconnect with the wilderness through guided forest walks and nature trails inside the Ratapani region. Learn about native plants, medicinal herbs, butterflies, and eco-systems while enjoying peaceful, device-free moments in the forest.",
+    idealFor: "Nature lovers, wellness travelers, families, photographers",
     learnMoreBtn: "Explore Forest Walks",
   },
   {
@@ -52,19 +53,21 @@ const experiences = [
     path: "bird-watching-and-wilderness",
     image: "/images/experiences/bird-watching.jpg",
     description:
-      "Spot over 70 species of native & migratory birds — making Madhuban a favorite birdwatching resort in Madhya Pradesh.",
+      "Witness over 70+ species of birds across pristine landscapes — from paradise flycatchers to orioles and kingfishers. Our guided birding sessions offer a serene wilderness experience ideal for enthusiasts and researchers.",
     learnMoreBtn: "Explore Bird Watching",
+    idealFor:
+      "Bird watchers, wildlife photographers, students, silent nature seekers",
   },
   {
     title: "Recreational Facilities",
     path: "recreational-facilities",
     image: "/images/experiences/Recreational-Facilities.jpg",
     description:
-      "From hammocks and cycling to nature play zones and open-air seating, our eco-friendly recreational areas offer peaceful leisure for all ages.",
+      "Relax and unwind with eco-friendly recreation — from indoor games and cycling tracks to hammocks, swings, open-air seating, children zones, and quiet reading corners.",
     learnMoreBtn: "Explore Recreational Activities",
+    idealFor: " Families, corporate retreats, wellness travelers, group",
   },
 ];
-
 const ImmersiveExperiences = () => {
   return (
     <section className="py-8 px-4 md:px-8 bg-[#D1C8C1]">
@@ -91,7 +94,7 @@ const ImmersiveExperiences = () => {
         </motion.div>
         {/* Adjusted grid columns for exactly 3 items */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 -mt-9 font-primary"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 -mt-9 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

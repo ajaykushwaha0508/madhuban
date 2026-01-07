@@ -66,28 +66,6 @@ const StayBanner = () => {
               {isPaused ? "⏵ Resume Video" : "⏸ Pause Video"}
             </button>
           )}
-
-          {/* <motion.h1
-            className="font-primary font-medium text-2xl md:text-6xl"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Discover Your Ideal Eco Stay Near Bhopal & Ratapani
-          </motion.h1>
-          <motion.p
-            className="font-arial-narrow text-md md:text-2xl mt-2 max-w-5xl"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            At Madhuban Eco Retreat, every stay blends natural serenity with
-          eco-friendly comfort. From safari tents and mud houses to glamping,
-          camping, and poolside villas, each space invites you to slow down and
-          reconnect with nature. Located near the lush Ratapani Wildlife
-          Sanctuary, Madhuban is one of the best eco stays near Bhopal for
-          families, couples, adventure seekers, and wellness travelers.
-          </motion.p> */}
         </div>
       </motion.div>
     </div>

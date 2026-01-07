@@ -1,23 +1,49 @@
-"use client"
+"use client";
 // src/components/BookingModal.js
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Calendar } from "lucide-react";
 import { phone } from "@/utills/constants";
+import BookStay from "./BookStay";
+import WhyChoose from "./WhyChoose";
+import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 
 const ADMIN_WHATSAPP = phone;
 
+const bookingFaqs = [
+  {
+    question: "How can I book a resort near Ratapani jungle?",
+    answer:
+      "Use our online booking portal for instant hotel booking in Ratapani and secure your preferred dates.",
+  },
+  {
+    question: "What is the Madhuban Eco Retreat price?",
+    answer:
+      "Prices vary by room type. Please check our booking portal for the latest Ratapani resort prices and seasonal offers.",
+  },
+  {
+    question: "Can I book a hotel near Ratapani for family stays?",
+    answer:
+      "Yes, our family-friendly rooms are ideal for group stays, weekend getaways, and digital detox experiences.",
+  },
+  {
+    question: "Are there hotels near Ratapani Wildlife Sanctuary?",
+    answer:
+      "Yes, Madhuban Eco Retreat is a top-rated eco-resort located close to Ratapani Wildlife Sanctuary, perfect for nature and wildlife enthusiasts.",
+  },
+];
+
 const BookingClient = () => {
   const searchParams = useSearchParams();
-  
+
   // Get URL parameters
-  const checkInParam = searchParams.get('checkIn');
-  const checkOutParam = searchParams.get('checkOut');
-  const adultsParam = searchParams.get('adults');
-  const childrenParam = searchParams.get('children');
-  const typeParam = searchParams.get('type');
+  const checkInParam = searchParams.get("checkIn");
+  const checkOutParam = searchParams.get("checkOut");
+  const adultsParam = searchParams.get("adults");
+  const childrenParam = searchParams.get("children");
+  const typeParam = searchParams.get("type");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -44,12 +70,12 @@ const BookingClient = () => {
     if (adultsParam || childrenParam) {
       const adults = adultsParam ? parseInt(adultsParam) : 2;
       const children = childrenParam ? parseInt(childrenParam) : 0;
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        people_count: adults + children
+        people_count: adults + children,
       }));
     }
-    if (typeParam && typeParam !== 'all') {
+    if (typeParam && typeParam !== "all") {
       // Map accommodation type from BookingWidget to BookingModal
       const typeMapping = {
         cottage: "Safari Tent",
@@ -58,9 +84,9 @@ const BookingClient = () => {
         camping: "Camping Tent",
         glamping: "Glamping Tents",
       };
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        room_interested: typeMapping[typeParam] || typeParam
+        room_interested: typeMapping[typeParam] || typeParam,
       }));
     }
   }, [checkInParam, checkOutParam, adultsParam, childrenParam, typeParam]);
@@ -115,7 +141,7 @@ const BookingClient = () => {
     // Create WhatsApp message (minimal version to avoid length limits)
     const checkInSimple = checkIn.toISOString().split("T")[0]; // 2025-10-04
     const checkOutSimple = checkOut.toISOString().split("T")[0];
-    
+
     const message = `Booking Request
 ${formData.name.trim()}
 ${formData.email.trim()}
@@ -124,48 +150,60 @@ ${checkInSimple} to ${checkOutSimple}
 ${formData.people_count} guests
 ${formData.room_interested}`;
 
-    console.log('Opening WhatsApp with message:', message);
-    console.log('Admin WhatsApp number:', ADMIN_WHATSAPP);
+    console.log("Opening WhatsApp with message:", message);
+    console.log("Admin WhatsApp number:", ADMIN_WHATSAPP);
 
     // Build WhatsApp URL
     const whatsappUrl = buildWhatsAppUrl(ADMIN_WHATSAPP, message);
-    
-    console.log('Full WhatsApp URL:', whatsappUrl);
+
+    console.log("Full WhatsApp URL:", whatsappUrl);
 
     // Open WhatsApp
     try {
-      const whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      const whatsappWindow = window.open(
+        whatsappUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
 
       // Check if popup was blocked
       setTimeout(() => {
-        if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed === 'undefined') {
-          setError("Popup blocked! Please allow popups, or click the button below to try again.");
+        if (
+          !whatsappWindow ||
+          whatsappWindow.closed ||
+          typeof whatsappWindow.closed === "undefined"
+        ) {
+          setError(
+            "Popup blocked! Please allow popups, or click the button below to try again."
+          );
           // Create fallback button
-          const fallbackBtn = document.createElement('a');
+          const fallbackBtn = document.createElement("a");
           fallbackBtn.href = whatsappUrl;
-          fallbackBtn.target = '_blank';
-          fallbackBtn.rel = 'noopener noreferrer';
-          fallbackBtn.textContent = '📱 Click Here to Open WhatsApp';
-          fallbackBtn.className = 'block mt-4 w-full bg-[#25D366] text-white py-3 rounded-md hover:bg-[#128C7E] transition text-center font-semibold';
-          
-          const existingBtn = document.getElementById('whatsapp-fallback');
+          fallbackBtn.target = "_blank";
+          fallbackBtn.rel = "noopener noreferrer";
+          fallbackBtn.textContent = "📱 Click Here to Open WhatsApp";
+          fallbackBtn.className =
+            "block mt-4 w-full bg-[#25D366] text-white py-3 rounded-md hover:bg-[#128C7E] transition text-center font-semibold";
+
+          const existingBtn = document.getElementById("whatsapp-fallback");
           if (existingBtn) existingBtn.remove();
-          fallbackBtn.id = 'whatsapp-fallback';
-          
-          const form = document.querySelector('form');
+          fallbackBtn.id = "whatsapp-fallback";
+
+          const form = document.querySelector("form");
           if (form && form.parentElement) {
             form.parentElement.appendChild(fallbackBtn);
           }
         } else {
           // Success - show thank you message
           setSubmitted(true);
-          console.log('WhatsApp opened successfully');
+          console.log("WhatsApp opened successfully");
         }
       }, 1000);
-
     } catch (err) {
-      console.error('Error opening WhatsApp:', err);
-      setError("Failed to open WhatsApp. Please try again or check your browser settings.");
+      console.error("Error opening WhatsApp:", err);
+      setError(
+        "Failed to open WhatsApp. Please try again or check your browser settings."
+      );
     }
   };
 
@@ -178,8 +216,9 @@ ${formData.room_interested}`;
   ];
 
   return (
-    <div className="min-h-screen bg-[#b4a6811a] flex items-center justify-center p-6">
-      <div className="bg-[#D1C8C1] rounded-2xl p-6 mt-32 shadow-xl w-full max-w-2xl border border-[rgb(110,97,70)]/20">
+    <div className="min-h-screen pt-20 md:pt-40 pb-20 bg-[#b4a6811a] flex flex-col items-center justify-center ">
+      <BookStay />
+      <div className="bg-[#D1C8C1] rounded-2xl p-6   md:mt-6 shadow-xl w-full max-w-2xl border border-[rgb(110,97,70)]/20">
         {submitted ? (
           <div className="text-center py-8">
             <div className="text-6xl mb-4">✅</div>
@@ -187,7 +226,8 @@ ${formData.room_interested}`;
               WhatsApp Opened Successfully!
             </h2>
             <p className="text-[rgb(110,97,70)] mb-4">
-              Please check WhatsApp and send the pre-filled message to complete your booking.
+              Please check WhatsApp and send the pre-filled message to complete
+              your booking.
             </p>
             <p className="text-sm text-[rgb(110,97,70)]/70">
               We'll get back to you within 5 minutes.
@@ -370,11 +410,14 @@ ${formData.room_interested}`;
             </button>
 
             <p className="text-center text-sm text-[rgb(110,97,70)]/70">
-              Clicking submit will open WhatsApp with your booking details ready to send.
+              Clicking submit will open WhatsApp with your booking details ready
+              to send.
             </p>
           </form>
         )}
       </div>
+      <WhyChoose />
+      <CommonFaqs faqs={bookingFaqs} bgColor="none" />
     </div>
   );
 };
