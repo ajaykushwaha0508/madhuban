@@ -8,15 +8,11 @@
 
 /* Contact Section */
 .contact-section {
-  /* background: #E6F2D6; */
   padding: 3rem 4rem;
-  border-radius: 60px 60px 0 0;
-  /* box-shadow: inset 0 10px 20px #C7E0A9; */
 }
 
 .section-description {
   text-align: center;
-  /* color: #2E4D25; */
   font-size: 1.2rem;
   margin-bottom: 3rem;
   max-width: 800px;
@@ -36,9 +32,6 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 2rem;
-  border-radius: 25px;
-  /* box-shadow: 0 6px 14px rgba(46, 77, 37, 0.15); */
   color: white;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -48,7 +41,6 @@
   content: "";
   position: absolute;
   inset: 0;
-  /* background-color: rgba(46, 77, 37, 0.7);/ */
   backdrop-filter: blur(3px);
   border-radius: 23px;
   z-index: 0;

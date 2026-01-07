@@ -1,66 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap');
 
-.contact-page {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Contact Section */
-.contact-section {
-  /* background: #E6F2D6; */
-  padding: 3rem 4rem;
-  border-radius: 60px 60px 0 0;
-  /* box-shadow: inset 0 10px 20px #C7E0A9; */
-}
-
-.contactModal .section-description {
-  text-align: center;
-  /* color: #2E4D25; */
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-}
-
-.contact-content {
-  display: flex;
-  gap: 2rem;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
 /* Contact Form */
-.contact-form {
+.contactModal .contact-form {
   flex: 1;
   position: relative;
   background-size: cover;
   background-position: center;
   padding: 2rem;
-  border-radius: 25px;
   /* box-shadow: 0 6px 14px rgba(46, 77, 37, 0.15); */
   color: white;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-.contact-form::before {
+.contactModal .contact-form::before {
   content: "";
   position: absolute;
   inset: 0;
   /* background-color: rgba(46, 77, 37, 0.7);/ */
   backdrop-filter: blur(3px);
-  border-radius: 23px;
   z-index: 0;
 }
 
-.contact-form form {
+.contactModal .contact-form form {
   position: relative;
   z-index: 1;
 }
 
 
-.form-group {
+.contactModal .form-group {
   margin-bottom: 1.5rem;
 }
 
@@ -80,22 +48,21 @@
   backdrop-filter: blur(5px);
 }
 
-input::placeholder,
-textarea::placeholder {
+.contactModal input::placeholder,
+.contactModal textarea::placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
 
-input:focus,
-textarea:focus {
+.contactModal input:focus,
+.contactModal textarea:focus {
   outline: none;
   border-color: #4CAF50;
   box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-textarea {
+.contactModal textarea {
   height: 150px;
-  resize: vertical;
 }
 
 .submit-btn {
@@ -124,69 +91,14 @@ textarea {
   box-shadow: none;
 }
 
-/* Map Container */
-.map-container {
-  flex: 1;
-  position: relative;
-  border-radius: 25px;
-  overflow: hidden;
-  /* box-shadow: 0 6px 14px rgba(46, 77, 37, 0.15); */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.map-container:hover {
-  transform: translateY(-5px);
-  /* box-shadow: 0 14px 30px rgba(34, 83, 34, 0.3); */
-}
-
-
-
-
-.map-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-
-
-iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  border: none;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 2rem;
-  }
-
-  .contact-section h2 {
-    font-size: 2.2rem;
-  }
-
- .contactModal .section-description {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-form,
-  .map-container {
+  .contactModal .contact-form{
     width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .contact-section h2 {
-    font-size: 1.8rem;
-  }
-
   .submit-btn {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;

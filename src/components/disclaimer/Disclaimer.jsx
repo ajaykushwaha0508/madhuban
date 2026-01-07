@@ -54,7 +54,7 @@ const privacyData = {
   companyName: "VyomEdge",
   website: "info@vyomedge.com",
   description:
-    "The website https://www.madhubanecoretreat.com/ is owned and operated by Madhuban Eco Retreat. All information available on this website is provided in good faith to showcase our retreat, experiences, accommodations, facilities, and nature-based offerings. By accessing or using this website, you acknowledge and agree to the terms outlined in this Disclaimer.",
+    "The website https://www.madhubanecoretreat.com/ is owned and operated by Madhuban Eco Retreat-Somaiya. All information available on this website is provided in good faith to showcase our retreat, experiences, accommodations, facilities, and nature-based offerings. By accessing or using this website, you acknowledge and agree to the terms outlined in this Disclaimer.",
 
   sections: [
     {
@@ -64,14 +64,9 @@ const privacyData = {
       note: "Details may change due to seasonal conditions, environmental factors, safety considerations, operational requirements, or regulatory guidelines.",
     },
     {
-      title: "2. Nature, Wildlife & Outdoor Experiences",
-      content: "We may use your personal data for the following purposes:",
-      items: [
-        "Wildlife sightings are natural occurrences and not guaranteed",
-        "Terrain, weather, and forest conditions may vary",
-        "Guests participate in outdoor and recreational activities voluntarily and at their own discretion",
-      ],
-      note: "Madhuban Eco Retreat shall not be held responsible for any injuries, discomfort, loss, or inconvenience arising from participation in such activities, except where required by applicable law.",
+      title: "2. Outdoor Activities & Natural Conditions",
+      content:
+        "Madhuban Eco Retreat offers nature-based experiences where outdoor conditions and wildlife encounters may vary. Participation in such activities is entirely at the guest’s discretion, and while safety measures are in place, the retreat is not liable for any injury, discomfort, or loss arising from these experiences, except as required by law.",
     },
     {
       title: "3.  Health, Safety & Personal Responsibility",

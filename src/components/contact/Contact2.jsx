@@ -79,11 +79,11 @@ Message: ${data.message}
   };
 
   return (
-    <section className="bg-[#f7f5f0] pt-40 pb-10 px-6">
+    <section className="bg-[#f7f5f0] pt-25 md:pt-40 pb-10 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Page Heading */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-[#3e3a2d] mb-4 font-primary">
+          <h1 className="text-2xl md:text-4xl font-bold text-primary-gray2 mb-4 font-primary">
             Contact Us
           </h1>
           <p className="text-gray-700 max-w-3xl mx-auto">
@@ -107,7 +107,7 @@ Message: ${data.message}
 
             {/* Location */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
                 <IoLocation /> Location
               </h3>
               <p className="text-gray-700">
@@ -122,39 +122,49 @@ Message: ${data.message}
 
             {/* Call / WhatsApp */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
                 <IoCall /> Call / WhatsApp
               </h3>
               <p className="text-gray-700 font-medium">+{phone}</p>
               <p className="text-sm text-gray-600">
-                Send us a WhatsApp message and we’ll respond within 24 hours.
+                We’re just a message away! Send us a WhatsApp message and we’ll
+                respond within 24 hours. Perfect for resorts near Bhopal for day
+                outing inquiries.
               </p>
             </div>
 
             {/* Email */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-[#3e3a2d] mb-2 font-primary">
+              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
                 <IoMail /> Email
               </h3>
               <p className="text-gray-700">{gmail}</p>
+              <p className="text-sm text-gray-600">
+                Prefer email? Write to us anytime and our team will get back to
+                you promptly.
+              </p>
             </div>
 
             {/* Social Media */}
             <div>
-              <h3 className="text-xl font-semibold text-[#3e3a2d] mb-3 font-primary">
-                Follow Us
+              <h3 className="text-xl  font-semibold text-primary-gray2  font-primary">
+                Follow Us on Social Media
               </h3>
-              <div className="flex gap-4 text-gray-700">
-                <Link href={facebook} className="text-2xl text-[#3e3a2d]">
+              <p className="text-gray-600">
+                Stay connected with us for the latest updates, offers, and
+                glimpses of life at Madhuban Eco Retreat.
+              </p>
+              <div className="flex gap-4 text-gray-700 mt-4">
+                <Link href={facebook} className="text-2xl text-primary-gray2">
                   <FaFacebookSquare />
                 </Link>
-                <Link href={instagram} className="text-2xl text-[#3e3a2d]">
+                <Link href={instagram} className="text-2xl text-primary-gray2">
                   <FaSquareInstagram />
                 </Link>
-                <Link href={youtube} className="text-2xl text-[#3e3a2d]">
+                <Link href={youtube} className="text-2xl text-primary-gray2">
                   <TbBrandYoutubeFilled />
                 </Link>
-                <Link href={linkedin} className="text-2xl text-[#3e3a2d]">
+                <Link href={linkedin} className="text-2xl text-primary-gray2">
                   <FaLinkedin />
                 </Link>
               </div>
@@ -162,9 +172,13 @@ Message: ${data.message}
 
             {/* CTA */}
             <div className="mt-8 rounded-xl bg-[#6e6146]/10 p-6">
-              <h3 className="text-2xl font-semibold text-[#3e3a2d] mb-2 font-primary">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary-gray2 mb-2 font-primary">
                 Looking for the Best Weekend Digital Detox Stay Near Ratapani?
               </h3>
+              <p className="text-primary-gray2">
+                Madhuban Eco Retreat is Here!
+              </p>
+
               <p className="text-gray-700 mb-4">
                 Escape the city, immerse yourself in nature, and rejuvenate your
                 mind and body.
@@ -179,11 +193,11 @@ Message: ${data.message}
           </div>
 
           {/* RIGHT SIDE – CONTACT FORM */}
-          <div className=" rounded-2xl shadow-lg p-8 bg-[#6e6146]">
-            <h2 className="text-3xl font-semibold text-white mb-2 font-primary">
+          <div className=" rounded-2xl shadow-lg p-4 md:p-8  bg-[#6e6146]">
+            <h2 className="text-2xl md:text-4xl text-center  font-semibold text-white mb-2 font-primary">
               Send Us a Message
             </h2>
-            <p className="text-gray-200 mb-6">
+            <p className="text-gray-200 mb-6  text-center">
               Your message goes directly to WhatsApp.
             </p>
 
@@ -279,10 +293,14 @@ Message: ${data.message}
         </div>
 
         {/* MAP SECTION */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-semibold text-center text-[#3e3a2d] mb-6 font-primary">
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center text-primary-gray2 mb-6 font-primary">
             Find Us Here
           </h2>
+          <p className="mb-4 text-gray-700">
+            Explore our beautiful location near Ratapani Wildlife Sanctuary. The
+            map below will help you find us easily and plan your visit.
+          </p>
 
           <div className="w-full h-[400px] rounded-xl overflow-hidden shadow">
             <iframe

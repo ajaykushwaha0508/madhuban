@@ -28,7 +28,7 @@ const fadeIn = {
 const GuestsExperiences = () => {
   return (
     <section
-      className="py-8 px-4 bg-cover bg-center bg-no-repeat bg-[#FAFAFA]"
+      className="py-8 px-4 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/images/experiences/ex-bg.jpg')",
       }}

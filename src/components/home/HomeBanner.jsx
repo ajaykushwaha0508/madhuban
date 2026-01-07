@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 const heroSlides = [
   {
     image: "/images/hero/hero-1.jpg",
-    title:
-      "Madhuban Eco Retreat: Eco-Luxury Forest Resort Near Bhopal, Madhya Pradesh",
+    title: "Madhuban Eco Retreat: Eco-Luxury Forest Resort",
     subtitle:
-      "Experience an eco-luxury forest stay surrounded by the untouched wilderness of Ratapani Tiger Reserve. Madhuban Eco Retreat is one of the most peaceful nature retreats in Madhya Pradesh, offering sustainable living, mindful experiences, and forest-side comfort for travelers seeking serenity and slow living.",
+      "Experience eco-luxury living amid the serene wilderness of Ratapani Tiger Reserve at Madhuban Eco Retreat — a peaceful forest stay offering sustainable comfort and mindful escapes.",
   },
   {
     image: "/images/hero/hero-2.jpg",

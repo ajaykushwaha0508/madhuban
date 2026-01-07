@@ -55,7 +55,7 @@ const sustainabilityFeatures = [
   {
     icon: "community",
     title: "Local Employment",
-    description: "Uplifting nearby communities",
+    description: "80% of our staff are from local communities",
   },
   {
     icon: "nature",

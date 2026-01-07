@@ -39,12 +39,12 @@ const ExperienceComponent = () => {
         <div className="flex items-center justify-center mb-4">
           <hr className="w-16 border-t border-white mr-4" />
           <h1 className="text-2xl md:text-5xl  font-primary text-white font-semibold tracking-wider">
-            Experiences at Madhuban
+            Nature Moments at Madhuban
           </h1>
           <hr className="w-16 border-t border-white ml-4" />
         </div>
         <p className="mt-1 max-w-2xl mx-auto text-lg text-white px-4 tracking-wide font-arial-narrow mb-4">
-          Discover Nature, Wilderness & Slow Living
+          A journey into forests, wildlife, and mindful living
         </p>
 
         <motion.div className="h-full" variants={itemVariants}>

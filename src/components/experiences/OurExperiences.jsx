@@ -82,7 +82,7 @@ const OurExperiences = () => {
           <div className="flex items-center justify-center">
             <hr className="w-16 border-t border-primary-gray2 mr-4" />
             <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
-              Our Experiences
+              Inspired by Nature
             </h2>
             <hr className="w-16 border-t border-primary-gray2 ml-4" />
           </div>
