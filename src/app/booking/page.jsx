@@ -1,6 +1,7 @@
 import BookingClient from "@/components/booking/BookingClient";
 import SEO from "@/components/seo/Seo";
 import { generateMataDataForSEO } from "@/utills/helperFunctions";
+import { Suspense } from "react";
 
 const schema = {
   "@context": "https://schema.org",
@@ -93,7 +94,9 @@ const BookingModal = () => {
   return (
     <>
       <SEO schemas={[schema]} />
-      <BookingClient />
+      <Suspense fallback={<div>Loading Booking Module...</div>}>
+        <BookingClient />
+      </Suspense>
     </>
   );
 };
