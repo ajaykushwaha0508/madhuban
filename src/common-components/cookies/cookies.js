@@ -48,10 +48,9 @@ const CookiesPopup = () => {
       }
     } else {
       // If no cookie preferences exist, show banner
-      setTimeout(()=>{
-          setShowBanner(true);
-      } ,7000)
-     
+      setTimeout(() => {
+        setShowBanner(true);
+      }, 7000);
     }
   }, []);
 
@@ -107,8 +106,7 @@ const CookiesPopup = () => {
 
   return (
     <>
-   
-      <div className="fixed  bottom-0 md:bottom-5 left-0 right-0 mx-0  md:mx-5 lg:mx-12 z-30  ">
+      <div className="fixed  bottom-5 md:bottom-5 left-0 right-0 mx-2  md:mx-5 lg:mx-12 z-30  ">
         <Box
           className="flex flex-col md:flex-row  gap-0.5 md:gap-2   items-center bg-primary-gray  rounded-t-xl rounded-xl md:rounded-full  "
           sx={{
@@ -117,7 +115,7 @@ const CookiesPopup = () => {
         >
           <div className=" w-full px-2 m-2.5">
             <div className="flex flex-row gap-1.5 md:gap-2  items-center">
-              <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] relative shrink-0">
+              <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] relative shrink-0">
                 <Image
                   src="/images/cookie.svg"
                   alt="logo"
@@ -126,7 +124,7 @@ const CookiesPopup = () => {
                 />
               </div>
               <div className="text-base">
-                <p className="dm_sans">{`We use cookies to improve your experience. By continuing, you agree to our use of cookies`}</p>
+                <p className="text-sm md:text-lg">{`We use cookies to improve your experience. By continuing, you agree to our use of cookies`}</p>
               </div>
             </div>
           </div>
@@ -137,26 +135,25 @@ const CookiesPopup = () => {
                   onClick={handleManagePreferences}
                   href="/"
                   rel="noopener noreferrer"
-                  className="flex flex-row items-center gap-1.5 hover:underline cursor-pointer text-[#1A2E33] whitespace-nowrap"
+                  className="flex flex-row items-center gap-1.5 hover:underline cursor-pointer underline text-[#1A2E33] whitespace-nowrap"
                 >
                   {`Cookies Settings`}
                 </Link>
               </p>
-              <div className="flex sm:flex-row gap-2 sm:gap-5">
+              <div className="flex sm:flex-row gap-2 sm:gap-5 text-xs md:text-lg">
                 <button
                   onClick={handleAcceptAll}
                   height={{ xs: "40px", sm: "50px" }}
-                  className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)]  transition cursor-pointer"
+                  className=" px-4 py-2 rounded-md  font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)]  transition cursor-pointer"
                   type="submit"
                   color="#1A2E33"
-                  
                 >
                   {`Accept All`}
                 </button>
                 <button
                   height={{ xs: "40px", sm: "50px" }}
                   onClick={handleRejectNonEssential}
-                  className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold  border border-[#6E6146]  transition cursor-pointer hover:text-[#D1C8C1] hover:bg-[#6E6146]"
+                  className=" px-4 py-2 rounded-md  font-semibold  border border-[#6E6146]  transition cursor-pointer hover:text-[#D1C8C1] hover:bg-[#6E6146]"
                   type="submit"
                 >
                   {`Reject All`}
@@ -175,15 +172,12 @@ const CookiesPopup = () => {
         maxWidth="sm"
         fullWidth
         sx={{
-          "& .MuiPaper-root":{
-            paddingTop : 2,
-            position :'relative'
-          }
+          "& .MuiPaper-root": {
+            paddingTop: 2,
+            position: "relative",
+          },
         }}
       >
-
-        
-    
         <p className="dm_sans  responsive-text font-bold! ps-6 text-xl">
           {" "}
           {`Cookie Preferences`}{" "}
@@ -193,9 +187,9 @@ const CookiesPopup = () => {
           onClick={() => setShowPreferences(false)}
           className="text-gray-500"
           sx={{
-            position : 'absolute',
-            right:10,
-            top:10
+            position: "absolute",
+            right: 10,
+            top: 10,
           }}
         >
           <CloseIcon />
@@ -271,14 +265,13 @@ const CookiesPopup = () => {
         </DialogContent>
         <DialogActions className="p-6 pt-2">
           <button
-           onClick={handleSavePreferences}   
-           className="cursor-pointer mt-6 w-full py-3 text-center rounded-md font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)] hover:bg-[rgb(132,116,85)] transition primary-font-family" >
-           Save My Preferences
+            onClick={handleSavePreferences}
+            className="cursor-pointer mt-6 w-full py-3 text-center rounded-md font-semibold  text-[#D1C8C1] bg-[rgb(110,97,70)] hover:bg-[rgb(132,116,85)] transition primary-font-family"
+          >
+            Save My Preferences
           </button>
         </DialogActions>
-        
       </Dialog>
-      
     </>
   );
 };

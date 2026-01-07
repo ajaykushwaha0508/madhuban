@@ -1,14 +1,8 @@
-// // src/components/TestimonialSlider.js
-// "use client";
-// import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
-
-// const TestimonialSlider = () => {
-//   const [current, setCurrent] = useState(0);
 
 const testimonials = [
   {
@@ -55,105 +49,6 @@ const testimonials = [
   },
 ];
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent((prev) => (prev + 1) % testimonials.length);
-//     }, 8000);
-//     return () => clearInterval(interval);
-//   }, [testimonials.length]);
-
-//   const goToSlide = (index) => {
-//     setCurrent(index);
-//   };
-
-//   const nextSlide = () => {
-//     setCurrent((prev) => (prev + 1) % testimonials.length);
-//   };
-
-//   const prevSlide = () => {
-//     setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-//   };
-
-//   return (
-//     <div className="relative max-w-5xl mx-auto px-4 md:px-0 -mt-10">
-//       {/* Testimonial Slides */}
-//       <div className="overflow-hidden relative rounded-xl bg-primary-gray2 shadow-lg">
-//         <div
-//           className="flex transition-transform duration-500 ease-out"
-//           style={{ transform: `translateX(-${current * 100}%)` }}
-//         >
-//           {testimonials.map((testimonial) => (
-//             <div key={testimonial.id} className="w-full flex-shrink-0">
-//               <div className="p-8 flex flex-col justify-center items-center text-center h-full">
-//                 <div className="flex items-center mb-4 justify-center">
-//                   {/* Star Rating */}
-//                   <div className="flex text-yellow-500 mr-2">
-//                     {[...Array(5)].map((_, i) => (
-//                       <Star
-//                         key={i}
-//                         className="w-5 h-5"
-//                         fill={i < testimonial.rating ? "currentColor" : "none"}
-//                       />
-//                     ))}
-//                   </div>
-//                 </div>
-
-//                 <blockquote className="italic text-white tracking-wider text-lg mb-6 font-arial-narrow max-w-3xl">
-//                   <span className="text-4xl  mr-1">“</span>
-//                   <span className="">{testimonial.text}</span>
-//                   <span className="text-4xl  ml-1">”</span>
-//                 </blockquote>
-
-//                 <div className="text-white">
-//                   <p className="font-medium  tracking-widest font-primary">
-//                     {testimonial.name}
-//                   </p>
-//                   <p className=" font-arial-narrow tracking-wider font-medium">
-//                     {testimonial.location}
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       {/* Navigation Arrows */}
-//       <button
-//         onClick={prevSlide}
-//         className="absolute top-1/2 left-0 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow-md hover:bg-opacity-100 transition z-10"
-//         aria-label="Previous testimonial"
-//       >
-//         <ChevronLeft className="w-6 h-6 text-gray-400" />
-//       </button>
-
-//       <button
-//         onClick={nextSlide}
-//         className="absolute top-1/2 right-0 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow-md hover:bg-opacity-100 transition z-10"
-//         aria-label="Next testimonial"
-//       >
-//         <ChevronRight className="w-6 h-6 text-gray-400" />
-//       </button>
-
-//       {/* Indicator Dots */}
-//       <div className="flex justify-center mt-6 space-x-2">
-//         {testimonials.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => goToSlide(index)}
-//             className={`w-3 h-3 rounded-full transition ${
-//               index === current ? "bg-primary-gray2" : "bg-gray-300"
-//             }`}
-//             aria-label={`Go to testimonial ${index + 1}`}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TestimonialSlider;
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -185,7 +80,9 @@ export default function App() {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        autoplay={true}
+        autoplay={{
+          pauseOnMouseEnter: true,
+        }}
         loop={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         className="mySwiper testimonial-swiper"
