@@ -34,7 +34,6 @@ const storyPoints = [
   "Environmental responsibility",
 ];
 
-
 const Story = () => {
   return (
     <motion.div
@@ -60,6 +59,7 @@ const Story = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
             >
               <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
                 <div className="text-white font-arial-narrow">
@@ -104,6 +104,7 @@ const Story = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
             >
               <div className=" rounded-xl">
                 <img
@@ -122,6 +123,7 @@ const Story = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
           >
             <p className="text-lg md:text-xl pt-12 text-white">
               Families, solo travelers, artists, researchers, nature lovers, and

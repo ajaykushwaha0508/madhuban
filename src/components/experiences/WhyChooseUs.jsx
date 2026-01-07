@@ -72,7 +72,7 @@ const WhyChoosePoints = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-8 px-4 md:px-8 bg-primary-gray2">
+    <section className="py-8 px-4 md:px-8 bg-primary-gray2 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
         >
           <div className="flex items-center justify-center">
             <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-white font-semibold tracking-wider">
+            <h2 className="text-2xl md:text-5xl font-primary text-white font-semibold tracking-wider">
               Why Choose Madhuban Experiences?
             </h2>
             <hr className="w-16 border-t border-white ml-4" />
@@ -93,8 +93,8 @@ const WhyChooseUs = () => {
             nature, sustainability, and slow living.
           </p>
         </motion.div>
-       
-        <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">  
+
+        <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">
           <motion.div
             className="grid   gap-4 order-2 md:order-1"
             initial="hidden"
@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
             variants={containerVariants}
           >
             {WhyChoosePoints.map((item, i) => {
-                const IconComponent = item.icon;
+              const IconComponent = item.icon;
               return (
                 <motion.div
                   variants={itemVariants}
@@ -111,7 +111,7 @@ const WhyChooseUs = () => {
                   key={i}
                 >
                   <div className="block flex items-center gap-4 rounded-xl border border-primary-gray bg-primary-gray  p-4 text-primary-gray2 transition">
-                   <IconComponent/> {item.title}
+                    <IconComponent /> {item.title}
                   </div>
                 </motion.div>
               );

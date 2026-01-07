@@ -39,45 +39,29 @@ const containerVariants = {
 
 const coreValues = [
   {
-    title: "Sustainability",
-    description:
-      "Every decision we make, from construction to cuisine, puts the planet first.",
+    title: "Eco-friendly accommodations near Ratapani",
   },
   {
-    title: "Community",
-    description:
-      "We work hand-in-hand with local artisans, farmers, and tribal communities to ensure everyone grows together.",
+    title: "Perfect for family trips or weekend getaways",
   },
   {
-    title: "Simplicity",
-    description:
-      "We believe the most profound experiences often come from the simplest moments …a morning walk, a fresh meal, a quiet sunset.",
-  },
-  {
-    title: "Authenticity",
-    description:
-      "Nothing here is artificial. Not the food, not the architecture, not the stories we share.",
-  },
-  {
-    title: "Learning",
-    description:
-      "Every guest becomes a part of our learning ecosystem whether it's through organic farming, birdwatching, or cultural exchange.",
+    title: "Instant confirmation for Ratapani resort booking",
   },
 ];
-const WhyChooseBooking = () => {
+const WhyChoose = () => {
   return (
     <motion.div
-      className="text-center pb-16 pt-20 bg-[#D1C8C1]"
+      className="text-center md:pb-16 pt-20 "
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center justify-center ">
           <hr className="w-16 border-t text-primary-gray2 mr-4" />
           <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
-            Our Core Values
+            Why Choose Us?
           </h2>
           <hr className="w-16 border-t text-primary-gray2 ml-4" />
         </div>
@@ -88,14 +72,10 @@ const WhyChooseBooking = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
           >
-            <div className=" mx-auto px-4 py-10 text-lg text-gray-800">
+            <div className=" mx-auto px-4 py-2 text-lg text-gray-800">
               <div className="text-primary-gray2 font-arial-narrow">
-                <p className="mb-4 text-lg md:text-xl">
-                  Our values shape every choice—from how we build, to how we
-                  share life with nature.
-                </p>
-
                 <div className=" rounded-2xl p-6 py-10">
                   <motion.div
                     className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-4 font-poppins"
@@ -107,11 +87,8 @@ const WhyChooseBooking = () => {
                     {coreValues.map((feature, index) => (
                       <motion.div key={index} variants={itemVariants}>
                         <div className="bg-primary-gray2 h-full flex flex-col justify-center bg-opacity-50 text-start item-center gap-2 rounded-lg p-6 backdrop-blur-sm">
-                          <p className="font-primary text-xl md:text-2xl tracking-wider text-white text-center text-opacity-90">
+                          <p className="text-lg md:text-2xl tracking-wider text-white text-center text-opacity-90">
                             {feature.title}
-                          </p>
-                          <p className="text-lg md:text-xl  text-white text-center text-opacity-90">
-                            {feature.description}
                           </p>
                         </div>
                       </motion.div>
@@ -127,4 +104,4 @@ const WhyChooseBooking = () => {
   );
 };
 
-export default WhyChooseBooking;
+export default WhyChoose;

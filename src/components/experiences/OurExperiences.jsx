@@ -81,12 +81,12 @@ const OurExperiences = () => {
         >
           <div className="flex items-center justify-center">
             <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+            <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
               Our Experiences
             </h2>
             <hr className="w-16 border-t border-primary-gray2 ml-4" />
           </div>
-          <p className="mt-1 max-w-2xl mx-auto text-lg text-primary-gray2 px-4 tracking-wide font-arial-narrow">
+          <p className="mt-1 max-w-2xl mx-auto text-sm  md:text-lg text-primary-gray2 px-4 tracking-wide font-arial-narrow">
             Connect with nature, wildlife, and local culture through
             thoughtfully curated experiences that bring you closer to the soul
             of Madhya Pradesh.

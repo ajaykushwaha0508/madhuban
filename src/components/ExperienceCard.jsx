@@ -22,22 +22,22 @@ const ExperienceCard = ({ experience }) => {
       </div>
 
       {/* Content with slide-up effect on hover  text-[rgb(110,97,70)]*/}
-      <div className="absolute bottom-0 left-0 right-0 p-6 text-white  transition-all duration-500 transform translate-y-0 group-hover:-translate-y-2">
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-white  h-full  transition-all duration-500 transform translate-y-0 group-hover:-translate-y-2">
         <h3 className="text-white font-primary tracking-wider font-semibold text-xl mb-2 md:text-2xl">
           {title}
         </h3>
-        <p className=" text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-36 mb-20 group-hover:opacity-100 max-h-0 max500:mb-28">
+        <p className="text-base md:text-lg text-[#f1f8e9]   group-hover:opacity-100  ">
           {description}
         </p>
         {idealFor && (
-          <p className="flex text-lg text-[#f1f8e9] md:mb-[200px] sm:mb-24 lg:mb-5 mb-5 group-hover:opacity-100 max-h-0 max500:mb-28 ">
+          <p className="flex text-base md:text-lg text-[#f1f8e9]  lg:mb-5 mb-05 group-hover:opacity-100 mt-2  ">
             Ideal For : {idealFor}
           </p>
         )}
 
         <Link
           href={`/experiences/${path}`}
-          className="inline-flex items-center max-340:mt-40 max-Xsm:mt-36 max-sm:mt-24 xl:mt-14 lg:mt-24 text-white font-arial-narrow font-semibold tracking-wider group-hover:opacity-100 "
+          className="inline-flex items-center  text-white font-arial-narrow font-semibold tracking-wider group-hover:opacity-100 absolute bottom-6"
         >
           {learnMoreBtn}{" "}
           <ChevronRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
