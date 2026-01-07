@@ -24,42 +24,42 @@ const cardData = [
     image: "/images/NearbyAttractions/Ginnorgarh_Tribal_Fort.jpg",
     description:
       "A historic 1200 BC hilltop fort rising over 700 meters, located inside Ratapani Tiger Reserve. The fort features ancient water bodies, palace remains, and stone gateways — offering a raw glimpse into tribal and medieval heritage.",
-      bestFor: "Trekkers, history lovers, architecture enthusiasts.",
+    bestFor: "Trekkers, history lovers, architecture enthusiasts.",
   },
   {
     title: "Bhimbetka Rock Shelters (UNESCO Site)",
     image: "/images/NearbyAttractions/Bhimbetika_Rock_Shelter_Site.jpg",
     description:
       "A world-renowned archaeological site with prehistoric rock art from the Paleolithic, Mesolithic, and early historic periods. These caves represent the earliest evidence of human life in India.",
-      bestFor: "Historians, students, cultural explorers."
+    bestFor: "Historians, students, cultural explorers.",
   },
   {
     title: "Satpura Tiger Reserve / Satpura National Park",
     image: "/images/NearbyAttractions/Satpura_Tiger_Reserve.jpg",
     description:
       "One of Central India’s finest forest belts, Satpura Tiger Reserve is known for its rugged landscapes, wildlife safaris, river boating, and deep forest trails.",
-      bestFor: "Wildlife safaris, nature enthusiasts, adventure seekers."
+    bestFor: "Wildlife safaris, nature enthusiasts, adventure seekers.",
   },
   {
     title: "Saru Maru Caves",
     image: "/images/NearbyAttractions/Saru_Maru_Caves.jpg",
     description:
       "An ancient Buddhist monastic complex featuring meditation caves, inscriptions, and remnants of Ashokan-era history.",
-      bestFor: "Archaeology lovers, cultural travelers, spiritual seekers."
+    bestFor: "Archaeology lovers, cultural travelers, spiritual seekers.",
   },
   {
     title: "Narmada River Darshan (Sethani Ghat)",
     image: "/images/NearbyAttractions/Narmada_River_Darshan.jpg",
     description:
       "A magnificent 19th-century riverside ghat located at Narmadapuram. It is one of India’s largest ghats and a serene place to experience the spiritual aura of the holy Narmada River.",
-      bestFor: "Pilgrims, sunset views, riverside relaxation."
+    bestFor: "Pilgrims, sunset views, riverside relaxation.",
   },
   {
     title: "Salkanpur Devi Temple",
     image: "/images/NearbyAttractions/Salkanpur_Devi_Temple.jpg",
     description:
       "A revered Shaktipeeth dedicated to Goddess Vindhyavasni Beejasan Devi. Located atop an 800-foot-high hill, the temple offers panoramic forest views and spiritual tranquility.",
-      bestFor: "Devotees, trekking enthusiasts, sunrise/sunset views."
+    bestFor: "Devotees, trekking enthusiasts, sunrise/sunset views.",
   },
 ];
 
@@ -96,39 +96,34 @@ const NearbyAttractions = () => {
     return () => clearInterval(interval);
   }, [heroSlides.length]);
 
- const nearbyAttractionsFaqs = [
-  {
-    question:
-      "What are the best nearby attractions around Madhuban Eco Retreat?",
-    answer:
-      "Top attractions include Ratapani Wildlife Sanctuary, Bhimbetka Rock Shelters, Ginnorgarh Fort, Satpura Tiger Reserve, Saru Maru Caves, and Salkanpur Temple.",
-  },
-  {
-    question:
-      "How far is Bhimbetka from Madhuban Eco Retreat?",
-    answer:
-      "Bhimbetka is easily accessible and is one of the most recommended visits near the retreat.",
-  },
-  {
-    question:
-      "Is Ratapani good for wildlife lovers?",
-    answer:
-      "Yes, Ratapani is known for tigers, leopards, hyenas, wild dogs, and rich birdlife.",
-  },
-  {
-    question:
-      "Are these attractions suitable for families?",
-    answer:
-      "Yes, most nearby attractions are family-friendly and ideal for nature, culture, and spiritual visits.",
-  },
-  {
-    question:
-      "Can I visit Satpura Tiger Reserve from Madhuban?",
-    answer:
-      "Yes, Satpura lies within the same forest belt region and is accessible for full-day wildlife trips.",
-  },
-];
-
+  const nearbyAttractionsFaqs = [
+    {
+      question:
+        "What are the best nearby attractions around Madhuban Eco Retreat?",
+      answer:
+        "Top attractions include Ratapani Wildlife Sanctuary, Bhimbetka Rock Shelters, Ginnorgarh Fort, Satpura Tiger Reserve, Saru Maru Caves, and Salkanpur Temple.",
+    },
+    {
+      question: "How far is Bhimbetka from Madhuban Eco Retreat?",
+      answer:
+        "Bhimbetka is easily accessible and is one of the most recommended visits near the retreat.",
+    },
+    {
+      question: "Is Ratapani good for wildlife lovers?",
+      answer:
+        "Yes, Ratapani is known for tigers, leopards, hyenas, wild dogs, and rich birdlife.",
+    },
+    {
+      question: "Are these attractions suitable for families?",
+      answer:
+        "Yes, most nearby attractions are family-friendly and ideal for nature, culture, and spiritual visits.",
+    },
+    {
+      question: "Can I visit Satpura Tiger Reserve from Madhuban?",
+      answer:
+        "Yes, Satpura lies within the same forest belt region and is accessible for full-day wildlife trips.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#D1C8C1]  ">
@@ -206,11 +201,14 @@ const NearbyAttractions = () => {
                 transition={{ delay: index * 0.1 + 0.2 }}
               />
               <div className="px-6 py-4">
-                <div className="font-arial-narrow text-[#D1C8C1] font-bold tracking-wider text-xl text-center mb-2">
+                <div className="font-arial-narrow text-[#D1C8C1] font-primary text-xl text-center mb-2">
                   {card.title}
                 </div>
-                <p className="font-arial-narrow text-[#D1C8C1] text-base tracking-wide text-justify">
+                <p className="font-arial-narrow text-[#D1C8C1] text-sm  text-justify">
                   {card.description}
+                </p>
+                <p className="font-arial-narrow text-[#D1C8C1] text-sm  mt-2 text-justify">
+                  Best For : {card.bestFor}
                 </p>
               </div>
             </motion.div>
@@ -218,9 +216,9 @@ const NearbyAttractions = () => {
         </motion.div>
       </section>
 
-       <section className=" px-4 py-4 rounded-bl-[60px] rounded-br-[60px] flex flex-col justify-center items-center">
-        <CommonFaqs faqs={nearbyAttractionsFaqs}/>
-       </section>
+      <section className=" px-4 py-4 rounded-bl-[60px] rounded-br-[60px] flex flex-col justify-center items-center">
+        <CommonFaqs faqs={nearbyAttractionsFaqs} />
+      </section>
     </div>
   );
 };

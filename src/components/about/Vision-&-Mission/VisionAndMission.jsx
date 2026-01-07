@@ -45,7 +45,6 @@ const containerVariants = {
   },
 };
 
-
 const VisionMission = () => {
   return (
     <>
@@ -77,9 +76,10 @@ const VisionMission = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2  gap-12">
                 <motion.div
                   className="h-full bg-primary-gray2 rounded-2xl order-2 md:order-1"
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
                     <div className="text-white font-arial-narrow">
@@ -98,9 +98,10 @@ const VisionMission = () => {
 
                 <motion.div
                   className="h-full order-1 md:order-2"
-                  initial={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className=" rounded-2xl shadow-lg">
                     <motion.div
@@ -127,6 +128,7 @@ const VisionMission = () => {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className=" rounded-2xl shadow-lg">
                     <motion.div
@@ -148,6 +150,7 @@ const VisionMission = () => {
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
                     <div className="text-white font-arial-narrow">
