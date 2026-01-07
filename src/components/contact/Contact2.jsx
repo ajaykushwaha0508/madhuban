@@ -9,6 +9,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa6";
+import "./contactPage.css";
 import {
   facebook,
   gmail,
