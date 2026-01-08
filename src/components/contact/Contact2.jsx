@@ -84,7 +84,7 @@ Message: ${data.message}
       <div className="max-w-7xl mx-auto">
         {/* Page Heading */}
         <div className="text-center mb-14">
-          <h1 className="text-2xl md:text-4xl font-bold text-primary-gray2 mb-4 font-primary">
+          <h1 className="heading1 font-bold text-primary-gray2 mb-4 font-primary">
             Contact Us
           </h1>
           <p className="text-gray-700 max-w-3xl mx-auto">
@@ -195,7 +195,7 @@ Message: ${data.message}
 
           {/* RIGHT SIDE – CONTACT FORM */}
           <div className=" rounded-2xl shadow-lg p-4 md:p-8  bg-[#6e6146]">
-            <h2 className="text-2xl md:text-4xl text-center  font-semibold text-white mb-2 font-primary">
+            <h2 className="heading1 text-center  font-semibold text-white mb-2 font-primary">
               Send Us a Message
             </h2>
             <p className="text-gray-200 mb-6  text-center">
@@ -295,7 +295,7 @@ Message: ${data.message}
 
         {/* MAP SECTION */}
         <div className="mt-16 text-center">
-          <h2 className="text-2xl md:text-4xl font-semibold text-center text-primary-gray2 mb-6 font-primary">
+          <h2 className="heading1 font-semibold text-center text-primary-gray2 mb-6 font-primary">
             Find Us Here
           </h2>
           <p className="mb-4 text-gray-700">

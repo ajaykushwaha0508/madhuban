@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Salad, BeerOff } from "lucide-react";
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -51,7 +50,7 @@ const GuestImportance = () => {
         <div className="max-w-6xl mx-auto items-center flex flex-col">
           <div className="flex items-center justify-center mb-4">
             <hr className="w-16 border-t border-prinary-gray2 mr-4" />
-            <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+            <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
               Important for Our Guests
             </h2>
             <hr className="w-16 border-t border-prinary-gray2 ml-4" />
@@ -96,7 +95,9 @@ const GuestImportance = () => {
                   <div className=" mx-auto px-4 py-10 text-lg ">
                     <div className="text-white flex flex-col items-center justify-center font-arial-narrow">
                       <BeerOff size={40} />
-                      <h3 className="text-xl md:text-2xl my-4">No Alcohol Served</h3>
+                      <h3 className="text-xl md:text-2xl my-4">
+                        No Alcohol Served
+                      </h3>
                       <p className="mb-6 text-sm md:text-lg    text-center">
                         To maintain the peace and purity of the retreat
                         environment, we do not serve alcohol.

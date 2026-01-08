@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import SustainabilityFeature from "@/components/SustainabilityFeature";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,14 +76,12 @@ const CommitmentSection = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-[#D1C8C1] mr-4" />
-            <h2 className="text-xl md:text-5xl font-primary text-[#D1C8C1] font-semibold tracking-wider">
-              Our Commitment to Sustainability
-            </h2>
-            <hr className="w-16 border-t border-[#D1C8C1] ml-4" />
-          </div>
-          <p className="mt-1 max-w-2xl mx-auto text-sm md:text-lg font-arial-narrow text-[#D1C8C1] px-4 tracking-wide">
+          <DecorativeHeading
+            text="Our Commitment to Sustainability"
+            color="#fff"
+          />
+
+          <p className="mt-1 p-text max-w-2xl mx-auto   font-arial-narrow text-[#D1C8C1] px-4 tracking-wide">
             As a leading sustainable resort in India, Madhuban Eco Retreat is
             built on practices that preserve the environment and support local
             communities.
@@ -107,7 +106,7 @@ const CommitmentSection = () => {
           variants={fadeInUp}
           viewport={{ once: true }}
         >
-          <p className="mt-4 max-w-2xl mx-auto text-lg font-arial-narrow text-[#D1C8C1] px-4 tracking-wide">
+          <p className="p-text mt-4 max-w-2xl mx-auto  font-arial-narrow text-[#D1C8C1] px-4 tracking-wide text-center">
             Every stay contributes to responsible tourism in Madhya Pradesh.
           </p>
         </motion.div>

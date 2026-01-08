@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import PhilosophyBenifit from "@/components/about/ecoPhilosophy/PhilosopyBenifit";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -66,20 +67,14 @@ const sustainabilityFeatures = [
 const EcoPhilosophy = () => {
   return (
     <motion.div
-      className="text-center pb-16 pt-20 bg-[#D1C8C1] overflow-hidden"
+      className="text-center pb-16 pt-14 bg-primary-gray overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t text-primary-gray2 mr-4" />
-          <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
-            Eco Philosophy
-          </h2>
-          <hr className="w-16 border-t text-primary-gray2 ml-4" />
-        </div>
+        <DecorativeHeading text={"Eco Philosophy"} />
 
         <motion.div className="h-full" variants={itemVariants}>
           <motion.div
@@ -91,14 +86,14 @@ const EcoPhilosophy = () => {
           >
             <div className=" mx-auto px-4 py-10 text-lg text-gray-800">
               <div className="text-primary-gray2 font-arial-narrow">
-                <p className="mb-6 text-lg md:text-xl  text-justify">
+                <p className="mb-6 p-text p-text-black  text-justify">
                   At Madhuban Eco Retreat, nature is not a backdrop — it is the
                   foundation of everything we do. Our eco philosophy is simple:
                   Live lightly, protect consciously, and give back continuously.
                 </p>
 
                 <div className="bg-primary-gray2 rounded-2xl p-6 py-10">
-                  <p className="text-lg md:text-3xl text-white font-primary font-semibold">
+                  <p className="heading1 text-white font-primary ">
                     Here’s how we bring this philosophy to life
                   </p>
                   <motion.div
@@ -118,19 +113,19 @@ const EcoPhilosophy = () => {
 
                 <div className="flex items-center justify-center mb-4">
                   <motion.div
-                    className="h-full"
+                    className="h-full  md:w-[80%]"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                     viewport={{ once: true }}
                   >
-                    <p className="text-lg md:text-xl pt-12 text-primary-gray2">
+                    <p className="p-text p-text-black pt-12 p-text-black text-justify  md:text-center ">
                       Our commitment extends beyond the retreat. We actively
                       participate in community development, volunteering, and
                       conservation-based initiatives that benefit the land and
                       people around us.
                     </p>
-                    <p className="text-lg md:text-xl pt-5 text-primary-gray2">
+                    <p className="p-text p-text-black pt-5 p-text-black text-justify md:text-center">
                       Eco-living at Madhuban is not a concept — it is a daily
                       practice that shapes how we grow, serve, and sustain
                     </p>

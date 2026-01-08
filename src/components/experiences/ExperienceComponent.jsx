@@ -38,7 +38,7 @@ const ExperienceComponent = () => {
       <div className="max-w-7xl mx-auto ">
         <div className="flex items-center justify-center mb-4">
           <hr className="w-16 border-t border-white mr-4" />
-          <h1 className="text-2xl md:text-5xl  font-primary text-white font-semibold tracking-wider">
+          <h1 className="heading1  font-primary text-white font-semibold tracking-wider">
             Nature Moments at Madhuban
           </h1>
           <hr className="w-16 border-t border-white ml-4" />

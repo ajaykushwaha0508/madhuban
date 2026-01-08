@@ -37,7 +37,7 @@ const BookStay = () => {
     >
       <div className="max-w-7xl mx-auto ">
         <div className="flex items-center justify-center mb-4">
-          <h1 className="text-xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+          <h1 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
             Discover Your Ideal Eco Stay Near Bhopal & Ratapani
           </h1>
         </div>

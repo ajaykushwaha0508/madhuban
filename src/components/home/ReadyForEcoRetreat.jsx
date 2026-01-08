@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,18 +52,16 @@ const ReadyForEcoRetreat = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-2xl md:text-5xl font-primary text-white font-extrabold tracking-wider">
-              Ready for Your Eco Retreat in Madhya Pradesh?
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading
+            text={"Ready for Your Eco Retreat in Madhya Pradesh?"}
+            color="#fff"
+            textClasses={"w-[80%] md:w-fit"}
+          />
 
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-white font-extrabold px-4 tracking-wide font-arial-narrow">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-white px-4 tracking-wide font-arial-narrow">
             Escape to nature without leaving comfort behind.
           </p>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-white font-extrabold px-4 tracking-wide font-arial-narrow">
+          <p className="mt-4 max-w-2xl mx-auto p-text text-white px-4 tracking-wide font-arial-narrow">
             Book your stay at Madhuban Eco Retreat — the perfect forest resort
             near Bhopal for peaceful getaways, wellness travel, and nature
             exploration.

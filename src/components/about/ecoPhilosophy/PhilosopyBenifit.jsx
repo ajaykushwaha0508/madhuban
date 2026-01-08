@@ -34,7 +34,7 @@ const PhilosophyBenifit = ({ feature }) => {
       <div className="flex items-center justify-center">
         <IconComponent className="w-10 h-10" />
       </div>
-      <p className="text-md md:text-lg text-primary-gray2 text-center text-opacity-90">
+      <p className="p-text text-primary-gray2 text-center text-opacity-90">
         {title}
       </p>
     </div>

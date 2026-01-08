@@ -81,7 +81,7 @@ const DiningSpacial = () => {
           >
             <div className="flex items-center justify-center">
               <hr className="w-16 border-t border-white mr-4" />
-              <h2 className="text-xl md:text-5xl font-primary text-white font-semibold tracking-wider">
+              <h2 className="heading1 font-primary text-white font-semibold tracking-wider">
                 What Makes Dining at Madhuban Special?
               </h2>
               <hr className="w-16 border-t border-white ml-4" />

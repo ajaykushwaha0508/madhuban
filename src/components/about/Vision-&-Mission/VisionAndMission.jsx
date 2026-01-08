@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaAnglesRight } from "react-icons/fa6";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -49,23 +50,17 @@ const VisionMission = () => {
   return (
     <>
       <motion.div
-        className="text-center pb-16 pt-12 bg-primary-gray2 overflow-hidden"
+        className="vision-mission text-center pb-16 pt-12 bg-primary-gray2 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
         <div className="max-w-7xl mx-auto ">
-          <div className="flex items-center justify-center mb-4">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-2xl md:text-5xl font-primary text-white font-semibold tracking-wider">
-              Vision & Mission
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading text={"Vision & Mission"} color="#fff" />
 
           <motion.div
-            className="flex flex-col gap-4 bg-primary-gray p-4  md:rounded-2xl"
+            className="flex flex-col gap-4 bg-(--primary-gray2)  md:bg-(--primary-gray) p-4 mt-4  md:rounded-2xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -75,16 +70,18 @@ const VisionMission = () => {
             <motion.div className="h-full" variants={containerVariants}>
               <div className="grid grid-cols-1 lg:grid-cols-2  gap-12">
                 <motion.div
-                  className="h-full bg-primary-gray2 rounded-2xl order-2 md:order-1"
+                  className="h-full max-md:bg-(--primary-gray) md:bg-(--primary-gray2) rounded-2xl order-2 md:order-1"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
                   viewport={{ once: true }}
                 >
-                  <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
-                    <div className="text-white font-arial-narrow">
-                      <h3 className="text-2xl mb-4">Our Vision</h3>
-                      <p className="mb-6 text-white  text-justify">
+                  <div className="max-w-4xl mx-auto px-4 py-10  text-lg text-gray-800">
+                    <div className=" max-md:text-(--primary-gray2) md:text-white  font-arial-narrow">
+                      <h3 className="text-2xl mb-4 text-primary-color-custom">
+                        Our Vision
+                      </h3>
+                      <p className="mb-6 text-base md:text-lg  text-justify">
                         To become India’s leading eco resort near Bhopal, where
                         guests rediscover the joy of simple living, reconnect
                         with nature, and leave with a renewed sense of
@@ -146,21 +143,21 @@ const VisionMission = () => {
                 </motion.div>
 
                 <motion.div
-                  className="h-full bg-primary-gray2 rounded-2xl"
+                  className="h-full max-md:bg-(--primary-gray) md:bg-(--primary-gray2) rounded-2xl"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
                   viewport={{ once: true }}
                 >
                   <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
-                    <div className="text-white font-arial-narrow">
+                    <div className="max-md:text-(--primary-gray2) md:text-white font-arial-narrow">
                       <h3 className="text-2xl mb-4">Our Mission</h3>
-                      <p className="mb-6  text-justify">
+                      <p className="mb-6 text-base md:text-lg   text-justify">
                         Our mission is to offer deeply meaningful,
                         earth-friendly travel experiences through:
                       </p>
 
-                      <div className="bg-primary-gray rounded-lg overflow-hidden shadow-lg">
+                      <div className="max-md:bg-(--primary-gray2) md:bg-(--primary-gray) rounded-lg overflow-hidden shadow-lg">
                         {ourMissionPoint.map((item, i) => {
                           return (
                             <motion.div
@@ -169,7 +166,7 @@ const VisionMission = () => {
                               variants={itemVariants}
                               whileHover={{ scale: 1.03 }}
                             >
-                              <div className="block rounded-xl flex gap-2 items-center text-primary-gray2   p-1  font-medium  transition">
+                              <div className="block rounded-xl flex gap-2 text-base md:text-lg  items-center  max-md:text-white  md:text-(--primary-gray2)  p-1  font-medium  transition">
                                 <FaAnglesRight className="shrink-0" /> {item}
                               </div>
                             </motion.div>
@@ -177,7 +174,7 @@ const VisionMission = () => {
                         })}
                       </div>
 
-                      <p className="text-left mt-4">
+                      <p className="text-justify md:text-center  mt-4 text-base md:text-lg ">
                         Madhuban Eco Retreat is crafted for travelers seeking a
                         nature resort near Bhopal, a peaceful weekend getaway,
                         or a rejuvenating detox retreat grounded in

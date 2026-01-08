@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const standsFor = [
   "One of the best resorts near Ratapani",
@@ -43,13 +44,7 @@ const AboutSection = () => {
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto ">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-          <h1 className="text-2xl md:text-5xl  font-primary text-[rgb(110,97,70)] font-semibold tracking-wider">
-            About Madhuban Eco Retreat
-          </h1>
-          <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
-        </div>
+        <DecorativeHeading text={"About Madhuban Eco Retreat"} as="h1" />
 
         <motion.div className="h-full" variants={itemVariants}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -61,8 +56,8 @@ const AboutSection = () => {
               viewport={{ once: true }}
             >
               <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
-                <div className="text-[rgb(110,97,70)] font-arial-narrow">
-                  <p className="mb-6 text-lg md:text-xl  text-justify">
+                <div className="p-text-black p-text font-arial-narrow text-justify">
+                  <p className="mb-4">
                     Madhuban Eco Retreat is a regenerative forest and
                     experiential travel destination nestled across 20 acres of
                     land that was once barren and degraded. Madhuban welcomes
@@ -71,7 +66,7 @@ const AboutSection = () => {
                     inviting you to slow down and reconnect with the rhythms of
                     nature.
                   </p>
-                  <p className="mb-6 text-md md:text-xl text-justify">
+                  <p>
                     Strategically located near Bhopal and in close proximity to
                     both Ratapani and Satpura Tiger Reserves, Madhuban is an
                     ideal base for those wishing to explore the stunning
@@ -129,7 +124,7 @@ const AboutSection = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg md:text-xl pt-12 text-primary-gray2">
+            <p className="p-text pt-12 p-text-black">
               Whether you're planning a forest escape, a cultural journey, or a
               sustainable retreat, Madhuban offers an unforgettable experience
               of Madhya Pradesh's wilderness and wonder.
