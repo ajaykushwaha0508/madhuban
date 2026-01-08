@@ -32,7 +32,7 @@ const SustainabilityFeature = ({ feature }) => {
       <div className="mb-4">
         <IconComponent className="w-10 h-10 text-primary-gray2" />
       </div>
-      <h3 className="font-primary tracking-widest text-primary-gray2 font-medium  text-xl mb-2">
+      <h3 className="font-primary card-herading text-primary-gray2  mb-2">
         {title}
       </h3>
       <p className=" text-primary-gray2 text-opacity-90">{description}</p>

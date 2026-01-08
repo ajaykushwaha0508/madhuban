@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,7 +49,7 @@ const WelComeSection = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <section className="pt-20 pb-8 md:px-8 bg-[#D1C8C1] min-h-[60vh] max640:pt-0 max640:text-center">
+    <section className="  md:pt-20 pb-8 md:px-8 bg-[#D1C8C1] min-h-[60vh] max640:pt-0 max640:text-center">
       <div className="max-w-7xl mx-auto px-2 py-7 md:px-6">
         <motion.div
           className="grid md:grid-cols-2 xl:grid-cols-2 gap-12 items-center"
@@ -58,18 +60,18 @@ const WelComeSection = () => {
         >
           {/* Text Section text-[rgb(110,97,70)] */}
           <motion.div className="h-full" variants={itemVariants}>
-            <h2 className="font-primary tracking-widest font-bold md:text-[30px] text-2xl text-primary-gray2 mb-6 text-center">
-              Welcome to "Madhuban Eco Retreat"
-            </h2>
+            <div className="flex flex-col justify-center items-center">
+              <DecorativeHeading text={`Welcome to "Madhuban Eco Retreat"`} />
+            </div>
 
-            <p className="font-arial-narrow text-md md:text:lg mb-6 text-primary-gray2 tracking-wider text-justify">
+            <p className="font-arial-narrow text-md md:text:lg mb-6 text-1 text-justify">
               Located just an hour from Bhopal, Madhuban is a premium eco resort
               near Ratapani designed for travelers who love nature, wellness,
               and responsible travel. Nestled beside the scenic teak forests of
               Ratapani Wildlife Sanctuary, our resort offers a rare blend of
               sustainable hospitality and natural luxury.
             </p>
-            <p className="text-md md:text:lg font-arial-narrow  text-primary-gray2 tracking-wider text-justify">
+            <p className="text-md md:text:lg font-arial-narrow  text-1 text-justify">
               As one of the best forest resorts in Madhya Pradesh, Madhuban
               invites you to reconnect with the outdoors through forest walks,
               birdwatching, organic dining, and peaceful eco-friendly stays.

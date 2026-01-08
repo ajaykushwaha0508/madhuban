@@ -60,7 +60,7 @@ const WhyChoose = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center ">
           <hr className="w-16 border-t text-primary-gray2 mr-4" />
-          <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
+          <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
             Why Choose Us?
           </h2>
           <hr className="w-16 border-t text-primary-gray2 ml-4" />

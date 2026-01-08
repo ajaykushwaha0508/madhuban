@@ -180,7 +180,7 @@ const Accommodations = () => {
         >
           <div className="flex items-center justify-center mb-3">
             <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
+            <h2 className="heading1 font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
               Our Accommodations
             </h2>
             <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />

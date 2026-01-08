@@ -60,7 +60,7 @@ const NewBlogPage = async () => {
       <div className="custom-container py-4 md:py-8">
         <div className="flex items-center justify-center mb-4">
           <hr className="w-16 border-t border-primary-gray2 mr-4" />
-          <h1 className="text-xl md:text-5xl  font-primary text-primary-gray2 font-semibold tracking-wider">
+          <h1 className="heading1  font-primary text-primary-gray2 font-semibold tracking-wider">
             Blogs
           </h1>
           <hr className="w-16 border-t border-primary-gray2 ml-4" />

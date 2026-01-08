@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => {
 
       {/* Content with slide-up effect on hover  text-[rgb(110,97,70)]*/}
       <div className="absolute bottom-0 left-0 right-0 p-6 text-white  h-full  transition-all duration-500 transform translate-y-0 group-hover:-translate-y-2">
-        <h3 className="text-white font-primary tracking-wider font-semibold text-xl mb-2 md:text-2xl">
+        <h3 className="text-white font-primary   text-xl mb-2 md:text-2xl">
           {title}
         </h3>
         <p className="text-base md:text-lg text-[#f1f8e9]   group-hover:opacity-100  ">

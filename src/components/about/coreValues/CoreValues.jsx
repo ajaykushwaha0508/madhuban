@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -67,20 +68,14 @@ const coreValues = [
 const CoreValues = () => {
   return (
     <motion.div
-      className="text-center pb-16 pt-20 bg-[#D1C8C1]"
+      className="text-center pb-16 pt-14 md:pt-20 bg-[#D1C8C1]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t text-primary-gray2 mr-4" />
-          <h2 className="text-2xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider">
-            Our Core Values
-          </h2>
-          <hr className="w-16 border-t text-primary-gray2 ml-4" />
-        </div>
+        <DecorativeHeading text={"Our Core Values"} />
 
         <motion.div className="h-full" variants={itemVariants}>
           <motion.div
@@ -89,9 +84,9 @@ const CoreValues = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className=" mx-auto px-4 py-10 text-lg text-gray-800">
+            <div className=" mx-auto px-4  text-lg text-gray-800">
               <div className="text-primary-gray2 font-arial-narrow">
-                <p className="mb-4 text-lg md:text-xl">
+                <p className="mb-4 p-text">
                   Our values shape every choice—from how we build, to how we
                   share life with nature.
                 </p>
@@ -107,10 +102,10 @@ const CoreValues = () => {
                     {coreValues.map((feature, index) => (
                       <motion.div key={index} variants={itemVariants}>
                         <div className="bg-primary-gray2 h-full flex flex-col justify-center bg-opacity-50 text-start item-center gap-2 rounded-lg p-6 backdrop-blur-sm">
-                          <p className="font-primary text-xl md:text-2xl tracking-wider text-white text-center text-opacity-90">
+                          <p className="font-primary card-heading tracking-wider  text-white text-center text-opacity-90">
                             {feature.title}
                           </p>
-                          <p className="text-lg md:text-xl  text-white text-center text-opacity-90">
+                          <p className="p-text   text-white text-center text-opacity-90">
                             {feature.description}
                           </p>
                         </div>

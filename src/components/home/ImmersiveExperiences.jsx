@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ExperienceCard from "@/components/ExperienceCard";
 import Link from "next/link";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -79,14 +80,12 @@ const ImmersiveExperiences = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider">
-              Immersive Experiences in Ratapani’s Wilderness
-            </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
-          </div>
-          <p className="mt-1 max-w-2xl mx-auto text=sm md:text-lg text-[rgb(110,97,70)] px-4 tracking-wide font-arial-narrow">
+          <DecorativeHeading
+            text={"Immersive Experiences in Ratapani’s Wilderness"}
+            textClasses={"w-[80%] md:w-fit"}
+          />
+
+          <p className="mt-1 max-w-2xl mx-auto p-text p-text-black px-4 tracking-wide font-arial-narrow">
             Connect with nature, wildlife, and local culture through
             thoughtfully curated experiences that bring you closer to the soul
             of Madhya Pradesh.

@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { FaAnglesRight } from "react-icons/fa6";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -37,20 +38,14 @@ const storyPoints = [
 const Story = () => {
   return (
     <motion.div
-      className="text-center pb-16 pt-20 bg-[rgb(110,97,70)] overflow-hidden"
+      className="text-center pb-16 pt-12 bg-[rgb(110,97,70)] overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t border-white mr-4" />
-          <h2 className="text-2xl md:text-5xl font-primary text-white font-semibold tracking-wider">
-            The Madhuban Story
-          </h2>
-          <hr className="w-16 border-t border-white ml-4" />
-        </div>
+        <DecorativeHeading text={"The Madhuban Story"} color={"#fff"} />
 
         <motion.div className="h-full" variants={itemVariants}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-center items-center">
@@ -63,19 +58,19 @@ const Story = () => {
             >
               <div className="max-w-4xl mx-auto px-4 py-10 text-lg text-gray-800">
                 <div className="text-white font-arial-narrow">
-                  <p className="mb-6 text-lg md:text-xl text-justify">
+                  <p className="mb-6 p-text text-justify">
                     The story of Madhuban began not with ambition, but with
                     emotion — a heartfelt response to a modern world moving too
                     fast and drifting away from nature. Over the years, the land
                     was revived with care, supported by local communities, and
                     shaped by a vision of mindful, responsible travel.
                   </p>
-                  <p className="mb-6 text-lg md:text-xl text-justify">
+                  <p className="mb-6 p-text text-justify">
                     The Somaiya Group, an 80-year-old corporate house with
                     expertise in education, healthcare, agriculture, social
                     development, and sustainability, brought this dream to life.
                   </p>
-                  <p className="mb-4 text-lg md:text-xl text-justify">
+                  <p className="mb-6 p-text text-justify">
                     Madhuban Eco Retreat is their first venture into hospitality
                     — a project built on:
                   </p>
@@ -88,7 +83,7 @@ const Story = () => {
                           variants={itemVariants}
                           whileHover={{ scale: 1.03 }}
                         >
-                          <div className="block rounded-xl text-lg md:text-xl flex gap-2 items-center    p-2  font-medium  transition">
+                          <div className="block rounded-xl p-text flex gap-2 items-center    p-2  font-medium  transition">
                             <FaAnglesRight /> {item}
                           </div>
                         </motion.div>
@@ -125,7 +120,7 @@ const Story = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg md:text-xl pt-12 text-white">
+            <p className="p-text pt-12 text-white">
               Families, solo travelers, artists, researchers, nature lovers, and
               spiritual seekers come to Madhuban Eco Retreat to rediscover{" "}
               <br /> what truly matters — simplicity, serenity, and balance.

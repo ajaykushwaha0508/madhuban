@@ -156,7 +156,7 @@ const NearbyAttractions = () => {
       </section>
       <section className=" px-4 py-4 rounded-bl-[60px] rounded-br-[60px] flex flex-col justify-center items-center">
         <div className="text-center max-w-7xl mb-12 -mt-10">
-          <h1 className=" text-2xl md:text-5xl font-bold text-[rgb(110,97,70)] mb-4 font-primary">
+          <h1 className=" heading1 font-bold text-[rgb(110,97,70)] mb-4 font-primary">
             Beyond the Retreat !.. <br></br>Experience the Soul of Madhya
             Pradesh!!
           </h1>

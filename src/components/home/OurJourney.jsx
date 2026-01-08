@@ -1,4 +1,5 @@
 "use client";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 import { facebook, instagram } from "@/utills/constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -63,15 +64,9 @@ const OurJourney = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="text-xl md:text-5xl font-primary text-[rgb(110,97,70)] font-semibold tracking-wider mb-3 max500:text-3xl">
-              Follow Our Journey
-            </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
-          </div>
+          <DecorativeHeading text={"Follow Our Journey"} />
           <motion.div
-            className="flex justify-center items-center space-x-4"
+            className="flex justify-center items-center space-x-4 mt-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

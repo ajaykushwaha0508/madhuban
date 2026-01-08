@@ -7,7 +7,7 @@ const DiningOptions = () => {
         <section className="gallery-section  ">
           <div className="flex items-center justify-center mb-8">
             <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-xl md:text-5xl font-primary text-white font-semibold tracking-wider text-center">
+            <h2 className="heading1 font-primary text-white font-semibold tracking-wider text-center">
               Buffet & Dining Options Near Ratapani
             </h2>
             <hr className="w-16 border-t border-white ml-4" />
@@ -20,7 +20,7 @@ const DiningOptions = () => {
               own gardens. If you’re searching for the best dinner in Ratapani,
               healthy lunch options, or a wholesome dining experience inside the
               jungle, Madhuban’s kitchen offers a memorable culinary journey.
-            </p>    
+            </p>
           </div>
         </section>
       </div>

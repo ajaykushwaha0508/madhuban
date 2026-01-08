@@ -599,7 +599,7 @@ const AccommodationDetail = () => {
 
               <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between h-auto md:min-h-[400px]">
                 <div>
-                  <h1 className="text-2xl md:text-4xl font-primary font-semibold text-[rgb(110,97,70)] mb-3">
+                  <h1 className="heading1 font-primary font-semibold text-[rgb(110,97,70)] mb-3">
                     {accommodation.name}
                   </h1>
                   <div className="flex items-center mb-4">
