@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Salad, BeerOff } from "lucide-react";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -48,13 +49,7 @@ const GuestImportance = () => {
         variants={fadeInUp}
       >
         <div className="max-w-6xl mx-auto items-center flex flex-col">
-          <div className="flex items-center justify-center mb-4">
-            <hr className="w-16 border-t border-prinary-gray2 mr-4" />
-            <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
-              Important for Our Guests
-            </h2>
-            <hr className="w-16 border-t border-prinary-gray2 ml-4" />
-          </div>
+          <DecorativeHeading text={"Important for Our Guests"} as="h2" />
 
           <motion.div
             className="flex flex-col gap-4 w-90 md:w-full  md:rounded-2xl"
@@ -73,12 +68,12 @@ const GuestImportance = () => {
                   transition={{ duration: 0.7 }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
-                    <div className="text-white flex flex-col items-center justify-center font-arial-narrow">
+                    <div className="text-white flex flex-col items-center justify-center ">
                       <Salad size={40} />
-                      <h3 className="text-xl md:text-2xl my-4">
+                      <h3 className="cardHeading my-4">
                         100% Pure Vegetarian Menu
                       </h3>
-                      <p className="mb-6 text-sm md:text-lg text-center">
+                      <p className="mb-6 p-text  text-center">
                         We serve only pure veg meals, prepared with fresh,
                         local, and organic produce.
                       </p>
@@ -93,12 +88,10 @@ const GuestImportance = () => {
                   transition={{ duration: 0.7 }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
-                    <div className="text-white flex flex-col items-center justify-center font-arial-narrow">
+                    <div className="text-white flex flex-col items-center justify-center ">
                       <BeerOff size={40} />
-                      <h3 className="text-xl md:text-2xl my-4">
-                        No Alcohol Served
-                      </h3>
-                      <p className="mb-6 text-sm md:text-lg    text-center">
+                      <h3 className="cardHeading  my-4">No Alcohol Served</h3>
+                      <p className="mb-6 p-text    text-center">
                         To maintain the peace and purity of the retreat
                         environment, we do not serve alcohol.
                       </p>

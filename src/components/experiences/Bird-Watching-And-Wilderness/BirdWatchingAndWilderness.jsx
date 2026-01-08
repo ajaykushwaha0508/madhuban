@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const BirdWatchingAndWilderness = () => {
   // Track active main accordion index
@@ -66,14 +67,14 @@ const BirdWatchingAndWilderness = () => {
       title: "Bird Watching & Wilderness",
       content: (
         <>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4 text-justify text-white">
             Escape into the peaceful wilderness of Ratapani with our Bird
             Watching & Wilderness experience at Madhuban Eco Retreat. Surrounded
             by untouched forest, this region is home to over 70+ species of
             native and migratory birds — making it one of the best bird-watching
             locations near Bhopal.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4 text-justify text-white">
             Our guided birding sessions take place during early mornings and
             golden-hour evenings, when the forest is most alive. With no urban
             noise and minimal human disturbance, you can witness the beauty of
@@ -81,7 +82,7 @@ const BirdWatchingAndWilderness = () => {
             Flycatcher to colorful orioles, kingfishers, drongos, peacocks, and
             seasonal visitors.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4 text-justify text-white">
             If you’re seeking a silent wilderness experience, a nature-based
             activity for families, or an ideal spot for wildlife photography,
             this trail offers a rare chance to slow down, observe, and connect
@@ -89,12 +90,12 @@ const BirdWatchingAndWilderness = () => {
           </p>
 
           {/* Nested Accordion inside first main accordion item */}
-          <div className="font-primary divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
+          <div className=" divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect ",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2">
                     <li>Guided sessions at sunrise and sunset</li>
                     <li>Spot native & migratory birds across forest zones</li>
                     <li>Learn bird calls, seasonal patterns & behaviors</li>
@@ -107,26 +108,12 @@ const BirdWatchingAndWilderness = () => {
               {
                 title: "Perfect For",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
-                    
-
-
-
-
-
-                    <li>
-                      Bird watchers & ornithologists
-                    </li>
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2">
+                    <li>Bird watchers & ornithologists</li>
                     <li>Wildlife photographers</li>
-                    <li>
-                     Nature lovers & quiet travelers
-                    </li>
-                    <li>
-                      Families & students
-                    </li>
-                    <li>
-                      Anyone exploring eco-tourism near Bhopal
-                    </li>
+                    <li>Nature lovers & quiet travelers</li>
+                    <li>Families & students</li>
+                    <li>Anyone exploring eco-tourism near Bhopal</li>
                   </ul>
                 ),
               },
@@ -134,10 +121,13 @@ const BirdWatchingAndWilderness = () => {
                 title: "Let Nature Surprise You",
                 content: (
                   <>
-                    Immerse yourself in the sounds of wings and the calm of the forest.—{" "}
+                    <p className="text-primary-gray2">
+                      Immerse yourself in the sounds of wings and the calm of
+                      the forest.—{" "}
+                    </p>
                     <Link
                       href="/booking"
-                      className="list-disc list-inside underline text-primary-gray2 font-bold tracking-widest font-primary space-y-2"
+                      className="list-disc list-inside underline text-primary-gray2  space-y-2"
                     >
                       Book Your Bird Watching Experience Now
                     </Link>
@@ -187,39 +177,38 @@ const BirdWatchingAndWilderness = () => {
     },
   ];
 
- const birdWatchingFaqs = [
-  {
-    question: "What birds can I spot in Ratapani during bird watching?",
-    answer:
-      "You may see the paradise flycatcher, golden oriole, kingfisher, drongo, peacock, woodpeckers, and various migratory species.",
-  },
-  {
-    question: "Is this the best bird watching spot near Bhopal?",
-    answer:
-      "Yes. Madhuban Eco Retreat is considered one of the top bird-watching zones near Bhopal due to its peaceful forest surroundings and rich biodiversity.",
-  },
-  {
-    question: "Are the bird watching sessions guided?",
-    answer:
-      "Yes, all sessions are led by experienced naturalists familiar with local bird species and their behavior.",
-  },
-  {
-    question: "What time is ideal for bird watching?",
-    answer:
-      "Early mornings and sunset hours are the most active and recommended times for bird watching.",
-  },
-  {
-    question: "Is bird watching suitable for children and beginners?",
-    answer:
-      "Absolutely. The sessions are easy, educational, and enjoyable for all age groups.",
-  },
-  {
-    question: "Do I need binoculars or a camera?",
-    answer:
-      "You may bring your own binoculars or camera, but even without equipment, the bird watching experience remains enriching.",
-  },
-];
-
+  const birdWatchingFaqs = [
+    {
+      question: "What birds can I spot in Ratapani during bird watching?",
+      answer:
+        "You may see the paradise flycatcher, golden oriole, kingfisher, drongo, peacock, woodpeckers, and various migratory species.",
+    },
+    {
+      question: "Is this the best bird watching spot near Bhopal?",
+      answer:
+        "Yes. Madhuban Eco Retreat is considered one of the top bird-watching zones near Bhopal due to its peaceful forest surroundings and rich biodiversity.",
+    },
+    {
+      question: "Are the bird watching sessions guided?",
+      answer:
+        "Yes, all sessions are led by experienced naturalists familiar with local bird species and their behavior.",
+    },
+    {
+      question: "What time is ideal for bird watching?",
+      answer:
+        "Early mornings and sunset hours are the most active and recommended times for bird watching.",
+    },
+    {
+      question: "Is bird watching suitable for children and beginners?",
+      answer:
+        "Absolutely. The sessions are easy, educational, and enjoyable for all age groups.",
+    },
+    {
+      question: "Do I need binoculars or a camera?",
+      answer:
+        "You may bring your own binoculars or camera, but even without equipment, the bird watching experience remains enriching.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#b4a681d8]">
@@ -237,10 +226,10 @@ const BirdWatchingAndWilderness = () => {
         </video>
 
         <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-primary tracking-widest font-medium mb-4">
+          <h1 className="bannerHeading font-primary mb-4">
             Bird Watching & Wilderness
           </h1>
-          <p className="text-xl md:text-2xl font-arial-narrow tracking-wider">
+          <p className="bannerSubHeading">
             Listen to Wings, Follow the Forest, Feel the Silence
           </p>
           <button
@@ -262,23 +251,18 @@ const BirdWatchingAndWilderness = () => {
         className="py-10 px-4 md:px-8 bg-primary-gray"
       >
         <div className="container mx-auto max-w-4xl">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider text-center">
-              Explore The Nature
-            </h2>
-            <hr className="w-16 border-t border-primary-gray2 ml-4" />
-          </div>
+          <DecorativeHeading text={"Explore The Nature"} as="h2" />
+
           <div className="divide-y rounded-xl bg-primary-gray2 shadow-md overflow-hidden">
             {accordionItems.map((item, index) => (
               <div key={index} className="group bg-primary-gray2">
                 <button
-                  className="font-primary font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
+                  className="font-primary  flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                  <span className="text-2xl">{item.title}</span>
+                  <span className="heading1">{item.title}</span>
                   <svg
                     className={`w-5 h-5 transform transition-transform duration-300 ${
                       activeAccordion === index ? "rotate-180" : ""
@@ -317,13 +301,8 @@ const BirdWatchingAndWilderness = () => {
       {/* Image Slider Section */}
       <section className="py-10 px-4 md:px-8 	bg-primary-gray2">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-white font-bold tracking-wider text-center">
-              Birds Gallery
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading text={"Birds Gallery"} as="h2" color="#fff" />
+
           <div className="w-[90%] md:w-[100%] h-[70vh] mx-auto">
             <Swiper
               modules={[Pagination, Autoplay]}
@@ -347,10 +326,10 @@ const BirdWatchingAndWilderness = () => {
       </section>
 
       {/* FAQs */}
-      <CommonFaqs 
-      heading="FAQs – Bird Watching & Wilderness"
-      faqs={birdWatchingFaqs}
-       />
+      <CommonFaqs
+        heading="FAQs – Bird Watching & Wilderness"
+        faqs={birdWatchingFaqs}
+      />
     </div>
   );
 };

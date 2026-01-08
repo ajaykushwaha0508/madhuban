@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const RecreationalFacilities = () => {
   // Track active main accordion index
@@ -50,7 +51,7 @@ const RecreationalFacilities = () => {
       title: "Recreational Facilities",
       content: (
         <>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4  text-white text-justify">
             At Madhuban Eco Retreat, recreation blends beautifully with nature.
             Our thoughtfully designed activity spaces allow you to unwind, move
             freely, and enjoy moments of joy at your own pace. Whether you're
@@ -58,25 +59,25 @@ const RecreationalFacilities = () => {
             adventures, our eco-conscious recreational facilities offer
             something for every traveler.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4  text-white text-justify">
             Surrounded by the peaceful wilderness of Ratapani, these activities
             help you reset your mind, refresh your body, and reconnect with the
             simple pleasures of slow living. From cycling trails to hammocks and
             open-air reading corners, everything here is crafted for comfort,
             calmness, and family-friendly fun.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider">
+          <p className="mb-4  text-white text-justify">
             If you're searching for recreational activities near Bhopal, this is
             one of the most relaxing, nature-integrated spaces to unwind.
           </p>
 
           {/* Nested Accordion inside first main accordion item */}
-          <div className="font-primary divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
+          <div className=" divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2">
                     <li>Indoor games (chess, carrom, board games)</li>
                     <li>Cycling on scenic forest paths</li>
                     <li>Hammocks, swings & open-air seating zones</li>
@@ -92,7 +93,7 @@ const RecreationalFacilities = () => {
               {
                 title: "Ideal For",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2">
                     <li>
                       Families looking for relaxing nature-friendly activities
                     </li>
@@ -110,11 +111,13 @@ const RecreationalFacilities = () => {
                 title: "It’s Your Time to Enjoy",
                 content: (
                   <>
-                    Plan your stay and explore eco-friendly recreation that
-                    slows down the mind and refreshes the spirit.—{" "}
+                    <p className="text-primary-gray2">
+                      Plan your stay and explore eco-friendly recreation that
+                      slows down the mind and refreshes the spirit.—{" "}
+                    </p>
                     <Link
                       href="/booking"
-                      className="list-disc list-inside underline text-primary-gray2 font-bold tracking-widest font-primary space-y-2"
+                      className="list-disc list-inside underline text-primary-gray2 font-bold  space-y-2"
                     >
                       Book Your Stay at Madhuban Eco Retreat
                     </Link>
@@ -164,40 +167,39 @@ const RecreationalFacilities = () => {
     },
   ];
 
- const recreationalActivitiesFaqs = [
-  {
-    question:
-      "What recreational activities are available at Madhuban Eco Retreat?",
-    answer:
-      "Guests can enjoy indoor games, cycling, hammocks, open-air seating, campfire zones, reading areas, and nature-inspired kid-friendly spaces.",
-  },
-  {
-    question: "Are these activities suitable for families?",
-    answer:
-      "Yes, the activities are safe, peaceful, and perfect for families, children, and seniors.",
-  },
-  {
-    question: "Do I need to pay extra for recreational activities?",
-    answer:
-      "Most activities are included with your stay. Some group sessions may require pre-booking.",
-  },
-  {
-    question: "Are outdoor recreation options available near Bhopal?",
-    answer:
-      "Yes, Madhuban offers one of the most relaxing and nature-integrated recreational experiences near Bhopal.",
-  },
-  {
-    question: "Can corporate groups use the recreational facilities?",
-    answer:
-      "Absolutely. Many corporate and wellness groups use these spaces for relaxation and team bonding.",
-  },
-  {
-    question: "Is cycling included in the stay?",
-    answer:
-      "Yes, cycles are available for guests to explore the scenic eco-paths.",
-  },
-];
-
+  const recreationalActivitiesFaqs = [
+    {
+      question:
+        "What recreational activities are available at Madhuban Eco Retreat?",
+      answer:
+        "Guests can enjoy indoor games, cycling, hammocks, open-air seating, campfire zones, reading areas, and nature-inspired kid-friendly spaces.",
+    },
+    {
+      question: "Are these activities suitable for families?",
+      answer:
+        "Yes, the activities are safe, peaceful, and perfect for families, children, and seniors.",
+    },
+    {
+      question: "Do I need to pay extra for recreational activities?",
+      answer:
+        "Most activities are included with your stay. Some group sessions may require pre-booking.",
+    },
+    {
+      question: "Are outdoor recreation options available near Bhopal?",
+      answer:
+        "Yes, Madhuban offers one of the most relaxing and nature-integrated recreational experiences near Bhopal.",
+    },
+    {
+      question: "Can corporate groups use the recreational facilities?",
+      answer:
+        "Absolutely. Many corporate and wellness groups use these spaces for relaxation and team bonding.",
+    },
+    {
+      question: "Is cycling included in the stay?",
+      answer:
+        "Yes, cycles are available for guests to explore the scenic eco-paths.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#b4a681d8]">
@@ -215,10 +217,10 @@ const RecreationalFacilities = () => {
         </video>
         <div className="absolute inset-0  bg-opacity-50 flex flex-col items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-primary tracking-widest font-medium mb-4">
+            <h1 className="font-primary bannerHeading mb-4">
               Recreational Activities
             </h1>
-            <p className="text-xl md:text-2xl font-arial-narrow tracking-wider">
+            <p className="text-xl bannerSubHeading md:text-2xl font-arial-narrow tracking-wider">
               Refresh, Play & Reconnect With Nature
             </p>
           </div>
@@ -241,23 +243,18 @@ const RecreationalFacilities = () => {
         className="py-10 px-4 md:px-8 bg-primary-gray"
       >
         <div className="container mx-auto max-w-4xl">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider text-center">
-              Explore The Madhuban
-            </h2>
-            <hr className="w-16 border-t border-primary-gray2 ml-4" />
-          </div>
+          <DecorativeHeading text={"Explore The Madhuban"} as="h2" />
+
           <div className="divide-y rounded-xl bg-primary-gray2 shadow-md overflow-hidden">
             {accordionItems.map((item, index) => (
               <div key={index} className="group">
                 <button
-                  className="font-primary font-bold tracking-widest flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
+                  className="font-primary heading1 flex items-center justify-between w-full py-5 px-4 text-left text-white transition duration-200"
                   onClick={() =>
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                   <span className="text-2xl">{item.title}</span>
+                  <span className="text-2xl">{item.title}</span>
                   <svg
                     className={`w-5 h-5 transform transition-transform duration-300 ${
                       activeAccordion === index ? "rotate-180" : ""
@@ -296,13 +293,8 @@ const RecreationalFacilities = () => {
       {/* Image Slider Section */}
       <section className="py-10 px-4 md:px-8 bg-primary-gray2">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-white font-bold tracking-wider text-center">
-              Activity Gallery
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading text={"Activity Gallery"} as="h2" color="#fff" />
+
           <div className="w-[90%] md:w-[100%] h-[70vh] mx-auto">
             <Swiper
               modules={[Pagination, Autoplay]}
@@ -325,7 +317,10 @@ const RecreationalFacilities = () => {
         </div>
       </section>
 
-      <CommonFaqs faqs={recreationalActivitiesFaqs} heading="FAQs – Recreational Activities" />
+      <CommonFaqs
+        faqs={recreationalActivitiesFaqs}
+        heading="FAQs – Recreational Activities"
+      />
     </div>
   );
 };

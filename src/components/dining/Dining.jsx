@@ -5,6 +5,7 @@ import "./Dining.css";
 import DiningSpacial from "./DiningSpacial";
 import DiningOptions from "./DiningOptions";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const foodAndDiningFaqs = [
   {
@@ -74,28 +75,20 @@ const Dining = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 className="text-3xl md:text-6xl font-inter font-medium font-primary">
-              Farm-To-Fork Dining
-            </h1>
-            <p className="font-inter text-md md:text-2xl mt-2">
+            <h1 className="bannerHeading  font-primary">Farm-To-Fork Dining</h1>
+            <p className="bannerSubheading font-inter text-md md:text-2xl mt-2">
               Fresh ingredients from our farm to your plate
             </p>
           </div>
         </div>
 
-        <div className="bg-primary-gray w-full flex flex-col items-center">
-          <section className="gallery-section bg-primary max-w-7xl ">
+        <div className="bg-primary-gray w-full flex flex-col items-center  max-w-7xl pt-4">
+          <section className="p-4 bg-primary max-w-7xl ">
             <div>
-              <div className="flex items-center justify-center mb-8">
-                <hr className="w-16 border-t border-primary-gray2 mr-4" />
-                <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider text-center">
-                  Fresh, Local & Wholesome
-                </h2>
-                <hr className="w-16 border-t border-primary-gray2 ml-4" />
-              </div>
+              <DecorativeHeading text={"Fresh, Local & Wholesome"} as="h2" />
 
-              <div className="flex flex-col gap-4">
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
+              <div className="flex flex-col gap-4 p-text">
+                <p className=" text-justify md:text-center text-primary-gray2 ">
                   At Madhuban Eco Retreat, dining is more than a meal — it’s an
                   experience rooted in nature, purity, and mindful eating. Our
                   farm-to-table concept brings fresh ingredients straight from
@@ -103,7 +96,7 @@ const Dining = () => {
                   communities, ensuring every dish is nourishing, seasonal, and
                   full of flavor.
                 </p>
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
+                <p className=" text-justify md:text-center text-primary-gray2 ">
                   Prepared with minimal processing and maximum care, our meals
                   celebrate the essence of clean eating, inspired by the
                   simplicity of rural Madhya Pradesh. Whether you’re enjoying a
@@ -111,7 +104,7 @@ const Dining = () => {
                   you’ll experience food that is earthy, honest, and deeply
                   satisfying.
                 </p>
-                <p className="text-sm md:text-xl text-justify md:text-center text-primary-gray2 ">
+                <p className=" text-justify md:text-center text-primary-gray2 ">
                   Perfect for travelers looking for veg food near Ratapani,
                   healthy cuisine, or sustainable dining options close to
                   Bhopal, our kitchen reflects our commitment to eco-conscious
@@ -123,14 +116,9 @@ const Dining = () => {
         </div>
 
         <div className="bg-primary-gray2 w-full items-center flex flex-col">
-          <section className="gallery-section max-w-7xl">
-            <div className="flex items-center justify-center mb-8">
-              <hr className="w-16 border-t border-white mr-4" />
-              <h2 className="heading1 font-primary text-white font-semibold tracking-wider text-center">
-                Photo Gallery
-              </h2>
-              <hr className="w-16 border-t border-white ml-4" />
-            </div>
+          <section className="py-8 px-4 max-w-7xl">
+            <DecorativeHeading text={"Photo Gallery"} as="h2" color="#fff" />
+
             <div className="flex flex-col ">
               <div className="media-grid max-w-7xl">
                 {photos.map((photo) => (
@@ -148,18 +136,11 @@ const Dining = () => {
           </section>
         </div>
 
-        <div className="max-w-7xl">
-          <section className="gallery-section ">
-            <div className="flex justify-center mb-5 -mt-7">
-              <div className="flex items-center justify-center">
-                <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-                <h2 className="heading1 font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
-                  Video Gallery
-                </h2>
-                <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
-              </div>
-            </div>
-            <div className="flex flex-col ">
+        <div className="max-w-7xl w-full">
+          <section className="py-8 px-4 mt-6 w-full ">
+            <DecorativeHeading text={"Video Gallery"} />
+
+            <div className="flex flex-col mt-4 ">
               <div
                 className={`media-grid ${
                   videos.length === 1 ? "single-media" : ""

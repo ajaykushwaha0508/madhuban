@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -29,20 +30,20 @@ const itemVariants = {
 const BookStay = () => {
   return (
     <motion.div
-      className="text-center w-full  pb-16 pt-12  overflow-hidden px-2"
+      className="text-center w-full  pb-8 pt-12  overflow-hidden px-2"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto ">
-        <div className="flex items-center justify-center mb-4">
-          <h1 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
-            Discover Your Ideal Eco Stay Near Bhopal & Ratapani
-          </h1>
-        </div>
+        <DecorativeHeading
+          text={"Book Your Stay at Madhuban Eco Retreat"}
+          as="h1"
+        />
+
         <motion.div className="h-full" variants={itemVariants}>
-          <div className="grid  gap-12">
+          <div className="grid  gap-12 px-2">
             <motion.div
               className="h-full"
               initial={{ opacity: 0, y: 50 }}
@@ -50,14 +51,11 @@ const BookStay = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <p className="text-sm text-justify md:text-center md:text-xl text-primary-gray2">
-                At Madhuban Eco Retreat, every stay blends natural serenity with
-                eco-friendly comfort. From safari tents and mud houses to
-                glamping, camping, and poolside villas, each space invites you
-                to slow down and reconnect with nature. Located near the lush
-                Ratapani Wildlife Sanctuary, Madhuban is one of the best eco
-                stays near Bhopal for families, couples, adventure seekers, and
-                wellness travelers.
+              <p className="p-text text-justify md:text-center  text-primary-gray2 ">
+                Experience the best hotel near Ratapani Wildlife Sanctuary at
+                Madhuban Eco Retreat. Ideal for families, couples, and nature
+                lovers, our resort offers eco-friendly stays, jungle views, and
+                easy access to Ratapani wildlife.
               </p>
             </motion.div>
           </div>

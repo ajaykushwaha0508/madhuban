@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -36,13 +37,11 @@ const WhyStayMadhuban = () => {
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto ">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t border-white mr-4" />
-          <h2 className="heading1 font-primary text-white font-semibold tracking-wider">
-            Why Stay at Madhuban Eco Retreat?
-          </h2>
-          <hr className="w-16 border-t border-white ml-4" />
-        </div>
+        <DecorativeHeading
+          text={"Why Stay at Madhuban Eco Retreat?"}
+          as="h2"
+          color="#fff"
+        />
         <motion.div className="h-full" variants={itemVariants}>
           <div className="grid  gap-12">
             <motion.div
@@ -52,7 +51,7 @@ const WhyStayMadhuban = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <p className="text-sm text-justify md:text-center md:text-xl text-white">
+              <p className=" text-justify md:text-center  text-white p-text">
                 Experience sustainable living in the heart of Ratapani. Every
                 accommodation—whether a safari tent, mud house, glamping tent,
                 camping setup, or poolside villa—is designed with local

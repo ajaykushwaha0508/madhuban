@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BedDouble, Users, Leaf, Wifi, Sun, MountainSnow } from "lucide-react";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -169,7 +170,7 @@ const accommodationsData = [
 
 const Accommodations = () => {
   return (
-    <section className="accommodations-section">
+    <section className="accommodations-section  flex flex-col justify-center items-center">
       <div className="flex justify-center mt-8">
         <motion.div
           className="flex items-center justify-center"
@@ -178,17 +179,11 @@ const Accommodations = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center justify-center mb-3">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="heading1 font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
-              Our Accommodations
-            </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4" />
-          </div>
+          <DecorativeHeading text="Our Accommodations" />
         </motion.div>
       </div>
       <motion.p
-        className="section-description text-justify md:text-center font-arial-narrow text-[rgb(110,97,70)] tracking-wider"
+        className="max-w-5xl text-justify md:text-center p-text p-text-black mb-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -211,7 +206,7 @@ const Accommodations = () => {
           {accommodationsData.map((accommodation) => (
             <motion.div
               key={accommodation.id}
-              className="accommodation-card w-full md:w-[350px] h-[100vh] flex flex-col max500:min-h-[820px] max-367:min-h-[967px]"
+              className="accommodation-card w-full md:w-[350px]  flex flex-col"
               variants={itemVariants}
               whileHover="hover"
               initial="rest"
@@ -230,22 +225,22 @@ const Accommodations = () => {
               </motion.div>
 
               <div className="p-6 flex flex-col flex-grow bg-[#D1C8C1]">
-                <h3 className="text-2xl  font-primary font-semibold text-[rgb(110,97,70)] tracking-widest mb-2">
+                <h3 className=" heading1  font-primary text-primary-gray2  mb-2">
                   {accommodation.name}
                 </h3>
-                <p className="font-arial-narrow text-[rgb(110,97,70)] tracking-wider text-sm mb-4 flex-grow text-justify">
+                <p className="font-arial-narrow text-primary-gray2  p-text mb-4 flex-grow text-justify">
                   {accommodation.shortDescription}
                 </p>
 
                 <div className="mb-4">
-                  <h4 className="text-base font-primary font-semibold tracking-widest text-[rgb(110,97,70)] mb-3">
-                    Key Features:
+                  <h4 className="text-base  text-primary-gray2 mb-3">
+                    <strong> Key Features:</strong>
                   </h4>
                   <ul className="font-openSans grid grid-cols-4 max-[496px]:grid-cols-2 gap-6 justify-between">
                     {accommodation.keyFeatures.map((feature, index) => (
                       <motion.li
                         key={index}
-                        className="flex flex-col items-center text-[#ada49e] text-xs"
+                        className="flex flex-col items-center text-primary-gray2 text-xs"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -264,7 +259,7 @@ const Accommodations = () => {
                             }}
                           />
                         </span>
-                        <span className="text-center font-medium leading-tight">
+                        <span className="text-center font-medium ">
                           {feature.text}
                         </span>
                       </motion.li>
@@ -272,11 +267,8 @@ const Accommodations = () => {
                   </ul>
                 </div>
 
-                <p className="text-base text-[rgb(110,97,70)] mb-4">
-                  <strong className="font-primary font-medium">
-                    Capacity:
-                  </strong>{" "}
-                  {accommodation.capacity}
+                <p className="text-base text-primary-gray2 mb-4">
+                  <strong>Capacity:</strong> {accommodation.capacity}
                 </p>
 
                 <Link
@@ -288,7 +280,7 @@ const Accommodations = () => {
                     variants={buttonHoverVariants}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className="relative z-10 font-primary tracking-widest font-medium">
+                  <span className="relative z-10 tracking-widest font-medium">
                     View Details & Book
                   </span>
                 </Link>

@@ -8,6 +8,7 @@ import { FaHandshakeSimple } from "react-icons/fa6";
 import { GiThreeFriends } from "react-icons/gi";
 import { FaRoute } from "react-icons/fa6";
 import { MdOutlineTravelExplore } from "react-icons/md";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -81,17 +82,11 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="heading1 font-primary text-white font-semibold tracking-wider">
-              Why Choose Madhuban Experiences?
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
-          <p className="mt-1 max-w-2xl mx-auto text-lg text-white px-4 tracking-wide font-arial-narrow">
-            We offer more than a stay — Madhuban is a mindful escape rooted in
-            nature, sustainability, and slow living.
-          </p>
+          <DecorativeHeading
+            text={"Why Choose Madhuban Experiences?"}
+            as="h2"
+            color="#fff"
+          />
         </motion.div>
 
         <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">

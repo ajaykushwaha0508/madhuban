@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const ForestWalkAndNatureTrails = () => {
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -45,13 +46,13 @@ const ForestWalkAndNatureTrails = () => {
       title: "Forest Walks & Nature Trails",
       content: (
         <>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+          <p className="mb-4 text-justify  text-white  p-text  ">
             Step into the quiet, refreshing world of Ratapani with our Forest
             Walks & Nature Trails experience. Designed for travelers who love
             calm, nature, and mindful exploration, this guided walk takes you
             through the lush wilderness surrounding Madhuban Eco Retreat.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+          <p className="mb-4 text-justify  text-white  p-text  ">
             Discover medicinal plants, native trees, butterflies, birds, and the
             natural ecosystem that thrives in this part of Madhya Pradesh. Every
             trail is led by trained naturalists who help you understand the
@@ -59,17 +60,17 @@ const ForestWalkAndNatureTrails = () => {
             scenic, and suitable for families, seniors, solo travelers, and
             nature lovers.
           </p>
-          <p className="mb-4 font-arial-narrow text-white tracking-wider text-base font-medium">
+          <p className="mb-4 text-justify  text-white  p-text  ">
             Whether you're looking for forest walks near Bhopal, peaceful
             eco-tourism, or an offbeat nature experience, this trail offers a
             chance to reconnect with yourself and the wild.
           </p>
-          <div className="font-primary divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
+          <div className=" divide-y rounded-lg bg-primary-gray shadow-inner overflow-hidden">
             {[
               {
                 title: "What to Expect",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2 p-text">
                     <li>Guided eco-trails with trained naturalists</li>
                     <li>
                       Learning about local flora, herbs, and forest ecology
@@ -85,7 +86,7 @@ const ForestWalkAndNatureTrails = () => {
               {
                 title: "Ideal For",
                 content: (
-                  <ul className="list-disc list-inside text-primary-gray2 font-bold tracking-widest font-primary space-y-2">
+                  <ul className="list-disc list-inside text-primary-gray2  space-y-2 p-text">
                     <li>Nature enthusiasts & eco-tourists</li>
                     <li>Wellness travelers</li>
                     <li>Families & children</li>
@@ -98,11 +99,13 @@ const ForestWalkAndNatureTrails = () => {
                 title: "Ready to Walk the Wild Side?",
                 content: (
                   <>
-                    Join our guided forest walk and discover Ratapani’s natural
-                    treasures. —{" "}
+                    <p className="text-primary-gray2  p-text">
+                      Join our guided forest walk and discover Ratapani’s
+                      natural treasures. —{" "}
+                    </p>
                     <Link
                       href="/booking"
-                      className="text-primary-gray2 underline font-bold tracking-widest font-primary"
+                      className="text-primary-gray2 underline "
                     >
                       Book Your Nature Trail Experience Now
                     </Link>
@@ -112,7 +115,7 @@ const ForestWalkAndNatureTrails = () => {
             ].map((item, idx) => (
               <div key={idx} className="group border-primary-gray2">
                 <button
-                  className="flex items-center justify-between w-full py-3 px-4 text-left text-primary-gray2 font-medium transition duration-200"
+                  className="p-text flex items-center justify-between w-full py-3 px-4 text-left text-primary-gray2  transition duration-200"
                   onClick={() =>
                     setActiveNestedAccordion(
                       activeNestedAccordion === idx ? null : idx
@@ -200,10 +203,10 @@ const ForestWalkAndNatureTrails = () => {
         </video>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-primary tracking-widest font-medium mb-4">
+            <h1 className="bannerHeading font-primary  mb-4">
               Forest Walks & Nature Trails
             </h1>
-            <p className="text-xl md:text-2xl font-light tracking-wider font-arial-narrow">
+            <p className="bannerSubHeading ">
               Slow Down, Breathe, and Walk With the Forest
             </p>
           </div>
@@ -226,13 +229,8 @@ const ForestWalkAndNatureTrails = () => {
         className="py-10 px-4 md:px-8 bg-primary-gray"
       >
         <div className="container mx-auto max-w-4xl">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-primary-gray2 font-semibold tracking-wider text-center">
-              Explore Our Forest
-            </h2>
-            <hr className="w-16 border-t border-primary-gray2 ml-4" />
-          </div>
+          <DecorativeHeading text={"Explore Our Forest"} as="h2" />
+
           <div className="divide-y  rounded-xl bg-primary-gray2 shadow-md overflow-hidden">
             {accordionItems.map((item, index) => (
               <div key={index} className="group">
@@ -242,9 +240,7 @@ const ForestWalkAndNatureTrails = () => {
                     setActiveAccordion(activeAccordion === index ? null : index)
                   }
                 >
-                  <span className="font-primary tracking-widest font-bold text-2xl">
-                    {item.title}
-                  </span>
+                  <span className=" heading1">{item.title}</span>
                   <svg
                     className={`w-5 h-5 transform transition-transform duration-300 ${
                       activeAccordion === index ? "rotate-180" : ""
@@ -263,7 +259,7 @@ const ForestWalkAndNatureTrails = () => {
                   </svg>
                 </button>
                 <div
-                  className={`font-arial-narrow px-4 pb-4 text-[#D1C8C1] tracking-wider transition-all duration-300 ease-in-out ${
+                  className={` px-4 pb-4 text-[#D1C8C1]  transition-all duration-300 ease-in-out ${
                     activeAccordion === index ? "block" : "hidden"
                   }`}
                 >
@@ -280,13 +276,8 @@ const ForestWalkAndNatureTrails = () => {
       {/* Image Slider Section */}
       <section className="py-10 px-4 md:px-8 	bg-primary-gray2">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="text-4xl md:text-5xl font-primary text-white font-bold tracking-wider text-center">
-              Forest Gallery
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading text={"Forest Gallery"} as="h2" color="#fff" />
+
           <div className="min-w-[80vw] md:w-[100%] h-[70vh] mx-auto">
             <Swiper
               modules={[Pagination, Autoplay]}
