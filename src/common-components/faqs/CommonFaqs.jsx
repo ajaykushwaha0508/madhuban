@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "../heading/DecorativeHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -65,14 +66,8 @@ export default function CommonFaqs({
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
-              {heading}
-            </h2>
-            <hr className="w-16 border-t border-primary-gray2 ml-4" />
-          </div>
-          <p className="mt-1 max-w-2xl mx-auto text-md text-primary-gray2 px-4 tracking-wide font-arial-narrow">
+          <DecorativeHeading text={"FAQs"} as="h2" textClasses={"w-[200]"} />
+          <p className="mt-1 max-w-2xl mx-auto text-md p-text p-text-color px-4 tracking-wide font-arial-narrow">
             Questions for a Meaningful Journey
           </p>
         </motion.div>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -58,13 +59,7 @@ const WhyChoose = () => {
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center ">
-          <hr className="w-16 border-t text-primary-gray2 mr-4" />
-          <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
-            Why Choose Us?
-          </h2>
-          <hr className="w-16 border-t text-primary-gray2 ml-4" />
-        </div>
+        <DecorativeHeading text={"Why Choose Us?"} />
 
         <motion.div className="h-full" variants={itemVariants}>
           <motion.div
@@ -74,9 +69,9 @@ const WhyChoose = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className=" mx-auto px-4 py-2 text-lg text-gray-800">
+            <div className=" mx-auto px-4  text-lg text-gray-800">
               <div className="text-primary-gray2 font-arial-narrow">
-                <div className=" rounded-2xl p-6 py-10">
+                <div className=" rounded-2xl p-4 ">
                   <motion.div
                     className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-4 font-poppins"
                     initial="hidden"
@@ -87,7 +82,7 @@ const WhyChoose = () => {
                     {coreValues.map((feature, index) => (
                       <motion.div key={index} variants={itemVariants}>
                         <div className="bg-primary-gray2 h-full flex flex-col justify-center bg-opacity-50 text-start item-center gap-2 rounded-lg p-6 backdrop-blur-sm">
-                          <p className="text-lg md:text-2xl tracking-wider text-white text-center text-opacity-90">
+                          <p className="text-sm md:text-lg text-white text-center text-opacity-90">
                             {feature.title}
                           </p>
                         </div>

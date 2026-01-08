@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const heroSlides = [
   { image: "/images/BhimBetika/bhim4.jpeg" },
@@ -129,7 +130,7 @@ const NearbyAttractions = () => {
     <div className="min-h-screen bg-[#D1C8C1]  ">
       {/* Hero Section */}
       <section className="relative h-[85vh] m-0 p-0 ">
-        <div className="absolute inset-0 overflow-hidden h-[70vh] rounded-bl-[60px] rounded-br-[60px]">
+        <div className="absolute inset-0 overflow-hidden  rounded-bl-[60px] rounded-br-[60px]">
           <AnimatePresence>
             {heroSlides.map(
               (slide, index) =>
@@ -155,12 +156,13 @@ const NearbyAttractions = () => {
         </div>
       </section>
       <section className=" px-4 py-4 rounded-bl-[60px] rounded-br-[60px] flex flex-col justify-center items-center">
-        <div className="text-center max-w-7xl mb-12 -mt-10">
-          <h1 className=" heading1 font-bold text-[rgb(110,97,70)] mb-4 font-primary">
-            Beyond the Retreat !.. <br></br>Experience the Soul of Madhya
-            Pradesh!!
-          </h1>
-          <p className="text-md text-justify md:text-center md:text-xl text-primary-gray2">
+        <div className="text-center max-w-7xl mb-12 mt-10">
+          <DecorativeHeading text={"Nearby Attractions"} />
+
+          <p className="heading1 text-[rgb(110,97,70)] mb-4 font-primary">
+            Experience the Soul of Madhya Pradesh!!
+          </p>
+          <p className="text-justify md:text-center p-text  text-primary-gray2">
             Beyond the calm of Madhuban Eco Retreat lies a region full of
             ancient caves, wildlife sanctuaries, tribal heritage, spiritual
             sites, and forested landscapes. Whether you're planning a short
@@ -168,7 +170,7 @@ const NearbyAttractions = () => {
             nearby attractions around Ratapani & Bhopal offer a glimpse into the
             rich culture and wilderness of Madhya Pradesh.
           </p>
-          <p className="text-md  text-justify md:text-center md:text-xl mt-4 text-primary-gray2">
+          <p className=" text-justify md:text-center p-text  mt-4 text-primary-gray2">
             Discover ancient rock shelters, wildlife sanctuaries, waterfalls,
             tribal forts, and sacred temples — all within easy reach from the
             retreat.

@@ -6,6 +6,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import styled from "styled-components";
 import "../../components/photoGallery.css";
 import { FaPlayCircle } from "react-icons/fa";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const tabs = [
   "Madhuban Eco Retreat",
@@ -134,10 +135,8 @@ const Gallery = () => {
           />
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 className="heading1 font-primary tracking-widest font-medium">
-              Eco Gallery
-            </h1>
-            <p className="font-arial-narrow tracking-wider text-xl md:text-2xl mt-2">
+            <h1 className="bannerHeading font-primary ">Eco Gallery</h1>
+            <p className=" bannerSubHeading mt-2">
               Discover the beauty of nature through our lens
             </p>
           </div>
@@ -146,16 +145,14 @@ const Gallery = () => {
 
       <section className="py-8 px-4 -mt-24 rounded-bl-[60px] rounded-br-[60px] ">
         <div className="max-w-[86rem] mx-auto">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="heading1 font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
-              Experience Madhuban Through Nature & Culture
-            </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4 " />
-          </div>
+          <DecorativeHeading
+            text={" Experience Madhuban Through Nature & Culture"}
+            as="h2"
+            textClasses={"w-[80%] md:w-full"}
+          />
 
           <div className="flex flex-col gap-4">
-            <p className="text-md md:text-xl text-center text-primary-gray2">
+            <p className="p-text md:text-center p-text-black  text-justify ">
               Explore the natural beauty, earthy architecture, and cultural
               heritage that make Madhuban Eco Retreat unique. Our gallery
               showcases scenic forest landscapes, wildlife moments, tribal art,
@@ -165,7 +162,7 @@ const Gallery = () => {
               of Ratapani’s wilderness. Dive in and experience the charm of
               Madhuban through our curated collection of photos and videos.
             </p>
-            <p className="text-md md:text-xl text-center text-primary-gray2">
+            <p className="p-text md:text-center  text-justify p-text-black ">
               From lush greenery to thoughtfully designed stays, these images
               capture the true essence of Ratapani’s wilderness. Dive in and
               experience the charm of Madhuban through our curated collection of
@@ -177,13 +174,12 @@ const Gallery = () => {
 
       <section className="py-8 px-4   rounded-bl-[60px] rounded-br-[60px] ">
         <div className="max-w-[86rem] mx-auto">
-          <div className="flex items-center justify-center mb-5">
-            <hr className="w-16 border-t border-[rgb(110,97,70)] mr-4" />
-            <h2 className="heading1 font-primary text-[rgb(110,97,70)] font-semibold tracking-wider text-center">
-              Our Gallery
-            </h2>
-            <hr className="w-16 border-t border-[rgb(110,97,70)] ml-4 " />
-          </div>
+          <DecorativeHeading
+            text={" Our Gallery"}
+            as="h2"
+            textClasses={"w-50"}
+          />
+
           <TabWrapper>
             {tabs.map((tab) => (
               <StyledButton

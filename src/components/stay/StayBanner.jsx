@@ -34,7 +34,7 @@ const StayBanner = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative w-full h-[90vh] overflow-hidden  rounded-bl-[60px] rounded-br-[60px]"
+        className="relative w-full h-[90vh] overflow-hidden  md:rounded-bl-[60px] md:rounded-br-[60px]"
       >
         {/* Background Video */}
         <video

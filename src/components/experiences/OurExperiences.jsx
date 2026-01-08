@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "@/components/ExperienceCard";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -79,14 +80,9 @@ const OurExperiences = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-primary-gray2 mr-4" />
-            <h2 className="heading1 font-primary text-primary-gray2 font-semibold tracking-wider">
-              Inspired by Nature
-            </h2>
-            <hr className="w-16 border-t border-primary-gray2 ml-4" />
-          </div>
-          <p className="mt-1 max-w-2xl mx-auto text-sm  md:text-lg text-primary-gray2 px-4 tracking-wide font-arial-narrow">
+          <DecorativeHeading text={"Inspired by Nature"} as="h2" />
+
+          <p className="mt-1 max-w-2xl mx-auto p-text p-text-black  px-4 ">
             Connect with nature, wildlife, and local culture through
             thoughtfully curated experiences that bring you closer to the soul
             of Madhya Pradesh.

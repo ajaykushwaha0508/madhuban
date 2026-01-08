@@ -9,6 +9,7 @@ import CompostIcon from "@mui/icons-material/Compost";
 import { CookingPot } from "lucide-react";
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 import GuestImportance from "./ImportanceOfGuest";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -73,19 +74,18 @@ const DiningSpacial = () => {
       <section className="py-8 px-4 md:px-8 bg-primary-gray2 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-8 "
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <div className="flex items-center justify-center">
-              <hr className="w-16 border-t border-white mr-4" />
-              <h2 className="heading1 font-primary text-white font-semibold tracking-wider">
-                What Makes Dining at Madhuban Special?
-              </h2>
-              <hr className="w-16 border-t border-white ml-4" />
-            </div>
+            <DecorativeHeading
+              text={"What Makes Dining at Madhuban Special?"}
+              as="h2"
+              color="#fff"
+              textClasses={"w-[70%] md:w-fit"}
+            />
           </motion.div>
 
           <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">

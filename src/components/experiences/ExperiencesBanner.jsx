@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -13,29 +13,28 @@ const fadeInUp = {
   },
 };
 
-
 const ExperiencesBanner = () => {
   return (
     <section
-        className="h-[90vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/hero/hero-2.jpg')" }}
+      className="h-[90vh] bg-cover bg-center flex items-center justify-center"
+      style={{ backgroundImage: "url('/images/hero/hero-2.jpg')" }}
+    >
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        className="text-white text-center px-4"
       >
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          className="text-white text-center px-4"
-        >
-          <p className="text-4xl md:text-6xl font-bold mb-4">
-            Experience Life at Nature’s Rhythm
-          </p>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl">
-            Explore mindful, eco-friendly experiences designed around 
-            forests, wildlife, and peaceful living near Bhopal
-          </p>
-        </motion.div>
-      </section>
-  )
-}
+        <p className=" bannerHeading mb-4 font-primary">
+          Experience Life at Nature’s Rhythm
+        </p>
+        <p className="max-w-2xl mx-auto bannerSubHeading">
+          Explore mindful, eco-friendly experiences designed around forests,
+          wildlife, and peaceful living near Bhopal
+        </p>
+      </motion.div>
+    </section>
+  );
+};
 
-export default ExperiencesBanner
+export default ExperiencesBanner;
