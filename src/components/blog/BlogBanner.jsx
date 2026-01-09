@@ -25,10 +25,8 @@ const BlogBanner = () => {
         variants={fadeInUp}
         className="text-white text-center px-4"
       >
-        <p className="text-4xl md:text-6xl d mb-4 font-primary">
-          Madhuban Blog
-        </p>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl">
+        <p className="bannerHeading d mb-4 font-primary">Madhuban Blog</p>
+        <p className="bannerSubHeading max-w-2xl mx-auto text-lg md:text-xl">
           Explore mindful, eco-friendly experiences designed around forests,
           wildlife, and peaceful living near Bhopal
         </p>

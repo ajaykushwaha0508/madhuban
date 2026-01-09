@@ -34,11 +34,11 @@ const CustomBanner = ({
         sx={{
           fontFamily: "sen, sans-serif",
           whiteSpace: "wrap",
-          // fontWeight: 500,
-          marginTop: 2,
+          marginTop: 4,
           lineHeight: "130%",
           color: "#322C3E",
-          fontSize: { xs: "24px", sm: "28px", md: "36px", lg: "40px" },
+          fontWeight: "bold",
+          fontSize: { xs: "var(--text-xl)", md: "var(--text-3xl)" },
           paddingTop: { lg: 5, md: 5, sm: 3, sx: 2 },
         }}
       >
@@ -70,7 +70,7 @@ const CustomBanner = ({
           width: "fit-content",
           padding: "4px 20px",
           justifySelf: "center",
-          marginTop: "20px",
+          marginTop: "10px",
           cursor: "default",
         }}
       >
@@ -80,9 +80,9 @@ const CustomBanner = ({
               <Box
                 component="span"
                 sx={{
-                  fontWeight: "bold",
                   fontFamily: "sen, sans-serif",
                   cursor: index == 0 ? "pointer" : "default",
+                  fontSize: { xs: "var(--text-sm)" },
                 }}
               >
                 {val.name}

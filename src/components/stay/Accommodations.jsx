@@ -63,7 +63,7 @@ const accommodationsData = [
     id: 2,
     name: "Mud Houses",
     slug: "mud-villa",
-    image: "/images/accommodations/mud-villa.jpg",
+    image: "/images/stay/stay3.jpg",
     altText: "Exterior view of a charming mud villa nestled in greenery",
     shortDescription:
       "Our mud-based cottages, inspired by the vernacular architecture of the Gond tribes, are nestled in a 5-acre organic orchard. Each Mud House features a spacious air-conditioned room, an annexed lobby, verandas, and a traditionally styled luxury bathroom. The rooftop offers breathtaking 360° views — perfect for stargazing or peaceful evenings.",
@@ -85,7 +85,7 @@ const accommodationsData = [
     id: 3,
     name: "Pool Side Villa",
     slug: "pool-side-room",
-    image: "/images/accommodations/pool-side-room.jpeg",
+    image: "/images/pool/pool1.jpg",
     altText: "Poolside room with beautiful garden views",
     shortDescription:
       "Wake up to sunlight dancing on the eco-pool and unwind to the soothing rhythm of nature. Our elegant Pool Side Villas offer the perfect balance of sophistication and serenity. Ideal for couples, families, or anyone looking for a private poolside villa near Bhopal.",

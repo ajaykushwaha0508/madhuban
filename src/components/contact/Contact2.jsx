@@ -18,6 +18,7 @@ import {
   phone,
   youtube,
 } from "@/utills/constants";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const ADMIN_WHATSAPP = phone;
 
@@ -83,11 +84,10 @@ Message: ${data.message}
     <section className="bg-[#f7f5f0] pt-25 md:pt-40 pb-10 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Page Heading */}
-        <div className="text-center mb-14">
-          <h1 className="heading1 font-bold text-primary-gray2 mb-4 font-primary">
-            Contact Us
-          </h1>
-          <p className="text-gray-700 max-w-3xl mx-auto">
+        <div className="text-center mb-4 md:mb-14">
+          <DecorativeHeading text={"Contact Us"} as="h1" />
+
+          <p className="text-gray-700 text-justify md:text-center p-text max-w-3xl mx-auto">
             Whether you’re planning a peaceful retreat or seeking information
             about our eco tourism experiences, our team at{" "}
             <span className="font-semibold">Madhuban Eco Retreat</span> is here
@@ -100,7 +100,7 @@ Message: ${data.message}
           {/* LEFT SIDE – CONTACT INFO */}
           <div className="space-y-8">
             {/* Description */}
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify md:text-center p-text">
               Nestled on the edge of the Ratapani Wildlife Sanctuary, our nature
               resort near Ratapani is the perfect escape into nature and an
               ideal digital detox retreat.
@@ -108,7 +108,7 @@ Message: ${data.message}
 
             {/* Location */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
+              <h3 className="text-lg md:text-xl flex items-center gap-1  text-primary-gray2 mb-2 font-primary">
                 <IoLocation /> Location
               </h3>
               <p className="text-gray-700">
@@ -123,11 +123,11 @@ Message: ${data.message}
 
             {/* Call / WhatsApp */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
+              <h3 className="text-lg md:text-xl flex items-center gap-1  text-primary-gray2 mb-2 font-primary">
                 <IoCall /> Call / WhatsApp
               </h3>
               <p className="text-gray-700 font-medium">+{phone}</p>
-              <p className="text-sm text-gray-600">
+              <p className="p-text text-gray-600">
                 We’re just a message away! Send us a WhatsApp message and we’ll
                 respond within 24 hours. Perfect for resorts near Bhopal for day
                 outing inquiries.
@@ -136,11 +136,11 @@ Message: ${data.message}
 
             {/* Email */}
             <div>
-              <h3 className="text-xl flex items-center gap-1 font-semibold text-primary-gray2 mb-2 font-primary">
+              <h3 className="text-lg md:text-xl flex items-center gap-1  text-primary-gray2 mb-2 font-primary">
                 <IoMail /> Email
               </h3>
-              <p className="text-gray-700">{gmail}</p>
-              <p className="text-sm text-gray-600">
+              <p className="text-gray-700 p-text">{gmail}</p>
+              <p className=" text-gray-600 p-text">
                 Prefer email? Write to us anytime and our team will get back to
                 you promptly.
               </p>
@@ -148,10 +148,10 @@ Message: ${data.message}
 
             {/* Social Media */}
             <div>
-              <h3 className="text-xl  font-semibold text-primary-gray2  font-primary">
+              <h3 className="text-lg md:text-xl   text-primary-gray2  font-primary">
                 Follow Us on Social Media
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 p-text">
                 Stay connected with us for the latest updates, offers, and
                 glimpses of life at Madhuban Eco Retreat.
               </p>
@@ -173,20 +173,20 @@ Message: ${data.message}
 
             {/* CTA */}
             <div className="mt-8 rounded-xl bg-[#6e6146]/10 p-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary-gray2 mb-2 font-primary">
+              <h3 className="text-base md:text-2xl  text-primary-gray2 mb-2 font-primary">
                 Looking for the Best Weekend Digital Detox Stay Near Ratapani?
               </h3>
-              <p className="text-primary-gray2">
+              <p className="text-primary-gray2 p-text">
                 Madhuban Eco Retreat is Here!
               </p>
 
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 p-text">
                 Escape the city, immerse yourself in nature, and rejuvenate your
                 mind and body.
               </p>
               <Link
                 href="/booking"
-                className="inline-block rounded-full bg-[#6e6146] px-6 py-3 text-white font-semibold hover:bg-[#5b503a] transition font-primary"
+                className="inline-block rounded-full bg-[#6e6146] px-6 py-3 text-white font-semibold hover:bg-[#5b503a] transition "
               >
                 Book Now
               </Link>
@@ -295,10 +295,8 @@ Message: ${data.message}
 
         {/* MAP SECTION */}
         <div className="mt-16 text-center">
-          <h2 className="heading1 font-semibold text-center text-primary-gray2 mb-6 font-primary">
-            Find Us Here
-          </h2>
-          <p className="mb-4 text-gray-700">
+          <DecorativeHeading text={"Find Us Here"} as="h2" />
+          <p className="mb-4 text-gray-700 p-text">
             Explore our beautiful location near Ratapani Wildlife Sanctuary. The
             map below will help you find us easily and plan your visit.
           </p>

@@ -72,10 +72,10 @@ export default function HeroSection({
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="text-white text-center px-4 max-w-7xl"
+              className="text-white text-center px-4 max-w-5xl"
             >
               <h1
-                className="text-4xl md:text-6xl  mb-4 font-primary"
+                className="bannerHeading  mb-4 font-primary"
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             </motion.div>

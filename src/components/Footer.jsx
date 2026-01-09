@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[rgb(110,97,70)] text-[#D1C8C1] pt-4 pb-8">
+    <footer className="bg-[rgb(110,97,70)] text-[#D1C8C1] pt-4 pb-8 footer-section">
       <div className="container mx-auto px-4">
         {/* Footer Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
               </Link>
             </div>
-            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider">
+            <p className="text-primary-gray mb-6 font-primary footer-text">
               An eco-luxury retreat nestled near Ratapani Wildlife Sanctuary,
               offering sustainable luxury and immersive nature experiences.
             </p>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                   alt="Instagram"
-                  className="w-10 h-10"
+                  className="w-8 h-8 "
                 />
               </a>
               <a
@@ -83,7 +83,7 @@ const Footer = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
                   alt="Facebook"
-                  className="w-10 h-10"
+                  className="w-8 h-8"
                 />
               </a>
               <a
@@ -95,7 +95,7 @@ const Footer = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
                   alt="Youtube"
-                  className="w-11 h-10"
+                  className="w-9 h-8"
                 />
               </a>
               <a
@@ -107,7 +107,7 @@ const Footer = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
                   alt="Linkedin"
-                  className="w-10 h-10"
+                  className="w-8 h-8"
                 />
               </a>
             </div>
@@ -123,7 +123,9 @@ const Footer = () => {
                 e.currentTarget.style.backgroundColor = "#25D366";
               }}
             >
-              <span className="font-poppins font-medium">Chat On WhatsApp</span>
+              <span className="font-poppins font-medium text-sm ">
+                Chat On WhatsApp
+              </span>
               <svg
                 style={{ width: "20px", height: "20px" }}
                 viewBox="0 0 48 48"
@@ -147,14 +149,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <div className="text-xl text-[#D1C8C1] tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="footer-heading text-[#D1C8C1] tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
               Quick Links
             </div>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about-us"
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] footer-text  flex items-center tracking-wider "
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> About Us
                 </Link>
@@ -162,7 +164,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/stay"
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] footer-text flex items-center tracking-wider "
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Accommodations
                 </Link>
@@ -172,7 +174,7 @@ const Footer = () => {
               <li className="relative">
                 <button
                   onClick={() => setOpen(!open)}
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-[#D1C8C1] footer-text flex items-center tracking-wider "
                 >
                   {open ? (
                     <ChevronDown className="w-4 h-4 mr-1" />
@@ -187,7 +189,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/forest-walks-and-nature-trails"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg  font-medium tracking-wide"
                       >
                         Forest Walks & Nature Trails
                       </Link>
@@ -195,7 +197,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/bird-watching-and-wilderness"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg  font-medium tracking-wide"
                       >
                         Bird Watching & Wilderness
                       </Link>
@@ -203,7 +205,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/experiences/recreational-facilities"
-                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg font-primary font-medium tracking-wide"
+                        className="block px-4 py-2 text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] rounded-lg  font-medium tracking-wide"
                       >
                         Recreational Facilities
                       </Link>
@@ -215,7 +217,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/gallery"
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className=" text-primary-gray footer-text flex items-center tracking-wider  font-primary"
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Gallery
                 </Link>
@@ -223,7 +225,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact-us"
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-primary-gray footer-text flex items-center tracking-wider "
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Contact Us
                 </Link>
@@ -231,7 +233,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/blogs"
-                  className="font-primary text-[#D1C8C1] tracking-wider text-lg flex items-center"
+                  className="font-primary text-primary-gray footer-text flex items-center tracking-wider "
                 >
                   <ChevronRight className="w-4 h-4 mr-1" /> Blogs
                 </Link>
@@ -241,36 +243,36 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <div className="text-xl text-[#D1C8C1] tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
+            <div className="text-xl footer-heading text-primary-gray tracking-widest font-primary font-medium mb-4 pb-2 border-b border-gray-700">
               Contact Us
             </div>
             <ul className="space-y-4">
-              <li className="flex">
+              <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
-                <span className="text-[#D1C8C1] font-primary tracking-wider text-lg">
+                <span className="text-primary-gray font-primary tracking-wider footer-text">
                   Near Ratapani Wildlife Sanctuary, Bhopal, Madhya Pradesh,
                   India
                 </span>
               </li>
-              <li className="flex">
+              <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
                 <a
                   href="tel:+917895432160"
-                  className="text-[#D1C8C1] font-primary tracking-wider text-lg"
+                  className="text-primary-gray font-primary tracking-wider footer-text"
                 >
                   +{phone}
                 </a>
               </li>
-              <li className="flex">
+              <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
                 <a
                   href="mailto:info@madhubanecoretreat.com"
-                  className="text-[#D1C8C1] font-primary tracking-wider text-lg"
+                  className="text-primary-gray font-primary tracking-wider footer-text"
                 >
                   {gmail}
                 </a>
               </li>
-              <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-lg">
+              <p className="text-primary-gray mb-6 font-primary tracking-wider footer-text">
                 Subscribe to recieve updates on special offers, new experiences,
                 and sustainability initiatives.
               </p>
@@ -285,24 +287,24 @@ const Footer = () => {
               className="w-[70px] h-[70px] mt-3 mb-4 mx-auto filter brightness-75"
               style={{ filter: "brightness(0.75)" }}
             />
-            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-center mx-auto">
+            <p className="text-primary-gray mb-6 font-primary tracking-wider text-center mx-auto">
               A Somaiya Group Initiative <br /> Where Sustainability Meets
               Hospitality.
             </p>
-            <p className="text-[#D1C8C1] mb-6 font-primary tracking-wider text-xs">
+            <p className="text-primary-gray mb-6 font-primary tracking-wider text-sm ">
               By subscribing, you agree to our Privacy Policy. You can
               unsubscribe at any time.
             </p>
             <form className="mb-4">
-              <div className="flex">
+              <div className="footer-input-con">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="font-primary tracking-wider flex-grow px-4 bg-[#D1C8C1] border border-stone-700 focus:outline-none focus:ring-2 focus:ring-brown-700 rounded-l-md text-[rgb(110,97,70)] placeholder-[rgb(110,97,70)]"
+                  className="font-primary tracking-wider flex-grow px-4 py-2 md:py-4 bg-primary-gray border border-stone-700 focus:outline-none focus:ring-2 focus:ring-brown-700  text-[rgb(110,97,70)] placeholder-[rgb(110,97,70)]"
                 />
                 <button
                   type="submit"
-                  className="bg-[rgb(106,95,80)] hover:bg-[rgb(87,75,58)] px-4 rounded-r-md font-primary font-medium"
+                  className="bg-[rgb(106,95,80)] hover:bg-[rgb(87,75,58)] px-4 py-4 rounded-r-md font-primary font-medium cursor-pointer"
                 >
                   Subscribe
                 </button>
@@ -313,34 +315,34 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 -mt-5 pt-2 flex  flex-col-reverse md:flex-row gap-8  items-center justify-between">
-          <div className="font-primary text-sm text-[#D1C8C1] tracking-wider text-center">
+          <div className="font-primary text-sm  text-primary-gray tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
           </div>
-          <div className="font-primary text-sm text-[#D1C8C1] w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row gap-4 tracking-wider text-center">
+          <div className="font-primary text-sm  text-primary-gray w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row gap-4 tracking-wider text-center">
             <Link
               href="/privacy-policy"
-              className="font-primary text-sm text-[#D1C8C1] tracking-wider  text-lg flex items-center"
+              className=" text-primary-gray tracking-wider   flex items-center"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms-and-condition"
-              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className=" text-primary-gray tracking-wider  flex items-center"
             >
               Terms & Conditions
             </Link>
 
             <Link
               href="/cookies-and-consent-policy"
-              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className=" text-primary-gray tracking-wider  flex items-center"
             >
               Cookie Policy
             </Link>
 
             <Link
               href="/disclaimer"
-              className="font-primary text-sm text-[#D1C8C1] tracking-wider text-lg flex items-center"
+              className=" text-primary-gray tracking-wider  flex items-center"
             >
               Disclaimer
             </Link>
