@@ -13,7 +13,7 @@ const storyImages = [
   },
   {
     id: 3,
-    src: "/images/stay/stay4.jpg",
+    src: "/images/stay/stay-4.jpg",
     alt: "First guests enjoying the eco-camp",
   },
   {

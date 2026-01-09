@@ -18,7 +18,7 @@ const storyImages = [
   },
   {
     id: 4,
-    src: "/images/stay/stay4.jpg",
+    src: "/images/stay/stay-4.jpg",
     alt: "The retreat as it looks today",
   },
   {
@@ -28,7 +28,7 @@ const storyImages = [
   },
   {
     id: 6,
-    src: "/images/stay/stay5.jpg",
+    src: "/images/stay/stay-5.jpg",
     alt: "Community involvement event",
   },
 ];
