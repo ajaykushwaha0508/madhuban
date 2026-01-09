@@ -125,13 +125,16 @@ export default function Disclaimer() {
       />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
-        <Typography sx={{ mb: 4, fontSize: 18 }}>
-          {privacyData.description}
-        </Typography>
+        <p className="p-text text-justify mb-4">{privacyData.description}</p>
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle component="h2">{section.title}</SectionTitle>
+            <SectionTitle
+              component="h2"
+              sx={{ fontSize: { xs: "var(--text-lg)", md: "var(--text-xl)" } }}
+            >
+              {section.title}
+            </SectionTitle>
             {section?.subtitle && (
               <SectionSubTitle component="h6">
                 {section.subtitle}
@@ -139,7 +142,16 @@ export default function Disclaimer() {
             )}
 
             {section.content && (
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 2,
+                  fontSize: {
+                    xs: "var(--text-sm)",
+                    md: "var(--text-sm)",
+                  },
+                }}
+              >
                 {section.content}
               </Typography>
             )}

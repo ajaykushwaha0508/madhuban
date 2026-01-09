@@ -41,6 +41,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     fontWeight: 600,
     position: "absolute",
     left: "8px",
+    top: "4px",
   },
   paddingLeft: theme.spacing(3),
 }));
@@ -50,7 +51,8 @@ const t_and_c_data = {
   lastUpdated: "1 August 2025",
   companyName: "VyomEdge",
   website: "info@vyomedge.com",
-  description :"Welcome to Madhuban Eco Retreat! These Terms & Conditions govern your use of our website, booking services, on-site facilities, experiences, and interactions with our team. By accessing or booking through https://www.madhubanecoretreat.com/, you agree to comply with and be bound by these terms.",
+  description:
+    "Welcome to Madhuban Eco Retreat! These Terms & Conditions govern your use of our website, booking services, on-site facilities, experiences, and interactions with our team. By accessing or booking through https://www.madhubanecoretreat.com/, you agree to comply with and be bound by these terms.",
   sections: [
     {
       title: "1. Reservations & Payments",
@@ -126,7 +128,7 @@ const t_and_c_data = {
         "Madhuban Eco Retreat reserves the right to modify or update these Terms & Conditions at any time without prior notice.",
         "Continued use of our website, services, or facilities constitutes acceptance of updated terms.",
       ],
-    }
+    },
   ],
 };
 
@@ -150,13 +152,15 @@ export default function TermsAndCondition() {
       />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
-         <Typography sx={{mb:4 ,fontSize : 18}}>
-          {t_and_c_data?.description}
-        </Typography>
+        <p className="p-text text-justify mb-4">{t_and_c_data?.description}</p>
         {/* Privacy Sections */}
         {t_and_c_data.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle variant="h5" component="h2">
+            <SectionTitle
+              variant="h5"
+              component="h2"
+              sx={{ fontSize: { xs: "var(--text-lg)", md: "var(--text-xl)" } }}
+            >
               {section.title}
             </SectionTitle>
 
@@ -186,7 +190,13 @@ export default function TermsAndCondition() {
                       primary={item}
                       primaryTypographyProps={{
                         variant: "body1",
-                        sx: { lineHeight: 1.6 },
+                        sx: {
+                          lineHeight: 1.6,
+                          fontSize: {
+                            xs: "var(--text-sm)",
+                            md: "var(--text-sm)",
+                          },
+                        },
                       }}
                     />
                   </StyledListItem>

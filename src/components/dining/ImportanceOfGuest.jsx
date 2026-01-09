@@ -66,6 +66,7 @@ const GuestImportance = () => {
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
                     <div className="text-white flex flex-col items-center justify-center ">
@@ -86,6 +87,7 @@ const GuestImportance = () => {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
                     <div className="text-white flex flex-col items-center justify-center ">

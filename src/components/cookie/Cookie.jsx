@@ -135,19 +135,30 @@ export default function Cookie() {
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
 
-        <Typography sx={{ mb: 4, fontSize: 18 }}>
-          {privacyData.description}
-        </Typography>
+        <p className="p-text text-justify mb-4">{privacyData.description}</p>
 
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle variant="h5" component="h2">
+            <SectionTitle
+              variant="h5"
+              component="h2"
+              sx={{ fontSize: { xs: "var(--text-lg)", md: "var(--text-xl)" } }}
+            >
               {section.title}
             </SectionTitle>
 
             {section.content && (
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 2,
+                  fontSize: {
+                    xs: "var(--text-sm)",
+                    md: "var(--text-sm)",
+                  },
+                }}
+              >
                 {section.content}
               </Typography>
             )}
@@ -172,7 +183,13 @@ export default function Cookie() {
                       primary={item}
                       primaryTypographyProps={{
                         variant: "body1",
-                        sx: { lineHeight: 1.6 },
+                        sx: {
+                          lineHeight: 1.6,
+                          fontSize: {
+                            xs: "var(--text-sm)",
+                            md: "var(--text-sm)",
+                          },
+                        },
                       }}
                     />
                   </StyledListItem>
@@ -247,6 +264,10 @@ export default function Cookie() {
                       fontSize: 20,
                       fontWeight: 500,
                       mb: 1,
+                      fontSize: {
+                        xs: "var(--text-base)",
+                        md: "var(--text-base)",
+                      },
                     }}
                   >
                     {obj.title}
@@ -254,6 +275,10 @@ export default function Cookie() {
                   <Typography
                     sx={{
                       fontWeight: 500,
+                      fontSize: {
+                        xs: "var(--text-sm)",
+                        md: "var(--text-sm)",
+                      },
                     }}
                   >
                     {obj.desc}

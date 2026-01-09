@@ -158,21 +158,38 @@ export default function PrivacyPolicy() {
       />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         {/* Header Section */}
-        <Typography sx={{ mb: 4, fontSize: 18 }}>
-          {privacyData.description}
-        </Typography>
+        <p className="p-text text-justify mb-4">{privacyData.description}</p>
         {/* Privacy Sections */}
         {privacyData.sections.map((section, index) => (
           <StyledPaper key={index} elevation={2}>
-            <SectionTitle component="h2">{section.title}</SectionTitle>
+            <SectionTitle
+              component="h2"
+              sx={{ fontSize: { xs: "var(--text-lg)", md: "var(--text-xl)" } }}
+            >
+              {section.title}
+            </SectionTitle>
             {section?.subtitle && (
-              <SectionSubTitle component="h3">
+              <SectionSubTitle
+                component="h3"
+                sx={{
+                  fontSize: { xs: "var(--text-base)", md: "var(--text-base)" },
+                }}
+              >
                 {section.subtitle}
               </SectionSubTitle>
             )}
 
             {section.content && (
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 2,
+                  fontSize: {
+                    xs: "var(--text-sm)",
+                    md: "var(--text-sm)",
+                  },
+                }}
+              >
                 {section.content}
               </Typography>
             )}
@@ -198,6 +215,10 @@ export default function PrivacyPolicy() {
                       primaryTypographyProps={{
                         variant: "body1",
                         sx: { lineHeight: 1.6 },
+                        fontSize: {
+                          xs: "var(--text-sm)",
+                          md: "var(--text-sm)",
+                        },
                       }}
                     />
                   </StyledListItem>
@@ -251,20 +272,56 @@ export default function PrivacyPolicy() {
 
             {section.contactInfo && (
               <Box sx={{ mt: 2 }}>
-                <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: 500,
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
                   {section.contactInfo.title}
                 </Typography>
 
-                <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: 500,
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
                   {section.contactInfo.company}
                 </Typography>
 
                 {section?.contactInfo?.email && (
                   <Stack flexDirection={"row"} gap={1}>
-                    <Typography fontWeight={600} component={"span"}>
+                    <Typography
+                      fontWeight={600}
+                      component={"span"}
+                      sx={{
+                        fontSize: {
+                          xs: "var(--text-sm)",
+                          md: "var(--text-sm)",
+                        },
+                      }}
+                    >
                       Email :
                     </Typography>
-                    <Typography variant="body1" color="#000000">
+                    <Typography
+                      variant="body1"
+                      color="#000000"
+                      sx={{
+                        fontSize: {
+                          xs: "var(--text-sm)",
+                          md: "var(--text-sm)",
+                        },
+                      }}
+                    >
                       {section.contactInfo.email}
                     </Typography>
                   </Stack>
@@ -272,10 +329,28 @@ export default function PrivacyPolicy() {
 
                 {section?.contactInfo?.phone && (
                   <Stack flexDirection={"row"} gap={1}>
-                    <Typography fontWeight={600} component={"span"}>
+                    <Typography
+                      fontWeight={600}
+                      component={"span"}
+                      sx={{
+                        fontSize: {
+                          xs: "var(--text-sm)",
+                          md: "var(--text-sm)",
+                        },
+                      }}
+                    >
                       Phone :
                     </Typography>
-                    <Typography variant="body1" color="#000000">
+                    <Typography
+                      variant="body1"
+                      color="#000000"
+                      sx={{
+                        fontSize: {
+                          xs: "var(--text-sm)",
+                          md: "var(--text-sm)",
+                        },
+                      }}
+                    >
                       {section.contactInfo.phone}
                     </Typography>
                   </Stack>
@@ -285,13 +360,58 @@ export default function PrivacyPolicy() {
 
             {section?.address && (
               <>
-                <Typography fontWeight={600} component={"span"}>
+                <Typography
+                  fontWeight={600}
+                  component={"span"}
+                  sx={{
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
                   {section?.address?.companyName}
                 </Typography>
-                <Typography>{section?.address?.street}</Typography>
-                <Typography>{section?.address?.location}</Typography>
-                <Typography>{section?.address?.phone}</Typography>
-                <Typography>{section?.address?.email}</Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
+                  {section?.address?.street}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
+                  {section?.address?.location}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
+                  {section?.address?.phone}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "var(--text-sm)",
+                      md: "var(--text-sm)",
+                    },
+                  }}
+                >
+                  {section?.address?.email}
+                </Typography>
               </>
             )}
           </StyledPaper>

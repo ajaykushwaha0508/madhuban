@@ -4,6 +4,7 @@ import BlogListWithPagination from "@/common-components/Pagination/BlogListWithP
 import BlogBanner from "./BlogBanner";
 import NaturesStory from "./NaturesStory";
 import { getAllBlogs } from "@/services/blog/blogServices";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 export const metadata = {
   title: "Explore Shikso Blog for Smart and AI driven Learning Insight",
@@ -58,13 +59,8 @@ const NewBlogPage = async () => {
       <BlogBanner />
       <NaturesStory />
       <div className="custom-container py-4 md:py-8">
-        <div className="flex items-center justify-center mb-4">
-          <hr className="w-16 border-t border-primary-gray2 mr-4" />
-          <h1 className="heading1  font-primary text-primary-gray2 font-semibold tracking-wider">
-            Blogs
-          </h1>
-          <hr className="w-16 border-t border-primary-gray2 ml-4" />
-        </div>
+        <DecorativeHeading text={"Blogs"} as="h1" textClasses={"w-50"} />
+
         <div className="mt-4 md:mt-10 flex items-center justify-center gap-5">
           {!blogs.length ? (
             <div className="text-center">

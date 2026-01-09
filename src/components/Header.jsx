@@ -1,20 +1,27 @@
 // src/components/MainNavigation.js
 "use client";
 
-import React, { useState ,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import { facebook, gmail, instagram, linkedin, phone, youtube } from "@/utills/constants";
+import {
+  facebook,
+  gmail,
+  instagram,
+  linkedin,
+  phone,
+  youtube,
+} from "@/utills/constants";
 
 const MainNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
 
-    useEffect(() => {
-      setIsMenuOpen(false);
-    }, [pathname]);
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   const navigation = [
     {
@@ -32,7 +39,7 @@ const MainNavigation = () => {
     },
     {
       name: "Experiences",
-      path: "/experiences"
+      path: "/experiences",
     },
     {
       name: "Dining",
@@ -45,6 +52,10 @@ const MainNavigation = () => {
     {
       name: "Gallery",
       path: "/gallery",
+    },
+    {
+      name: "Blogs",
+      path: "/blogs",
     },
     {
       name: "Contact",
@@ -74,52 +85,33 @@ const MainNavigation = () => {
               <Phone className="w-4 h-4 mr-1" />
               <span>+{phone}</span>
             </a>
-            <a
-              href={`mailto:${gmail}`}
-              className="hover:text-[#D1C8C1]"
-            >
+            <a href={`mailto:${gmail}`} className="hover:text-[#D1C8C1]">
               {gmail}
             </a>
           </div>
           <div className="flex items-center space-x-3">
-            <a
-              href={instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={instagram} target="_blank" rel="noopener noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                 alt="Instagram"
                 className="w-5 h-5"
               />
             </a>
-            <a
-              href={facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={facebook} target="_blank" rel="noopener noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
                 alt="Facebook"
                 className="w-5 h-5"
               />
             </a>
-            <a
-              href={youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={youtube} target="_blank" rel="noopener noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
                 alt="Youtube"
                 className="w-6 h-5"
               />
             </a>
-            <a
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
                 alt="Linkdin"
@@ -260,62 +252,25 @@ const MainNavigation = () => {
           </button>
 
           <nav className="flex flex-col space-y-4">
-            {navigation.map((item, index) => (
-              <div key={item.name}>
-                {item.dropdown ? (
-                  <div>
-                    <button
-                      className="flex items-center justify-between w-full py-2 text-lg font-semibold text-black hover:text-[rgb(110,97,70)]"
-                      onClick={() => toggleDropdown(index)}
-                      aria-expanded={activeDropdown === index}
-                    >
-                      {item.name}
-                      <ChevronDown
-                        className={`w-5 h-5 transition-transform ${
-                          activeDropdown === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    <div
-                      className={`ml-4 mt-2 space-y-2 overflow-hidden transition-all duration-300 ${
-                        activeDropdown === index ? "max-h-96" : "max-h-0"
+            <div className="border-l-3 border-l-[rgb(110,97,70)] ">
+              {navigation.map((item, index) => {
+                return (
+                  <div key={item.name}>
+                    <Link
+                      href={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block  text-lg px-4 py-2  p-text border-b-1 border-b-gray-200 ml-4 ${
+                        pathname === item.path
+                          ? "text-white bg-primary-gray2 rounded-lg"
+                          : "text-gray-800 hover:text-[rgb(110,97,70)]"
                       }`}
                     >
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.path}
-                          onClick={() => setIsMenuOpen(false)}
-                          //   className={({ isActive }) =>
-                          //     `block text-base pl-3 py-1 border-l-2 ${
-                          //       isActive
-                          //         ? "text-[rgb(110,97,70)] border-[rgb(110,97,70)] font-medium"
-                          //         : "text-gray-600 border-transparent hover:text-[rgb(110,97,70)] hover:border-[rgb(110,97,70)] "
-                          //     }`
-                          //   }
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
+                      {item.name}
+                    </Link>
                   </div>
-                ) : (
-                  <Link
-                    href={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    // className={({ isActive }) =>
-                    //   `block py-2 text-lg font-semibold ${
-                    //     isActive
-                    //       ? "text-[rgb(110,97,70)]"
-                    //       : "text-gray-800 hover:text-[rgb(110,97,70)]"
-                    //   }`
-                    // }
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
+                );
+              })}
+            </div>
 
             {/* Book Now Button - Mobile */}
             <Link
