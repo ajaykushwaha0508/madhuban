@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaAnglesRight } from "react-icons/fa6";
+import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -44,19 +45,13 @@ const StayWhyChooseUs = ({ points = [], title = "", imageUrl = "" }) => {
     <section className="py-8 px-4 md:px-8 bg-primary-gray2">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="flex items-center justify-center">
-            <hr className="w-16 border-t border-white mr-4" />
-            <h2 className="heading1 font-primary text-white font-semibold tracking-wider">
-              {title}
-            </h2>
-            <hr className="w-16 border-t border-white ml-4" />
-          </div>
+          <DecorativeHeading text={title} as="h2" color="#fff" />
         </motion.div>
 
         <motion.div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-6  ">
@@ -74,8 +69,8 @@ const StayWhyChooseUs = ({ points = [], title = "", imageUrl = "" }) => {
                   whileHover={{ scale: 1.05 }}
                   key={i}
                 >
-                  <div className=" flex items-center gap-4 rounded-xl border border-primary-gray bg-primary-gray  p-4 text-primary-gray2 transition">
-                    <FaAnglesRight /> {item}
+                  <div className=" flex items-center p-text gap-4 rounded-xl border border-primary-gray bg-primary-gray  p-4 text-primary-gray2 transition">
+                    <FaAnglesRight className="shrink-0" /> {item}
                   </div>
                 </motion.div>
               );

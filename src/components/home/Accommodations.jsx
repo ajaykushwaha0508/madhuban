@@ -130,11 +130,11 @@ const Accommodations = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="font-primary t text-primary-gray2 mb-2  card-herading">
+                <h3 className="font-primary  text-primary-gray2 mb-2  text-xl md:text-2xl">
                   {item.title}
                 </h3>
 
-                <p className="text-primary-gray2  text-base  mb-4 text-justify">
+                <p className=" p-text p-text-black    mb-4 text-justify">
                   {item.description}
                 </p>
               </div>
@@ -152,7 +152,7 @@ const Accommodations = () => {
         >
           <Link
             href="/stay"
-            className="font-arial-narrow text-primary-gray2 px-8 py-3 bg-[#D1C8C1] hover:font-bold rounded-md font-medium tracking-wider inline-block"
+            className="font-arial-narrow text-primary-gray2 px-8 py-3 bg-[#D1C8C1] hover:font-bold rounded-md font-medium p-text inline-block"
           >
             Explore All Accommodations
           </Link>

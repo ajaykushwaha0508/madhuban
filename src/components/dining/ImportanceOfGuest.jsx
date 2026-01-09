@@ -65,8 +65,9 @@ const GuestImportance = () => {
                   className="h-full bg-primary-gray2 rounded-2xl order-2 md:order-1"
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 0.3 }}
                   viewport={{ once: true }}
+                  whileHover={{ scale: 1.03 }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
                     <div className="text-white flex flex-col items-center justify-center ">
@@ -86,8 +87,9 @@ const GuestImportance = () => {
                   className="h-full order-1 md:order-2 bg-primary-gray2 rounded-2xl"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 0.3 }}
                   viewport={{ once: true }}
+                  whileHover={{ scale: 1.03 }}
                 >
                   <div className=" mx-auto px-4 py-10 text-lg ">
                     <div className="text-white flex flex-col items-center justify-center ">

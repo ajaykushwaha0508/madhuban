@@ -36,7 +36,7 @@ const BookingWidget = () => {
             {/* Check-in Date */}
             <div className="lg:col-span-1 flex justify-center">
               <div>
-                <label className="block text-lg font-arial-narrow tracking-wider font-semibold text-[#D1C8C1] text-center mb-1">
+                <label className="block text-lg font-semibold text-primary-gray text-center mb-1">
                   Check-in
                 </label>
                 <div className="relative text-black">
@@ -60,7 +60,7 @@ const BookingWidget = () => {
             {/* Check-out Date */}
             <div className="lg:col-span-1 flex justify-center">
               <div>
-                <label className="block text-lg font-arial-narrow tracking-wider font-semibold text-[#D1C8C1] text-center mb-1">
+                <label className="block text-lg font-arial-narrow tracking-wider font-semibold text-primary-gray text-center mb-1">
                   Check-out
                 </label>
                 <div className="relative">
@@ -84,7 +84,7 @@ const BookingWidget = () => {
             {/* Guests */}
             <div className="lg:col-span-1 flex justify-center">
               <div>
-                <label className="block text-lg font-arial-narrow tracking-wider font-semibold text-[#D1C8C1] text-center mb-1">
+                <label className="block text-lg font-arial-narrow  font-semibold text-primary-gray text-center mb-1">
                   Guests
                 </label>
                 <div className="relative">
@@ -92,7 +92,7 @@ const BookingWidget = () => {
                     <select
                       value={adults}
                       onChange={(e) => setAdults(parseInt(e.target.value))}
-                      className=" bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2.5 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
+                      className=" bg-[#D1C8C1] font-arial-narrow  font-medium rounded-md py-2.5 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
                       <option value="1">1 Adult</option>
                       <option value="2">2 Adults</option>
@@ -104,7 +104,7 @@ const BookingWidget = () => {
                     <select
                       value={children}
                       onChange={(e) => setChildren(parseInt(e.target.value))}
-                      className=" bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
+                      className=" bg-[#D1C8C1] font-arial-narrow  font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
                       <option value="0">0 Child</option>
                       <option value="1">1 Child</option>
@@ -120,13 +120,13 @@ const BookingWidget = () => {
             {/* Accommodation */}
             <div className="lg:col-span-1 flex justify-center">
               <div>
-                <label className="block text-lg font-arial-narrow tracking-wider font-semibold text-[#D1C8C1] text-center mb-1">
+                <label className="block text-lg font-arial-narrow  font-semibold text-primary-gray text-center mb-1">
                   Accommodation
                 </label>
                 <select
                   value={accommodationType}
                   onChange={(e) => setAccommodationType(e.target.value)}
-                  className="w-40 rounded-md bg-[#D1C8C1] font-arial-narrow tracking-wider font-medium text-[rgb(110,97,70)] py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-40 rounded-md bg-[#D1C8C1] font-arial-narrow  font-medium text-[rgb(110,97,70)] py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                 >
                   <option value="all">All Types</option>
                   <option value="cottage">Safari Tent</option>
@@ -140,12 +140,9 @@ const BookingWidget = () => {
             {/* Submit Button */}
             <div className="lg:col-span-4 flex justify-center items-end">
               <div className="w-full">
-                <label className="invisible block text-sm font-medium text-[#D1C8C1] mb-1">
-                  Check
-                </label>
                 <button
                   type="submit"
-                  className="w-full font-arial-narrow tracking-wider font-semibold flex items-center justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-[rgb(110,97,70)] bg-[#D1C8C1]"
+                  className="w-full font-arial-narrow cursor-pointer  font-semibold flex items-center justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-[rgb(110,97,70)] bg-[#D1C8C1]"
                 >
                   Check Availability <ChevronRight className="ml-2 h-5 w-5" />
                 </button>

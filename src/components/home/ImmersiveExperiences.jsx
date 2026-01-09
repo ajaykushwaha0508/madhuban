@@ -115,7 +115,7 @@ const ImmersiveExperiences = () => {
         >
           <Link
             href="/experiences"
-            className="font-arial-narrow text-white px-8 py-3 bg-primary-gray2 hover:font-bold rounded-md font-medium tracking-wider inline-block"
+            className="font-arial-narrow text-white px-8 py-3 bg-primary-gray2 hover:font-bold rounded-md font-medium p-text inline-block"
           >
             Explore All Experiences
           </Link>

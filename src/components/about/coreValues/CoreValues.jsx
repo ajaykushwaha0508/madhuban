@@ -100,7 +100,11 @@ const CoreValues = () => {
                     variants={containerVariants}
                   >
                     {coreValues.map((feature, index) => (
-                      <motion.div key={index} variants={itemVariants}>
+                      <motion.div
+                        key={index}
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.03 }}
+                      >
                         <div className="bg-primary-gray2 h-full flex flex-col justify-center bg-opacity-50 text-start item-center gap-2 rounded-lg p-6 backdrop-blur-sm">
                           <p className="font-primary card-heading tracking-wider  text-white text-center text-opacity-90">
                             {feature.title}
