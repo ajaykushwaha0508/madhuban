@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import {
   facebook,
   gmail,
@@ -14,63 +14,55 @@ import {
   youtube,
 } from "@/utills/constants";
 
+const navigation = [
+  {
+    name: "Home",
+    path: "/",
+    dropdown: null,
+  },
+  {
+    name: "About",
+    path: "/about-us",
+  },
+  {
+    name: "Stay",
+    path: "/stay",
+  },
+  {
+    name: "Experiences",
+    path: "/experiences",
+  },
+  {
+    name: "Dining",
+    path: "/dining",
+  },
+  {
+    name: "Nearby Attractions",
+    path: "/nearby-attractions",
+  },
+  {
+    name: "Gallery",
+    path: "/gallery",
+  },
+  {
+    name: "Blogs",
+    path: "/blogs",
+    hideOnDesktop: true,
+  },
+  {
+    name: "Contact",
+    path: "/contact-us",
+    dropdown: null,
+  },
+];
+
 const MainNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
-
-  const navigation = [
-    {
-      name: "Home",
-      path: "/",
-      dropdown: null,
-    },
-    {
-      name: "About",
-      path: "/about-us",
-    },
-    {
-      name: "Stay",
-      path: "/stay",
-    },
-    {
-      name: "Experiences",
-      path: "/experiences",
-    },
-    {
-      name: "Dining",
-      path: "/dining",
-    },
-    {
-      name: "Nearby Attractions",
-      path: "/nearby-attractions",
-    },
-    {
-      name: "Gallery",
-      path: "/gallery",
-    },
-    {
-      name: "Blogs",
-      path: "/blogs",
-    },
-    {
-      name: "Contact",
-      path: "/contact-us",
-      dropdown: null,
-    },
-  ];
-
-  const toggleDropdown = (index) => {
-    if (activeDropdown === index) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(index);
-    }
-  };
 
   return (
     <header className="fixed top-0 w-full z-50 bg-primary-gray shadow-lg ">
@@ -171,61 +163,37 @@ const MainNavigation = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden xl:flex xl:justify-between xl:flex-1 xl:ml-8 2xl:ml-12 items-center space-x-6 font-inter xl:max-w-[62vw]">
-          {navigation.map((item, index) => {
-            const isActive = pathname === item.path;
-            return (
-              <div key={item.name} className="relative group">
-                {item.dropdown ? (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(index)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button
-                      className="flex items-center font-primary font-medium tracking-wide text-[22px]  text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)]"
-                      onClick={() => toggleDropdown(index)}
-                    >
-                      {item.name} <ChevronDown className="ml-1 w-4 h-4" />
-                    </button>
-                    <div
-                      className={`absolute left-0 w-56 bg-white shadow-lg rounded-md py-2 z-20 transform transition-all origin-top-left  ${
-                        activeDropdown === index
-                          ? "opacity-100 scale-100"
-                          : "opacity-0 scale-95 pointer-events-none"
-                      }`}
-                    >
-                      {item.dropdown.map((subItem) => {
-                        const isActive = pathname === subItem.path;
-                        return (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.path}
-                            className={`block px-4 py-2 text-lg ${
-                              isActive
-                                ? "text-[rgb(110,97,70)] hover:text-[rgb(190,175,145)] font-primary font-medium tracking-wide"
-                                : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] font-primary font-medium tracking-wide"
-                            }`}
-                          >
-                            {subItem.name}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ) : (
+          {navigation
+            .filter((item) => !item.hideOnDesktop)
+            .map((item) => {
+              const isActive = (itemPath) => {
+                if (itemPath === "/") {
+                  return pathname === "/";
+                }
+                return pathname.startsWith(itemPath);
+              };
+
+              return (
+                <div key={item.name} className="relative group">
                   <Link
                     href={item.path}
-                    className={`font-medium text-[19px] ${
-                      isActive
-                        ? "text-[rgb(110,97,70)] font-primary font-medium tracking-wide text-[22px]"
-                        : "text-[rgb(120,100,60)] hover:text-[rgb(190,175,145)] text-[22px] font-primary font-medium tracking-wide"
-                    }`}
+                    className={`
+                              text-[22px] font-primary text-[rgb(120,100,60)]
+                              relative  font-medium tracking-wide cursor-pointer
+                              after:content-[''] after:absolute after:w-full  ${
+                                isActive(item.path)
+                                  ? "after:scale-x-100"
+                                  : "after:scale-x-0"
+                              } after:h-[2px] after:bottom-0 after:left-0
+                              after:bg-[rgb(120,100,60)] after:origin-bottom-right after:transition-transform after:duration-300
+                             hover:after:scale-x-100
+                             hover:after:origin-bottom-left`}
                   >
                     {item.name}
                   </Link>
-                )}
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
         </nav>
 
         {/* Book Now Button - Desktop */}
