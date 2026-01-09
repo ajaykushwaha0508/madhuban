@@ -27,13 +27,10 @@ const sitemapUrls = [
   },
 
   { url: "/blogs", priority: 0.8 },
-  { url: "/faqs", priority: 0.8 },
-
   { url: "/privacy-policy", priority: 0.8 },
   { url: "/terms-and-condition", priority: 0.8 },
   { url: "/cookies-and-consent-policy", priority: 0.8 },
   { url: "/disclaimer", priority: 0.8 },
-
   { url: "/stay/safari-tent", priority: 0.64 },
   { url: "/stay/mud-villa", priority: 0.64 },
   { url: "/stay/pool-side-room", priority: 0.64 },
