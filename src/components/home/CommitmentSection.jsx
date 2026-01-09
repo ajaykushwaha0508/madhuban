@@ -95,7 +95,11 @@ const CommitmentSection = () => {
           variants={containerVariants}
         >
           {sustainabilityFeatures.map((feature, index) => (
-            <motion.div key={index} variants={itemVariants}>
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.03 }}
+            >
               <SustainabilityFeature feature={feature} />
             </motion.div>
           ))}

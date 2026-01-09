@@ -1000,6 +1000,7 @@ export const accommodationsData = [
       "/images/accommodations/mud-villa1.jpg",
       "/images/accommodations/mud-villa2.jpg",
       "/images/accommodations/mud-villa.jpg",
+      "/images/stay/stay3.jpg",
     ],
     amenities: [
       "King Size Bed",
@@ -1066,6 +1067,8 @@ export const accommodationsData = [
       "/images/accommodations/pool-side-room1.jpg",
       "/images/accommodations/pool-side-room2.jpg",
       "/images/accommodations/pool-side-room3.jpg",
+      "/images/pool/pool1.jpg",
+      "/images/pool/pool2.jpg",
     ],
     amenities: [
       "King Size Bed",

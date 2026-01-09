@@ -101,12 +101,10 @@ export default function CommonFaqs({
                       color: "white",
                     }}
                   >
-                    <Typography component="span">{item?.question}</Typography>
+                    <p className="p-text">{item?.question}</p>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography className="text-primary-gray2">
-                      {item?.answer}
-                    </Typography>
+                    <p className="text-primary-gray2 p-text">{item?.answer}</p>
                   </AccordionDetails>
                 </Accordion>
               </motion.div>

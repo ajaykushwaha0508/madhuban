@@ -280,7 +280,7 @@ const Accommodations = () => {
                     variants={buttonHoverVariants}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className="relative z-10 tracking-widest font-medium">
+                  <span className="relative z-10 tracking-widest font-medium p-text">
                     View Details & Book
                   </span>
                 </Link>
