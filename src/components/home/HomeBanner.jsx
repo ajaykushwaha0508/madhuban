@@ -48,14 +48,12 @@ const HomeBanner = () => {
             animate={{ opacity: index === currentSlide ? 1 : 0 }}
             transition={{ duration: 1 }}
           >
-            <Image
-              src={slide.image}
-              alt="Background"
-              fill
-              className="object-cover"
-              loading="lazy"
-              fetchPriority="high"
-            />
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
           </motion.div>
         ))}
       </div>
