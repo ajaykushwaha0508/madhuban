@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 import { primary_gray2 } from "@/styles/variables";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -122,7 +123,9 @@ const Accommodations = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="h-64 xl:h-[200px] overflow-hidden">
-                <img
+                <Image
+                  width={300}
+                  height={200}
                   src={item.image}
                   alt={item.alt}
                   className="w-full h-full object-cover"

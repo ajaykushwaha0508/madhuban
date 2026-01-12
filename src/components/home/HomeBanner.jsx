@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import BookingWidget from "../BookingWidget";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const heroSlides = [
   {
@@ -10,18 +11,18 @@ const heroSlides = [
     subtitle:
       "Experience eco-luxury living amid the serene wilderness of Ratapani Tiger Reserve at Madhuban Eco Retreat — a peaceful forest stay offering sustainable comfort and mindful escapes.",
   },
-  {
-    image: "/images/hero/hero-2.jpg",
-    title: "Sustainable Travel in India: An Eco-Luxury Retreat",
-    subtitle:
-      "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
-  },
-  {
-    image: "/images/hero/hero-3.jpg",
-    title: "Connect With Wildlife & Nature",
-    subtitle:
-      "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
-  },
+  // {
+  //   image: "/images/hero/hero-2.jpg",
+  //   title: "Sustainable Travel in India: An Eco-Luxury Retreat",
+  //   subtitle:
+  //     "Reconnect with nature through immersive experiences like birdwatching in Madhya Pradesh, all without compromising on comfort.",
+  // },
+  // {
+  //   image: "/images/hero/hero-3.jpg",
+  //   title: "Connect With Wildlife & Nature",
+  //   subtitle:
+  //     "Located next to the Ratapani Wildlife Sanctuary, Madhuban is ideal for serene forest walks and birdwatching adventures.",
+  // },
 ];
 
 const HomeBanner = () => {
@@ -47,12 +48,14 @@ const HomeBanner = () => {
             animate={{ opacity: index === currentSlide ? 1 : 0 }}
             transition={{ duration: 1 }}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="absolute inset-0 bg-black/30"></div>
-            </div>
+            <Image
+              src={slide.image}
+              alt="Background"
+              fill
+              className="object-cover"
+              loading="lazy"
+              fetchPriority="high"
+            />
           </motion.div>
         ))}
       </div>

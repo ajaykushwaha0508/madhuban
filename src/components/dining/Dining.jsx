@@ -45,7 +45,7 @@ const Dining = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const photos = [
-    { id: 1, url: "/images/dining/dining1.jpg" },
+    { id: 1, url: "/images/dining/dining1.JPG" },
     { id: 2, url: "/images/dining/dining2.jpg" },
     { id: 3, url: "/images/dining/dining3.jpg" },
     { id: 4, url: "/images/dining/dining4.jpg" },
@@ -54,6 +54,9 @@ const Dining = () => {
     { id: 7, url: "/images/dining/dining7.jpg" },
     { id: 8, url: "/images/dining/dining8.jpg" },
     { id: 9, url: "/images/dining/dining9.jpg" },
+    { id: 10, url: "/images/dining/dining11.jpg" },
+    { id: 11, url: "/images/dining/dining22.jpg" },
+    { id: 11, url: "/images/dining/dining33.jpg" },
   ];
 
   const videos = [

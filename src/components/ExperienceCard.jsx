@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { FaAnglesRight } from "react-icons/fa6";
+import Image from "next/image";
 
 const ExperienceCard = ({ experience }) => {
   const { title, image, description, learnMoreBtn, path, idealFor } =
@@ -12,7 +13,9 @@ const ExperienceCard = ({ experience }) => {
     <div className=" group relative rounded-lg overflow-hidden shadow-lg h-96 hover:shadow-xl transition-all duration-300">
       {/* Background Image with zoom effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <img
+        <Image
+          width={500}
+          height={400}
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

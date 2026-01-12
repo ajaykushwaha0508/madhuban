@@ -23,7 +23,7 @@ const p1 =
 const DiscoverIdeal = () => {
   return (
     <motion.div
-      className="text-center pb-16  bg-primary-gray2 overflow-hidden px-2"
+      className="text-center   bg-primary-gray2 overflow-hidden px-2"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

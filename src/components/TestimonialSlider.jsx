@@ -87,11 +87,17 @@ export default function App() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         className="mySwiper testimonial-swiper"
       >
-        <button className="swiper-prev absolute left-0 top-1/2 z-10 cursor-pointer">
+        <button
+          name={"prevSlide"}
+          className="swiper-prev absolute left-0 top-1/2 z-10 cursor-pointer"
+        >
           <IoIosArrowDropleftCircle size={40} className="text-primary-gray" />
         </button>
 
-        <button className="swiper-next absolute right-0 top-1/2 z-10 cursor-pointer">
+        <button
+          name={"nextSlide"}
+          className="swiper-next absolute right-0 top-1/2 z-10 cursor-pointer"
+        >
           <IoIosArrowDroprightCircle size={40} className="text-primary-gray" />
         </button>
 
