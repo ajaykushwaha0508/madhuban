@@ -151,13 +151,8 @@ ${checkInSimple} to ${checkOutSimple}
 ${formData.people_count} guests
 ${formData.room_interested}`;
 
-    console.log("Opening WhatsApp with message:", message);
-    console.log("Admin WhatsApp number:", ADMIN_WHATSAPP);
-
     // Build WhatsApp URL
     const whatsappUrl = buildWhatsAppUrl(ADMIN_WHATSAPP, message);
-
-    console.log("Full WhatsApp URL:", whatsappUrl);
 
     // Open WhatsApp
     try {

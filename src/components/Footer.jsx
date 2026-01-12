@@ -255,7 +255,7 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 flex-shrink-0 text-white" />
+                <Phone className="w-5 h-5 mr-3 flex-shrink-0 text-white footer-text" />
                 <a
                   href="tel:+917895432160"
                   className="text-primary-gray  tracking-wider "
@@ -287,7 +287,7 @@ const Footer = () => {
               className="w-[70px] h-[70px] mt-3 mb-4 mx-auto filter brightness-75"
               style={{ filter: "brightness(0.75)" }}
             />
-            <p className="text-primary-gray mb-6 font-primary tracking-wider text-center mx-auto">
+            <p className="text-primary-gray footer-heading mb-6 font-primary  text-center mx-auto">
               A Somaiya Group Initiative <br /> Where Sustainability Meets
               Hospitality.
             </p>
@@ -318,7 +318,7 @@ const Footer = () => {
           <div className="font-primary text-sm  text-primary-gray tracking-wider text-center">
             &copy; {currentYear} Madhuban Eco Retreat. All rights reserved.
           </div>
-          <div className="font-primary text-sm  text-primary-gray w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row gap-4 tracking-wider text-center">
+          <div className="font-primary text-sm md:text-sm  text-primary-gray w-full md:w-auto mt-4 md:mt-0 flex flex-col md:flex-row gap-4 tracking-wider text-center">
             <Link
               href="/privacy-policy"
               className=" text-primary-gray tracking-wider   flex items-center"

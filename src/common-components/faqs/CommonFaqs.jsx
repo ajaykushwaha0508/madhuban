@@ -47,7 +47,6 @@ export default function CommonFaqs({
   heading = "FAQs",
   bgColor = "bg-primary-gray",
 }) {
-  console.log(bgColor);
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {

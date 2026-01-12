@@ -31,8 +31,6 @@ export default function ContactPage2() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("Form Data:", data);
-
     // 🔥 Example: WhatsApp redirect
     const message = `
 Name: ${data.name}

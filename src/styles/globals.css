@@ -137,11 +137,11 @@ body {
 /* footer */
 
 .footer-section .footer-text{
-  font-size: var(--text-base)
+  font-size: var(--text-sm)
 }
 
 .footer-section .footer-heading{
-   font-size: var(--text-lg)
+   font-size: var(--text-base)
 }
 
 .footer-section .footer-input-con{
@@ -169,7 +169,7 @@ body {
 
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 .footer-section .footer-input-con{
   display:flex ;
   flex-direction: column;
