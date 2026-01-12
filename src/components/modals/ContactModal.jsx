@@ -13,7 +13,7 @@ const ADMIN_WHATSAPP = phone;
 
 const ContactModal = () => {
   const COOKIE_NAME = "contact_popup_hidden";
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const pathName = usePathname();
 
   const {
@@ -24,8 +24,6 @@ const ContactModal = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("Form Data:", data);
-
     // 🔥 Example: WhatsApp redirect
     const message = `
     Name: ${data.name}
@@ -138,10 +136,10 @@ const ContactModal = () => {
             <IoMdCloseCircle />
           </Box>
           <div className="rounded-2xl shadow-lg p-2 py-8 md:p-8 bg-[#6e6146] ">
-            <h2 className="text-xl md:text-3xl font-semibold text-white text-center mb-2 font-primary">
+            <h2 className="heading1 font-semibold text-white text-center mb-2 font-primary">
               Send Us a Message
             </h2>
-            <p className="text-sm  md:text-xl text-gray-200 mb-2 md:mb-6 text-center">
+            <p className="p-text text-gray-200 mb-2 md:mb-6 text-center">
               Your message goes directly to WhatsApp.
             </p>
 

@@ -132,14 +132,14 @@ const MainNavigation = () => {
           <img
             src="/images/logo/logo-4.png"
             alt="Madhuban Eco Retreat Logo"
-            className="h-15 md:h-20 w-15 md:w-20 filter brightness-75"
+            className="h-12 w-12 md:h-20  md:w-20 filter brightness-75"
           />
           <div className="flex flex-col justify-center">
-            <div className="font-primary tracking-wide text-lg  md:text-xl font-bold text-[rgb(110,97,70)] leading-tight">
+            <div className="font-primary tracking-wide text-base  md:text-xl font-bold text-[rgb(110,97,70)] leading-tight">
               Madhuban Eco Retreat
             </div>
 
-            <p className="font-primary tracking-wider text-sm text-[rgb(110,97,70)] leading-tight">
+            <p className="font-primary tracking-wider text-xs text-[rgb(110,97,70)] leading-tight">
               Ratapani Tiger Reserve,
             </p>
             <p className="font-primary tracking-wide text-xs text-[rgb(110,97,70)] leading-tight">

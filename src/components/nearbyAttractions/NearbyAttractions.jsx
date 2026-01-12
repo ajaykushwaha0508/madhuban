@@ -130,7 +130,7 @@ const NearbyAttractions = () => {
     <div className="min-h-screen bg-[#D1C8C1]  ">
       {/* Hero Section */}
       <section className="relative h-[85vh] m-0 p-0 ">
-        <div className="absolute inset-0 overflow-hidden  rounded-bl-[60px] rounded-br-[60px]">
+        <div className="absolute inset-0 overflow-hidden  ">
           <AnimatePresence>
             {heroSlides.map(
               (slide, index) =>

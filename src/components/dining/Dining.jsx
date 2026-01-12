@@ -44,14 +44,15 @@ const Dining = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const photos = [
-    { id: 1, url: "/images/dining/dining1.jpeg" },
+    { id: 1, url: "/images/dining/dining1.jpg" },
     { id: 2, url: "/images/dining/dining2.jpg" },
     { id: 3, url: "/images/dining/dining3.jpg" },
-    { id: 4, url: "/images/dining/dining8.jpg" },
+    { id: 4, url: "/images/dining/dining4.jpg" },
     { id: 5, url: "/images/dining/dining5.jpg" },
     { id: 6, url: "/images/dining/dining6.jpg" },
     { id: 7, url: "/images/dining/dining7.jpg" },
-    { id: 8, url: "/images/dining/dining9.jpg" },
+    { id: 8, url: "/images/dining/dining8.jpg" },
+    { id: 9, url: "/images/dining/dining9.jpg" },
   ];
 
   const videos = [
@@ -67,14 +68,19 @@ const Dining = () => {
   return (
     <>
       <div className="farm-to-table bg-[#D1C8C1] flex flex-col items-center">
-        <div className="relative w-full h-[85vh] overflow-hidden rounded-bl-[60px] rounded-br-[60px]">
+        <div className="relative w-full h-[85vh] overflow-hidden ">
           <img
             loading="lazy"
-            src="/images/dining/dining10.jpg"
+            src="/images/dining/dining4.jpg"
             alt="Farm Banner"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center text-white text-center "
+            style={{
+              background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
+            }}
+          >
             <h1 className="bannerHeading  font-primary">Farm-To-Fork Dining</h1>
             <p className="bannerSubheading font-inter text-md md:text-2xl mt-2">
               Fresh ingredients from our farm to your plate
