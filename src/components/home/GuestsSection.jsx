@@ -96,9 +96,9 @@ const GuestsSection = () => {
                 />
                 <div className="absolute  inset-0 bg-black/50 flex flex-col justify-end p-4">
                   <div className="ml-5">
-                    <h5 className="font-primary  text-[rgb(190,175,145)] tracking-widest text-lg md:text-xl">
+                    <h3 className="font-primary  text-[rgb(190,175,145)] tracking-widest text-lg md:text-xl">
                       {celeb.name}
-                    </h5>
+                    </h3>
                     <p className="text-[rgb(204,180,120)] text-sm tracking-wider font-arial-narrow">
                       {celeb.details}
                     </p>

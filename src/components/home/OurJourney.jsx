@@ -2,6 +2,7 @@
 import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 import { facebook, instagram } from "@/utills/constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 const containerVariants = {
@@ -79,7 +80,9 @@ const OurJourney = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.2 }}
             >
-              <img
+              <Image
+                width={32}
+                height={32}
                 src="/images/socials/instagram.png"
                 alt="Instagram"
                 className="w-8 h-8"
@@ -92,7 +95,9 @@ const OurJourney = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.2 }}
             >
-              <img
+              <Image
+                width={32}
+                height={32}
                 src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
                 alt="Facebook"
                 className="w-8 h-8"
@@ -105,7 +110,9 @@ const OurJourney = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.2 }}
             >
-              <img
+              <Image
+                width={32}
+                height={32}
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                 alt="WhatsApp"
                 className="w-8 h-8"
@@ -155,7 +162,9 @@ const OurJourney = () => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
               >
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={`/images/instagram/insta-${index + 1}.jpg`}
                   alt={`Instagram post ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
@@ -175,7 +184,9 @@ const OurJourney = () => {
               className="relative cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="/images/instagram/insta-4-thumbanil.png"
                 alt="Video Thumbnail"
                 className="xl:w-[25vw] xl:h-[50vh] object-cover rounded-md sm:w-[100vw] max640:w-[100vw]"

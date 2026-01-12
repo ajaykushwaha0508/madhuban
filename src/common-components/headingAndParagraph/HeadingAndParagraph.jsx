@@ -40,7 +40,7 @@ const HeadingAndParagraph = ({
 }) => {
   return (
     <motion.div
-      className={`text-center  pt-12 ${bg} overflow-hidden`}
+      className={`text-center pb-16  pt-12 ${bg} overflow-hidden`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

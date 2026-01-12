@@ -13,6 +13,7 @@ import {
   phone,
   youtube,
 } from "@/utills/constants";
+import Image from "next/image";
 
 const navigation = [
   {
@@ -56,6 +57,39 @@ const navigation = [
   },
 ];
 
+const socialLinks = [
+  {
+    name: "Instagram",
+    href: instagram,
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+    className: "w-5 h-5",
+  },
+  {
+    name: "Facebook",
+    href: facebook,
+    img: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg",
+    className: "w-5 h-5",
+  },
+  {
+    name: "YouTube",
+    href: youtube,
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png",
+    className: "w-6 h-5",
+  },
+  {
+    name: "LinkedIn",
+    href: linkedin,
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png",
+    className: "w-5 h-5",
+  },
+  {
+    name: "WhatsApp",
+    href: `https://wa.me/${phone}`,
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    className: "w-5 h-5",
+  },
+];
+
 const MainNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -77,50 +111,31 @@ const MainNavigation = () => {
               <Phone className="w-4 h-4 mr-1" />
               <span>+{phone}</span>
             </a>
-            <a href={`mailto:${gmail}`} className="hover:text-[#D1C8C1]">
+            <a
+              href={`mailto:${gmail}`}
+              aria-label="send us a message on this email"
+              className="hover:text-[#D1C8C1]"
+            >
               {gmail}
             </a>
           </div>
           <div className="flex items-center space-x-3">
-            <a href={instagram} target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                alt="Instagram"
-                className="w-5 h-5"
-              />
-            </a>
-            <a href={facebook} target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-                alt="Facebook"
-                className="w-5 h-5"
-              />
-            </a>
-            <a href={youtube} target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
-                alt="Youtube"
-                className="w-6 h-5"
-              />
-            </a>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
-                alt="Linkdin"
-                className="w-5 h-5"
-              />
-            </a>
-            <a
-              href={`https://wa.me/${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-                className="w-5 h-5"
-              />
-            </a>
+            {socialLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  width={20}
+                  height={20}
+                  src={item.img}
+                  alt={item.name}
+                  className={item.className}
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -129,8 +144,10 @@ const MainNavigation = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center relative xl:justify-between 2xl:justify-between xl:min-w-full">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-4 z-20">
-          <img
+          <Image
             src="/images/logo/logo-4.png"
+            width={80}
+            height={80}
             alt="Madhuban Eco Retreat Logo"
             className="h-12 w-12 md:h-20  md:w-20 filter brightness-75"
           />

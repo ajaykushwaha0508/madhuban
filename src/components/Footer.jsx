@@ -11,6 +11,7 @@ import {
   phone,
   youtube,
 } from "@/utills/constants";
+import Image from "next/image";
 
 const Footer = () => {
   const [open, setOpen] = useState(false); // dropdown state
@@ -68,7 +69,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="transition"
               >
-                <img
+                <Image
+                  width={32}
+                  height={32}
                   src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                   alt="Instagram"
                   className="w-8 h-8 "
@@ -80,7 +83,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="transition"
               >
-                <img
+                <Image
+                  width={32}
+                  height={32}
                   src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
                   alt="Facebook"
                   className="w-8 h-8"
@@ -92,7 +97,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="transition"
               >
-                <img
+                <Image
+                  width={32}
+                  height={32}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
                   alt="Youtube"
                   className="w-9 h-8"
@@ -104,7 +111,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="transition"
               >
-                <img
+                <Image
+                  width={32}
+                  height={32}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/640px-Linkedin.svg.png"
                   alt="Linkedin"
                   className="w-8 h-8"
@@ -272,10 +281,10 @@ const Footer = () => {
                   {gmail}
                 </a>
               </li>
-              <p className="text-primary-gray mb-6 font-primary tracking-wider footer-text">
+              <li className="text-primary-gray mb-6 font-primary tracking-wider footer-text">
                 Subscribe to recieve updates on special offers, new experiences,
                 and sustainability initiatives.
-              </p>
+              </li>
             </ul>
           </div>
 

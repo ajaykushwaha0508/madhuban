@@ -94,23 +94,23 @@ const BookingWidget = () => {
                       onChange={(e) => setAdults(parseInt(e.target.value))}
                       className=" bg-[#D1C8C1] font-arial-narrow  font-medium rounded-md py-2.5 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
-                      <option value="1">1 Adult</option>
-                      <option value="2">2 Adults</option>
-                      <option value="3">3 Adults</option>
-                      <option value="4">4 Adults</option>
-                      <option value="5">5 Adults</option>
-                      <option value="6">6 Adults</option>
+                      <option label="1 Adult" value="1"></option>
+                      <option label="2 Adults" value="2"></option>
+                      <option label="3 Adults" value="3"></option>
+                      <option label="4 Adults" value="4"></option>
+                      <option label="5 Adults" value="5"></option>
+                      <option label="6 Adults" value="6"></option>
                     </select>
                     <select
                       value={children}
                       onChange={(e) => setChildren(parseInt(e.target.value))}
                       className=" bg-[#D1C8C1] font-arial-narrow  font-medium rounded-md py-2 px-3 focus:outline-none text-[rgb(110,97,70)] hover:border-black focus:border-black"
                     >
-                      <option value="0">0 Child</option>
-                      <option value="1">1 Child</option>
-                      <option value="2">2 Children</option>
-                      <option value="3">3 Children</option>
-                      <option value="4">4 Children</option>
+                      <option label="0 Child" value="0"></option>
+                      <option label="1 Child" value="1"></option>
+                      <option label="2 Children" value="2"></option>
+                      <option label="3 Children" value="3"></option>
+                      <option label="4 Children" value="4"></option>
                     </select>
                   </div>
                 </div>
@@ -128,11 +128,11 @@ const BookingWidget = () => {
                   onChange={(e) => setAccommodationType(e.target.value)}
                   className="w-40 rounded-md bg-[#D1C8C1] font-arial-narrow  font-medium text-[rgb(110,97,70)] py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                 >
-                  <option value="all">All Types</option>
-                  <option value="cottage">Safari Tent</option>
-                  <option value="tent">Mud Houses</option>
-                  <option value="treehouse">Pool Side Villa</option>
-                  <option value="camping">Camping Tent</option>
+                  <option label="All Types" value="all"></option>
+                  <option label="Safari Tent" value="cottage"></option>
+                  <option label="Mud Houses" value="tent"></option>
+                  <option label="Pool Side Villa" value="treehouse"></option>
+                  <option label="Camping Tent" value="camping"></option>
                 </select>
               </div>
             </div>
