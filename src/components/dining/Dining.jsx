@@ -6,6 +6,7 @@ import DiningSpacial from "./DiningSpacial";
 import DiningOptions from "./DiningOptions";
 import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
+import { motion } from "framer-motion";
 
 const foodAndDiningFaqs = [
   {
@@ -65,26 +66,51 @@ const Dining = () => {
     setSelectedMedia(null);
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <div className="farm-to-table bg-[#D1C8C1] flex flex-col items-center">
-        <div className="relative w-full h-[85vh] overflow-hidden ">
+        <div className="relative w-full h-[85vh]  ">
           <img
             loading="lazy"
             src="/images/dining/dining4.jpg"
             alt="Farm Banner"
             className="w-full h-full object-cover"
           />
+
           <div
-            className="absolute inset-0 flex flex-col items-center justify-center text-white text-center "
+            className="absolute top-0 z-10 h-full w-full text-white flex flex-col items-center justify-center"
             style={{
               background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
             }}
           >
-            <h1 className="bannerHeading  font-primary">Farm-To-Fork Dining</h1>
-            <p className="bannerSubheading font-inter text-md md:text-2xl mt-2">
-              Fresh ingredients from our farm to your plate
-            </p>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="text-white text-center px-4"
+            >
+              <div className="text-center max-w-7xl">
+                <h1 className="bannerHeading font-primary">
+                  {" "}
+                  Farm-To-Fork Dining
+                </h1>
+                <h2 className="bannerSubHeading">
+                  Fresh ingredients from our farm to your plate
+                </h2>
+              </div>
+            </motion.div>
           </div>
         </div>
 

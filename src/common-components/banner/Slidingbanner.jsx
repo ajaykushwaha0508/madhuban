@@ -15,14 +15,21 @@ import {
 } from "swiper/modules";
 import { motion } from "framer-motion";
 
-const Slidingbanner = ({ images }) => {
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const Slidingbanner = ({ images, heading, subHeading }) => {
   return (
-    <motion.div
-      className="w-full  relative"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
+    <motion.div className="w-full  relative">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
@@ -45,6 +52,27 @@ const Slidingbanner = ({ images }) => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {heading || subHeading ? (
+        <div
+          className="absolute top-0 z-10 h-full w-full text-white flex flex-col items-center justify-center"
+          style={{
+            background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
+          }}
+        >
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="text-white text-center px-4"
+          >
+            <div className="text-center max-w-7xl">
+              <h1 className="bannerHeading font-primary">{heading}</h1>
+              {subHeading && <h2 className="bannerSubHeading">{subHeading}</h2>}
+            </div>
+          </motion.div>
+        </div>
+      ) : null}
 
       <style jsx>{`
         .swiper-pagination-bullet {

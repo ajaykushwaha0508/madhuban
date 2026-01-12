@@ -65,7 +65,7 @@
 }
 
 .bannerSubHeading{
-   font-size: var(--text-2xl) ; 
+   font-size: var(--text-xl) ; 
 }
 .p-text{
   font-size: var(--text-base);

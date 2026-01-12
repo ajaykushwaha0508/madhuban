@@ -31,11 +31,6 @@ const DiscoverIdeal = () => {
     >
       <div className="max-w-7xl mx-auto ">
         <HeadingAndParagraph
-          headingText={"Discover Your Ideal Eco Stay Near Bhopal & Ratapani"}
-          headingType="h1"
-          subHeadingText={
-            "A journey into forests, wildlife, and mindful living"
-          }
           paragraphs={[p1]}
           textColor={"#fff"}
           textClasses="w-[80%] md:w-fit"

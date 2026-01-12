@@ -44,8 +44,6 @@ const AboutSection = () => {
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto ">
-        <DecorativeHeading text={"About Madhuban Eco Retreat"} as="h1" />
-
         <motion.div className="h-full" variants={itemVariants}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
