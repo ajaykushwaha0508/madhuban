@@ -159,7 +159,7 @@ const NearbyAttractions = () => {
         <div className="text-center max-w-7xl mb-12 mt-10">
           <DecorativeHeading text={"Nearby Attractions"} />
 
-          <p className="heading1 text-[rgb(110,97,70)] mb-4 font-primary">
+          <p className="text-2xl text-[rgb(110,97,70)] mb-4 font-primary">
             Experience the Soul of Madhya Pradesh!!
           </p>
           <p className="text-justify md:text-center p-text  text-primary-gray2">
