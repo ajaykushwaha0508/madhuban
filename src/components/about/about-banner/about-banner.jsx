@@ -29,7 +29,15 @@ const storyImages = [
 ];
 
 const AboutBanner = () => {
-  return <Slidingbanner images={storyImages} />;
+  return (
+    <Slidingbanner
+      images={storyImages}
+      heading={"About Madhuban Eco Retreat"}
+      subHeading={
+        "A serene eco-retreat where nature, comfort, and conscious travel come together"
+      }
+    />
+  );
 };
 
 export default AboutBanner;

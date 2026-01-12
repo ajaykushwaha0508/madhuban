@@ -7,6 +7,7 @@ import styled from "styled-components";
 import "../../components/photoGallery.css";
 import { FaPlayCircle } from "react-icons/fa";
 import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
+import { motion } from "framer-motion";
 
 const tabs = [
   "Madhuban Eco Retreat",
@@ -16,6 +17,18 @@ const tabs = [
   "Tribal Culture At Madhuban",
   "Saru Maru Caves",
 ];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 const mediaContent = {
   "Madhuban Eco Retreat": [
@@ -133,12 +146,26 @@ const Gallery = () => {
             playsInline
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 className="bannerHeading font-primary ">Eco Gallery</h1>
-            <p className=" bannerSubHeading mt-2">
-              Discover the beauty of nature through our lens
-            </p>
+
+          <div
+            className="absolute top-0 z-10 h-full w-full text-white flex flex-col items-center justify-center"
+            style={{
+              background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
+            }}
+          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="text-white text-center px-4"
+            >
+              <div className="text-center max-w-7xl">
+                <h1 className="bannerHeading font-primary">Eco Gallery</h1>
+                <h2 className="bannerSubHeading">
+                  Discover the beauty of nature through our lens
+                </h2>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

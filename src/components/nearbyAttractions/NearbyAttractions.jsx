@@ -87,6 +87,18 @@ const item = {
   },
 };
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 const NearbyAttractions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -153,15 +165,49 @@ const NearbyAttractions = () => {
                 )
             )}
           </AnimatePresence>
+
+          <div
+            className="absolute top-0 z-10 h-full w-full text-white flex flex-col items-center justify-center"
+            style={{
+              background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
+            }}
+          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="text-white text-center px-4"
+            >
+              <div className="text-center max-w-7xl">
+                <h1 className="bannerHeading font-primary">
+                  Nearby Attractions
+                </h1>
+
+                <h2 className="bannerSubHeading">
+                  Experience the Soul of Madhya Pradesh!!
+                </h2>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* <div
+            className="absolute top-0 z-10 h-full w-full text-white flex flex-col items-center justify-center"
+            style={{
+              background: "linear-gradient(180deg,rgba(0, 0, 0, 0.4 ) 100%)",
+            }}
+          >
+            <div className="text-center max-w-7xl">
+              <h1 className="bannerHeading font-primary">Nearby Attractions</h1>
+
+              <h2 className="bannerSubHeading">
+                Experience the Soul of Madhya Pradesh!!
+              </h2>
+            </div>
+          </div> */}
         </div>
       </section>
       <section className=" px-4 py-4 rounded-bl-[60px] rounded-br-[60px] flex flex-col justify-center items-center">
         <div className="text-center max-w-7xl mb-12 mt-10">
-          <DecorativeHeading text={"Nearby Attractions"} />
-
-          <p className="text-2xl text-[rgb(110,97,70)] mb-4 font-primary">
-            Experience the Soul of Madhya Pradesh!!
-          </p>
           <p className="text-justify md:text-center p-text  text-primary-gray2">
             Beyond the calm of Madhuban Eco Retreat lies a region full of
             ancient caves, wildlife sanctuaries, tribal heritage, spiritual

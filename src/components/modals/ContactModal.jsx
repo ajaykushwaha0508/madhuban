@@ -13,7 +13,7 @@ const ADMIN_WHATSAPP = phone;
 
 const ContactModal = () => {
   const COOKIE_NAME = "contact_popup_hidden";
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const pathName = usePathname();
 
   const {

@@ -33,7 +33,13 @@ const storyImages = [
   },
 ];
 const StayBanner = () => {
-  return <Slidingbanner images={storyImages} />;
+  return (
+    <Slidingbanner
+      images={storyImages}
+      heading={"Discover Your Ideal Eco Stay Near Bhopal & Ratapani"}
+      subHeading={"A journey into forests, wildlife, and mindful living"}
+    />
+  );
 };
 
 export default StayBanner;

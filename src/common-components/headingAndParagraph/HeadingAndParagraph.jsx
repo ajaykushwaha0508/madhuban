@@ -40,19 +40,21 @@ const HeadingAndParagraph = ({
 }) => {
   return (
     <motion.div
-      className={`text-center pb-16 pt-12 ${bg} overflow-hidden`}
+      className={`text-center  pt-12 ${bg} overflow-hidden`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
     >
       <div className="max-w-7xl mx-auto ">
-        <DecorativeHeading
-          text={headingText}
-          as={headingType}
-          color={textColor}
-          textClasses={textClasses}
-        />
+        {headingText && (
+          <DecorativeHeading
+            text={headingText}
+            as={headingType}
+            color={textColor}
+            textClasses={textClasses}
+          />
+        )}
 
         {subHeadingText && (
           <p
