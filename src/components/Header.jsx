@@ -178,13 +178,13 @@ const MainNavigation = () => {
                   <Link
                     href={item.path}
                     className={`
-                              text-[22px] font-primary text-[rgb(120,100,60)]
+                              text-[20px] font-primary text-[rgb(120,100,60)]
                               relative  font-medium tracking-wide cursor-pointer
                               after:content-[''] after:absolute after:w-full  ${
                                 isActive(item.path)
                                   ? "after:scale-x-100"
                                   : "after:scale-x-0"
-                              } after:h-[2px] after:bottom-0 after:left-0
+                              } after:h-[2px] after:-bottom-2 after:left-0
                               after:bg-[rgb(120,100,60)] after:origin-bottom-right after:transition-transform after:duration-300
                              hover:after:scale-x-100
                              hover:after:origin-bottom-left`}
@@ -199,7 +199,7 @@ const MainNavigation = () => {
         {/* Book Now Button - Desktop */}
         <Link
           href="/booking"
-          className="hidden xl:block px-4 py-2 rounded-md font-primary font-semibold text-xl text-[#D1C8C1] bg-[rgb(110,97,70)]  transition"
+          className="hidden xl:block px-4 py-2 rounded-md font-primary text-xl text-[#D1C8C1] bg-[rgb(110,97,70)]  transition"
         >
           Book Now
         </Link>
