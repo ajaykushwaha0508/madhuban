@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Link href="/" className="flex items-center space-x-4 z-20">
                 <img
-                  src="/images/logo/logo7.png"
+                  src="https://res.cloudinary.com/djxgpbncu/image/upload/v1768288795/logo7_nyli06.png"
                   alt="Madhuban Eco Retreat Logo"
                   className="h-20 w-20 filter brightness-75"
                 />

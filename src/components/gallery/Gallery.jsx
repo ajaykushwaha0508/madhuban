@@ -32,94 +32,328 @@ const fadeInUp = {
 
 const mediaContent = {
   "Madhuban Eco Retreat": [
-    { type: "image", src: "/images/Gallery/gallery17.jpg" },
-    { type: "video", src: "/images/bird/gallery-video.mp4" },
-    { type: "image", src: "/images/Gallery/gallery5.jpg" },
-    { type: "video", src: "/images/Gallery/gallery-video5.mp4" },
-    { type: "image", src: "/images/Gallery/gallery15.jpg" },
-    { type: "video", src: "/images/Gallery/gallery-video4.mp4" },
-    { type: "video", src: "/images/Gallery/gallery-video-7.mp4" },
-    { type: "image", src: "/images/Gallery/gallery-18.jpg" },
-    { type: "image", src: "/images/Gallery/gallery-19.jpg" },
-    { type: "image", src: "/images/Gallery/gallery-20.jpg" },
-    { type: "image", src: "/images/Gallery/gallery-21.jpg" },
-    { type: "image", src: "/images/Gallery/gallery-22.jpg" },
-    { type: "image", src: "/images/Gallery/gallery-23.jpg" },
-    { type: "video", src: "/images/Gallery/gallery-video-6.mp4" },
-    { type: "image", src: "/images/Gallery/gallery-25.jpg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288937/gallery17_gddpm8.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288900/gallery-video_lxgi5u.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288939/gallery5_vcmqdv.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288935/gallery-video5_oqmnfe.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288935/gallery15_pi78aq.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288930/gallery-video4_fgufwe.mp4",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288930/gallery-video-7_rzrvzt.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288919/gallery-18_gncakv.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288920/gallery-19_ttjjcd.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288920/gallery-20_r5ou58.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288922/gallery-21_iy3p9q.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288922/gallery-22_lcwwmq.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288923/gallery-23_i3xqvy.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288926/gallery-video-6_ull4os.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288925/gallery-25_hoigtj.jpg",
+    },
   ],
   "Tribal Culture At Madhuban": [
-    { type: "image", src: "/images/Gallery/gallery3.heic" },
-    { type: "image", src: "/images/Gallery/gallery4.heic" },
-    { type: "image", src: "/images/TribalCulture/culture-3.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-4.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-2.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-7.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-1.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-5.jpg" },
-    { type: "image", src: "/images/TribalCulture/culture-6.jpg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288938/gallery3_ftanlw.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288939/gallery4_zygz59.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288845/culture-3_svlsce.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288846/culture-4_ylmslo.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288844/culture-2_xjkyoo.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288848/culture-7_cidelh.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288844/culture-1_tkbppn.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288847/culture-5_mfbqww.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288847/culture-6_d2x1ix.jpg",
+    },
   ],
   "Forest & Nature": [
-    { type: "image", src: "/images/Nature/nature7.jpg" },
-    { type: "video", src: "/images/Nature/nature-trails.mp4" },
-    { type: "image", src: "/images/Nature/nature6.jpg" },
-    { type: "video", src: "/images/Nature/nature-video.mp4" },
-    { type: "image", src: "/images/bird/bird3.jpg" },
-    { type: "video", src: "/images/Nature/nature-video1.mp4" },
-    { type: "image", src: "/images/Nature/nature3.jpg" },
-    { type: "video", src: "/images/Nature/nature-video2.mp4" },
-    { type: "image", src: "/images/bird/bird11.jpg" },
-    { type: "image", src: "/images/Nature/nature5.jpg" },
-    { type: "image", src: "/images/bird/bird2.jpg" },
-    { type: "image", src: "/images/bird/bird6.jpg" },
-    { type: "image", src: "/images/Nature/nature10.jpg" },
-    { type: "image", src: "/images/Nature/nature11.jpg" },
-    { type: "image", src: "/images/Nature/nature12.jpg" },
-    { type: "image", src: "/images/Nature/nature13.jpg" },
-    { type: "image", src: "/images/Nature/nature14.jpg" },
-    { type: "image", src: "/images/Nature/nature15.jpg" },
-    { type: "image", src: "/images/Nature/nature16.jpg" },
-    { type: "image", src: "/images/Nature/nature17.jpg" },
-    { type: "image", src: "/images/Nature/nature18.jpg" },
-    { type: "image", src: "/images/Nature/nature19.jpg" },
-    { type: "image", src: "/images/Nature/nature20.jpg" },
-    { type: "image", src: "/images/bird/bird7.jpeg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288818/nature7_ixb8so.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288809/nature-trails_ctdm7m.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288816/nature6_j5mqzr.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288807/nature-video_sqffoq.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288891/bird3_gbzwca.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288806/nature-video1_cyqrsr.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288814/nature3_ucohza.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288808/nature-video2_emsvei.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288886/bird11_rzi05w.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288816/nature5_yajyuo.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288890/bird2_iulmns.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288893/bird6_domeru.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288808/nature10_omicfx.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288808/nature11_pjhnv0.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288809/nature12_pfhmy3.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288809/nature13_ym99wl.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288810/nature14_flm4h3.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288810/nature15_u32n8p.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288811/nature16_dozutp.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288812/nature17_gsp9x7.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288812/nature18_ujttwn.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288813/nature19_cxtdme.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288814/nature20_bmtca0.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288896/bird7_enkzkv.jpg",
+    },
   ],
   "Bhim Bettika": [
-    { type: "image", src: "/images/BhimBetika/bhim1.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim2.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim3.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim4.jpeg" },
-    { type: "image", src: "/images/BhimBetika/bhim5.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim6.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim15.jpeg" },
-    { type: "image", src: "/images/BhimBetika/bhim14.jpeg" },
-    { type: "image", src: "/images/BhimBetika/bhim13.jpeg" },
-    { type: "image", src: "/images/BhimBetika/bhim10.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim11.jpg" },
-    { type: "image", src: "/images/BhimBetika/bhim12.jpg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288876/bhim1_txawpc.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288880/bhim2_io8aa3.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288881/bhim3_jgeaz1.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288882/bhim4_nzgvnx.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288883/bhim5_thvrkb.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288883/bhim6_qckvtg.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288880/bhim15_qzihcf.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288880/bhim14_cahcdm.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288879/bhim13_exasqh.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288876/bhim10_lyupkc.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288877/bhim11_hyb58e.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288878/bhim12_xogwqp.jpg",
+    },
   ],
   "Saru Maru Caves": [
-    { type: "image", src: "/images/SaruMaruCaves/smCaves1.jpg" },
-    { type: "video", src: "/images/SaruMaruCaves/smCaves.mp4" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves2.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves3.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves4.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves5.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves7.jpg" },
-    { type: "video", src: "/images/SaruMaruCaves/smCaves1.mp4" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves8.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves9.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves12.jpg" },
-    { type: "image", src: "/images/SaruMaruCaves/smCaves11.jpg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288828/smCaves1_xq7gmn.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288829/smCaves_wvdefc.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288831/smCaves2_drzodl.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288832/smCaves3_ozcyiu.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288832/smCaves4_f9q4ql.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288833/smCaves5_hcqodp.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288836/smCaves7_olaf2a.jpg",
+    },
+    {
+      type: "video",
+      src: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288831/smCaves1_upcwfe.mp4",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288838/smCaves8_f9adfo.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288837/smCaves9_fxwlqp.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288832/smCaves12_pi6fdp.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288832/smCaves11_hbqa8g.jpg",
+    },
   ],
   "Ginnorgarh Fort": [
-    { type: "image", src: "images/GinnorgarhFort/GF.jpg" },
-    { type: "image", src: "images/GinnorgarhFort/GF1.jpg" },
-    { type: "image", src: "images/GinnorgarhFort/GF2.jpg" },
-    { type: "image", src: "images/GinnorgarhFort/GF3.jpg" },
-    { type: "image", src: "images/GinnorgarhFort/GF4.jpg" },
-    { type: "image", src: "images/GinnorgarhFort/GF5.jpg" },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288944/GF_l7iqap.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288945/GF1_nk4opu.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288946/GF2_sspav2.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288947/GF3_jbjaln.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288947/GF4_gxn1k7.jpg",
+    },
+    {
+      type: "image",
+      src: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288948/GF5_ybake4.jpg",
+    },
   ],
 };
 

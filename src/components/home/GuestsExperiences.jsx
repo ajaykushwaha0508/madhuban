@@ -31,7 +31,8 @@ const GuestsExperiences = () => {
     <section
       className="py-8 px-4 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/images/experiences/ex-bg.jpg')",
+        backgroundImage:
+          "url('https://res.cloudinary.com/djxgpbncu/image/upload/v1768288916/ex-bg_ihhc2w.jpg')",
       }}
     >
       <div className="container mx-auto">
