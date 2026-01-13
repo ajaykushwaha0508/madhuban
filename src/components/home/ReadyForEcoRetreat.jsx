@@ -41,7 +41,8 @@ const ReadyForEcoRetreat = () => {
     <section
       className="py-8 px-4 bg-cover bg-center bg-no-repeat bg-[#FAFAFA]"
       style={{
-        backgroundImage: "url('/images/Arts/art4.jpg')",
+        backgroundImage:
+          "url('https://res.cloudinary.com/djxgpbncu/image/upload/v1768288873/art4_ljdqje.jpg')",
       }}
     >
       <div className="container mx-auto">

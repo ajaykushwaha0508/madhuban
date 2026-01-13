@@ -42,35 +42,40 @@ const fadeInUp = {
 const accommodations = [
   {
     title: "Safari Tent",
-    image: "/images/accommodations/safari-tend1.jpeg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288867/safari-tend1_gencq5.jpg",
     alt: "Nature Tent",
     description:
       "Experience one of the most unique jungle stays near Bhopal with our eco-luxury safari tents featuring open-to-sky showers, forest views, and crafted cane interiors.",
   },
   {
     title: "Mud Houses",
-    image: "/images/accommodations/mud-villa.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288860/mud-villa_skhjwn.jpg",
     alt: "Mud Houses",
     description:
       "Inspired by the Gond tribes, these mud cottages offer rustic charm and sustainable comfort — making them one of the most loved eco stays in Madhya Pradesh.",
   },
   {
     title: "Pool Side Villa",
-    image: "/images/accommodations/pool-side-tent.jpeg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288866/pool-side-tent_hugtjo.jpg",
     alt: "Pool Side Room",
     description:
       "For travelers seeking leisure and calm, our poolside villas combine scenic views, wellness-friendly spaces, and forest-side luxury.",
   },
   {
     title: "Glamping Tents",
-    image: "/images/accommodations/glamping-tent1.JPG",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288858/glamping-tent1_hdls5v.jpg",
     alt: "Glamping Tent",
     description:
       "Enjoy boutique-style glamping with chic décor, ensuite bathrooms, and private sit-outs — perfect for a stylish forest experience.",
   },
   {
     title: "Camping Tents",
-    image: "/images/accommodations/comping-tent11.jpeg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288852/comping-tent11_blzutq.jpg",
     alt: "Camping Tent",
     description:
       "Ideal for adventure seekers looking for a pure nature experience, our camping tents offer a peaceful, off-grid stay under starry skies.",

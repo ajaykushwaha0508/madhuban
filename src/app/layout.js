@@ -32,6 +32,10 @@ export default function RootLayout({ children }) {
       <head>
         <Script
           strategy="beforeInteractive"
+          src="https://t.contentsquare.net/uxa/d252099aa0f2e.js"
+        ></Script>
+        <Script
+          strategy="beforeInteractive"
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-DBTW8G5KT3"
         />
