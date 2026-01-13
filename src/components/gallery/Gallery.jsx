@@ -139,7 +139,9 @@ const Gallery = () => {
       <section className="relative h-[85vh] m-0 p-0">
         <div className="absolute inset-0 overflow-hidden h-[70vh] ">
           <video
-            src="videos\gallery-bg-video.mp4"
+            src={
+              "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294865/gallery-bg-video_ox5a5e.mp4"
+            }
             autoPlay
             muted
             loop

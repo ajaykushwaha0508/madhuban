@@ -6,8 +6,7 @@ export const generateMataDataForSEO = ({
   ogImages = [],
   robots = {},
 }) => {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.madhubanecoretreat.com";
+  const baseUrl = "https://www.madhubanecoretreat.com";
 
   const generateOGImage = (urls = []) => {
     if (!urls || !urls.length) return [];

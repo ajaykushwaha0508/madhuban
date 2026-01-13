@@ -45,23 +45,65 @@ const Dining = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const photos = [
-    { id: 1, url: "/images/dining/dining1.JPG" },
-    { id: 2, url: "/images/dining/dining2.jpg" },
-    { id: 3, url: "/images/dining/dining3.jpg" },
-    { id: 4, url: "/images/dining/dining4.jpg" },
-    { id: 5, url: "/images/dining/dining5.jpg" },
-    { id: 6, url: "/images/dining/dining6.jpg" },
-    { id: 7, url: "/images/dining/dining7.jpg" },
-    { id: 8, url: "/images/dining/dining8.jpg" },
-    { id: 9, url: "/images/dining/dining9.jpg" },
-    { id: 10, url: "/images/dining/dining11.jpg" },
-    { id: 11, url: "/images/dining/dining22.jpg" },
-    { id: 11, url: "/images/dining/dining33.jpg" },
+    {
+      id: 1,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288903/dining1_yxgp8l.jpg",
+    },
+    {
+      id: 2,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288902/dining2_yaw7lt.jpg",
+    },
+    {
+      id: 3,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288904/dining3_ncgktx.jpg",
+    },
+    {
+      id: 4,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288906/dining4_hrtwvl.jpg",
+    },
+    {
+      id: 5,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288907/dining5_fgz1zk.jpg",
+    },
+    {
+      id: 6,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288909/dining6_vhntfo.jpg",
+    },
+    {
+      id: 7,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288910/dining7_t2zi3x.jpg",
+    },
+    {
+      id: 8,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288911/dining8_qsox6h.jpg",
+    },
+    {
+      id: 9,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288913/dining9_imyfw0.jpg",
+    },
+    {
+      id: 10,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288901/dining11_etzefp.jpg",
+    },
+    {
+      id: 11,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288902/dining22_xbpeyq.jpg",
+    },
+    {
+      id: 11,
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288903/dining33_gh0tty.jpg",
+    },
   ];
 
   const videos = [
-    { id: 1, url: "/images/dining/dining.mp4" },
-    { id: 1, url: "/images/dining/dining1.mp4" },
+    {
+      id: 1,
+      url: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288897/dining_q3u9sq.mp4",
+    },
+    {
+      id: 1,
+      url: "https://res.cloudinary.com/djxgpbncu/video/upload/v1768288901/dining1_xrvzhj.mp4",
+    },
     // Add more if needed
   ];
 
@@ -87,7 +129,9 @@ const Dining = () => {
         <div className="relative w-full h-[85vh]  ">
           <img
             loading="lazy"
-            src="/images/dining/dining4.jpg"
+            src={
+              "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288906/dining4_hrtwvl.jpg"
+            }
             alt="Farm Banner"
             className="w-full h-full object-cover"
           />

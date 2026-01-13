@@ -6,58 +6,77 @@ import CommonFaqs from "@/common-components/faqs/CommonFaqs";
 import DecorativeHeading from "@/common-components/heading/DecorativeHeading";
 
 const heroSlides = [
-  { image: "/images/BhimBetika/bhim4.jpeg" },
-  { image: "/images/SaruMaruCaves/smCaves5.jpg" },
-  { image: "/images/SaruMaruCaves/smCaves1.jpg" },
-  { image: "/images/nature/nature8.jpg" },
+  {
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288877/bhim11_hyb58e.jpg",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288834/smCaves6_qqbde7.jpg",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288832/smCaves11_hbqa8g.jpg",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288817/nature8_ymyp0q.jpg",
+  },
 ];
 
 const cardData = [
   {
     title: "Ratapani Widlife Sanctuary",
-    image: "/images/NearbyAttractions/Ratapani_Widlife_Sanctuary.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288820/Ratapani_Widlife_Sanctuary_etyrdl.jpg",
     description:
       "A stunning 688 sq. km forest known for teak woodlands, wildlife diversity, and peaceful jungle landscapes. Apart from the tiger, you may spot leopards, jackals, hyenas, wild dogs, and unique species of birds.",
     bestFor: "Wildlife lovers, nature photographers, jungle drives.",
   },
   {
     title: "Ginnorgarh Tribal Fort",
-    image: "/images/NearbyAttractions/Ginnorgarh_Tribal_Fort.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288819/Ginnorgarh_Tribal_Fort_glqmvi.jpg",
     description:
       "A historic 1200 BC hilltop fort rising over 700 meters, located inside Ratapani Tiger Reserve. The fort features ancient water bodies, palace remains, and stone gateways — offering a raw glimpse into tribal and medieval heritage.",
     bestFor: "Trekkers, history lovers, architecture enthusiasts.",
   },
   {
     title: "Bhimbetka Rock Shelters (UNESCO Site)",
-    image: "/images/NearbyAttractions/Bhimbetika_Rock_Shelter_Site.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288818/Bhimbetika_Rock_Shelter_Site_wbp6b9.jpg",
     description:
       "A world-renowned archaeological site with prehistoric rock art from the Paleolithic, Mesolithic, and early historic periods. These caves represent the earliest evidence of human life in India.",
     bestFor: "Historians, students, cultural explorers.",
   },
   {
     title: "Satpura Tiger Reserve / Satpura National Park",
-    image: "/images/NearbyAttractions/Satpura_Tiger_Reserve.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288822/Satpura_Tiger_Reserve_ih44ro.jpg",
     description:
       "One of Central India’s finest forest belts, Satpura Tiger Reserve is known for its rugged landscapes, wildlife safaris, river boating, and deep forest trails.",
     bestFor: "Wildlife safaris, nature enthusiasts, adventure seekers.",
   },
   {
     title: "Saru Maru Caves",
-    image: "/images/NearbyAttractions/Saru_Maru_Caves.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288821/Saru_Maru_Caves_pngbiw.jpg",
     description:
       "An ancient Buddhist monastic complex featuring meditation caves, inscriptions, and remnants of Ashokan-era history.",
     bestFor: "Archaeology lovers, cultural travelers, spiritual seekers.",
   },
   {
     title: "Narmada River Darshan (Sethani Ghat)",
-    image: "/images/NearbyAttractions/Narmada_River_Darshan.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288820/Narmada_River_Darshan_knarfm.jpg",
     description:
       "A magnificent 19th-century riverside ghat located at Narmadapuram. It is one of India’s largest ghats and a serene place to experience the spiritual aura of the holy Narmada River.",
     bestFor: "Pilgrims, sunset views, riverside relaxation.",
   },
   {
     title: "Salkanpur Devi Temple",
-    image: "/images/NearbyAttractions/Salkanpur_Devi_Temple.jpg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288820/Salkanpur_Devi_Temple_bsnul2.jpg",
     description:
       "A revered Shaktipeeth dedicated to Goddess Vindhyavasni Beejasan Devi. Located atop an 800-foot-high hill, the temple offers panoramic forest views and spiritual tranquility.",
     bestFor: "Devotees, trekking enthusiasts, sunrise/sunset views.",

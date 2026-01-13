@@ -117,8 +117,9 @@ const DiningSpacial = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9 }}
               style={{
-                backgroundImage: `url(/images/dining/dining5.jpg)`,
+                backgroundImage: `url(https://res.cloudinary.com/djxgpbncu/image/upload/v1768288903/dining1_yxgp8l.jpg)`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             ></motion.div>
           </motion.div>

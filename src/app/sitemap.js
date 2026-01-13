@@ -39,8 +39,7 @@ const sitemapUrls = [
 ];
 
 export default async function sitemap() {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.madhubanecoretreat.com";
+  const baseUrl = "https://www.madhubanecoretreat.com";
 
   const lastmod = new Date().toISOString().replace("Z", "+00:00");
 
