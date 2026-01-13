@@ -17,31 +17,31 @@ const RecreationalFacilities = () => {
 
   const forestImages = [
     {
-      url: "/images/RecreationalFacilities/RF1.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300490/RF1_gkvkf5.jpg",
       alt: "Forest View 1",
     },
     {
-      url: "/images/RecreationalFacilities/RF2.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300492/RF2_xf7nzg.jpg",
       alt: "Forest View 2",
     },
     {
-      url: "/images/RecreationalFacilities/RF3.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300495/RF3_ek9i3o.jpg",
       alt: "Forest View 3",
     },
     {
-      url: "/images/RecreationalFacilities/RF4.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300497/RF4_foe1wd.jpg",
       alt: "Forest View 4",
     },
     {
-      url: "/images/RecreationalFacilities/RF5.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300501/RF5_dirg0v.jpg",
       alt: "Forest View 5",
     },
     {
-      url: "/images/RecreationalFacilities/RF6.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768300504/RF6_jvdv2o.jpg",
       alt: "Forest View 6",
     },
     {
-      url: "/images/RecreationalFacilities/RF7.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288827/RF7_wlw1mk.jpg",
       alt: "Forest View 7",
     },
   ];
@@ -212,7 +212,10 @@ const RecreationalFacilities = () => {
           muted
           playsInline
         >
-          <source src="/videos/PF.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/djxgpbncu/video/upload/v1768294829/PF_gvdooc.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0  bg-opacity-50 flex flex-col items-center justify-center">

@@ -145,7 +145,7 @@ const MainNavigation = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-4 z-20">
           <Image
-            src="/images/logo/logo-4.png"
+            src="https://res.cloudinary.com/djxgpbncu/image/upload/v1768288792/logo-4_p2iwwi.png"
             width={120}
             height={120}
             alt="Madhuban Eco Retreat Logo"

@@ -17,47 +17,47 @@ const BirdWatchingAndWilderness = () => {
 
   const forestImages = [
     {
-      url: "/images/bird/bird14.jpeg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288891/bird14_szbqvv.jpg",
       alt: "Forest View 1",
     },
     {
-      url: "/images/bird/bird1.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288886/bird1_qfq8pa.jpg",
       alt: "Forest View 1",
     },
     {
-      url: "/images/bird/bird2.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288890/bird2_iulmns.jpg",
       alt: "Forest View 2",
     },
     {
-      url: "/images/bird/bird4.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288891/bird4_oiupro.jpg",
       alt: "Forest View 3",
     },
     {
-      url: "/images/bird/bird5.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288891/bird3_gbzwca.jpg",
       alt: "Forest View 4",
     },
     {
-      url: "/images/bird/bird6.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288893/bird6_domeru.jpg",
       alt: "Forest View 5",
     },
     {
-      url: "/images/bird/bird7.jpeg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288896/bird7_enkzkv.jpg",
       alt: "Forest View 6",
     },
     {
-      url: "/images/bird/bird9.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288894/bird9_e9brhw.jpg",
       alt: "Forest View 7",
     },
     {
-      url: "/images/bird/bird11.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288886/bird11_rzi05w.jpg",
       alt: "Forest View 8",
     },
     {
-      url: "/images/bird/bird14.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288889/bird14_ezsixy.jpg",
       alt: "Forest View 10",
     },
     {
-      url: "/images/bird/bird13.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288888/bird13_uuh3va.jpg",
       alt: "Forest View 11",
     },
   ];
@@ -221,7 +221,12 @@ const BirdWatchingAndWilderness = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/wilderness.mp4" type="video/mp4" />
+          <source
+            src={
+              "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294832/wilderness_gjys4f.mp4"
+            }
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
 

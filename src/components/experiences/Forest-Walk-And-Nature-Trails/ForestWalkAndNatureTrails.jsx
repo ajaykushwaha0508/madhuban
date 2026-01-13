@@ -16,27 +16,27 @@ const ForestWalkAndNatureTrails = () => {
 
   const forestImages = [
     {
-      url: "/images/Nature/nature9.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288818/nature9_kozay6.jpg",
       alt: "Forest View 1",
     },
     {
-      url: "/images/Nature/nature3.jpeg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288814/nature3_ucohza.jpg",
       alt: "Forest View 2",
     },
     {
-      url: "/images/Nature/nature6.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288816/nature6_j5mqzr.jpg",
       alt: "Forest View 3",
     },
     {
-      url: "/images/Nature/nature5.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288816/nature5_yajyuo.jpg",
       alt: "Forest View 4",
     },
     {
-      url: "/images/Nature/nature7.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288818/nature7_ixb8so.jpg",
       alt: "Forest View 5",
     },
     {
-      url: "/images/Nature/nature1.jpg",
+      url: "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288807/nature1_hgewji.jpg",
       alt: "Forest View 6",
     },
   ];
@@ -198,7 +198,12 @@ const ForestWalkAndNatureTrails = () => {
           muted
           playsInline
         >
-          <source src="/videos/nature-trails1.mp4" type="video/mp4" />
+          <source
+            src={
+              "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294884/nature-trails1_xl0b5v.mp4"
+            }
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 flex flex-col items-center justify-center">

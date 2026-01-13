@@ -930,7 +930,8 @@ export const accommodationsData = [
     id: 1,
     name: "Safari Tent",
     slug: "safari-tent",
-    image: "/videos/safari-tent.mp4",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294836/safari-tent_ptr5om.mp4",
     altText: "Exterior view of a charming safari tent nestled in greenery",
     descriptions: [
       "Experience the charm of a true safari tent house in Ratapani, designed for travelers who wish to immerse themselves in nature without compromising on comfort. Set on raised platforms beside a gentle stream and overlooking forested mountains, these classic safari-style tents offer one of the most serene and authentic jungle stay experiences near Bhopal.",
@@ -938,9 +939,9 @@ export const accommodationsData = [
       "Each tent is thoughtfully crafted with elegant cane furniture, a vanity and dressing space, a separate shower area, and an open-to-sky bath surrounded by nature. Whether you're a couple seeking a peaceful getaway, a family looking for a unique stay near Bhopal, or a nature lover wanting to unwind amidst wilderness, this safari tent provides the ideal blend of rustic charm and eco-luxury.",
     ],
     galleryImages: [
-      "/images/accommodations/safari-tent2.jpeg",
-      "/images/accommodations/safari-tent3.jpeg",
-      "/images/accommodations/safari-tent4.jpeg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288869/safari-tent2_hkfzge.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288869/safari-tent3_qs1qxi.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288870/safari-tent4_dsr8wk.jpg",
     ],
     amenities: [
       "King Size Bed",
@@ -988,7 +989,8 @@ export const accommodationsData = [
     id: 2,
     name: "Mud House – Traditional Gond Architecture with Modern Comfort",
     slug: "mud-villa",
-    image: "/videos/mud-villa.mp4",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294832/mud-villa_tbnu2r.mp4",
     altText: "Exterior view of a charming safari tent nestled in greenery",
     descriptions: [
       "Experience the warmth and simplicity of earth-inspired living in our Mud Houses, crafted using the traditional vernacular architecture of the Gond tribes. Nestled in the heart of our 5-acre organic orchard, these cottages offer an immersive and peaceful stay surrounded by greenery, birdsong, and nature’s calm.",
@@ -997,10 +999,10 @@ export const accommodationsData = [
       "Designed for travelers seeking a mud house stay near Bhopal, a cultural escape, or an eco-friendly retreat, this is one of the finest and most authentic mud cottage experiences in the Ratapani region.",
     ],
     galleryImages: [
-      "/images/accommodations/mud-villa1.jpg",
-      "/images/accommodations/mud-villa2.jpg",
-      "/images/accommodations/mud-villa.jpg",
-      "/images/stay/stay3.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288861/mud-villa1_prb46n.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288861/mud-villa2_jx8fzk.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288860/mud-villa_skhjwn.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768292703/stay3_rakqxv.jpg",
     ],
     amenities: [
       "King Size Bed",
@@ -1057,18 +1059,19 @@ export const accommodationsData = [
     id: 3,
     name: "Pool Side Villa – Luxury Eco Stay by the Water",
     slug: "pool-side-room",
-    image: "/videos/pool-side.mp4",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/video/upload/v1768294840/pool-side_uphqte.mp4",
     altText: "A beautiful treehouse offering panoramic views of the forest",
     descriptions: [
       "Discover serenity and slow living in our Pool Side Villa, designed for travelers seeking comfort, privacy, and a refreshing nature-dipped experience. Wake up to gentle sunlight shimmering on the eco-pool, breathe in the fresh forest air, and enjoy calm moments surrounded by greenery.",
       "Perfect for families, couples, and wellness seekers, this pool villa stay near Bhopal blends eco-conscious design with boutique luxury. Whether you prefer a morning dip, peaceful poolside chai, or quiet evenings under the stars, this villa invites you to reconnect with yourself and nature.",
     ],
     galleryImages: [
-      "/images/accommodations/pool-side-room1.jpg",
-      "/images/accommodations/pool-side-room2.jpg",
-      "/images/accommodations/pool-side-room3.jpg",
-      "/images/pool/pool1.jpg",
-      "/images/pool/pool2.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288864/pool-side-room1_hseinb.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288864/pool-side-room2_clgjoh.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288865/pool-side-room3_zpcouk.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768293376/pool1_tequbc.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288826/pool2_sor23g.jpg",
     ],
     amenities: [
       "King Size Bed",
@@ -1116,7 +1119,8 @@ export const accommodationsData = [
     id: 4,
     name: "Glamping Tents – Boutique Comfort in the Heart of Ratapani",
     slug: "glamping-tents",
-    image: "/images/accommodations/glamping-tent1.JPG",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288858/glamping-tent1_hdls5v.jpg",
     altText: "Luxury glamping tent with deck overlooking greenery",
     descriptions: [
       "Enjoy the charm of the outdoors with the comfort of a thoughtfully designed stay in our Glamping Tents. Set amid Ratapani’s peaceful landscape, each tent combines natural textures with warm, elegant décor. Inside, you’ll find a plush king-size bed, ensuite shower, soft lighting, and calming interiors that make your stay effortless and relaxing.",
@@ -1124,9 +1128,9 @@ export const accommodationsData = [
       "Step outside to your private lawn-side sit-out, perfect for slow mornings, evening tea, or peaceful moments surrounded by greenery. With attentive hospitality and all modern conveniences, this stay is ideal for couples, nature lovers, and weekend travelers searching for a stylish escape near Bhopal.",
     ],
     galleryImages: [
-      "/images/accommodations/glamping-tent2.JPG",
-      "/images/accommodations/glamping-tent3.JPG",
-      "/images/accommodations/glamping-tent4.JPG",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288860/glamping-tent2_p1aicy.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288860/glamping-tent3_mvchnv.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288862/glamping-tent4_qllv68.jpg",
     ],
     amenities: [
       "King Size Bed",
@@ -1174,7 +1178,8 @@ export const accommodationsData = [
     id: 5,
     name: "Camping Tent – Nature-First Camping in the Heart of Ratapani",
     slug: "camping-tent",
-    image: "/images/accommodations/camping-tent.jpeg",
+    image:
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288850/camping-tent_v58biz.jpg",
     altText: "A beautiful treehouse offering panoramic views of the forest",
     descriptions: [
       "Experience the thrill of outdoor living with our Camping Tents, designed for travelers who want true closeness to nature. Set against the serene backdrop of Ratapani’s forest, this stay offers peaceful nights, fresh morning air, and uninterrupted views of the night sky.",
@@ -1182,9 +1187,9 @@ export const accommodationsData = [
       "Perfect for adventure seekers, trekkers, backpackers, and nature lovers, this is one of the best camping experiences near Bhopal, offering a safe, scenic, and refreshing escape from city life. Whether you’re planning a group outing, a solo nature break, or a weekend adventure, this tent stay gives you everything you need to disconnect and recharge.",
     ],
     galleryImages: [
-      "/images/accommodations/comping-tent1.jpg",
-      "/images/accommodations/comping-tent4.jpg",
-      "/images/accommodations/comping-tent5.jpeg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288850/comping-tent1_ynih4j.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288854/comping-tent4_clovid.jpg",
+      "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288855/comping-tent5_yjyfzg.jpg",
     ],
     pricePerNight111: "One Night Comping: 2500/person",
     pricePerNight22: "Day Package: 1100/person",
