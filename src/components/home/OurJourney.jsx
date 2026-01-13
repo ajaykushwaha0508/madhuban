@@ -50,6 +50,12 @@ const fadeIn = {
   },
 };
 
+const instagramPosts = [
+  "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288789/insta-1_gvkymb.png",
+  "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288789/insta-2_lj10rz.png",
+  "https://res.cloudinary.com/djxgpbncu/image/upload/v1768288789/insta-3_yarrxo.jpg",
+];
+
 const OurJourney = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -137,7 +143,7 @@ const OurJourney = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="/images/instagram/vidya.jpg"
+              src="https://res.cloudinary.com/djxgpbncu/image/upload/v1768288791/vidya_rqcef7.jpg"
               alt="Manual"
               className="xl:w-[50vw] xl:h-[50vh] object-cover rounded-md sm:w-[100vw] max640:w-[100vw]"
               // className="w-[50vw] h-[50vh]  object-cover rounded-md sm:w-screen max640:w-screen "
@@ -152,20 +158,18 @@ const OurJourney = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
           >
-            {[...Array(3)].map((_, index) => (
+            {instagramPosts.map((url, index) => (
               <motion.div
                 key={index}
                 className="aspect-square min-h-[200px] rounded-xl overflow-hidden cursor-pointer"
-                onClick={() =>
-                  setSelectedImage(`/images/instagram/insta-${index + 1}.jpg`)
-                }
+                onClick={() => setSelectedImage(url)}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
                   width={500}
                   height={500}
-                  src={`/images/instagram/insta-${index + 1}.jpg`}
+                  src={url}
                   alt={`Instagram post ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
@@ -187,7 +191,7 @@ const OurJourney = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/instagram/insta-4-thumbanil.png"
+                src="https://res.cloudinary.com/djxgpbncu/image/upload/v1768288790/insta-4-thumbanil_zckeag.png"
                 alt="Video Thumbnail"
                 className="xl:w-[25vw] xl:h-[50vh] object-cover rounded-md sm:w-[100vw] max640:w-[100vw]"
               />
@@ -222,7 +226,7 @@ const OurJourney = () => {
                   className="w-full h-[100vh] rounded-md"
                 >
                   <source
-                    src="/images/instagram/insta-4.mp4"
+                    src="https://res.cloudinary.com/djxgpbncu/video/upload/v1768288792/insta-4_p5ucse.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

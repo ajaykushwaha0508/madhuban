@@ -291,7 +291,7 @@ const Footer = () => {
           {/* Newsletter Signup */}
           <div className="">
             <img
-              src="/images/logo/group-logo.png"
+              src="https://res.cloudinary.com/djxgpbncu/image/upload/v1768288791/group-logo_hogyzt.png"
               alt="Newsletter"
               className="w-[70px] h-[70px] mt-3 mb-4 mx-auto filter brightness-75"
               style={{ filter: "brightness(0.75)" }}
