@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const serverUrl = process.env.NEXT_PUBLIC_SERVER_URL;
+const serverUrl = "https://admin-backend-dev.onrender.com";
 
 export const getAllBlogs = async (pageCount, limit) => {
   try {
